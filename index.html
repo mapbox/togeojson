@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel='stylesheet' type='text/css' href='' />
+    </head>
+    <body>
+        <pre id='gj'></pre>
+        <script src='kml.js'></script>
+        <script>
+        function xhr(url, callback) {
+            var xhr = new XMLHttpRequest(),
+                twoHundred = /^20\d$/;
+            xhr.onreadystatechange = function() {
+                if (4 == xhr.readyState && 0 !== xhr.status) {
+                    callback(xhr);
+                }
+            };
+            xhr.open('GET', url, true);
+            xhr.send();
+        };
+
+        var gj = document.getElementById('gj');
+
+        xhr('point.kml', function(res) {
+            gj.innerHTML = JSON.stringify(toGeoJSON.kml(res.responseXML), null, 2);
+        });
+        </script>
+    </body>
+</html>
