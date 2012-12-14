@@ -2,10 +2,23 @@
 <html>
     <head>
         <title></title>
-        <link rel='stylesheet' type='text/css' href='' />
+        <style>
+            .c {
+            }
+            .left {
+                width:50%;
+                float:left;
+                left:0;
+            }
+            .right {
+                float:left;
+                width:50%;
+                right:0;
+            }
+        </style>
     </head>
     <body>
-        <pre id='gj'></pre>
+        <div id='output'></div>
         <script src='kml.js'></script>
         <script>
         function xhr(url, callback) {
@@ -20,10 +33,20 @@
             xhr.send();
         };
 
-        var gj = document.getElementById('gj');
+        var tests = ['point.kml', 'twopoints.kml', 'extended_data.kml', 'linestring.kml'];
+        var output = document.getElementById('output');
 
-        xhr('point.kml', function(res) {
-            gj.innerHTML = JSON.stringify(toGeoJSON.kml(res.responseXML), null, 2);
+        tests.forEach(function(t) {
+            var od = output.appendChild(document.createElement('div'));
+            var kmlpre = od.appendChild(document.createElement('pre'));
+            var geopre = od.appendChild(document.createElement('pre'));
+            od.className = 'c';
+            kmlpre.className = 'left';
+            geopre.className = 'right';
+            xhr(t, function(res) {
+                kmlpre.innerText = res.responseText;
+                geopre.innerHTML = JSON.stringify(toGeoJSON.kml(res.responseXML), null, 2);
+            });
         });
         </script>
     </body>

@@ -1,6 +1,9 @@
 # Convert things to GeoJSON.
 
-This converts less-cool formats to GeoJSON, so you can use GeoJSON.
+This converts less-cool formats to GeoJSON, so you can use GeoJSON. It's not
+done yet. KML is first, GPX is second, GeoRSS is third. It'll be dependency-free
+and compatible with any system that has an XML parser (IE7+) and probably
+systems without one via polyfills (nodejs).
 
 ## FAQ
 
