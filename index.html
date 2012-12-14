@@ -3,14 +3,15 @@
     <head>
         <title></title>
         <style>
-            .c {
-            }
+            .c { }
             .left {
+                border-top:1px solid #000;
                 width:50%;
                 float:left;
                 left:0;
             }
             .right {
+                border-top:1px solid #000;
                 float:left;
                 width:50%;
                 right:0;
@@ -19,7 +20,7 @@
     </head>
     <body>
         <div id='output'></div>
-        <script src='kml.js'></script>
+        <script src='togeojson.js'></script>
         <script>
         function xhr(url, callback) {
             var xhr = new XMLHttpRequest(),
@@ -33,7 +34,7 @@
             xhr.send();
         };
 
-        var tests = ['point.kml', 'twopoints.kml', 'extended_data.kml', 'linestring.kml'];
+        var tests = ['point.kml', 'polygon.kml', 'twopoints.kml', 'extended_data.kml', 'linestring.kml'];
         var output = document.getElementById('output');
 
         tests.forEach(function(t) {

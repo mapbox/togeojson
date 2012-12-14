@@ -5,6 +5,21 @@ done yet. KML is first, GPX is second, GeoRSS is third. It'll be dependency-free
 and compatible with any system that has an XML parser (IE7+) and probably
 systems without one via polyfills (nodejs).
 
+## KML
+
+Supported:
+
+* Point
+* Polygon
+* LineString
+* name & description
+* ExtendedData
+
+Not supported yet:
+
+* MultiGeometry
+* Styles (may never be supported ever)
+
 ## FAQ
 
 ### Why isn't this built on OpenLayers
@@ -16,3 +31,7 @@ with trailing spaces, miles away from jshint compliant, and filled with
 scope-creep that does nothing for me.
 
 I'm sorry.
+
+## Can it convert back?
+
+No.
