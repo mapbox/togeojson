@@ -37,7 +37,8 @@ toGeoJSON = {
             var geomNode, geomNodes, i, j, k, geoms = [];
             if (get1(root, 'MultiGeometry')) return getGeometry(get1(root, 'MultiGeometry'));
             for (i = 0; i < geotypes.length; i++) {
-                if (geomNodes = get(root, geotypes[i])) {
+                geomNodes = get(root, geotypes[i]);
+                if (geomNodes) {
                     for (j = 0; j < geomNodes.length; j++) {
                         geomNode = geomNodes[j];
                         if (geotypes[i] == 'Point') {

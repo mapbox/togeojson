@@ -2,10 +2,20 @@
 
 [![Build Status](https://travis-ci.org/tmcw/togeojson.png)](https://travis-ci.org/tmcw/togeojson)
 
-This converts less-cool formats to GeoJSON, so you can use GeoJSON. It's not
-done yet. KML is first, GPX is second, GeoRSS is third. It'll be dependency-free
-and compatible with any system that has an XML parser (IE7+) and probably
-systems without one via polyfills (nodejs).
+This converts [KML](https://developers.google.com/kml/documentation/) into
+[GeoJSON](http://www.geojson.org/), in a browser or with [nodejs](http://nodejs.org/).
+
+It is
+
+* Dependency-free
+* Tiny
+* Written in vanilla javascript that's jshint-friendly
+* Tested
+
+It is not
+
+* Concerned about ugly extensions to KML
+* Concerned with having an 'internal format' of its own
 
     npm install togeojson
 
