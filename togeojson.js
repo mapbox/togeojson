@@ -6,8 +6,9 @@ toGeoJSON = {
             trimSpace = (/^\s*|\s*$/g), splitSpace = (/\s+/),
             placemarks = get(doc, 'Placemark');
 
-        for (var j = 0; j < placemarks.length; j++)
-            gj.features.push(getplacemark(placemarks[j]));
+        for (var j = 0; j < placemarks.length; j++) {
+            gj.features = gj.features.concat(getPlacemark(placemarks[j]));
+        }
 
         function get(x, y) { return x.getElementsByTagNameNS('*', y); }
         function get1(x, y) { var n = get(x, y); return n.length ? n[0] : null; }
@@ -46,12 +47,13 @@ toGeoJSON = {
             }
         }
 
-        function getplacemark(root) {
-            var geometry = getGeometry(root),
+        function getPlacemark(root, georoot) {
+            var geometry = getGeometry(georoot || root),
                 i, properties = {},
                 name = nodeVal(get1(root, 'name')),
                 description = nodeVal(get1(root, 'description')),
                 extendedData = get1(root, 'ExtendedData');
+            if (!georoot && !geometry) return false;
             if (name) properties.name = name;
             if (description) properties.description = description;
             if (extendedData) {

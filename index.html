@@ -44,7 +44,7 @@
             od.className = 'c';
             kmlpre.className = 'left';
             geopre.className = 'right';
-            xhr(t, function(res) {
+            xhr('test/data/' + t, function(res) {
                 kmlpre.innerText = res.responseText;
                 geopre.innerHTML = JSON.stringify(toGeoJSON.kml(res.responseXML), null, 2);
             });
