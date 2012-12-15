@@ -1,0 +1,26 @@
+{
+  "name": "togeojson",
+  "version": "0.0.0",
+  "description": "turn stuff into geojson",
+  "main": "togeojson.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "mocha": "1.2.x"
+  },
+  "scripts": {
+    "test": "mocha -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tmcw/togeojson.git"
+  },
+  "license": "BSD",
+  "dependencies": {
+    "jsdom": "~0.3.1"
+  }
+}
