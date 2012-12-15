@@ -1,5 +1,7 @@
 # Convert things to GeoJSON.
 
+[![Build Status](https://travis-ci.org/tmcw/togeojson.png)](https://travis-ci.org/tmcw/togeojson)
+
 This converts less-cool formats to GeoJSON, so you can use GeoJSON. It's not
 done yet. KML is first, GPX is second, GeoRSS is third. It'll be dependency-free
 and compatible with any system that has an XML parser (IE7+) and probably
