@@ -27,13 +27,24 @@ Supported:
 * LineString
 * name & description
 * ExtendedData
+* MultiGeometry with coalescing
 
 Not supported yet:
 
-* MultiGeometry
 * Styles (may never be supported ever)
+* Various silly Google extensions (will never be supported)
+* NetworkLinks (lol)
 
 ## FAQ
+
+### What is coalescing?
+
+KML's MultiGeometry type is a freeform geometry collection - you can have a single
+feature with lines, points, polygons, and so on. GeoJSON doesn't have an equivalent,
+so `togeojson` does its best:
+
+* If the MultiGeometry is filled with the same type, it'll automatically derive a MultiLineString, a MultiPolygon or MultiPoint
+* Otherwise, it'll derive a feature for each discrete geometry
 
 ### Why isn't this built on OpenLayers
 
@@ -48,3 +59,11 @@ I'm sorry.
 ## Can it convert back?
 
 No.
+
+## What about flyTo and other Google add-ons?
+
+These will never be supported. These extensions make KML a case example of
+[OGC](http://www.opengeospatial.org/)'s failure to make truly cross-compatible
+formats - they shouldn't bow to vendors who want to customize formats for
+proprietary software within their own, proprietary specifications,
+while doing it under the banner of an open specification.
