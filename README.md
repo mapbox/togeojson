@@ -5,6 +5,19 @@ done yet. KML is first, GPX is second, GeoRSS is third. It'll be dependency-free
 and compatible with any system that has an XML parser (IE7+) and probably
 systems without one via polyfills (nodejs).
 
+    npm install togeojson
+
+```javascript
+// using togeojson in nodejs
+
+var tj = require('togeojson'),
+    fs = require('fs'),
+    // node doesn't have xml parsing or a dom. use jsdom
+    jsdom = require('jsdom').jsdom;
+
+var converted = tj.kml(jsdom(fs.readFileSync('foo.kml', 'utf8')));
+```
+
 ## KML
 
 Supported:
