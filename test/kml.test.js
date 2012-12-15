@@ -27,8 +27,13 @@ describe('KML to GeoJSON conversion', function() {
     describe('multigeometry', function() {
         it('can parse a multigeometry kml file with coalescing', function() {
             assert.deepEqual(tj.kml(
-                jsdom(fs.readFileSync('./test/data/linestring.kml', 'utf8'))),
-                JSON.parse(fs.readFileSync('./test/data/linestring.geojson', 'utf8')));
+                jsdom(fs.readFileSync('./test/data/multigeometry.kml', 'utf8'))),
+                JSON.parse(fs.readFileSync('./test/data/multigeometry.geojson', 'utf8')));
+        });
+        it('can parse a multigeometry kml file without coalescing', function() {
+            assert.deepEqual(tj.kml(
+                jsdom(fs.readFileSync('./test/data/multigeometry_discrete.kml', 'utf8'))),
+                JSON.parse(fs.readFileSync('./test/data/multigeometry_discrete.geojson', 'utf8')));
         });
     });
 });
