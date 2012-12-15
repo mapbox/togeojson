@@ -1,6 +1,5 @@
 toGeoJSON = {
     kml: function(doc) {
-        function get(x, y) { return x.getElementsByTagName(y); }
         var gj = { type: 'FeatureCollection', features: [] },
             geotypes = ['Polygon', 'LineString', 'Point'],
             removeSpace = (/\s*/g),
@@ -11,6 +10,7 @@ toGeoJSON = {
             gj.features = gj.features.concat(getPlacemark(placemarks[j]));
         }
 
+        function get(x, y) { return x.getElementsByTagName(y); }
         function get1(x, y) { var n = get(x, y); return n.length ? n[0] : null; }
         function numarray(x) {
             for (var j = 0, o = []; j < x.length; j++) o[j] = parseFloat(x[j]);
