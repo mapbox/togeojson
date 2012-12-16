@@ -47,6 +47,7 @@ Not supported yet:
 * Styles (may never be supported ever)
 * Various silly Google extensions (will never be supported)
 * NetworkLinks (lol)
+* GroundOverlays (lol)
 
 ## FAQ
 
@@ -69,11 +70,11 @@ scope-creep that does nothing for me.
 
 I'm sorry.
 
-## Can it convert back?
+### Can it convert back?
 
 No.
 
-## What about flyTo and other Google add-ons?
+### What about flyTo and other Google add-ons?
 
 These will never be supported. These extensions make KML a case example of
 [OGC](http://www.opengeospatial.org/)'s failure to make truly cross-compatible

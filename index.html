@@ -1,52 +1,135 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title></title>
+        <title>togeojson</title>
         <style>
-            .c { }
-            .left {
-                border-top:1px solid #000;
-                width:50%;
-                float:left;
-                left:0;
+            body {
+                font:12px/20px 'Helvetica Neue', sans-serif;
+                margin:0;
+                padding:0;
+                background:#d1d6dc;
+                color:#444;
             }
-            .right {
-                border-top:1px solid #000;
-                float:left;
-                width:50%;
-                right:0;
+            h1 {
+                position:absolute;
+                padding-left:10px;
+            }
+            h1 a {
+                color:#69FFFA;
+            }
+            a {
+                color:#000;
+            }
+            circle {
+                fill:#000;
+                stroke-width:2px;
+                stroke:#69FFFA;
+            }
+            path {
+                fill:#69FFFA;
+                stroke:#000;
+                fill-opacity:1;
+                stroke-width:2;
+            }
+            #intro {
+                padding:10px;
+                font-size:20px;
             }
         </style>
     </head>
     <body>
+        <div id='intro'>
+            <a href='https://github.com/tmcw/togeojson'>togeojson</a>
+            turns KML and other stuff into <a href='http://geojson.org/'>GeoJSON</a>,
+            which is useful in d3, polymaps, leaflet, and so on.
+        </div>
         <div id='output'></div>
         <script src='togeojson.js'></script>
+        <script src='queue.min.js'></script>
+        <script src='polymaps.min.js'></script>
         <script>
-        function xhr(url, callback) {
-            var xhr = new XMLHttpRequest(),
-                twoHundred = /^20\d$/;
-            xhr.onreadystatechange = function() {
-                if (4 == xhr.readyState && 0 !== xhr.status) {
-                    callback(xhr);
-                }
-            };
-            xhr.open('GET', url, true);
-            xhr.send();
+        var q = queue(), po = org.polymaps;
+
+        var cache = po.cache();
+
+        function bounds(features) {
+          var i = -1,
+              n = features.length,
+              geometry,
+              bounds = [{lon: Infinity, lat: Infinity}, {lon: -Infinity, lat: -Infinity}];
+          while (++i < n) {
+            geometry = features[i].geometry;
+            boundGeometry[geometry.type](bounds, geometry.coordinates);
+          }
+          return bounds;
+        }
+
+        function boundPoint(bounds, coordinate) {
+          var x = coordinate[0], y = coordinate[1];
+          if (x < bounds[0].lon) bounds[0].lon = x;
+          if (x > bounds[1].lon) bounds[1].lon = x;
+          if (y < bounds[0].lat) bounds[0].lat = y;
+          if (y > bounds[1].lat) bounds[1].lat = y;
+        }
+
+        function boundPoints(bounds, coordinates) {
+          var i = -1, n = coordinates.length;
+          while (++i < n) boundPoint(bounds, coordinates[i]);
+        }
+
+        function boundMultiPoints(bounds, coordinates) {
+          var i = -1, n = coordinates.length;
+          while (++i < n) boundPoints(bounds, coordinates[i]);
+        }
+
+        var boundGeometry = {
+          Point: boundPoint,
+          MultiPoint: boundPoints,
+          LineString: boundPoints,
+          MultiLineString: boundMultiPoints,
+          Polygon: function(bounds, coordinates) {
+            boundPoints(bounds, coordinates[0]); // exterior ring
+          },
+          MultiPolygon: function(bounds, coordinates) {
+            var i = -1, n = coordinates.length;
+            while (++i < n) boundPoints(bounds, coordinates[i][0]);
+          }
         };
 
-        var tests = ['point.kml', 'polygon.kml', 'twopoints.kml', 'extended_data.kml', 'linestring.kml'];
-        var output = document.getElementById('output');
+        ['test/data/point.kml',
+         'test/data/polygon.kml',
+         'test/data/twopoints.kml',
+         'test/data/extended_data.kml',
+         'test/data/linestring.kml'].forEach(function(k) {
+             q.defer(function(u, c) {
+                 po.queue.xml(u, function(x) {
+                    c(null, x);
+                 });
+             }, k);
+        });
 
-        tests.forEach(function(t) {
-            var od = output.appendChild(document.createElement('div'));
-            var kmlpre = od.appendChild(document.createElement('pre'));
-            var geopre = od.appendChild(document.createElement('pre'));
-            od.className = 'c';
-            kmlpre.className = 'left';
-            geopre.className = 'right';
-            xhr('test/data/' + t, function(res) {
-                kmlpre.innerText = res.responseText;
-                geopre.innerHTML = JSON.stringify(toGeoJSON.kml(res.responseXML), null, 2);
+        q.awaitAll(function(err, ds) {
+            ds.forEach(function(d) {
+                var o = document.getElementById("output").appendChild(document.createElement('h1'));
+                var a = o.appendChild(document.createElement('a'));
+                a.innerHTML = d.baseURI;
+                a.href = d.baseURI;
+                // create a map in the "map" div, set the view to a given place and zoom
+                var map = po.map()
+                    .container(document.getElementById("output").appendChild(po.svg("svg")));
+
+                map.add(po.image()
+                    .url(po.url("http://a.tiles.mapbox.com/v3/tmcw.map-u5tnqr3f/{Z}/{X}/{Y}.png")));
+
+                var g = po.geoJson()
+                .features(toGeoJSON.kml(d).features)
+                .on('load', po.stylist()
+                    .attr('r', 10));
+
+                map.add(g);
+                map.extent(bounds(g.features()));
+                map.zoom(Math.floor(map.zoom() - 1));
+                if (map.zoom() > 16) map.zoom(16);
             });
         });
         </script>
