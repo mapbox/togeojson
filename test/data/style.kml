@@ -1,0 +1,36 @@
+<Document>
+  <Style id="a">
+    <IconStyle>
+      <color>a1ff00ff</color>
+      <scale>1.399999976158142</scale>
+      <Icon>
+        <href>http://myserver.com/icon.jpg</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="b">
+    <IconStyle>
+      <color>a1ff00ff</color>
+      <scale>1.399999976158142</scale>
+      <Icon>
+        <href>http://myserver.com/icon.jpg</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Placemark>
+    <name>Google Earth - New Polygon</name>
+    <description>Here is some descriptive text</description>
+    <styleUrl>#a</styleUrl>
+    <Point>
+      <coordinates>-122.0822035425683,37.42228990140251,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Google Earth - New Path</name>
+    <styleUrl>#b</styleUrl>
+    <Point>
+      <coordinates>-122.0822035425683,37.42228990140251,0</coordinates>
+    </Point>
+  </Placemark>
+</Document>
+</kml>

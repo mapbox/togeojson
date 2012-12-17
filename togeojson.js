@@ -1,16 +1,27 @@
 toGeoJSON = {
-    kml: function(doc) {
-        var gj = { type: 'FeatureCollection', features: [] },
+    kml: function(doc, o) {
+        o = o || {};
+        var gj = { type: 'FeatureCollection', features: [] }, styleIndex = {},
             geotypes = ['Polygon', 'LineString', 'Point'],
             multigeotypes = { Polygon: 'MultiPolygon', LineString: 'MultiLineString', Point: 'MultiPoint' },
             removeSpace = (/\s*/g),
             trimSpace = (/^\s*|\s*$/g), splitSpace = (/\s+/),
-            placemarks = get(doc, 'Placemark');
+            placemarks = get(doc, 'Placemark'), styles = get(doc, 'Style');
 
+        if (o.styles) for (var k = 0; k < styles.length; k++) {
+            styleIndex['#' + styles[k].id] = okhash(styles[k].innerHTML).toString(16);
+        }
         for (var j = 0; j < placemarks.length; j++) {
             gj.features = gj.features.concat(getPlacemark(placemarks[j]));
         }
 
+        function okhash(x) {
+            if (!x || !x.length) return 0;
+            for (var i = 0, h = 0; i < x.length; i++) {
+                h = ((h << 5) - h) + x.charCodeAt(i) | 0;
+            }
+            return h;
+        }
         function get(x, y) { return x.getElementsByTagName(y); }
         function get1(x, y) { var n = get(x, y); return n.length ? n[0] : null; }
         function numarray(x) {
@@ -64,10 +75,15 @@ toGeoJSON = {
         function getPlacemark(root) {
             var geometry = getGeometry(root), i, properties = {},
                 name = nodeVal(get1(root, 'name')),
+                styleUrl = nodeVal(get1(root, 'styleUrl')),
                 description = nodeVal(get1(root, 'description')),
                 extendedData = get1(root, 'ExtendedData');
             if (!geometry) return false;
             if (name) properties.name = name;
+            if (styleUrl && styleIndex[styleUrl]) {
+                properties.styleUrl = styleUrl;
+                properties.styleHash = styleIndex[styleUrl];
+            }
             if (description) properties.description = description;
             if (extendedData) {
                 var datas = get(extendedData, 'Data');

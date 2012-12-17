@@ -1,0 +1,34 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.0822035425683,
+                    37.42228990140251,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Google Earth - New Polygon",
+                "description": "Here is some descriptive text"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.0822035425683,
+                    37.42228990140251,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Google Earth - New Path"
+            }
+        }
+    ]
+}

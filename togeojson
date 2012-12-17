@@ -1,8 +1,16 @@
 #!/usr/bin/env node
 
 var tj = require('togeojson'),
+    argv = require('optimist').argv,
     fs = require('fs'),
     jsdom = require('jsdom').jsdom;
 
 if (process.argv.length < 3) return console.error('togeojson file.kml');
-console.log(JSON.stringify(tj.kml(jsdom(fs.readFileSync(process.argv[2], 'utf8')))));
+console.log(JSON.stringify(
+    tj.kml(
+        jsdom(
+            fs.readFileSync(argv._[0], 'utf8')
+        ), {
+            styles: argv.styles
+        }
+    ), null, 4));
