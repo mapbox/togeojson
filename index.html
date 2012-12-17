@@ -119,8 +119,11 @@
                 a.innerHTML = d.baseURI;
                 a.href = d.baseURI;
                 // create a map in the "map" div, set the view to a given place and zoom
+                var svg = document.getElementById("output").appendChild(po.svg("svg"));
+                svg.style.width = window.innerWidth + 'px';
+                svg.style.height = window.innerHeight + 'px';
                 var map = po.map()
-                    .container(document.getElementById("output").appendChild(po.svg("svg")));
+                    .container(svg);
 
                 map.add(po.image()
                     .url(po.url("http://a.tiles.mapbox.com/v3/tmcw.map-u5tnqr3f/{Z}/{X}/{Y}.png")));
