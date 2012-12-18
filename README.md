@@ -28,7 +28,11 @@ var tj = require('togeojson'),
     // node doesn't have xml parsing or a dom. use jsdom
     jsdom = require('jsdom').jsdom;
 
-var converted = tj.kml(jsdom(fs.readFileSync('foo.kml', 'utf8')));
+var kml = jsdom(fs.readFileSync('foo.kml', 'utf8'));
+
+var converted = tj.kml(kml);
+
+var converted_with_styles = tj.kml(kml, { styles: true });
 ```
 
 ## KML
@@ -41,10 +45,10 @@ Supported:
 * name & description
 * ExtendedData
 * MultiGeometry with coalescing
+* Styles with hashing
 
 Not supported yet:
 
-* Styles (may never be supported ever)
 * Various silly Google extensions (will never be supported)
 * NetworkLinks (lol)
 * GroundOverlays (lol)
@@ -59,6 +63,18 @@ so `togeojson` does its best:
 
 * If the MultiGeometry is filled with the same type, it'll automatically derive a MultiLineString, a MultiPolygon or MultiPoint
 * Otherwise, it'll derive a feature for each discrete geometry
+
+### What is hashing?
+
+KML's style system isn't semantic: a typical document made through official tools
+(read Google) has hundreds of identical styles. So, togeojson does its best to
+make this into something usable, by taking a quick hash of each style and exposing
+`styleUrl` and `styleHash` to users. This lets you work backwards from the awful
+representation and build your own styles or derive data based on the classes
+chosen.
+
+Implied here is that this does not try to represent all data contained in KML
+styles.
 
 ### Why isn't this built on OpenLayers
 
