@@ -14,13 +14,11 @@ toGeoJSON = {
         for (var j = 0; j < placemarks.length; j++) {
             gj.features = gj.features.concat(getPlacemark(placemarks[j]));
         }
-
         function okhash(x) {
             if (!x || !x.length) return 0;
             for (var i = 0, h = 0; i < x.length; i++) {
                 h = ((h << 5) - h) + x.charCodeAt(i) | 0;
-            }
-            return h;
+            } return h;
         }
         function get(x, y) { return x.getElementsByTagName(y); }
         function get1(x, y) { var n = get(x, y); return n.length ? n[0] : null; }
@@ -34,15 +32,6 @@ toGeoJSON = {
             var coords = v.replace(trimSpace, '').split(splitSpace), o = [];
             for (var i = 0; i < coords.length; i++) o.push(coord1(coords[i]));
             return o;
-        }
-        function coalesce(geoms) {
-            if (geoms.length === 1) return geoms[0];
-            for (var i = 0, t = null, coords = []; i < geoms.length; i++) {
-                if (t && t !== geoms[i].type) return false; // more than 1 type
-                coords.push(geoms[i].coordinates);
-                t = geoms[i].type;
-            }
-            return { type: multigeotypes[t], coordinates: coords };
         }
         function getGeometry(root) {
             var geomNode, geomNodes, i, j, k, geoms = [];
@@ -73,12 +62,12 @@ toGeoJSON = {
             return geoms;
         }
         function getPlacemark(root) {
-            var geometry = getGeometry(root), i, properties = {},
+            var geoms = getGeometry(root), i, properties = {},
                 name = nodeVal(get1(root, 'name')),
                 styleUrl = nodeVal(get1(root, 'styleUrl')),
                 description = nodeVal(get1(root, 'description')),
                 extendedData = get1(root, 'ExtendedData');
-            if (!geometry) return false;
+            if (!geoms.length) return false;
             if (name) properties.name = name;
             if (styleUrl && styleIndex[styleUrl]) {
                 properties.styleUrl = styleUrl;
@@ -91,14 +80,9 @@ toGeoJSON = {
                     properties[datas[i].getAttribute('name')] = nodeVal(get1(datas[i], 'value'));
                 }
             }
-            if (coalesce(geometry)) return [{ type: 'Feature', geometry: coalesce(geometry), properties: properties }];
-            else {
-                var features = [];
-                for (i = 0; i < geometry.length; i++) {
-                    features.push({ type: 'Feature', geometry: geometry[i], properties: properties });
-                }
-                return features;
-            }
+            return [{ type: 'Feature', geometry: (geoms.length === 1) ? geoms[0] : {
+                type: 'GeometryCollection',
+                geometries: geoms }, properties: properties }];
         }
         return gj;
     }

@@ -44,7 +44,7 @@ Supported:
 * LineString
 * name & description
 * ExtendedData
-* MultiGeometry with coalescing
+* MultiGeometry -> GeometryCollection
 * Styles with hashing
 
 Not supported yet:
@@ -54,15 +54,6 @@ Not supported yet:
 * GroundOverlays (lol)
 
 ## FAQ
-
-### What is coalescing?
-
-KML's MultiGeometry type is a freeform geometry collection - you can have a single
-feature with lines, points, polygons, and so on. GeoJSON doesn't have an equivalent,
-so `togeojson` does its best:
-
-* If the MultiGeometry is filled with the same type, it'll automatically derive a MultiLineString, a MultiPolygon or MultiPoint
-* Otherwise, it'll derive a feature for each discrete geometry
 
 ### What is hashing?
 
