@@ -35,6 +35,28 @@
                 padding:10px;
                 font-size:20px;
             }
+            #interactive {
+                width:100%;
+                height:500px;
+            }
+            #interactive textarea#kml {
+                background:#838f9b;
+            }
+            #interactive textarea {
+                border:0;
+                font-family:monospace;
+                margin:0;
+                width:20%;
+                background:#dcdfe4;
+                display:inline-block;
+                height:500px;
+            }
+            #interactive #map {
+                width:59%;
+                height:500px;
+                display:inline-block;
+                background:#dcdfe4;
+            }
         </style>
     </head>
     <body>
@@ -42,6 +64,9 @@
             <a href='https://github.com/tmcw/togeojson'>togeojson</a>
             turns KML and other stuff into <a href='http://geojson.org/'>GeoJSON</a>,
             which is useful in d3, polymaps, leaflet, and so on.
+        </div>
+        <div id='interactive'>
+            <textarea id='kml'></textarea><textarea id='geojson'></textarea><div id='map'></div>
         </div>
         <div id='output'></div>
         <div id='attrib'>
@@ -63,7 +88,13 @@
               bounds = [{lon: Infinity, lat: Infinity}, {lon: -Infinity, lat: -Infinity}];
           while (++i < n) {
             geometry = features[i].geometry;
-            boundGeometry[geometry.type](bounds, geometry.coordinates);
+            if (geometry.type === 'GeometryCollection') {
+                for (var j = 0; j < geometry.geometries.length; j++) {
+                    boundGeometry[geometry.geometries[j].type](bounds, geometry.geometries[j].coordinates);
+                }
+            } else {
+                boundGeometry[geometry.type](bounds, geometry.coordinates);
+            }
           }
           return bounds;
         }
@@ -139,6 +170,41 @@
                 if (map.zoom() > 16) map.zoom(16);
             });
         });
+        (function() {
+        var md = document.getElementById("map");
+        var kml = document.getElementById("kml");
+        var gjinput = document.getElementById("geojson");
+        // create a map in the "map" div, set the view to a given place and zoom
+        var svg = md.appendChild(po.svg("svg"));
+        svg.style.width = md.innerWidth + 'px';
+        svg.style.height = md.innerHeight + 'px';
+        var map = po.map()
+            .container(svg);
+
+        map.add(po.image()
+            .url(po.url("http://a.tiles.mapbox.com/v3/tmcw.map-u5tnqr3f/{Z}/{X}/{Y}.png")));
+
+        function update() {
+            var geojson = toGeoJSON.kml((new DOMParser()).parseFromString(this.value, 'text/xml'));
+            var g = po.geoJson()
+                .features(geojson.features)
+                .on('load', po.stylist()
+                    .attr('r', 10));
+            gjinput.value = JSON.stringify(geojson, null, 4);
+
+            map.add(g);
+            map.extent(bounds(g.features()));
+            map.zoom(Math.floor(map.zoom() - 1));
+            if (map.zoom() > 16) map.zoom(16);
+        }
+
+        kml.onchange = update;
+        kml.onkeyup = update;
+        po.queue.xml('test/data/multigeometry.kml', function(d) {
+            kml.value = (new XMLSerializer()).serializeToString(d);
+            update.apply(kml);
+        });
+        })();
         </script>
     </body>
 </html>
