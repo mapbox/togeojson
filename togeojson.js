@@ -3,7 +3,6 @@ toGeoJSON = {
         o = o || {};
         var gj = { type: 'FeatureCollection', features: [] }, styleIndex = {},
             geotypes = ['Polygon', 'LineString', 'Point'],
-            multigeotypes = { Polygon: 'MultiPolygon', LineString: 'MultiLineString', Point: 'MultiPoint' },
             removeSpace = (/\s*/g),
             trimSpace = (/^\s*|\s*$/g), splitSpace = (/\s+/),
             placemarks = get(doc, 'Placemark'), styles = get(doc, 'Style');
