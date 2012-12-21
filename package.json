@@ -1,6 +1,6 @@
 {
   "name": "togeojson",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "turn stuff into geojson",
   "main": "togeojson.js",
   "directories": {
@@ -10,7 +10,7 @@
     "test": "mocha -R spec"
   },
   "devDependencies": {
-    "mocha": "1.2.x"
+    "mocha": "1.7.x"
   },
   "repository": {
     "type": "git",
