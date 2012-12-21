@@ -12,6 +12,9 @@
   "devDependencies": {
     "mocha": "1.7.x"
   },
+  "bin": {
+    "togeojson": "togeojson"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/tmcw/togeojson.git"

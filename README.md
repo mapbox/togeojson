@@ -17,8 +17,17 @@ It is not
 * Concerned about ugly extensions to KML
 * Concerned with having an 'internal format' of its own
 
+## Using it as a console utility
 
-    npm install togeojson
+Install it into your path with `npm install -g togeojson`.
+
+```
+~> togeojson file.kml > file.geojson
+```
+
+## Using it as a nodejs library
+
+Install it into your project with `npm install --save togeojson`.
 
 ```javascript
 // using togeojson in nodejs
@@ -34,6 +43,26 @@ var converted = tj.kml(kml);
 
 var converted_with_styles = tj.kml(kml, { styles: true });
 ```
+
+## Using it as a browser library
+
+Download it into your project like
+
+    wget https://raw.github.com/tmcw/togeojson/gh-pages/togeojson.js
+
+```html
+<script src='jquery.js'></script>
+<script src='togeojson.js'></script>
+<script>
+$.ajax('test/data/linestring.kml').done(function(xml) {
+    console.log(toGeoJSON.kml(xml));
+});
+</script>
+```
+
+toGeoJSON doesn't include AJAX - you can use [jQuery](http://jquery.com/),
+[reqwest](https://github.com/ded/reqwest), [d3](http://d3js.org/), or anything
+else that can request an XML document.
 
 ## KML
 
