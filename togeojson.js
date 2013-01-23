@@ -7,6 +7,8 @@ toGeoJSON = (function() {
         } return h;
     }
     function get(x, y) { return x.getElementsByTagName(y); }
+    function attr(x, y) { return x.getAttribute(y); }
+    function attrf(x, y) { return parseFloat(attr(x, y)); }
     function get1(x, y) { var n = get(x, y); return n.length ? n[0] : null; }
     function numarray(x) {
         for (var j = 0, o = []; j < x.length; j++) o[j] = parseFloat(x[j]);
@@ -19,10 +21,11 @@ toGeoJSON = (function() {
         for (var i = 0; i < coords.length; i++) o.push(coord1(coords[i]));
         return o;
     }
-    toGeoJSON = {
+    function fc() { return { type: 'FeatureCollection', features: [] }; }
+    t = {
         kml: function(doc, o) {
             o = o || {};
-            var gj = { type: 'FeatureCollection', features: [] }, styleIndex = {},
+            var gj = fc(), styleIndex = {},
                 geotypes = ['Polygon', 'LineString', 'Point'],
                 placemarks = get(doc, 'Placemark'), styles = get(doc, 'Style');
 
@@ -84,9 +87,28 @@ toGeoJSON = (function() {
                     geometries: geoms }, properties: properties }];
             }
             return gj;
+        },
+        gpx: function(doc, o) {
+            var i, j, tracks = get(doc, 'trk'), track, pt, gj = fc();
+            for (i = 0; i < tracks.length; i++) {
+                track = tracks[i];
+                var name = nodeVal(get1(track, 'name'));
+                var pts = get(track, 'trkpt'), line = [];
+                for (j = 0; j < pts.length; j++) {
+                    line.push([attrf(pts[j], 'lon'), attrf(pts[j], 'lat')]);
+                }
+                gj.features.push({
+                    type: 'Feature',
+                    properties: {
+                        name: name || ''
+                    },
+                    geometry: { type: 'LineString', coords: line }
+                });
+            }
+            return gj;
         }
     };
-    return toGeoJSON;
+    return t;
 })();
 
 if (typeof module !== 'undefined') module.exports = toGeoJSON;
