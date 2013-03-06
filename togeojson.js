@@ -102,7 +102,7 @@ toGeoJSON = (function() {
                     properties: {
                         name: name || ''
                     },
-                    geometry: { type: 'LineString', coords: line }
+                    geometry: { type: 'LineString', coordinates: line }
                 });
             }
             return gj;
