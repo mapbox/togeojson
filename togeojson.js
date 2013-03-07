@@ -14,7 +14,7 @@ toGeoJSON = (function() {
         for (var j = 0, o = []; j < x.length; j++) o[j] = parseFloat(x[j]);
         return o;
     }
-    function nodeVal(x) { return x && x.firstChild.nodeValue; }
+    function nodeVal(x) { return x && x.firstChild && x.firstChild.nodeValue; }
     function coord1(v) { return numarray(v.replace(removeSpace, '').split(',')); }
     function coord(v) {
         var coords = v.replace(trimSpace, '').split(splitSpace), o = [];
@@ -69,6 +69,7 @@ toGeoJSON = (function() {
                     styleUrl = nodeVal(get1(root, 'styleUrl')),
                     description = nodeVal(get1(root, 'description')),
                     extendedData = get1(root, 'ExtendedData');
+
                 if (!geoms.length) return false;
                 if (name) properties.name = name;
                 if (styleUrl && styleIndex[styleUrl]) {
@@ -77,9 +78,14 @@ toGeoJSON = (function() {
                 }
                 if (description) properties.description = description;
                 if (extendedData) {
-                    var datas = get(extendedData, 'Data');
+                    var datas = get(extendedData, 'Data'),
+                        simpleDatas = get(extendedData, 'SimpleData');
+
                     for (i = 0; i < datas.length; i++) {
                         properties[datas[i].getAttribute('name')] = nodeVal(get1(datas[i], 'value'));
+                    }
+                    for (i = 0; i < simpleDatas.length; i++) {
+                        properties[simpleDatas[i].getAttribute('name')] = nodeVal(simpleDatas[i]);
                     }
                 }
                 return [{ type: 'Feature', geometry: (geoms.length === 1) ? geoms[0] : {
