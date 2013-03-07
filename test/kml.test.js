@@ -48,4 +48,11 @@ describe('KML to GeoJSON conversion', function() {
                 JSON.parse(fs.readFileSync('./test/data/multigeometry_discrete.geojson', 'utf8')));
         });
     });
+    describe('simpledata', function() {
+        it('parses simpledata', function() {
+            assert.deepEqual(tj.kml(
+                jsdom(fs.readFileSync('./test/data/simpledata.kml', 'utf8'))),
+                JSON.parse(fs.readFileSync('./test/data/simpledata.geojson', 'utf8')));
+        });
+    });
 });
