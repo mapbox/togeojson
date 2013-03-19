@@ -20,6 +20,11 @@ toGeoJSON = (function() {
         for (var j = 0, o = []; j < x.length; j++) o[j] = parseFloat(x[j]);
         return o;
     }
+    function clean(x) {
+        var o = {};
+        for (var i in x) if (x[i]) o[i] = x[i];
+        return o;
+    }
     // get the content of a text node, if any
     function nodeVal(x) { return x && x.firstChild && x.firstChild.nodeValue; }
     // get one coordinate from a coordinate array, if any
@@ -133,7 +138,7 @@ toGeoJSON = (function() {
             return gj;
         },
         gpx: function(doc, o) {
-            var i, j,
+            var i, j, k,
                 tracks = get(doc, 'trk'),
                 track,
                 pt,
@@ -141,16 +146,19 @@ toGeoJSON = (function() {
                 gj = fc();
             for (i = 0; i < tracks.length; i++) {
                 track = tracks[i];
-                var name = nodeVal(get1(track, 'name')),
-                    pts = get(track, 'trkpt'), line = [];
+                var meta = ['name', 'desc', 'author', 'copyright', 'link',
+                    'time', 'keywords'],
+                    prop = {};
+                for (k = 0; k < meta.length; k++) {
+                    prop[meta[k]] = nodeVal(get1(track, meta[k]));
+                }
+                var pts = get(track, 'trkpt'), line = [];
                 for (j = 0; j < pts.length; j++) {
                     line.push([attrf(pts[j], 'lon'), attrf(pts[j], 'lat')]);
                 }
                 gj.features.push({
                     type: 'Feature',
-                    properties: {
-                        name: name || ''
-                    },
+                    properties: clean(prop),
                     geometry: {
                         type: 'LineString',
                         coordinates: line
