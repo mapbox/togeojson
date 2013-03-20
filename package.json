@@ -1,7 +1,7 @@
 {
   "name": "togeojson",
-  "version": "0.0.1",
-  "description": "turn stuff into geojson",
+  "version": "0.1.0",
+  "description": "turn KML and GPX into GeoJSON",
   "main": "togeojson.js",
   "directories": {
     "test": "test"
@@ -10,7 +10,7 @@
     "test": "mocha -R spec"
   },
   "devDependencies": {
-    "mocha": "1.7.x"
+    "mocha": "1.8.x"
   },
   "bin": {
     "togeojson": "togeojson"
