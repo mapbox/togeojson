@@ -1,4 +1,6 @@
 toGeoJSON = (function() {
+    'use strict';
+
     var removeSpace = (/\s*/g),
         trimSpace = (/^\s*|\s*$/g),
         splitSpace = (/\s+/);
@@ -47,7 +49,7 @@ toGeoJSON = (function() {
         };
     }
 
-    t = {
+    var t = {
         kml: function(doc, o) {
             o = o || {};
 
