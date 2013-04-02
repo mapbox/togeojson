@@ -5005,6 +5005,508 @@
                     ]
                 ]
             }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-06-24T20:59:47Z",
+                "ele": "86.258400",
+                "sym": "Summit"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.119025, 42.209547]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-10-13T23:50:58Z",
+                "ele": "114.041260",
+                "sym": "Dot"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.112672, 42.218051]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-06-24T20:59:47Z",
+                "ele": "91.744800",
+                "sym": "Dot"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.107853, 42.208834]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-05-26T21:52:38Z",
+                "ele": "143.256000",
+                "sym": "Dot"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.109739, 42.215053]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "ele": null,
+                "sym": "Dot"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.112492, 42.21981]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "ele": null,
+                "sym": "Dot"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.110304, 42.219598]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-05-26T21:52:38Z",
+                "ele": "155.752800",
+                "sym": "Dot"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.107977, 42.216088]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-06-24T20:59:48Z",
+                "ele": "90.525600",
+                "sym": "Dot"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.1048, 42.211321]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-05-26T21:52:38Z",
+                "ele": "82.296000",
+                "sym": "Dot"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.108347, 42.221506]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-10-13T23:50:58Z",
+                "ele": "67.177368",
+                "sym": "Dot"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.105258, 42.222848]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-05-26T21:52:37Z",
+                "ele": "113.385600",
+                "sym": "Danger Area"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.104257, 42.220552]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-06-24T20:59:47Z",
+                "ele": "88.696800",
+                "sym": "Dot"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.102706, 42.217001]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-05-26T21:52:38Z",
+                "ele": "85.039200",
+                "sym": "Dot"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.098855, 42.225669]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "ele": null,
+                "sym": "Dot"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.097067, 42.223768]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-06-24T20:59:47Z",
+                "ele": "40.538400",
+                "sym": "Dot"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.096953, 42.222728]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "ele": null,
+                "sym": "Dot"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.095441, 42.224446]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-05-26T21:52:36Z",
+                "ele": "83.515200",
+                "sym": "Dot"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.089384, 42.210681]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-06-24T20:59:46Z",
+                "ele": "66.141600",
+                "sym": "Dot"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.084249, 42.210898]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-05-26T21:52:36Z",
+                "ele": "80.772000",
+                "sym": "Dot"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.084324, 42.216248]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-05-26T21:52:36Z",
+                "ele": "79.857600",
+                "sym": "Truck Stop"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.086398, 42.219117]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-05-26T21:52:36Z",
+                "ele": "43.281600",
+                "sym": "Truck Stop"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.094603, 42.227122]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-05-26T21:52:37Z",
+                "ele": "51.511200",
+                "sym": "Dot"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.095172, 42.208131]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-05-26T21:52:41Z",
+                "ele": null,
+                "sym": "Dot"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.07779, 42.20442]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-05-26T21:52:44Z",
+                "ele": "118.567200",
+                "sym": "Summit"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.0814, 42.21192]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-05-26T21:52:45Z",
+                "ele": "136.855200",
+                "sym": "Dangerous Area"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.1014, 42.21942]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-05-26T21:52:45Z",
+                "ele": "85.344000",
+                "sym": "Summit"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.08974, 42.21109]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-05-26T21:52:46Z",
+                "ele": "151.180800",
+                "sym": "Summit"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.07502, 42.21442]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-05-26T21:52:46Z",
+                "ele": "100.279200",
+                "sym": "Summit"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.0814, 42.20887]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-10-13T23:50:58Z",
+                "ele": "168.355225",
+                "sym": "Shipwreck"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.11152, 42.215241]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-05-26T21:52:36Z",
+                "ele": "71.628000",
+                "sym": "Zoo"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.086827, 42.220424]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-05-26T21:52:52Z",
+                "ele": "126.492000",
+                "sym": "Shipwreck"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.098765, 42.222087]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-05-26T21:52:53Z",
+                "ele": "146.608800",
+                "sym": "Shipwreck"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.109856, 42.215086]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-05-26T21:53:00Z",
+                "ele": "152.400000",
+                "sym": "Summit"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.09529, 42.21804]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-05-26T21:53:01Z",
+                "ele": "143.256000",
+                "sym": "Summit"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.10002, 42.2172]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-05-26T21:53:03Z",
+                "ele": "127.711200",
+                "sym": "Summit"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.09724, 42.21276]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-05-26T21:53:03Z",
+                "ele": "48.158400",
+                "sym": "Fishing Area"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.09529, 42.20748]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-05-26T21:52:37Z",
+                "ele": "61.264800",
+                "sym": "Building"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.094075, 42.214481]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-05-26T21:53:08Z",
+                "ele": "82.296000",
+                "sym": "Summit"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.12363, 42.21248]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-05-26T21:52:37Z",
+                "ele": "181.660800",
+                "sym": "Scenic Area"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.115376, 42.211229]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-05-26T21:52:36Z",
+                "ele": "54.254400",
+                "sym": "Car"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.096281, 42.21018]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-10-13T23:50:58Z",
+                "ele": "58.765440",
+                "sym": "Dot"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.0889, 42.221934]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-06-24T20:59:46Z",
+                "ele": "68.580000",
+                "sym": "Dot"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.083988, 42.210941]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-06-24T20:59:46Z",
+                "ele": "84.429600",
+                "sym": "Dot"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.119145, 42.215248]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-05-26T21:52:37Z",
+                "ele": "187.452000",
+                "sym": "Tall Tower"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.114709, 42.211362]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-05-26T21:52:37Z",
+                "ele": "141.122400",
+                "sym": "Truck Stop"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.113374, 42.216817]
+            }
+        }, {
+            "type": "Feature",
+            "properties": {
+                "time": "2001-05-26T21:53:33Z",
+                "ele": "134.112000",
+                "sym": "Summit"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-71.0864, 42.21304]
+            }
         }
     ]
 }
