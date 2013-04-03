@@ -19,4 +19,9 @@ describe('GPX to GeoJSON conversion', function() {
             jsdom(fs.readFileSync('./test/data/blue_hills.gpx', 'utf8'))),
             JSON.parse(fs.readFileSync('./test/data/blue_hills.geojson', 'utf8')));
     });
+    it('can parse a gpx file with route points', function() {
+        assert.deepEqual(tj.gpx(
+            jsdom(fs.readFileSync('./test/data/trek.gpx', 'utf8'))),
+            JSON.parse(fs.readFileSync('./test/data/trek.geojson', 'utf8')));
+    });
 });
