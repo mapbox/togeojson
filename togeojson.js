@@ -140,32 +140,57 @@ toGeoJSON = (function() {
             return gj;
         },
         gpx: function(doc, o) {
-            var i, j, k,
+            var i,
                 tracks = get(doc, 'trk'),
-                track,
-                pt,
+                routes = get(doc, 'rte'),
+                waypoints = get(doc, 'wpt'),
                 // a feature collection
                 gj = fc();
             for (i = 0; i < tracks.length; i++) {
-                track = tracks[i];
-                var meta = ['name', 'desc', 'author', 'copyright', 'link',
-                    'time', 'keywords'],
-                    prop = {};
-                for (k = 0; k < meta.length; k++) {
-                    prop[meta[k]] = nodeVal(get1(track, meta[k]));
-                }
-                var pts = get(track, 'trkpt'), line = [];
+                gj.features.push(getLinestring(tracks[i], 'trkpt'));
+            }
+            for (i = 0; i < routes.length; i++) {
+                gj.features.push(getLinestring(routes[i], 'rtept'));
+            }
+            for (i = 0; i < waypoints.length; i++) {
+                gj.features.push(getPoint(waypoints[i]));
+            }
+            function getLinestring(node, pointname) {
+                var j, pts = get(node, pointname), line = [];
                 for (j = 0; j < pts.length; j++) {
                     line.push([attrf(pts[j], 'lon'), attrf(pts[j], 'lat')]);
                 }
-                gj.features.push({
+                return {
                     type: 'Feature',
-                    properties: clean(prop),
+                    properties: getProperties(node),
                     geometry: {
                         type: 'LineString',
                         coordinates: line
                     }
-                });
+                };
+            }
+            function getPoint(node) {
+                var prop = getProperties(node);
+                prop['ele'] = nodeVal(get1(node, 'ele'));
+                prop['sym'] = nodeVal(get1(node, 'sym'));
+                return {
+                    type: 'Feature',
+                    properties: prop,
+                    geometry: {
+                        type: 'Point',
+                        coordinates: [attrf(node, 'lon'), attrf(node, 'lat')]
+                    }
+                };
+            }
+            function getProperties(node) {
+                var meta = ['name', 'desc', 'author', 'copyright', 'link',
+                            'time', 'keywords'],
+                    prop = {},
+                    k;
+                for (k = 0; k < meta.length; k++) {
+                    prop[meta[k]] = nodeVal(get1(node, meta[k]));
+                }
+                return clean(prop);
             }
             return gj;
         }
