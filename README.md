@@ -1,4 +1,4 @@
-# Convert things to GeoJSON.
+# Convert KML and GPX to GeoJSON.
 
 [![Build Status](https://travis-ci.org/tmcw/togeojson.png)](https://travis-ci.org/tmcw/togeojson)
 
@@ -82,6 +82,13 @@ Not supported yet:
 * Various silly Google extensions (will never be supported)
 * NetworkLinks
 * GroundOverlays
+
+## GPX
+
+Supported:
+
+* Line Paths
+* 'name', 'desc', 'author', 'copyright', 'link', 'time', 'keywords' tags
 
 ## FAQ
 
