@@ -1,216 +1,88 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>togeojson</title>
-        <style>
-            body {
-                font:12px/20px 'Helvetica Neue', sans-serif;
-                margin:0;
-                padding:0;
-                background:#d1d6dc;
-                color:#444;
-            }
-            h1 {
-                position:absolute;
-                padding-left:10px;
-            }
-            h1 a {
-                color:#69FFFA;
-            }
-            a {
-                color:#000;
-            }
-            circle {
-                fill:#000;
-                stroke-width:2px;
-                stroke:#69FFFA;
-            }
-            path {
-                fill:#69FFFA;
-                stroke:#000;
-                fill-opacity:1;
-                stroke-width:2;
-            }
-            #intro, #attrib {
-                padding:10px;
-                font-size:20px;
-            }
-            #interactive {
-                width:100%;
-                height:500px;
-            }
-            #interactive textarea#kml {
-                background:#838f9b;
-            }
-            #interactive textarea {
-                border:0;
-                font-family:monospace;
-                margin:0;
-                width:20%;
-                background:#dcdfe4;
-                display:inline-block;
-                height:500px;
-            }
-            #interactive #map {
-                width:59%;
-                height:500px;
-                display:inline-block;
-                background:#dcdfe4;
-            }
-        </style>
+        <link href='css/style.css' type='text/css' rel='stylesheet' />
+        <link href='css/site.css' type='text/css' rel='stylesheet' />
+        <title>toGeoJSON</title>
     </head>
     <body>
-        <div id='intro'>
-            <a href='https://github.com/tmcw/togeojson'>togeojson</a>
-            turns KML &amp; GPX into <a href='http://geojson.org/'>GeoJSON</a>
-            for online maps.
-            <a href='http://macwright.org/csv2geojson/'>csv2geojson does
-                the same for CSV</a>.
-            <div style='float:right;'>
-            <iframe src="http://ghbtns.com/github-btn.html?user=tmcw&repo=togeojson&type=watch&count=true"
-  allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe>
-          </div>
-        </div>
-        <div id='interactive'>
-            <textarea id='kml'></textarea><textarea id='geojson'></textarea><div id='map'></div>
+        <div class='col8 margin2 pad2'>
+            <h1 class='center'>
+                <a href='https://github.com/tmcw/togeojson'>toGeoJSON
+                    turns KML &amp; GPX</a> into <a target='_blank' href='http://geojson.org/'>GeoJSON</a>
+                <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=tmcw&repo=togeojson&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+            </h1>
+            <div class='clearfix col12'>
+                <div class='col6'>
+                    <select id='format'>
+                        <option value='kml'>KML</option>
+                        <option value='gpx'>GPX</option>
+                    </select>
+                    <textarea id='in'>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;kml xmlns=&quot;http://www.opengis.net/kml/2.2&quot;&gt;
+  &lt;Placemark&gt;
+    &lt;name&gt;Simple placemark&lt;/name&gt;
+    &lt;description&gt;Attached to the ground. Intelligently places itself
+       at the height of the underlying terrain.&lt;/description&gt;
+    &lt;Point&gt;
+      &lt;coordinates&gt;-122.0822035425683,37.42228990140251,0&lt;/coordinates&gt;
+    &lt;/Point&gt;
+  &lt;/Placemark&gt;
+&lt;/kml&gt;
+                </textarea>
+                </div>
+                <div class='col6'>
+                    <strong class='h30'>GeoJSON</strong>
+                    <textarea id='output'></textarea></div>
+            </div>
+            <div class='pad2 center'>
+                <a class='button' href='https://raw.github.com/tmcw/togeojson/gh-pages/togeojson.js' download='togeojson.js'>⬇ togeojson.js <small>3.9 KB</small></a>
+                <br /><br />
+                <small>
+                    <a href='http://github.com/tmcw/togeojson'>or clone &amp; contribute on github</a>
+                </small>
+            </div>
+            <div class='clearfix col12'>
+                <div class='col6 pad2'>
+                    <p>
+                    toGeoJSON is a simple way to use KML and GPX formats with
+                    modern web tools like Leaflet and MapBox. It's simple,
+                    written in plain, dependency-free JavaScript and designed
+                    to work across browsers and in node.js.
+                    </p>
+                    <p>
+                    Use this page to test it out, or download it to integrate
+                    into your application.
+                    </p>
+                </div>
+                <div class='col6 pad2'>
+                    <h3>KML</h3>
+                    <p>
+                    <ul class='features'>
+                        <li>LineString, Polygon, MultiPolygon, MultiLineString, Point, MultiGeometry</li>
+                        <li>ExtendedData, SimpleData, name, description</li>
+                    </ul>
+                    </p>
+                    <h3>GPX</h3>
+                    <p>
+                    <ul class='features'>
+                        <li>Tracks, Routes, and Waypoints</li>
+                        <li>Standard metadata</li>
+                    </ul>
+                    </p>
+                </div>
         </div>
         <div id='output'></div>
-        <div id='attrib'>
-            <a href='http://mapbox.com/'>pretty maps from the extremely handsome folks at MapBox</a>,
-            the finest data from freedom-fighting <a href='http://openstreetmap.org/'>OpenStreetMap contributors</a>.
-        </div>
         <script src='togeojson.js'></script>
-        <script src='queue.min.js'></script>
-        <script src='polymaps.min.js'></script>
         <script>
-        var q = queue(), po = org.polymaps;
-
-        var cache = po.cache();
-
-        function bounds(features) {
-          var i = -1,
-              n = features.length,
-              geometry,
-              bounds = [{lon: Infinity, lat: Infinity}, {lon: -Infinity, lat: -Infinity}];
-          while (++i < n) {
-            geometry = features[i].geometry;
-            if (geometry.type === 'GeometryCollection') {
-                for (var j = 0; j < geometry.geometries.length; j++) {
-                    boundGeometry[geometry.geometries[j].type](bounds, geometry.geometries[j].coordinates);
-                }
-            } else {
-                boundGeometry[geometry.type](bounds, geometry.coordinates);
-            }
-          }
-          return bounds;
-        }
-
-        function boundPoint(bounds, coordinate) {
-          var x = coordinate[0], y = coordinate[1];
-          if (x < bounds[0].lon) bounds[0].lon = x;
-          if (x > bounds[1].lon) bounds[1].lon = x;
-          if (y < bounds[0].lat) bounds[0].lat = y;
-          if (y > bounds[1].lat) bounds[1].lat = y;
-        }
-
-        function boundPoints(bounds, coordinates) {
-          var i = -1, n = coordinates.length;
-          while (++i < n) boundPoint(bounds, coordinates[i]);
-        }
-
-        function boundMultiPoints(bounds, coordinates) {
-          var i = -1, n = coordinates.length;
-          while (++i < n) boundPoints(bounds, coordinates[i]);
-        }
-
-        var boundGeometry = {
-          Point: boundPoint,
-          MultiPoint: boundPoints,
-          LineString: boundPoints,
-          MultiLineString: boundMultiPoints,
-          Polygon: function(bounds, coordinates) {
-            boundPoints(bounds, coordinates[0]); // exterior ring
-          },
-          MultiPolygon: function(bounds, coordinates) {
-            var i = -1, n = coordinates.length;
-            while (++i < n) boundPoints(bounds, coordinates[i][0]);
-          }
-        };
-
-        ['test/data/point.kml',
-         'test/data/polygon.kml',
-         'test/data/twopoints.kml',
-         'test/data/extended_data.kml',
-         'test/data/linestring.kml'].forEach(function(k) {
-             q.defer(function(u, c) {
-                 po.queue.xml(u, function(x) {
-                    c(null, x);
-                 });
-             }, k);
-        });
-
-        q.awaitAll(function(err, ds) {
-            ds.forEach(function(d) {
-                var o = document.getElementById("output").appendChild(document.createElement('h1'));
-                var a = o.appendChild(document.createElement('a'));
-                a.innerHTML = d.baseURI;
-                a.href = d.baseURI;
-                // create a map in the "map" div, set the view to a given place and zoom
-                var svg = document.getElementById("output").appendChild(po.svg("svg"));
-                svg.style.width = window.innerWidth + 'px';
-                svg.style.height = window.innerHeight + 'px';
-                var map = po.map()
-                    .container(svg);
-
-                map.add(po.image()
-                    .url(po.url("http://a.tiles.mapbox.com/v3/tmcw.map-u5tnqr3f/{Z}/{X}/{Y}.png")));
-
-                var g = po.geoJson()
-                .features(toGeoJSON.kml(d).features)
-                .on('load', po.stylist()
-                    .attr('r', 10));
-
-                map.add(g);
-                map.extent(bounds(g.features()));
-                map.zoom(Math.floor(map.zoom() - 1));
-                if (map.zoom() > 16) map.zoom(16);
-            });
-        });
-        (function() {
-        var md = document.getElementById("map");
-        var kml = document.getElementById("kml");
-        var gjinput = document.getElementById("geojson");
-        // create a map in the "map" div, set the view to a given place and zoom
-        var svg = md.appendChild(po.svg("svg"));
-        svg.style.width = md.innerWidth + 'px';
-        svg.style.height = md.innerHeight + 'px';
-        var map = po.map()
-            .container(svg);
-
-        map.add(po.image()
-            .url(po.url("http://a.tiles.mapbox.com/v3/tmcw.map-u5tnqr3f/{Z}/{X}/{Y}.png")));
-
-        function update() {
-            var geojson = toGeoJSON.kml((new DOMParser()).parseFromString(this.value, 'text/xml'));
-            var g = po.geoJson()
-                .features(geojson.features)
-                .on('load', po.stylist()
-                    .attr('r', 10));
-            gjinput.value = JSON.stringify(geojson, null, 4);
-
-            map.add(g);
-            map.extent(bounds(g.features()));
-            map.zoom(Math.floor(map.zoom() - 1));
-            if (map.zoom() > 16) map.zoom(16);
-        }
-
-        kml.onchange = update;
-        kml.onkeyup = update;
-        po.queue.xml('test/data/multigeometry.kml', function(d) {
-            kml.value = (new XMLSerializer()).serializeToString(d);
-            update.apply(kml);
-        });
-        })();
+var input = document.getElementById('in');
+var out = document.getElementById('output');
+var format = document.getElementById('format');
+input.onchange = input.onkeyup = format.onchange = update = function() {
+    out.value = JSON.stringify(toGeoJSON[format.value]((new DOMParser()).parseFromString(input.value, 'text/xml')), null, 4);
+};
+update();
         </script>
     </body>
 </html>
