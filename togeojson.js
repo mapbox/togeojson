@@ -64,7 +64,7 @@ toGeoJSON = (function() {
                 placemarks = get(doc, 'Placemark'),
                 styles = get(doc, 'Style');
 
-            if (o.styles) for (var k = 0; k < styles.length; k++) {
+            for (var k = 0; k < styles.length; k++) {
                 styleIndex['#' + styles[k].id] = okhash(styles[k].innerHTML).toString(16);
             }
             for (var j = 0; j < placemarks.length; j++) {

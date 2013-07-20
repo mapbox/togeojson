@@ -27,13 +27,8 @@ describe('KML to GeoJSON conversion', function() {
     describe('styles', function() {
         it('derive style hashes', function() {
             assert.deepEqual(tj.kml(
-                jsdom(fs.readFileSync('./test/data/style.kml', 'utf8')), { styles: true }),
-                JSON.parse(fs.readFileSync('./test/data/style.geojson', 'utf8')));
-        });
-        it('not derive style hashes', function() {
-            assert.deepEqual(tj.kml(
                 jsdom(fs.readFileSync('./test/data/style.kml', 'utf8'))),
-                JSON.parse(fs.readFileSync('./test/data/style_no.geojson', 'utf8')));
+                JSON.parse(fs.readFileSync('./test/data/style.geojson', 'utf8')));
         });
     });
     describe('multigeometry', function() {

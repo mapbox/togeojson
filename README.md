@@ -17,6 +17,29 @@ It is not
 * Concerned about ugly extensions to KML
 * Concerned with having an 'internal format' of its own
 
+## API
+
+### `toGeoJSON.kml(doc)`
+
+Convert a KML document to GeoJSON. The first argument, `doc`, must be a KML
+document as an XML DOM - not as a string. You can get this using jQuery's default
+`.ajax` function or using a bare XMLHttpRequest with the `.response` property
+holding an XML DOM.
+
+The output is a Javascript object of GeoJSON data. You can convert it to a string
+with [JSON.stringify](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
+or use it directly in libraries like [mapbox.js](http://www.mapbox.com/mapbox.js/).
+
+### `toGeoJSON.gpx(doc)`
+
+Convert a GPX document to GeoJSON. The first argument, `doc`, must be a KML
+document as an XML DOM - not as a string. You can get this using jQuery's default
+`.ajax` function or using a bare XMLHttpRequest with the `.response` property
+holding an XML DOM.
+
+The output is a Javascript object of GeoJSON data, same as `.kml` outputs.
+
+
 ## Using it as a console utility
 
 Install it into your path with `npm install -g togeojson`.
@@ -103,3 +126,11 @@ chosen.
 
 Implied here is that this does not try to represent all data contained in KML
 styles.
+
+## Protips:
+
+Have a string of XML and need an XML DOM?
+
+```js
+var dom = (new DOMParser()).parseFromString(xmlStr, 'text/xml');
+```

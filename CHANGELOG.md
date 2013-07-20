@@ -1,3 +1,8 @@
+## 0.2.0
+
+* Improve documentation
+* Make style hashing on by default, remove options object
+
 ## 0.1.1
 
 * Fix global leak.
