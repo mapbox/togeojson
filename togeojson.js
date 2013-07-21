@@ -50,6 +50,13 @@ toGeoJSON = (function() {
         };
     }
 
+    var styleSupport = false;
+    if (typeof XMLSerializer !== 'undefined') {
+        var serializer = new XMLSerializer();
+        styleSupport = true;
+    }
+    function xml2str(str) { return serializer.serializeToString(str); }
+
     var t = {
         kml: function(doc, o) {
             o = o || {};
@@ -64,8 +71,8 @@ toGeoJSON = (function() {
                 placemarks = get(doc, 'Placemark'),
                 styles = get(doc, 'Style');
 
-            for (var k = 0; k < styles.length; k++) {
-                styleIndex['#' + styles[k].id] = okhash(styles[k].innerHTML).toString(16);
+            if (styleSupport) for (var k = 0; k < styles.length; k++) {
+                styleIndex['#' + attr(styles[k], 'id')] = okhash(xml2str(styles[k])).toString(16);
             }
             for (var j = 0; j < placemarks.length; j++) {
                 gj.features = gj.features.concat(getPlacemark(placemarks[j]));

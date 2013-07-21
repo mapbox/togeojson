@@ -13,8 +13,6 @@
             },
             "properties": {
                 "name": "Google Earth - New Polygon",
-                "styleUrl": "#a",
-                "styleHash": "-79af7398",
                 "description": "Here is some descriptive text"
             }
         },
@@ -29,9 +27,7 @@
                 ]
             },
             "properties": {
-                "name": "Google Earth - New Path",
-                "styleUrl": "#b",
-                "styleHash": "-79af7398"
+                "name": "Google Earth - New Path"
             }
         }
     ]

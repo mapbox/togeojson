@@ -1,25 +1,24 @@
 #!/usr/bin/env node
 
-var tj = require('togeojson'),
-    opt = require('optimist')
-        .usage('Usage: $0 [-f format] FILE');
-    argv = opt.argv,
+var tj = require('./'),
+    argv = require('optimist')
+        .usage('Usage: $0 [-f format] FILE')
+        .describe('f', 'file format. if not given, will be detected by filename')
+        .demand(1)
+        .argv;
     fs = require('fs'),
     jsdom = require('jsdom').jsdom;
 
-if (process.argv.length < 3) return opt.showHelp();
 var filename = argv._[0], f = (argv.f);
+
 if (!f) {
     if (filename.match(/\.kml$/i)) f = 'kml';
     if (filename.match(/\.gpx$/i)) f = 'gpx';
 }
-if (!f) return console.error('could not determine format of file ' +
-    filename + '. please specify a format manually with -f');
-console.log(JSON.stringify(
-    tj[f](
-        jsdom(
-            fs.readFileSync(filename, 'utf8')
-        ), {
-            styles: argv.styles
-        }
-    ), null, 4));
+
+if (!f) {
+    return console.error('could not determine format of file ' +
+        filename + '. please specify a format manually with -f');
+}
+
+console.log(JSON.stringify(tj[f](jsdom(fs.readFileSync(filename, 'utf8'))), null, 4));
