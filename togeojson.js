@@ -17,6 +17,8 @@ toGeoJSON = (function() {
     function attrf(x, y) { return parseFloat(attr(x, y)); }
     // one Y child of X, if any, otherwise null
     function get1(x, y) { var n = get(x, y); return n.length ? n[0] : null; }
+    // https://developer.mozilla.org/en-US/docs/Web/API/Node.normalize
+    function norm(el) { if (el.normalize) { el.normalize(); } return el; }
     // cast array x into numbers
     function numarray(x) {
         for (var j = 0, o = []; j < x.length; j++) o[j] = parseFloat(x[j]);
@@ -28,7 +30,7 @@ toGeoJSON = (function() {
         return o;
     }
     // get the content of a text node, if any
-    function nodeVal(x) { return x && x.firstChild && x.firstChild.nodeValue; }
+    function nodeVal(x) { if (x) {norm(x);} return x && x.firstChild && x.firstChild.nodeValue; }
     // get one coordinate from a coordinate array, if any
     function coord1(v) { return numarray(v.replace(removeSpace, '').split(',')); }
     // get all coordinates from a coordinate array as [[],[]]
