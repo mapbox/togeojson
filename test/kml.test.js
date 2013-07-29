@@ -1,6 +1,7 @@
 var tj = require('../'),
     fs = require('fs'),
     assert = require('assert'),
+    hint = require('geojsonhint'),
     jsdom = require('jsdom').jsdom;
 
 describe('KML to GeoJSON conversion', function() {
@@ -9,10 +10,17 @@ describe('KML to GeoJSON conversion', function() {
             jsdom(fs.readFileSync('./test/data/point.kml', 'utf8'))),
             JSON.parse(fs.readFileSync('./test/data/point.geojson', 'utf8')));
     });
+    it('outputs hint-friendly geojson', function() {
+        assert.deepEqual(hint.hint(JSON.stringify(tj.kml(
+            jsdom(fs.readFileSync('./test/data/point.kml', 'utf8'))))), []);
+        assert.deepEqual(hint.hint(JSON.stringify(tj.kml(
+            jsdom(fs.readFileSync('./test/data/polygon.kml', 'utf8'))))), []);
+    });
     it('can parse a polygon kml file', function() {
         assert.deepEqual(tj.kml(
             jsdom(fs.readFileSync('./test/data/polygon.kml', 'utf8'))),
             JSON.parse(fs.readFileSync('./test/data/polygon.geojson', 'utf8')));
+
     });
     it('can parse a extended data kml file', function() {
         assert.deepEqual(tj.kml(

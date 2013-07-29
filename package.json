@@ -10,7 +10,8 @@
     "test": "mocha -R spec"
   },
   "devDependencies": {
-    "mocha": "1.8.x"
+    "mocha": "1.8.x",
+    "geojsonhint": "~0.1.2"
   },
   "bin": {
     "togeojson": "togeojson"
