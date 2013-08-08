@@ -14,7 +14,9 @@
                 "name": "Easy trail",
                 "TrailHeadName": "Pi in the sky",
                 "TrailLength": "3.14159",
-                "ElevationGain": "10"
+                "ElevationGain": "10",
+                "styleHash": "-5f29d69d",
+                "styleUrl": "#trailhead-balloon-template"
             }
         },
         {
@@ -30,7 +32,9 @@
                 "name": "Difficult trail",
                 "TrailHeadName": "Mount Everest",
                 "TrailLength": "347.45",
-                "ElevationGain": "10000"
+                "ElevationGain": "10000",
+                "styleHash": "-5f29d69d",
+                "styleUrl": "#trailhead-balloon-template"
             }
         }
     ]

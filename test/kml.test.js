@@ -1,61 +1,55 @@
-var tj = require('../'),
-    fs = require('fs'),
-    assert = require('assert'),
-    hint = require('geojsonhint'),
-    jsdom = require('jsdom').jsdom;
+var tj = toGeoJSON;
+
+function file(url, cb) {
+    var w = new window.XMLHttpRequest();
+    w.onload = function() {
+        cb(this.responseText);
+    };
+    w.open('GET', url, true);
+    w.send();
+}
+
+function filexml(url, cb) {
+    file(url, function(r) {
+        cb((new DOMParser()).parseFromString(r, 'text/xml'));
+    });
+}
+
+function filejson(url, cb) {
+    file(url, function(r) {
+        cb(JSON.parse(r));
+    });
+}
+
+function against(name) {
+    return function(done) {
+        filexml('data/' + name + '.kml', function(kml) {
+            filejson('data/' + name + '.geojson', function(json) {
+                expect(tj.kml(kml)).to.eql(json);
+                done();
+            });
+        });
+    };
+}
 
 describe('KML to GeoJSON conversion', function() {
-    it('can parse a point kml file', function() {
-        assert.deepEqual(tj.kml(
-            jsdom(fs.readFileSync('./test/data/point.kml', 'utf8'))),
-            JSON.parse(fs.readFileSync('./test/data/point.geojson', 'utf8')));
-    });
-    it('outputs hint-friendly geojson', function() {
-        assert.deepEqual(hint.hint(JSON.stringify(tj.kml(
-            jsdom(fs.readFileSync('./test/data/point.kml', 'utf8'))))), []);
-        assert.deepEqual(hint.hint(JSON.stringify(tj.kml(
-            jsdom(fs.readFileSync('./test/data/polygon.kml', 'utf8'))))), []);
-    });
-    it('can parse a polygon kml file', function() {
-        assert.deepEqual(tj.kml(
-            jsdom(fs.readFileSync('./test/data/polygon.kml', 'utf8'))),
-            JSON.parse(fs.readFileSync('./test/data/polygon.geojson', 'utf8')));
-
-    });
-    it('can parse a extended data kml file', function() {
-        assert.deepEqual(tj.kml(
-            jsdom(fs.readFileSync('./test/data/extended_data.kml', 'utf8'))),
-            JSON.parse(fs.readFileSync('./test/data/extended_data.geojson', 'utf8')));
-    });
-    it('can parse a linestring kml file', function() {
-        assert.deepEqual(tj.kml(
-            jsdom(fs.readFileSync('./test/data/linestring.kml', 'utf8'))),
-            JSON.parse(fs.readFileSync('./test/data/linestring.geojson', 'utf8')));
+    describe('basic features', function() {
+        it('can parse a point kml file', against('point'));
+        it('can parse a polygon kml file', against('polygon'));
+        it('can parse a extended data kml file', against('extended_data'));
+        it('can parse a linestring kml file', against('linestring'));
     });
     describe('styles', function() {
-        it('derive style hashes', function() {
-            assert.deepEqual(tj.kml(
-                jsdom(fs.readFileSync('./test/data/style.kml', 'utf8'))),
-                JSON.parse(fs.readFileSync('./test/data/style.geojson', 'utf8')));
-        });
+        it('derive style hashes', against('style'));
+    });
+    describe('multitrack', function() {
+        it('supports multitracks', against('multitrack'));
     });
     describe('multigeometry', function() {
-        it('can parse a multigeometry kml file with the same type', function() {
-            assert.deepEqual(tj.kml(
-                jsdom(fs.readFileSync('./test/data/multigeometry.kml', 'utf8'))),
-                JSON.parse(fs.readFileSync('./test/data/multigeometry.geojson', 'utf8')));
-        });
-        it('can parse a multigeometry kml file with different types', function() {
-            assert.deepEqual(tj.kml(
-                jsdom(fs.readFileSync('./test/data/multigeometry_discrete.kml', 'utf8'))),
-                JSON.parse(fs.readFileSync('./test/data/multigeometry_discrete.geojson', 'utf8')));
-        });
+        it('can parse a multigeometry kml file with the same type', against('multigeometry'));
+        it('can parse a multigeometry kml file with different types', against('multigeometry_discrete'));
     });
     describe('simpledata', function() {
-        it('parses simpledata', function() {
-            assert.deepEqual(tj.kml(
-                jsdom(fs.readFileSync('./test/data/simpledata.kml', 'utf8'))),
-                JSON.parse(fs.readFileSync('./test/data/simpledata.geojson', 'utf8')));
-        });
+        it('parses simpledata', against('simpledata'));
     });
 });

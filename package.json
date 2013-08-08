@@ -7,11 +7,13 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha -R spec"
+    "test": "mocha-phantomjs test/index.html"
   },
   "devDependencies": {
-    "mocha": "1.8.x",
-    "geojsonhint": "~0.1.2"
+    "mocha": "1.12.x",
+    "mocha-phantomjs": "~3.1.0",
+    "geojsonhint": "~0.1.2",
+    "expect.js": "~0.2.0"
   },
   "bin": {
     "togeojson": "togeojson"

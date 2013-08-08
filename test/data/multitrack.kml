@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2"
+xmlns:gx="http://www.google.com/kml/ext/2.2"
+xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+<open>1</open>
+<visibility>1</visibility>
+<name><![CDATA[8/8/2013 17:20]]></name>
+<atom:author><atom:name><![CDATA[Created by Google My Tracks on Android.]]></atom:name></atom:author>
+<Style id="track">
+<LineStyle><color>7f0000ff</color><width>4</width></LineStyle>
+<IconStyle>
+<scale>1.3</scale>
+<Icon><href>http://earth.google.com/images/kml-icons/track-directional/track-0.png</href></Icon>
+</IconStyle>
+</Style>
+<Style id="start"><IconStyle>
+<scale>1.3</scale>
+<Icon><href>http://maps.google.com/mapfiles/kml/paddle/grn-circle.png</href></Icon>
+<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+</IconStyle></Style>
+<Style id="end"><IconStyle>
+<scale>1.3</scale>
+<Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon>
+<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+</IconStyle></Style>
+<Style id="statistics"><IconStyle>
+<scale>1.3</scale>
+<Icon><href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href></Icon>
+<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+</IconStyle></Style>
+<Style id="waypoint"><IconStyle>
+<scale>1.3</scale>
+<Icon><href>http://maps.google.com/mapfiles/kml/pushpin/blue-pushpin.png</href></Icon>
+<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+</IconStyle></Style>
+<Schema id="schema">
+<gx:SimpleArrayField name="power" type="int">
+<displayName><![CDATA[Power (W)]]></displayName>
+</gx:SimpleArrayField>
+<gx:SimpleArrayField name="cadence" type="int">
+<displayName><![CDATA[Cadence (rpm)]]></displayName>
+</gx:SimpleArrayField>
+<gx:SimpleArrayField name="heart_rate" type="int">
+<displayName><![CDATA[Heart rate (bpm)]]></displayName>
+</gx:SimpleArrayField>
+</Schema>
+<Placemark>
+<name><![CDATA[8/8/2013 17:20 (Start)]]></name>
+<description><![CDATA[]]></description>
+<TimeStamp><when>2013-08-08T15:20:40.000Z</when></TimeStamp>
+<styleUrl>#start</styleUrl>
+<Point>
+<coordinates>3.682555,51.050362,50.599998474121094</coordinates>
+</Point>
+</Placemark>
+<Placemark id="tour">
+<name><![CDATA[8/8/2013 17:20]]></name>
+<description><![CDATA[]]></description>
+<styleUrl>#track</styleUrl>
+<ExtendedData>
+<Data name="type"><value><![CDATA[walking]]></value></Data>
+</ExtendedData>
+<gx:MultiTrack>
+<altitudeMode>absolute</altitudeMode>
+<gx:interpolate>1</gx:interpolate>
+<gx:Track>
+<gx:coord>3.68217 51.050583 54.599998474121094</gx:coord>
+<when>2013-08-08T15:24:47.000Z</when>
+<gx:coord>3.68211 51.050596 54.79999923706055</gx:coord>
+<when>2013-08-08T15:24:48.000Z</when>
+<gx:coord>3.68209 51.050598 55.400001525878906</gx:coord>
+<when>2013-08-08T15:24:50.000Z</when>
+<gx:coord>3.682043 51.050609 55.70000076293945</gx:coord>
+<when>2013-08-08T15:24:51.000Z</when>
+<gx:coord>3.682012 51.050618 54.5</gx:coord>
+<when>2013-08-08T15:24:52.000Z</when>
+<gx:coord>3.68198 51.050629 54.29999923706055</gx:coord>
+<when>2013-08-08T15:24:53.000Z</when>
+<gx:coord>3.681945 51.050638 54.79999923706055</gx:coord>
+<when>2013-08-08T15:24:54.000Z</when>
+<gx:coord>3.681907 51.050647 54.900001525878906</gx:coord>
+<when>2013-08-08T15:24:55.000Z</when>
+<gx:coord>3.68187 51.050656 54.599998474121094</gx:coord>
+<when>2013-08-08T15:24:56.000Z</when>
+<gx:coord>3.681834 51.050664 54.0</gx:coord>
+<when>2013-08-08T15:24:57.000Z</when>
+<gx:coord>3.681797 51.050669 55.29999923706055</gx:coord>
+<when>2013-08-08T15:24:58.000Z</when>
+<gx:coord>3.681759 51.050673 55.400001525878906</gx:coord>
+<when>2013-08-08T15:24:59.000Z</when>
+<gx:coord>3.681721 51.050677 55.20000076293945</gx:coord>
+<when>2013-08-08T15:25:00.000Z</when>
+<gx:coord>3.681682 51.050682 54.70000076293945</gx:coord>
+<when>2013-08-08T15:25:01.000Z</when>
+<gx:coord>3.681637 51.050685 55.20000076293945</gx:coord>
+<when>2013-08-08T15:25:02.000Z</when>
+<gx:coord>3.681589 51.050687 55.0</gx:coord>
+<when>2013-08-08T15:25:03.000Z</when>
+<ExtendedData>
+<SchemaData schemaUrl="#schema">
+</SchemaData>
+</ExtendedData>
+</gx:Track>
+</gx:MultiTrack>
+</Placemark>
+<Placemark>
+<name><![CDATA[8/8/2013 17:20 (End)]]></name>
+<description><![CDATA[]]></description>
+<TimeStamp><when>2013-08-08T16:25:57.000Z</when></TimeStamp>
+<styleUrl>#end</styleUrl>
+<Point>
+<coordinates>3.682725,51.050615,61.5</coordinates>
+</Point>
+</Placemark>
+</Document>
+</kml>
