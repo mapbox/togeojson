@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha-phantomjs test/index.html"
+    "test": "mocha -R spec"
   },
   "devDependencies": {
     "mocha": "1.12.x",
@@ -25,6 +25,7 @@
   "license": "BSD",
   "dependencies": {
     "jsdom": "~0.3.1",
-    "optimist": "~0.3.5"
+    "optimist": "~0.3.5",
+    "xmldom": "~0.1.16"
   }
 }

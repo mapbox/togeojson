@@ -52,10 +52,11 @@ toGeoJSON = (function() {
         };
     }
 
-    var styleSupport = false;
+    var serializer;
     if (typeof XMLSerializer !== 'undefined') {
-        var serializer = new XMLSerializer();
-        styleSupport = true;
+        serializer = new XMLSerializer();
+    } else if (typeof require !== 'undefined') {
+        serializer = new (require('xmldom').XMLSerializer)();
     }
     function xml2str(str) { return serializer.serializeToString(str); }
 
@@ -73,7 +74,7 @@ toGeoJSON = (function() {
                 placemarks = get(doc, 'Placemark'),
                 styles = get(doc, 'Style');
 
-            if (styleSupport) for (var k = 0; k < styles.length; k++) {
+            for (var k = 0; k < styles.length; k++) {
                 styleIndex['#' + attr(styles[k], 'id')] = okhash(xml2str(styles[k])).toString(16);
             }
             for (var j = 0; j < placemarks.length; j++) {

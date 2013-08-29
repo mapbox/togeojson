@@ -1,24 +1,36 @@
-var tj = toGeoJSON;
-
-function file(url, cb) {
-    var w = new window.XMLHttpRequest();
-    w.onload = function() {
-        cb(this.responseText);
+if (typeof require !== 'undefined') {
+    expect = require('expect.js');
+    tj = require('../');
+    var fs = require('fs'),
+        xmldom = new (require('xmldom').DOMParser)();
+    filejson = function(url, cb) {
+        cb(JSON.parse(fs.readFileSync('./test/' + url)));
     };
-    w.open('GET', url, true);
-    w.send();
-}
+    filexml = function(url, cb) {
+        cb(xmldom.parseFromString(fs.readFileSync('./test/' + url, 'utf8')));
+    };
+} else {
+    tj = toGeoJSON;
+    file = function(url, cb) {
+        var w = new window.XMLHttpRequest();
+        w.onload = function() {
+            cb(this.responseText);
+        };
+        w.open('GET', url, true);
+        w.send();
+    };
 
-function filexml(url, cb) {
-    file(url, function(r) {
-        cb((new DOMParser()).parseFromString(r, 'text/xml'));
-    });
-}
+    filexml = function(url, cb) {
+        file(url, function(r) {
+            cb((new DOMParser()).parseFromString(r, 'text/xml'));
+        });
+    };
 
-function filejson(url, cb) {
-    file(url, function(r) {
-        cb(JSON.parse(r));
-    });
+    filejson = function(url, cb) {
+        file(url, function(r) {
+            cb(JSON.parse(r));
+        });
+    };
 }
 
 function against(name) {

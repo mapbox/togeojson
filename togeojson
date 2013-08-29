@@ -7,7 +7,7 @@ var tj = require('./'),
         .demand(1)
         .argv;
     fs = require('fs'),
-    jsdom = require('jsdom').jsdom;
+    xmldom = new (require('xmldom').DOMParser)();
 
 var filename = argv._[0], f = (argv.f);
 
@@ -21,4 +21,4 @@ if (!f) {
         filename + '. please specify a format manually with -f');
 }
 
-console.log(JSON.stringify(tj[f](jsdom(fs.readFileSync(filename, 'utf8'))), null, 4));
+console.log(JSON.stringify(tj[f](xmldom.parseFromString(fs.readFileSync(filename, 'utf8'))), null, 4));
