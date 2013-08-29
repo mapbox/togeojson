@@ -99,6 +99,7 @@ Supported:
 * SimpleData
 * MultiGeometry -> GeometryCollection
 * Styles with hashing
+* Tracks & MultiTracks with `gx:coords`, including altitude
 
 Not supported yet:
 
