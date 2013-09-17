@@ -1,8 +1,9 @@
 # Convert KML and GPX to GeoJSON.
 
-[![Build Status](https://travis-ci.org/tmcw/togeojson.png)](https://travis-ci.org/tmcw/togeojson)
+[![Build Status](https://travis-ci.org/mapbox/togeojson.png)](https://travis-ci.org/mapbox/togeojson)
 
-This converts [KML](https://developers.google.com/kml/documentation/) into
+This converts [KML](https://developers.google.com/kml/documentation/) & [GPX](http://www.gpx.com/)
+to
 [GeoJSON](http://www.geojson.org/), in a browser or with [nodejs](http://nodejs.org/).
 
 It is
