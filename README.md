@@ -33,7 +33,7 @@ or use it directly in libraries like [mapbox.js](http://www.mapbox.com/mapbox.js
 
 ### `toGeoJSON.gpx(doc)`
 
-Convert a GPX document to GeoJSON. The first argument, `doc`, must be a KML
+Convert a GPX document to GeoJSON. The first argument, `doc`, must be a GPX
 document as an XML DOM - not as a string. You can get this using jQuery's default
 `.ajax` function or using a bare XMLHttpRequest with the `.response` property
 holding an XML DOM.
