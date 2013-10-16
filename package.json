@@ -26,6 +26,7 @@
   "dependencies": {
     "jsdom": "~0.3.1",
     "optimist": "~0.3.5",
-    "xmldom": "~0.1.16"
+    "xmldom": "~0.1.16",
+    "concat-stream": "~1.0.1"
   }
 }

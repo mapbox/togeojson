@@ -1,3 +1,11 @@
+## 0.3.0
+
+* Support for pipes and streams
+
+```sh
+echo "LineString(0 0, 10 10)" | wellknown | tokml | togeojson > map.geojson
+```
+
 ## 0.2.0
 
 * Improve documentation
