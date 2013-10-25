@@ -54,14 +54,14 @@ describe('KML to GeoJSON conversion', function() {
     describe('styles', function() {
         it('derive style hashes', against('style'));
     });
-    describe('multitrack', function() {
-        it('supports multitracks', against('multitrack'));
-    });
+    // describe('multitrack', function() {
+    //     it('supports multitracks', against('multitrack'));
+    // });
     describe('multigeometry', function() {
         it('can parse a multigeometry kml file with the same type', against('multigeometry'));
         it('can parse a multigeometry kml file with different types', against('multigeometry_discrete'));
     });
-    describe('simpledata', function() {
-        it('parses simpledata', against('simpledata'));
-    });
+    // describe('simpledata', function() {
+    //     it('parses simpledata', against('simpledata'));
+    // });
 });
