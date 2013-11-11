@@ -1,3 +1,7 @@
+## 0.3.1
+
+* Stricter check for browser versus browserify when requiring `xmldom`
+
 ## 0.3.0
 
 * Support for pipes and streams
