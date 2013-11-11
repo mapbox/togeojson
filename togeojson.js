@@ -56,7 +56,7 @@ toGeoJSON = (function() {
     if (typeof XMLSerializer !== 'undefined') {
         serializer = new XMLSerializer();
     // only require xmldom in a node environment
-    } else if (typeof exports === 'object' && process && !process.browser) {
+    } else if (typeof exports === 'object' && typeof process === 'object' && !process.browser) {
         serializer = new (require('xmldom').XMLSerializer)();
     }
     function xml2str(str) { return serializer.serializeToString(str); }
