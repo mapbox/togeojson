@@ -1,3 +1,7 @@
+## 0.4.2
+
+* No longer bundles xmldom for browsers
+
 ## 0.3.1
 
 * Stricter check for browser versus browserify when requiring `xmldom`
