@@ -22,9 +22,11 @@
     "type": "git",
     "url": "git://github.com/tmcw/togeojson.git"
   },
+  "browser": {
+    "xmldom": false
+  },
   "license": "BSD",
   "dependencies": {
-    "jsdom": "~0.3.1",
     "optimist": "~0.3.5",
     "xmldom": "~0.1.16",
     "concat-stream": "~1.0.1"
