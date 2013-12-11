@@ -1,0 +1,12 @@
+{ "type": "FeatureCollection",
+  "features":
+   [ { "type": "Feature",
+       "geometry":
+        { "type": "Polygon",
+          "coordinates":
+           [ [ [ 115.87726, 24.93583, 0 ],
+               [ 115.87075, 24.93053, 0 ],
+               [ 115.87439, 24.90768, 0 ] ] ] },
+       "properties":
+        { "name": "1",
+          "timespan": { "begin": "0725", "end": "0733" } } } ] }

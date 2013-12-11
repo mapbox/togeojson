@@ -55,4 +55,11 @@ describe('KML to GeoJSON conversion', function() {
                 JSON.parse(fs.readFileSync('./test/data/simpledata.geojson', 'utf8')));
         });
     });
+    describe('timespan', function() {
+        it('parses timespans', function() {
+            assert.deepEqual(tj.kml(
+                jsdom(fs.readFileSync('./test/data/timespan.kml', 'utf8'))),
+                JSON.parse(fs.readFileSync('./test/data/timespan.geojson', 'utf8')));
+        });
+    });
 });
