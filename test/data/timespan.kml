@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns="http://earth.google.com/kml/2.1">
+<Document>
+  <Folder>
+    <name>Features</name>
+    <open>0</open>
+       <Placemark>
+         <name>1</name>
+         <TimeSpan><begin>0725</begin><end>0733</end></TimeSpan><styleUrl>#FEATURES</styleUrl>
+         <Polygon>
+           <outerBoundaryIs>
+           <LinearRing>
+             <coordinates>
+               115.87726,24.93583,0
+               115.87075,24.93053,0
+               115.87439,24.90768,0
+             </coordinates>
+           </LinearRing>
+           </outerBoundaryIs>
+         </Polygon>
+       </Placemark>
+   </Folder>
+</Document>

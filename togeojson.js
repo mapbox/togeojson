@@ -132,6 +132,7 @@ toGeoJSON = (function() {
                     name = nodeVal(get1(root, 'name')),
                     styleUrl = nodeVal(get1(root, 'styleUrl')),
                     description = nodeVal(get1(root, 'description')),
+                    timeSpan = get1(root, 'TimeSpan'),
                     extendedData = get1(root, 'ExtendedData');
 
                 if (!geoms.length) return [];
@@ -141,6 +142,11 @@ toGeoJSON = (function() {
                     properties.styleHash = styleIndex[styleUrl];
                 }
                 if (description) properties.description = description;
+                if (timeSpan) {
+                    var begin = nodeVal(get1(timeSpan, 'begin'));
+                    var end = nodeVal(get1(timeSpan, 'end'));
+                    properties.timespan = { begin: begin, end: end };
+                }
                 if (extendedData) {
                     var datas = get(extendedData, 'Data'),
                         simpleDatas = get(extendedData, 'SimpleData');
