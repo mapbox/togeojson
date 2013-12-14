@@ -76,6 +76,7 @@ Supported:
 * SimpleData
 * MultiGeometry -> GeometryCollection
 * Styles with hashing
+* [TimeSpan](https://developers.google.com/kml/documentation/kmlreference#timespan)
 
 Not supported yet:
 
