@@ -101,6 +101,7 @@ Supported:
 * MultiGeometry -> GeometryCollection
 * Styles with hashing
 * Tracks & MultiTracks with `gx:coords`, including altitude
+* [TimeSpan](https://developers.google.com/kml/documentation/kmlreference#timespan)
 
 Not supported yet:
 
