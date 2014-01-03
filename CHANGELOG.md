@@ -1,3 +1,8 @@
+## 0.5.0
+
+* Elevation values along linestrings and in points for GPX are now parsed
+  correctly into `Z` coordinate values in GeoJSON.
+
 ## 0.4.2
 
 * No longer bundles xmldom for browsers
