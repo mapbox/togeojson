@@ -1,6 +1,6 @@
 {
   "name": "togeojson",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "description": "turn KML and GPX into GeoJSON",
   "main": "togeojson.js",
   "directories": {
