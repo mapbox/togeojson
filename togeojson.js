@@ -42,7 +42,12 @@ toGeoJSON = (function() {
         }
         return o;
     }
-    function coordPair(x) { return [attrf(x, 'lon'), attrf(x, 'lat')]; }
+    function coordPair(x) {
+        var ll = [attrf(x, 'lon'), attrf(x, 'lat')],
+            ele = get1(x, 'ele');
+        if (ele) ll.push(parseFloat(nodeVal(ele)));
+        return ll;
+    }
 
     // create a new feature collection parent object
     function fc() {
@@ -201,7 +206,6 @@ toGeoJSON = (function() {
             }
             function getPoint(node) {
                 var prop = getProperties(node);
-                prop.ele = nodeVal(get1(node, 'ele'));
                 prop.sym = nodeVal(get1(node, 'sym'));
                 return {
                     type: 'Feature',
