@@ -53,6 +53,7 @@ describe('KML to GeoJSON conversion', function() {
     });
     describe('styles', function() {
         it('derive style hashes', against('style'));
+        it('import inline style', against('inline_style'));
     });
     // describe('multitrack', function() {
     //     it('supports multitracks', against('multitrack'));

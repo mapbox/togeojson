@@ -138,7 +138,9 @@ toGeoJSON = (function() {
                     styleUrl = nodeVal(get1(root, 'styleUrl')),
                     description = nodeVal(get1(root, 'description')),
                     timeSpan = get1(root, 'TimeSpan'),
-                    extendedData = get1(root, 'ExtendedData');
+                    extendedData = get1(root, 'ExtendedData'),
+                    lineStyle = get1(root, 'LineStyle'),
+                    polyStyle = get1(root, 'PolyStyle');
 
                 if (!geoms.length) return [];
                 if (name) properties.name = name;
@@ -151,6 +153,26 @@ toGeoJSON = (function() {
                     var begin = nodeVal(get1(timeSpan, 'begin'));
                     var end = nodeVal(get1(timeSpan, 'end'));
                     properties.timespan = { begin: begin, end: end };
+                }
+                if (lineStyle) {
+                    var color = nodeVal(get1(lineStyle, 'color'));
+                    var width = nodeVal(get1(lineStyle, 'width'));
+                    if (color || width) {
+                        properties.linestyle = {};
+                        if (color) properties.linestyle.color = color;
+                        if (width) properties.linestyle.width = parseFloat(width);
+                    }
+                }
+                if (polyStyle) {
+                    var pcolor = nodeVal(get1(polyStyle, 'color'));
+                    var fill = nodeVal(get1(polyStyle, 'fill'));
+                    var outline = nodeVal(get1(polyStyle, 'outline'));
+                    if (pcolor || fill || outline) {
+                        properties.polystyle = {};
+                        if (pcolor) properties.polystyle.color = pcolor;
+                        if (fill) properties.polystyle.fill = fill === "1";
+                        if (outline) properties.polystyle.outline = outline === "1";
+                    }
                 }
                 if (extendedData) {
                     var datas = get(extendedData, 'Data'),
