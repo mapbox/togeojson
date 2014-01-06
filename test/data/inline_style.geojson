@@ -54,15 +54,11 @@
       },
       "properties": {
         "name": "With all inline styles",
-        "linestyle": {
-          "color": "#ff0000ff",
-          "width": 3
-        },
-        "polystyle": {
-          "color": "#ff0011ff",
-          "fill": true,
-          "outline": false
-        }
+        "stroke": "0000ff",
+        "stroke-opacity": 0,
+        "stroke-width": 3,
+        "fill": "0011ff",
+        "fill-opacity": 1
       }
     },
     {
@@ -118,12 +114,9 @@
       },
       "properties": {
         "name": "With some inline styles",
-        "linestyle": {
-          "color": "#ff0000ff"
-        },
-        "polystyle": {
-          "fill": true
-        }
+        "stroke": "0000ff",
+        "stroke-opacity": 1,
+        "fill-opacity": 1
       }
     },
     {
