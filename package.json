@@ -25,6 +25,9 @@
   "browser": {
     "xmldom": false
   },
+  "browserify": {
+    "transform": [ "brfs" ]
+  },
   "testling": {
     "files": "test/*.js",
     "browsers": [
