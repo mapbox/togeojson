@@ -1,3 +1,8 @@
+## 0.6.0
+
+* Support for [simplestyle spec](https://github.com/mapbox/simplestyle-spec) 1.1.0
+* Tests in [tape](https://github.com/substack/tape) rather than mocha/expect.js
+
 ## 0.5.0
 
 * Elevation values along linestrings and in points for GPX are now parsed
