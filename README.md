@@ -1,3 +1,5 @@
+![](https://ci.testling.com/mapbox/togeojson.png)
+
 # Convert KML and GPX to GeoJSON.
 
 This converts [KML](https://developers.google.com/kml/documentation/) & [GPX](http://www.gpx.com/)
