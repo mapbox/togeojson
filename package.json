@@ -7,13 +7,13 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha -R spec"
+    "test": "tape test/*.js",
+    "browser": "browserify -t brfs test/index.js | testling"
   },
   "devDependencies": {
-    "mocha": "1.12.x",
-    "mocha-phantomjs": "~3.1.0",
     "geojsonhint": "~0.1.2",
-    "expect.js": "~0.2.0"
+    "tape": "~2.4.2",
+    "brfs": "~0.2.1"
   },
   "bin": {
     "togeojson": "togeojson"
@@ -24,6 +24,19 @@
   },
   "browser": {
     "xmldom": false
+  },
+  "testling": {
+    "files": "test/*.js",
+    "browsers": [
+      "ie/6..latest",
+      "chrome/22..latest",
+      "firefox/16..latest",
+      "safari/latest",
+      "opera/11.0..latest",
+      "iphone/6",
+      "ipad/6",
+      "android-browser/latest"
+    ]
   },
   "license": "BSD",
   "dependencies": {

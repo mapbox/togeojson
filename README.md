@@ -1,7 +1,5 @@
 # Convert KML and GPX to GeoJSON.
 
-[![Build Status](https://travis-ci.org/mapbox/togeojson.png)](https://travis-ci.org/mapbox/togeojson)
-
 This converts [KML](https://developers.google.com/kml/documentation/) & [GPX](http://www.gpx.com/)
 to
 [GeoJSON](http://www.geojson.org/), in a browser or with [nodejs](http://nodejs.org/).
@@ -17,6 +15,8 @@ It is not
 
 * Concerned about ugly extensions to KML
 * Concerned with having an 'internal format' of its own
+
+Want to use this with [Leaflet](http://leafletjs.com/)? Try [leaflet-omnivore](https://github.com/mapbox/leaflet-omnivore)!
 
 ## API
 
@@ -84,9 +84,8 @@ $.ajax('test/data/linestring.kml').done(function(xml) {
 </script>
 ```
 
-toGeoJSON doesn't include AJAX - you can use [jQuery](http://jquery.com/),
-[reqwest](https://github.com/ded/reqwest), [d3](http://d3js.org/), or anything
-else that can request an XML document.
+toGeoJSON doesn't include AJAX - you can use [jQuery](http://jquery.com/) for
+just AJAX.
 
 ## KML
 
