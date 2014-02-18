@@ -86,6 +86,17 @@ toGeoJSON = (function() {
             for (var j = 0; j < placemarks.length; j++) {
                 gj.features = gj.features.concat(getPlacemark(placemarks[j]));
             }
+            function kmlColor(v) {
+                var color, opacity;
+                v = v || "";
+                if (v.substr(0, 1) === "#") v = v.substr(1);
+                if (v.length === 6 || v.length === 3) color = v;
+                if (v.length === 8) {
+                    opacity = parseInt(v.substr(0, 2), 16) / 255;
+                    color = v.substr(2);
+                }
+                return [color, isNaN(opacity) ? undefined : opacity];
+            }
             function gxCoord(v) { return numarray(v.split(' ')); }
             function gxCoords(root) {
                 var elems = get(root, 'coord', 'gx'), coords = [];
@@ -138,7 +149,9 @@ toGeoJSON = (function() {
                     styleUrl = nodeVal(get1(root, 'styleUrl')),
                     description = nodeVal(get1(root, 'description')),
                     timeSpan = get1(root, 'TimeSpan'),
-                    extendedData = get1(root, 'ExtendedData');
+                    extendedData = get1(root, 'ExtendedData'),
+                    lineStyle = get1(root, 'LineStyle'),
+                    polyStyle = get1(root, 'PolyStyle');
 
                 if (!geoms.length) return [];
                 if (name) properties.name = name;
@@ -151,6 +164,26 @@ toGeoJSON = (function() {
                     var begin = nodeVal(get1(timeSpan, 'begin'));
                     var end = nodeVal(get1(timeSpan, 'end'));
                     properties.timespan = { begin: begin, end: end };
+                }
+                if (lineStyle) {
+                    var linestyles = kmlColor(nodeVal(get1(lineStyle, 'color'))),
+                        color = linestyles[0],
+                        opacity = linestyles[1],
+                        width = parseFloat(nodeVal(get1(lineStyle, 'width')));
+                    if (color) properties.stroke = color;
+                    if (!isNaN(opacity)) properties['stroke-opacity'] = opacity;
+                    if (!isNaN(width)) properties['stroke-width'] = width;
+                }
+                if (polyStyle) {
+                    var polystyles = kmlColor(nodeVal(get1(polyStyle, 'color'))),
+                        pcolor = polystyles[0],
+                        popacity = polystyles[1],
+                        fill = nodeVal(get1(polyStyle, 'fill')),
+                        outline = nodeVal(get1(polyStyle, 'outline'));
+                    if (pcolor) properties.fill = pcolor;
+                    if (!isNaN(popacity)) properties['fill-opacity'] = popacity;
+                    if (fill) properties['fill-opacity'] = fill === "1" ? 1 : 0;
+                    if (outline) properties['stroke-opacity'] = outline === "1" ? 1 : 0;
                 }
                 if (extendedData) {
                     var datas = get(extendedData, 'Data'),
