@@ -17,6 +17,9 @@ test('GPX', function(t) {
     t.deepEqual(
         JSON.parse(fs.readFileSync('test/data/trek.geojson')),
         tj.gpx(toDOM(fs.readFileSync('test/data/trek.gpx'))), 'gpx with route points');
+    t.deepEqual(
+        JSON.parse(fs.readFileSync('test/data/blue_hills.geojson')),
+        tj.gpx(toDOM(fs.readFileSync('test/data/blue_hills.gpx'))), 'gpx with track segments');
     t.end();
 });
 
