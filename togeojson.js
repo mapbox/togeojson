@@ -231,12 +231,18 @@ toGeoJSON = (function() {
                 return line;
             }
             function getTrack(node) {
+                var j, segs = get(node, 'trkseg'), track = [];
+                for (j = 0; j < segs.length; j++) {
+                    track.push(getPoints(segs[j], 'trkpt'));
+                }
+                var type = track.length === 1 ? 'LineString' : 'MultiLineString';
+                var coordinates = track.length === 1 ? track[0] : track;
                 return {
                     type: 'Feature',
                     properties: getProperties(node),
                     geometry: {
-                        type: 'LineString',
-                        coordinates: getPoints(node, 'trkpt')
+                        type: type,
+                        coordinates: coordinates
                     }
                 };
             }
