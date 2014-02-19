@@ -215,25 +215,38 @@ toGeoJSON = (function() {
                 // a feature collection
                 gj = fc();
             for (i = 0; i < tracks.length; i++) {
-                gj.features.push(getLinestring(tracks[i], 'trkpt'));
+                gj.features.push(getTrack(tracks[i]));
             }
             for (i = 0; i < routes.length; i++) {
-                gj.features.push(getLinestring(routes[i], 'rtept'));
+                gj.features.push(getRoute(routes[i]));
             }
             for (i = 0; i < waypoints.length; i++) {
                 gj.features.push(getPoint(waypoints[i]));
             }
-            function getLinestring(node, pointname) {
+            function getPoints(node, pointname) {
                 var j, pts = get(node, pointname), line = [];
                 for (j = 0; j < pts.length; j++) {
                     line.push(coordPair(pts[j]));
                 }
+                return line;
+            }
+            function getTrack(node) {
                 return {
                     type: 'Feature',
                     properties: getProperties(node),
                     geometry: {
                         type: 'LineString',
-                        coordinates: line
+                        coordinates: getPoints(node, 'trkpt')
+                    }
+                };
+            }
+            function getRoute(node) {
+                return {
+                    type: 'Feature',
+                    properties: getProperties(node),
+                    geometry: {
+                        type: 'LineString',
+                        coordinates: getPoints(node, 'rtept')
                     }
                 };
             }
