@@ -1,6 +1,6 @@
 {
   "name": "togeojson",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "turn KML and GPX into GeoJSON",
   "main": "togeojson.js",
   "directories": {
@@ -11,7 +11,6 @@
     "browser": "browserify -t brfs test/index.js | testling"
   },
   "devDependencies": {
-    "geojsonhint": "~0.1.2",
     "tape": "~2.4.2",
     "brfs": "~0.2.1"
   },

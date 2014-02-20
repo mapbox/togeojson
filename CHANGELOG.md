@@ -1,3 +1,7 @@
+## 0.7.0
+
+* GPX conversion creates MultiLineString geometries when given multiple track segments.
+
 ## 0.6.0
 
 * Support for [simplestyle spec](https://github.com/mapbox/simplestyle-spec) 1.1.0

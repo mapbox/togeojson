@@ -224,25 +224,23 @@ toGeoJSON = (function() {
                 gj.features.push(getPoint(waypoints[i]));
             }
             function getPoints(node, pointname) {
-                var j, pts = get(node, pointname), line = [];
-                for (j = 0; j < pts.length; j++) {
-                    line.push(coordPair(pts[j]));
+                var pts = get(node, pointname), line = [];
+                for (var i = 0; i < pts.length; i++) {
+                    line.push(coordPair(pts[i]));
                 }
                 return line;
             }
             function getTrack(node) {
-                var j, segs = get(node, 'trkseg'), track = [];
-                for (j = 0; j < segs.length; j++) {
-                    track.push(getPoints(segs[j], 'trkpt'));
+                var segments = get(node, 'trkseg'), track = [];
+                for (var i = 0; i < segments.length; i++) {
+                    track.push(getPoints(segments[i], 'trkpt'));
                 }
-                var type = track.length === 1 ? 'LineString' : 'MultiLineString';
-                var coordinates = track.length === 1 ? track[0] : track;
                 return {
                     type: 'Feature',
                     properties: getProperties(node),
                     geometry: {
-                        type: type,
-                        coordinates: coordinates
+                        type: track.length === 1 ? 'LineString' : 'MultiLineString',
+                        coordinates: track.length === 1 ? track[0] : track
                     }
                 };
             }
