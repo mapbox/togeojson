@@ -88,7 +88,7 @@ toGeoJSON = (function() {
             }
             function kmlColor(v) {
                 var color, opacity;
-                v = v || "";
+                v = v || "";
                 if (v.substr(0, 1) === "#") v = v.substr(1);
                 if (v.length === 6 || v.length === 3) color = v;
                 if (v.length === 8) {
