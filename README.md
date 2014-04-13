@@ -1,4 +1,4 @@
-![](https://ci.testling.com/mapbox/togeojson.png)
+[![](https://ci.testling.com/mapbox/togeojson.png)](https://ci.testling.com/mapbox/togeojson)
 
 # Convert KML and GPX to GeoJSON.
 
