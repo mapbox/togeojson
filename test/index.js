@@ -51,6 +51,9 @@ test('KML', function(t) {
     t.deepEqual(
         JSON.parse(fs.readFileSync('test/data/timespan.geojson')),
         tj.kml(toDOM(fs.readFileSync('test/data/timespan.kml'))), 'timespans');
+    t.equal(
+        JSON.stringify(JSON.parse(fs.readFileSync('test/data/selfclosing.geojson'))),
+        JSON.stringify(tj.kml(toDOM(fs.readFileSync('test/data/selfclosing.kml')))), 'self-closing coord bug');
     t.end();
 });
 

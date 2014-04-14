@@ -30,7 +30,10 @@ toGeoJSON = (function() {
         return o;
     }
     // get the content of a text node, if any
-    function nodeVal(x) { if (x) {norm(x);} return x && x.firstChild && x.firstChild.nodeValue; }
+    function nodeVal(x) {
+        if (x) { norm(x); }
+        return (x && x.firstChild && x.firstChild.nodeValue) || '';
+    }
     // get one coordinate from a coordinate array, if any
     function coord1(v) { return numarray(v.replace(removeSpace, '').split(',')); }
     // get all coordinates from a coordinate array as [[],[]]

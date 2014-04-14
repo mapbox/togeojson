@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+  <name>LineString.kml</name>
+  <open>1</open>
+  <Placemark>
+    <name>unextruded</name>
+    <LineString>
+      <extrude>1</extrude>
+      <tessellate>1</tessellate>
+      <coordinates />
+    </LineString>
+  </Placemark>
+</Document>
+</kml>
