@@ -11,7 +11,7 @@
     "browser": "browserify -t brfs test/index.js | testling"
   },
   "devDependencies": {
-    "tape": "~2.4.2",
+    "tape": "~2.12.3",
     "brfs": "~0.2.1"
   },
   "bin": {
@@ -44,8 +44,8 @@
   },
   "license": "BSD",
   "dependencies": {
-    "optimist": "~0.3.5",
-    "xmldom": "~0.1.16",
-    "concat-stream": "~1.0.1"
+    "xmldom": "~0.1.19",
+    "concat-stream": "~1.4.5",
+    "minimist": "0.0.8"
   }
 }

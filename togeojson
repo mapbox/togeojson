@@ -1,24 +1,28 @@
 #!/usr/bin/env node
 
 var tj = require('./'),
-    opt = require('optimist')
-        .usage('Usage: $0 [-f format] FILE')
-        .describe('f', 'file format. if not given, will be detected by filename')
-        .default('f', 'kml'),
-    argv = opt.argv,
+    argv = require('minimist')(process.argv.slice(2)),
     concat = require('concat-stream'),
     fs = require('fs'),
     xmldom = new (require('xmldom').DOMParser)();
 
-var filename = argv._[0] || '', f = (argv.f);
+var filename = argv._[0] || '',
+    filetype = (argv.f || 'kml');
 
-if (filename.match(/\.kml$/i)) f = 'kml';
-if (filename.match(/\.gpx$/i)) f = 'gpx';
+if (filename.match(/\.kml$/i)) filetype = 'kml';
+if (filename.match(/\.gpx$/i)) filetype = 'gpx';
 
-if (process.stdin.isTTY && !argv._[0]) return opt.showHelp();
+if (!tj[filetype] || (process.stdin.isTTY && !argv._[0])) {
+    return help();
+}
 
 (argv._.length ? fs.createReadStream(argv._[0]) : process.stdin).pipe(concat(convert));
 
 function convert(data) { process.stdout.write(
-    JSON.stringify(tj[f](xmldom.parseFromString(data.toString())), null, 4));
+    JSON.stringify(tj[filetype](xmldom.parseFromString(data.toString())), null, 4));
+}
+
+function help() {
+    console.error('Usage: togeojson [-f format] FILE\n' +
+        '-f    file format. if not given, will be detected by filename');
 }
