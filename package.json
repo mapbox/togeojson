@@ -1,7 +1,7 @@
 {
   "name": "togeojson",
   "version": "0.7.0",
-  "description": "turn KML and GPX into GeoJSON",
+  "description": "convert KML and GPX to GeoJSON",
   "main": "togeojson.js",
   "directories": {
     "test": "test"
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/tmcw/togeojson.git"
+    "url": "git://github.com/mapbox/togeojson.git"
   },
   "browser": {
     "xmldom": false
@@ -47,5 +47,16 @@
     "xmldom": "~0.1.19",
     "concat-stream": "~1.4.5",
     "minimist": "0.0.8"
-  }
+  },
+  "keywords": [
+    "kml",
+    "geojson",
+    "gpx",
+    "geo",
+    "parser",
+    "formatter",
+    "input",
+    "leaflet",
+    "maps"
+  ]
 }

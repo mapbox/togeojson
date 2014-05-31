@@ -1,0 +1,20 @@
+{
+  "version": "0.7.0",
+  "scripts": [
+    "togeojson.js"
+  ],
+  "main": "togeojson.js",
+  "repo": "mapbox/togeojson",
+  "keywords": [
+    "kml",
+    "geojson",
+    "gpx",
+    "geo",
+    "parser",
+    "formatter",
+    "input",
+    "leaflet",
+    "maps"
+  ],
+  "description": "convert KML and GPX to GeoJSON"
+}
