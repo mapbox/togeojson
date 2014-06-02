@@ -57,6 +57,16 @@ test('KML', function(t) {
     t.end();
 });
 
+test('POLY', function(t) {
+    t.deepEqual(
+        JSON.parse(fs.readFileSync('test/data/austria.geojson')),
+        tj.poly(fs.readFileSync('test/data/austria.poly', { encoding: 'utf8' })), 'austria poly file');
+    t.deepEqual(
+        JSON.parse(fs.readFileSync('test/data/complex.geojson')),
+        tj.poly(fs.readFileSync('test/data/complex.poly', { encoding: 'utf8' })), 'complex poly file');
+    t.end();
+});
+
 function toDOM(_) {
     if (typeof DOMParser === 'undefined') {
         return (new xmldom.DOMParser()).parseFromString(_.toString());
