@@ -8,11 +8,14 @@
   },
   "scripts": {
     "test": "tape test/*.js",
+    "cov": "istanbul cover node_modules/.bin/tape --report lcovonly test/*.js && coveralls < ./coverage/lcov.info",
     "browser": "browserify -t brfs test/index.js | testling"
   },
   "devDependencies": {
     "tape": "~2.12.3",
-    "brfs": "~0.2.1"
+    "brfs": "~0.2.1",
+    "coveralls": "~2.10.0",
+    "istanbul": "~0.2.11"
   },
   "bin": {
     "togeojson": "togeojson"
@@ -27,19 +30,6 @@
   "browserify": {
     "transform": [
       "brfs"
-    ]
-  },
-  "testling": {
-    "files": "test/*.js",
-    "browsers": [
-      "ie/8..latest",
-      "chrome/22..latest",
-      "firefox/16..latest",
-      "safari/latest",
-      "opera/11.0..latest",
-      "iphone/6..latest",
-      "ipad/6..latest",
-      "android-browser/latest"
     ]
   },
   "license": "BSD",
