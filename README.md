@@ -23,7 +23,7 @@ document as an XML DOM - not as a string. You can get this using jQuery's defaul
 `.ajax` function or using a bare XMLHttpRequest with the `.response` property
 holding an XML DOM.
 
-The output is a Javascript object of GeoJSON data. You can convert it to a string
+The output is a JavaScript object of GeoJSON data. You can convert it to a string
 with [JSON.stringify](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
 or use it directly in libraries like [mapbox.js](http://www.mapbox.com/mapbox.js/).
 
@@ -34,7 +34,7 @@ document as an XML DOM - not as a string. You can get this using jQuery's defaul
 `.ajax` function or using a bare XMLHttpRequest with the `.response` property
 holding an XML DOM.
 
-The output is a Javascript object of GeoJSON data, same as `.kml` outputs.
+The output is a JavaScript object of GeoJSON data, same as `.kml` outputs.
 
 ## CLI
 
