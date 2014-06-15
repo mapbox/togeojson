@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <Folder>
+      <name>Inline style test</name>
+      <Placemark>
+        <name>With all inline styles</name>
+        <Style>
+          <LineStyle>
+            <color>ff0</color>
+            <width>3</width>
+          </LineStyle>
+          <PolyStyle>
+            <color>ff0011</color>
+            <fill>1</fill>
+            <outline>0</outline>
+          </PolyStyle>
+        </Style>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

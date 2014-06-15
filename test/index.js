@@ -20,10 +20,28 @@ test('GPX', function(t) {
     t.deepEqual(
         JSON.parse(fs.readFileSync('test/data/blue_hills.geojson')),
         tj.gpx(toDOM(fs.readFileSync('test/data/blue_hills.gpx'))), 'gpx with track segments');
+    t.deepEqual(
+        JSON.parse(fs.readFileSync('test/data/multitrackgpx.geojson')),
+        tj.gpx(toDOM(fs.readFileSync('test/data/multitrackgpx.gpx'))), 'gpx with multitrack');
+    t.deepEqual(
+        JSON.parse(fs.readFileSync('test/data/wpt.geojson')),
+        tj.gpx(toDOM(fs.readFileSync('test/data/wpt.gpx'))), 'gpx with multitrack');
     t.end();
 });
 
 test('KML', function(t) {
+    t.deepEqual(
+        JSON.parse(fs.readFileSync('test/data/noname.geojson')),
+        tj.kml(toDOM(fs.readFileSync('test/data/noname.kml'))), 'no name');
+    t.deepEqual(
+        JSON.parse(fs.readFileSync('test/data/nogeomplacemark.geojson')),
+        tj.kml(toDOM(fs.readFileSync('test/data/nogeomplacemark.kml'))), 'simpledata');
+    t.deepEqual(
+        JSON.parse(fs.readFileSync('test/data/simpledata.geojson')),
+        tj.kml(toDOM(fs.readFileSync('test/data/simpledata.kml'))), 'simpledata');
+    t.deepEqual(
+        JSON.parse(fs.readFileSync('test/data/literal_color.geojson')),
+        tj.kml(toDOM(fs.readFileSync('test/data/literal_color.kml'))), '{3,6} color form');
     t.deepEqual(
         JSON.parse(fs.readFileSync('test/data/point.geojson')),
         tj.kml(toDOM(fs.readFileSync('test/data/point.kml'))), 'point kml');

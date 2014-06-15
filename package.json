@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "tape test/*.js",
-    "cov": "istanbul cover node_modules/.bin/tape --report lcovonly test/*.js && coveralls < ./coverage/lcov.info",
+    "cov": "istanbul cover test/index.js && coveralls < ./coverage/lcov.info",
     "browser": "browserify -t brfs test/index.js | testling"
   },
   "devDependencies": {

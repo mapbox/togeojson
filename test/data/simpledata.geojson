@@ -12,11 +12,11 @@
             },
             "properties": {
                 "name": "Easy trail",
+                "styleUrl": "#trailhead-balloon-template",
+                "styleHash": "ca0b0b",
                 "TrailHeadName": "Pi in the sky",
                 "TrailLength": "3.14159",
-                "ElevationGain": "10",
-                "styleHash": "-5f29d69d",
-                "styleUrl": "#trailhead-balloon-template"
+                "ElevationGain": "10"
             }
         },
         {
@@ -30,11 +30,11 @@
             },
             "properties": {
                 "name": "Difficult trail",
+                "styleUrl": "#trailhead-balloon-template",
+                "styleHash": "ca0b0b",
                 "TrailHeadName": "Mount Everest",
                 "TrailLength": "347.45",
-                "ElevationGain": "10000",
-                "styleHash": "-5f29d69d",
-                "styleUrl": "#trailhead-balloon-template"
+                "ElevationGain": "10000"
             }
         }
     ]
