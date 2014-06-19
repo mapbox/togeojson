@@ -106,7 +106,6 @@ Supported:
 
 Not supported yet:
 
-* Various silly Google extensions (will never be supported)
 * NetworkLinks
 * GroundOverlays
 
