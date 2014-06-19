@@ -1,3 +1,7 @@
+## 0.8.0
+
+* Support for the `gx:Track` and `gx:MultiTrack` extensions to GPX
+
 ## 0.7.0
 
 * GPX conversion creates MultiLineString geometries when given multiple track segments.
