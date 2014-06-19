@@ -70,8 +70,7 @@ toGeoJSON = (function() {
     function xml2str(str) { return serializer.serializeToString(str); }
 
     var t = {
-        kml: function(doc, o) {
-            o = o || {};
+        kml: function(doc) {
 
             var gj = fc(),
                 // styleindex keeps track of hashed styles in order to match features
@@ -213,7 +212,7 @@ toGeoJSON = (function() {
             }
             return gj;
         },
-        gpx: function(doc, o) {
+        gpx: function(doc) {
             var i,
                 tracks = get(doc, 'trk'),
                 routes = get(doc, 'rte'),
