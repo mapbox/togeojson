@@ -78,7 +78,7 @@ toGeoJSON = (function() {
                 styleIndex = {},
                 // atomic geospatial types supported by KML - MultiGeometry is
                 // handled separately
-                geotypes = ['Polygon', 'LineString', 'Point', 'Track'],
+                geotypes = ['Polygon', 'LineString', 'Point', 'Track', 'gx:Track'],
                 // all root placemarks in the file
                 placemarks = get(doc, 'Placemark'),
                 styles = get(doc, 'Style');
@@ -103,6 +103,7 @@ toGeoJSON = (function() {
             function gxCoord(v) { return numarray(v.split(' ')); }
             function gxCoords(root) {
                 var elems = get(root, 'coord', 'gx'), coords = [];
+                if (elems.length === 0) elems = get(root, 'gx:coord');
                 for (var i = 0; i < elems.length; i++) coords.push(gxCoord(nodeVal(elems[i])));
                 return coords;
             }
@@ -110,6 +111,7 @@ toGeoJSON = (function() {
                 var geomNode, geomNodes, i, j, k, geoms = [];
                 if (get1(root, 'MultiGeometry')) return getGeometry(get1(root, 'MultiGeometry'));
                 if (get1(root, 'MultiTrack')) return getGeometry(get1(root, 'MultiTrack'));
+                if (get1(root, 'gx:MultiTrack')) return getGeometry(get1(root, 'gx:MultiTrack'));
                 for (i = 0; i < geotypes.length; i++) {
                     geomNodes = get(root, geotypes[i]);
                     if (geomNodes) {
@@ -135,7 +137,8 @@ toGeoJSON = (function() {
                                     type: 'Polygon',
                                     coordinates: coords
                                 });
-                            } else if (geotypes[i] == 'Track') {
+                            } else if (geotypes[i] == 'Track' ||
+                                geotypes[i] == 'gx:Track') {
                                 geoms.push({
                                     type: 'LineString',
                                     coordinates: gxCoords(geomNode)

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2"
+xmlns:gx="http://www.google.com/kml/ext/2.2"
+xmlns:atom="http://www.w3.org/2005/Atom">
+ <Document>
+  <open>1</open>
+  <visibility>1</visibility>
+  <name>
+<![CDATA[12/04/2014 11:24 AM]]>
+  </name>
+  <atom:author>
+   <atom:name>
+<![CDATA[Créé par Google Mes parcours sur Android]]>
+   </atom:name>
+  </atom:author>
+  <Style id="track">
+   <LineStyle>
+    <color>7f0000ff</color>
+    <width>4</width>
+   </LineStyle>
+   <IconStyle>
+    <scale>1.3</scale>
+    <Icon>
+     <href>http://earth.google.com/images/kml-icons/track-directional/track-0.png</href>
+    </Icon>
+   </IconStyle>
+  </Style>
+  <Style id="start">
+   <IconStyle>
+    <scale>1.3</scale>
+    <Icon>
+     <href>http://maps.google.com/mapfiles/kml/paddle/grn-circle.png</href>
+    </Icon>
+    <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+   </IconStyle>
+  </Style>
+  <Style id="end">
+   <IconStyle>
+    <scale>1.3</scale>
+    <Icon>
+     <href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href>
+    </Icon>
+    <hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+   </IconStyle>
+  </Style>
+  <Style id="statistics">
+   <IconStyle>
+    <scale>1.3</scale>
+    <Icon>
+     <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+    </Icon>
+    <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+   </IconStyle>
+  </Style>
+  <Style id="waypoint">
+   <IconStyle>
+    <scale>1.3</scale>
+    <Icon>
+     <href>http://maps.google.com/mapfiles/kml/pushpin/blue-pushpin.png</href>
+    </Icon>
+    <hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+   </IconStyle>
+  </Style>
+  <Schema id="schema">
+   <gx:SimpleArrayField name="power" type="int">
+    <displayName>
+<![CDATA[Puissance (W)]]>
+    </displayName>
+   </gx:SimpleArrayField>
+   <gx:SimpleArrayField name="cadence" type="int">
+    <displayName>
+<![CDATA[Cadence (tr/min)]]>
+    </displayName>
+   </gx:SimpleArrayField>
+   <gx:SimpleArrayField name="heart_rate" type="int">
+    <displayName>
+<![CDATA[Fréquence cardiaque (bpm)]]>
+    </displayName>
+   </gx:SimpleArrayField>
+  </Schema>
+  <Placemark>
+   <name>
+<![CDATA[12/04/2014 11:24 AM (départ)]]>
+   </name>
+   <description>
+<![CDATA[]]>
+   </description>
+   <TimeStamp>
+    <when>2014-04-12T14:26:16.702Z</when>
+   </TimeStamp>
+   <styleUrl>#start</styleUrl>
+   <Point>
+    <coordinates>-71.324739,-40.139527,791.5999755859375</coordinates>
+   </Point>
+  </Placemark>
+  <Placemark id="tour">
+   <name>
+<![CDATA[12/04/2014 11:24 AM]]>
+   </name>
+   <description>
+<![CDATA[]]>
+   </description>
+   <styleUrl>#track</styleUrl>
+   <ExtendedData>
+    <Data name="type">
+     <value>
+<![CDATA[course à pied]]>
+     </value>
+    </Data>
+   </ExtendedData>
+   <gx:MultiTrack>
+    <altitudeMode>absolute</altitudeMode>
+    <gx:interpolate>1</gx:interpolate>
+    <gx:Track>
+     <when>2014-04-12T14:26:16.702Z</when>
+     <gx:coord>-71.324739 -40.139527 791.5999755859375</gx:coord>
+     <when>2014-04-12T14:26:52.761Z</when>
+     <gx:coord>-71.324819 -40.139536 772.0</gx:coord>
+     <when>2014-04-12T14:26:53.745Z</when>
+     <gx:coord>-71.324824 -40.139537 771.800048828125</gx:coord>
+     <when>2014-04-12T14:26:56.656Z</when>
+     <gx:coord>-71.324828 -40.139538 771.699951171875</gx:coord>
+     <when>2014-04-12T14:26:57.639Z</when>
+     <gx:coord>-71.324839 -40.139552 772.5999755859375</gx:coord>
+     <when>2014-04-12T14:26:58.658Z</when>
+     <gx:coord>-71.324839 -40.139556 773.0</gx:coord>
+     <when>2014-04-12T14:26:59.744Z</when>
+     <gx:coord>-71.324843 -40.139555 773.199951171875</gx:coord>
+     <when>2014-04-12T14:27:16.749Z</when>
+     <gx:coord>-71.324848 -40.139563 774.0</gx:coord>
+     <when>2014-04-12T14:27:17.741Z</when>
+     <gx:coord>-71.324879 -40.139559 774.300048828125</gx:coord>
+     <when>2014-04-12T14:27:19.657Z</when>
+     <gx:coord>-71.324871 -40.139579 774.5999755859375</gx:coord>
+     <when>2014-04-12T14:27:20.643Z</when>
+     <gx:coord>-71.32487 -40.139578 774.699951171875</gx:coord>
+     <when>2014-04-12T14:27:23.687Z</when>
+     <gx:coord>-71.324874 -40.139583 774.5</gx:coord>
+     <when>2014-04-12T14:27:24.638Z</when>
+     <gx:coord>-71.324879 -40.139577 774.4000244140625</gx:coord>
+     <ExtendedData>
+      <SchemaData schemaUrl="#schema"></SchemaData>
+     </ExtendedData>
+    </gx:Track>
+    <gx:Track>
+     <when>2014-04-12T14:26:16.702Z</when>
+     <gx:coord>-72.324739 -40.139527 791.5999755859375</gx:coord>
+     <when>2014-04-12T14:26:52.761Z</when>
+     <gx:coord>-72.324819 -40.139536 772.0</gx:coord>
+     <when>2014-04-12T14:26:53.745Z</when>
+     <gx:coord>-72.324824 -40.139537 771.800048828125</gx:coord>
+     <when>2014-04-12T14:26:56.656Z</when>
+     <gx:coord>-72.324828 -40.139538 771.699951171875</gx:coord>
+     <when>2014-04-12T14:26:57.639Z</when>
+     <gx:coord>-72.324839 -40.139552 772.5999755859375</gx:coord>
+     <when>2014-04-12T14:26:58.658Z</when>
+     <gx:coord>-71.324839 -40.139556 773.0</gx:coord>
+     <when>2014-04-12T14:26:59.744Z</when>
+     <gx:coord>-71.324843 -40.139555 773.199951171875</gx:coord>
+     <when>2014-04-12T14:27:16.749Z</when>
+     <gx:coord>-71.324848 -40.139563 774.0</gx:coord>
+     <when>2014-04-12T14:27:17.741Z</when>
+     <gx:coord>-71.324879 -40.139559 774.300048828125</gx:coord>
+     <when>2014-04-12T14:27:19.657Z</when>
+     <gx:coord>-71.324871 -40.139579 774.5999755859375</gx:coord>
+     <when>2014-04-12T14:27:20.643Z</when>
+     <gx:coord>-71.32487 -40.139578 774.699951171875</gx:coord>
+     <when>2014-04-12T14:27:23.687Z</when>
+     <gx:coord>-71.324874 -40.139583 774.5</gx:coord>
+     <when>2014-04-12T14:27:24.638Z</when>
+     <gx:coord>-71.324879 -40.139577 774.4000244140625</gx:coord>
+     <ExtendedData>
+      <SchemaData schemaUrl="#schema"></SchemaData>
+     </ExtendedData>
+    </gx:Track>
+   </gx:MultiTrack>
+  </Placemark>
+  <Placemark>
+   <name>
+<![CDATA[12/04/2014 11:24 AM (fin)]]>
+   </name>
+   <description>
+<![CDATA[Créé par Google Mes parcours sur Android
+
+Nom : 12/04/2014 11:24 AM
+Type d'activité : course à pied
+Description : -
+Distance totale : 10,43 km (6,5 mi)
+Durée totale : 1:13:38
+Durée du déplacement : 1:08:20
+Vitesse moyenne : 8,49 km/h (5,3 mi/h)
+Vitesse moyenne de déplacement : 9,16 km/h (5,7 mi/h)
+Vitesse max. : 12,84 km/h (8,0 mi/h)
+Vitesse moyenne : 7:04 min/km (11:22 min/mi)
+Allure moyenne : 6:33 min/km (10:33 min/mi)
+Vitesse maximale : 4:40 min/km (7:31 min/mi)
+Élévation max. : 1020 m (3347 pi)
+Élévation min. : 678 m (2223 pi)
+Dénivelé : 1095 m (3593 pi)
+Inclinaison max. : 21 %
+Inclinaison min. : -24 %
+Date d'enregistrement : 12/04/2014 11:24 AM
+]]>
+   </description>
+   <TimeStamp>
+    <when>2014-04-12T15:38:07.678Z</when>
+   </TimeStamp>
+   <styleUrl>#end</styleUrl>
+   <Point>
+    <coordinates>-71.353544,-40.157777,677.300048828125</coordinates>
+   </Point>
+  </Placemark>
+ </Document>
+</kml>

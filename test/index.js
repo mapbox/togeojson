@@ -31,6 +31,12 @@ test('GPX', function(t) {
 
 test('KML', function(t) {
     t.deepEqual(
+        JSON.parse(fs.readFileSync('test/data/gxtrack.geojson')),
+        tj.kml(toDOM(fs.readFileSync('test/data/gxtrack.kml'))), 'gx:track');
+    t.deepEqual(
+        JSON.parse(fs.readFileSync('test/data/gxmultitrack.geojson')),
+        tj.kml(toDOM(fs.readFileSync('test/data/gxmultitrack.kml'))), 'gx:multitrack');
+    t.deepEqual(
         JSON.parse(fs.readFileSync('test/data/noname.geojson')),
         tj.kml(toDOM(fs.readFileSync('test/data/noname.kml'))), 'no name');
     t.deepEqual(
