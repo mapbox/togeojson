@@ -111,6 +111,7 @@ toGeoJSON = (function() {
                 var geomNode, geomNodes, i, j, k, geoms = [];
                 if (get1(root, 'MultiGeometry')) return getGeometry(get1(root, 'MultiGeometry'));
                 if (get1(root, 'MultiTrack')) return getGeometry(get1(root, 'MultiTrack'));
+                if (get1(root, 'gx:MultiTrack')) return getGeometry(get1(root, 'gx:MultiTrack'));
                 for (i = 0; i < geotypes.length; i++) {
                     geomNodes = get(root, geotypes[i]);
                     if (geomNodes) {
