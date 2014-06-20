@@ -2,7 +2,7 @@
 
 # Convert KML and GPX to GeoJSON.
 
-This converts [KML](https://developers.google.com/kml/documentation/) & [GPX](http://www.gpx.com/)
+This converts [KML](https://developers.google.com/kml/documentation/) & [GPX](http://www.topografix.com/gpx.asp)
 to
 [GeoJSON](http://www.geojson.org/), in a browser or with [nodejs](http://nodejs.org/).
 
