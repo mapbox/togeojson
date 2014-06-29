@@ -26,6 +26,9 @@ test('GPX', function(t) {
     t.deepEqual(
         JSON.parse(fs.readFileSync('test/data/wpt.geojson')),
         tj.gpx(toDOM(fs.readFileSync('test/data/wpt.gpx'))), 'gpx with multitrack');
+    t.deepEqual(
+        JSON.parse(fs.readFileSync('test/data/unique_trkpt.geojson')),
+        tj.gpx(toDOM(fs.readFileSync('test/data/unique_trkpt.gpx'))), 'trkseg with only one trkpt');
     t.end();
 });
 
