@@ -218,28 +218,35 @@ toGeoJSON = (function() {
                 routes = get(doc, 'rte'),
                 waypoints = get(doc, 'wpt'),
                 // a feature collection
-                gj = fc();
+                gj = fc(),
+                feature;
             for (i = 0; i < tracks.length; i++) {
-                gj.features.push(getTrack(tracks[i]));
+                feature = getTrack(tracks[i]);
+                if (feature) gj.features.push(feature);
             }
             for (i = 0; i < routes.length; i++) {
-                gj.features.push(getRoute(routes[i]));
+                feature = getRoute(routes[i]);
+                if (feature) gj.features.push(feature);
             }
             for (i = 0; i < waypoints.length; i++) {
                 gj.features.push(getPoint(waypoints[i]));
             }
             function getPoints(node, pointname) {
-                var pts = get(node, pointname), line = [];
-                for (var i = 0; i < pts.length; i++) {
+                var pts = get(node, pointname), line = [],
+                    l = pts.length;
+                if (l < 2) return;  // Invalid line in GeoJSON
+                for (var i = 0; i < l; i++) {
                     line.push(coordPair(pts[i]));
                 }
                 return line;
             }
             function getTrack(node) {
-                var segments = get(node, 'trkseg'), track = [];
+                var segments = get(node, 'trkseg'), track = [], line;
                 for (var i = 0; i < segments.length; i++) {
-                    track.push(getPoints(segments[i], 'trkpt'));
+                    line = getPoints(segments[i], 'trkpt');
+                    if (line) track.push(line);
                 }
+                if (track.length === 0) return;
                 return {
                     type: 'Feature',
                     properties: getProperties(node),
@@ -250,12 +257,14 @@ toGeoJSON = (function() {
                 };
             }
             function getRoute(node) {
+                var line = getPoints(node, 'rtept');
+                if (!line) return;
                 return {
                     type: 'Feature',
                     properties: getProperties(node),
                     geometry: {
                         type: 'LineString',
-                        coordinates: getPoints(node, 'rtept')
+                        coordinates: line
                     }
                 };
             }
