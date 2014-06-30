@@ -1,5 +1,12 @@
 [![build status](https://secure.travis-ci.org/mapbox/togeojson.png)](http://travis-ci.org/mapbox/togeojson) [![Coverage Status](https://coveralls.io/repos/mapbox/togeojson/badge.png)](https://coveralls.io/r/mapbox/togeojson)
 
+# Fork togeojson library for 2gis additional layers
+
+* We don't need GPX support
+* Add folder support from KML
+* Add marker icons from KML style block
+* Remove inline styles from html in layer content description
+
 # Convert KML and GPX to GeoJSON.
 
 This converts [KML](https://developers.google.com/kml/documentation/) & [GPX](http://www.topografix.com/gpx.asp)
