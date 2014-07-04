@@ -1,0 +1,118 @@
+{
+    "type": "root",
+    "subfolders": {
+        "DGISLAYER127": {
+            "name": "Социальное обслуживание населения",
+            "type": "folder",
+            "subfolders": {
+                "DGISLAYER170": {
+                    "name": "Социальное обслуживание населения170",
+                    "type": "folder",
+                    "subfolders": {
+                        "DGISLAYER128": {
+                            "name": "Отделы социальной поддержки населения",
+                            "type": "folderNode",
+                            "geometries": {
+                                "type": "FeatureCollection",
+                                "features": [
+                                    {
+                                        "type": "Feature",
+                                        "geometry": {
+                                            "type": "Point",
+                                            "coordinates": [
+                                                82.9668633489255,
+                                                55.0510937512953,
+                                                0
+                                            ]
+                                        },
+                                        "properties": {
+                                            "name": "ОСПН Дзержинского района",
+                                            "description": "<div style=\"font-size: 13px; font-weight:bold; color:#17590E\"> Отдел социальной поддержки населения Дзержинского района </div>"
+                                        }
+                                    },
+                                    {
+                                        "type": "Feature",
+                                        "geometry": {
+                                            "type": "Point",
+                                            "coordinates": [
+                                                82.9009926231011,
+                                                55.0330780040838,
+                                                0
+                                            ]
+                                        },
+                                        "properties": {
+                                            "name": "ОСПН Железнодорожного района",
+                                            "description": "<div style=\"font-size: 13px; font-weight:bold; color:#17590E\"> Отдел социальной поддержки населения Железнодорожного района</div>"
+                                        }
+                                    },
+                                    {
+                                        "type": "Feature",
+                                        "geometry": {
+                                            "type": "Point",
+                                            "coordinates": [
+                                                82.9095479601919,
+                                                55.0586805649532,
+                                                0
+                                            ]
+                                        },
+                                        "properties": {
+                                            "name": "ОСПН Заельцовского района",
+                                            "description": "<div style=\"font-size: 13px; font-weight:bold; color:#17590E\"> Отдел социальной поддержки населения Заельцовского района</div>"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "DGISLAYER139": {
+                    "name": "Учреждения социального обслуживания населения",
+                    "type": "folderNode",
+                    "geometries": {
+                        "type": "FeatureCollection",
+                        "features": [
+                            {
+                                "type": "Feature",
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        83.0032395722068,
+                                        55.0712301585709,
+                                        0
+                                    ]
+                                },
+                                "properties": {
+                                    "name": "МБУ \"КЦСОН Дзержинского района\"",
+                                    "description": "<div style=\"font-size: 13px; font-weight:bold; color:#17590E\"> Муниципальное Бюджетное Учреждение г. Новосибирска \"Комплексный центр социального обслуживания населения\" Дзержинского района (МБУ \"КЦСОН Дзержинского района\")</div>"
+                                }
+                            },
+                            {
+                                "type": "Feature",
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        82.9105416643526,
+                                        55.0251929393546,
+                                        0
+                                    ]
+                                },
+                                "properties": {
+                                    "name": "МБУ \"КЦСОН Железнодорожного района\"",
+                                    "description": "<div style=\"font-size: 13px; font-weight:bold; color:#17590E\"> Муниципальное Бюджетное Учреждение г. Новосибирска \"Комплексный центр социального обслуживания населения\" Железнодорожного района (МБУ \"КЦСОН Железнодорожного района\")</div>"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "DGISLAYER150": {
+            "name": "Социальное обслуживание населенияololo",
+            "type": "folderNode",
+            "geometries": {
+                "type": "FeatureCollection",
+                "features": []
+            }
+        }
+    }
+}
