@@ -40,15 +40,6 @@ The output is a Javascript object of GeoJSON data. You can convert it to a strin
 with [JSON.stringify](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
 or use it directly in libraries like [mapbox.js](http://www.mapbox.com/mapbox.js/).
 
-### `toGeoJSON.gpx(doc)`
-
-Convert a GPX document to GeoJSON. The first argument, `doc`, must be a GPX
-document as an XML DOM - not as a string. You can get this using jQuery's default
-`.ajax` function or using a bare XMLHttpRequest with the `.response` property
-holding an XML DOM.
-
-The output is a Javascript object of GeoJSON data, same as `.kml` outputs.
-
 
 ## Using it as a console utility
 
@@ -116,12 +107,6 @@ Not supported yet:
 * NetworkLinks
 * GroundOverlays
 
-## GPX
-
-Supported:
-
-* Line Paths
-* 'name', 'desc', 'author', 'copyright', 'link', 'time', 'keywords' tags
 
 ## FAQ
 
