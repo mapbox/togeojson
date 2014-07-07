@@ -7,31 +7,6 @@ if (!process.browser) {
     var xmldom = require('xmldom');
 }
 
-test('GPX', function(t) {
-    t.deepEqual(
-        JSON.parse(fs.readFileSync('test/data/run.geojson')),
-        tj.gpx(toDOM(fs.readFileSync('test/data/run.gpx'))), 'point gpx file');
-    t.deepEqual(
-        JSON.parse(fs.readFileSync('test/data/osm.geojson')),
-        tj.gpx(toDOM(fs.readFileSync('test/data/osm.gpx'))), 'osm gpx file');
-    t.deepEqual(
-        JSON.parse(fs.readFileSync('test/data/trek.geojson')),
-        tj.gpx(toDOM(fs.readFileSync('test/data/trek.gpx'))), 'gpx with route points');
-    t.deepEqual(
-        JSON.parse(fs.readFileSync('test/data/blue_hills.geojson')),
-        tj.gpx(toDOM(fs.readFileSync('test/data/blue_hills.gpx'))), 'gpx with track segments');
-    t.deepEqual(
-        JSON.parse(fs.readFileSync('test/data/multitrackgpx.geojson')),
-        tj.gpx(toDOM(fs.readFileSync('test/data/multitrackgpx.gpx'))), 'gpx with multitrack');
-    t.deepEqual(
-        JSON.parse(fs.readFileSync('test/data/wpt.geojson')),
-        tj.gpx(toDOM(fs.readFileSync('test/data/wpt.gpx'))), 'gpx with multitrack');
-    t.deepEqual(
-        JSON.parse(fs.readFileSync('test/data/unique_trkpt.geojson')),
-        tj.gpx(toDOM(fs.readFileSync('test/data/unique_trkpt.gpx'))), 'trkseg with only one trkpt');
-    t.end();
-});
-
 test('KML', function(t) {
     t.deepEqual(
         JSON.parse(fs.readFileSync('test/data/gxtrack.geojson')),
@@ -78,9 +53,15 @@ test('KML', function(t) {
     t.deepEqual(
         JSON.parse(fs.readFileSync('test/data/timespan.geojson')),
         tj.kml(toDOM(fs.readFileSync('test/data/timespan.kml'))), 'timespans');
+    t.deepEqual(
+        JSON.parse(fs.readFileSync('test/data/subfolders.json')),
+        tj.kml(toDOM(fs.readFileSync('test/data/subfolders.kml'))), 'subfolders');
     t.equal(
         JSON.stringify(JSON.parse(fs.readFileSync('test/data/selfclosing.geojson'))),
         JSON.stringify(tj.kml(toDOM(fs.readFileSync('test/data/selfclosing.kml')))), 'self-closing coord bug');
+    t.deepEqual(
+        JSON.parse(fs.readFileSync('test/data/styles-with-subfolders.geojson')),
+        tj.kml(toDOM(fs.readFileSync('test/data/styles-with-subfolders.kml'))), 'styles-with-subfolders');
     t.end();
 });
 

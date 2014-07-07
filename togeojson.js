@@ -14,7 +14,6 @@ toGeoJSON = (function() {
     // all Y children of X
     function get(x, y) { return x.getElementsByTagName(y); }
     function attr(x, y) { return x.getAttribute(y); }
-    function attrf(x, y) { return parseFloat(attr(x, y)); }
     // one Y child of X, if any, otherwise null
     function get1(x, y) { var n = get(x, y); return n.length ? n[0] : null; }
     // https://developer.mozilla.org/en-US/docs/Web/API/Node.normalize
@@ -22,11 +21,6 @@ toGeoJSON = (function() {
     // cast array x into numbers
     function numarray(x) {
         for (var j = 0, o = []; j < x.length; j++) o[j] = parseFloat(x[j]);
-        return o;
-    }
-    function clean(x) {
-        var o = {};
-        for (var i in x) if (x[i]) o[i] = x[i];
         return o;
     }
     // get the content of a text node, if any
@@ -45,12 +39,6 @@ toGeoJSON = (function() {
         }
         return o;
     }
-    function coordPair(x) {
-        var ll = [attrf(x, 'lon'), attrf(x, 'lat')],
-            ele = get1(x, 'ele');
-        if (ele) ll.push(parseFloat(nodeVal(ele)));
-        return ll;
-    }
 
     // create a new feature collection parent object
     function fc() {
@@ -58,6 +46,12 @@ toGeoJSON = (function() {
             type: 'FeatureCollection',
             features: []
         };
+    }
+    // create a new folder object
+    function fd(node) {
+        return {
+            name: nodeVal(get1(node, 'name'))
+        }
     }
 
     var serializer;
@@ -72,21 +66,94 @@ toGeoJSON = (function() {
     var t = {
         kml: function(doc) {
 
-            var gj = fc(),
-                // styleindex keeps track of hashed styles in order to match features
+            var // styleindex keeps track of hashed styles in order to match features
                 styleIndex = {},
                 // atomic geospatial types supported by KML - MultiGeometry is
                 // handled separately
                 geotypes = ['Polygon', 'LineString', 'Point', 'Track', 'gx:Track'],
-                // all root placemarks in the file
-                placemarks = get(doc, 'Placemark'),
-                styles = get(doc, 'Style');
+                foldersList = get(doc, 'Folder'),
+                root,
+                styles = get(doc, 'Style'),
+                stylesById = {};
 
             for (var k = 0; k < styles.length; k++) {
-                styleIndex['#' + attr(styles[k], 'id')] = okhash(xml2str(styles[k])).toString(16);
+                var id = attr(styles[k], 'id');
+                stylesById['#' + id] = styles[k];
+                styleIndex['#' + id] = okhash(xml2str(styles[k])).toString(16);
             }
-            for (var j = 0; j < placemarks.length; j++) {
-                gj.features = gj.features.concat(getPlacemark(placemarks[j]));
+
+            if (foldersList.length > 1) {
+                root = {
+                    type: 'root',
+                    subfolders: parseChildFolders(foldersList).folders
+                };
+                fillFoldersWithPlacemarks(root);
+            } else {
+                // all root placemarks in the file
+                var placemarks = get(doc, 'Placemark');
+
+                root = fc();
+                for (var j = 0; j < placemarks.length; j++) {
+                    root.features = root.features.concat(getPlacemark(placemarks[j]));
+                }
+            }
+
+            
+            function parseChildFolders(foldersList) {
+                var layersContain = [];
+                var layersContainLevel2 = [];
+                if (!foldersList.length) return false;
+                var folders = {};
+                for(var i = 0; i< foldersList.length; i++) {
+                    var folder = foldersList[i];
+                    if (folder) {
+                        var childFolders = parseChildFolders(get(folder, 'Folder')),
+                            currentFolder = fd(folder),
+                            styleUrl = nodeVal(get1(folder, 'styleUrl')),
+                            icon = getListIcon(styleUrl);
+
+                        if (icon) currentFolder.icon = icon;
+
+                        if (childFolders && childFolders.folders) {
+                            currentFolder.type = 'folder';
+                            currentFolder.subfolders = childFolders.folders;
+                            layersContainLevel2 = layersContainLevel2.concat(childFolders.layersContain);
+                        } else {
+                            currentFolder.type = 'folderNode';
+                            currentFolder.node = folder;
+                        }
+                        folders[attr(folder, 'id')] = currentFolder;
+                        layersContain.push(attr(folder, 'id'));
+                    }
+                }
+                layersContainLevel2.forEach(function(id) {
+                    if (folders[id]) {
+                        delete folders[id];
+                    }
+                });
+                return {
+                    folders: folders,
+                    layersContain: layersContain.concat(layersContainLevel2)
+                };
+            }
+            function fillFoldersWithPlacemarks(folder) {
+                switch(folder.type) {
+                    case 'folderNode':
+                        var placemarks = get(folder.node, 'Placemark'),
+                            features = [];
+                        for (var j = 0; j < placemarks.length; j++) {
+                            features = features.concat(getPlacemark(placemarks[j]));
+                        }
+                        folder.geometries = fc();
+                        folder.geometries.features = features;
+                        delete folder.node;
+                        break;
+                    default:
+                        for (var subfolder in folder.subfolders) {
+                            fillFoldersWithPlacemarks(folder.subfolders[subfolder]);
+                        }
+                        break;
+                }
             }
             function kmlColor(v) {
                 var color, opacity;
@@ -105,6 +172,30 @@ toGeoJSON = (function() {
                 if (elems.length === 0) elems = get(root, 'gx:coord');
                 for (var i = 0; i < elems.length; i++) coords.push(gxCoord(nodeVal(elems[i])));
                 return coords;
+            }
+            function getListIcon(styleUrl) {
+                if (styleUrl) {
+                    var styleNode = stylesById[styleUrl];
+                    if (styleNode) {
+                        var iconNode = get1(styleNode, 'ItemIcon');
+                        if (iconNode) {
+                            return nodeVal(get1(iconNode, 'href'));
+                        }
+                    }
+                }
+                return null;
+            }
+            function getIcon(styleUrl) {
+                if (styleUrl) {
+                    var styleNode = stylesById[styleUrl];
+                    if (styleNode) {
+                        var iconNode = get1(styleNode, 'Icon');
+                        if (iconNode) {
+                            return nodeVal(get1(iconNode, 'href'));
+                        }
+                    }
+                }
+                return null;
             }
             function getGeometry(root) {
                 var geomNode, geomNodes, i, j, k, geoms = [];
@@ -156,7 +247,10 @@ toGeoJSON = (function() {
                     timeSpan = get1(root, 'TimeSpan'),
                     extendedData = get1(root, 'ExtendedData'),
                     lineStyle = get1(root, 'LineStyle'),
-                    polyStyle = get1(root, 'PolyStyle');
+                    polyStyle = get1(root, 'PolyStyle'),
+                    icon = getIcon(styleUrl);
+                
+                if (icon) properties.icon = icon;
 
                 if (!geoms.length) return [];
                 if (name) properties.name = name;
@@ -210,87 +304,7 @@ toGeoJSON = (function() {
                     properties: properties
                 }];
             }
-            return gj;
-        },
-        gpx: function(doc) {
-            var i,
-                tracks = get(doc, 'trk'),
-                routes = get(doc, 'rte'),
-                waypoints = get(doc, 'wpt'),
-                // a feature collection
-                gj = fc(),
-                feature;
-            for (i = 0; i < tracks.length; i++) {
-                feature = getTrack(tracks[i]);
-                if (feature) gj.features.push(feature);
-            }
-            for (i = 0; i < routes.length; i++) {
-                feature = getRoute(routes[i]);
-                if (feature) gj.features.push(feature);
-            }
-            for (i = 0; i < waypoints.length; i++) {
-                gj.features.push(getPoint(waypoints[i]));
-            }
-            function getPoints(node, pointname) {
-                var pts = get(node, pointname), line = [],
-                    l = pts.length;
-                if (l < 2) return;  // Invalid line in GeoJSON
-                for (var i = 0; i < l; i++) {
-                    line.push(coordPair(pts[i]));
-                }
-                return line;
-            }
-            function getTrack(node) {
-                var segments = get(node, 'trkseg'), track = [], line;
-                for (var i = 0; i < segments.length; i++) {
-                    line = getPoints(segments[i], 'trkpt');
-                    if (line) track.push(line);
-                }
-                if (track.length === 0) return;
-                return {
-                    type: 'Feature',
-                    properties: getProperties(node),
-                    geometry: {
-                        type: track.length === 1 ? 'LineString' : 'MultiLineString',
-                        coordinates: track.length === 1 ? track[0] : track
-                    }
-                };
-            }
-            function getRoute(node) {
-                var line = getPoints(node, 'rtept');
-                if (!line) return;
-                return {
-                    type: 'Feature',
-                    properties: getProperties(node),
-                    geometry: {
-                        type: 'LineString',
-                        coordinates: line
-                    }
-                };
-            }
-            function getPoint(node) {
-                var prop = getProperties(node);
-                prop.sym = nodeVal(get1(node, 'sym'));
-                return {
-                    type: 'Feature',
-                    properties: prop,
-                    geometry: {
-                        type: 'Point',
-                        coordinates: coordPair(node)
-                    }
-                };
-            }
-            function getProperties(node) {
-                var meta = ['name', 'desc', 'author', 'copyright', 'link',
-                            'time', 'keywords'],
-                    prop = {},
-                    k;
-                for (k = 0; k < meta.length; k++) {
-                    prop[meta[k]] = nodeVal(get1(node, meta[k]));
-                }
-                return clean(prop);
-            }
-            return gj;
+            return root;
         }
     };
     return t;

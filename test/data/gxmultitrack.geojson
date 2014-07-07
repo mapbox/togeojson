@@ -12,6 +12,7 @@
                 ]
             },
             "properties": {
+                "icon": "http://maps.google.com/mapfiles/kml/paddle/grn-circle.png",
                 "name": "\n",
                 "styleUrl": "#start",
                 "styleHash": "-13d91d2a",
@@ -166,6 +167,7 @@
                 ]
             },
             "properties": {
+                "icon": "http://earth.google.com/images/kml-icons/track-directional/track-0.png",
                 "name": "\n",
                 "styleUrl": "#track",
                 "styleHash": "-4182fe62",
@@ -184,6 +186,7 @@
                 ]
             },
             "properties": {
+                "icon": "http://maps.google.com/mapfiles/kml/paddle/red-circle.png",
                 "name": "\n",
                 "styleUrl": "#end",
                 "styleHash": "10d07b61",

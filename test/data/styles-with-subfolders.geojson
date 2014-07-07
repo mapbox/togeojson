@@ -1,0 +1,117 @@
+{
+    "type": "root",
+    "subfolders": {
+        "DGISLAYER300": {
+            "name": "Новые направления социальных услуг",
+            "icon": "files/acc.png",
+            "type": "folder",
+            "subfolders": {
+                "DGISLAYER303": {
+                    "name": "Мобильное ориентирование",
+                    "icon": "files/acc.png",
+                    "type": "folderNode",
+                    "geometries": {
+                        "type": "FeatureCollection",
+                        "features": [
+                            {
+                                "type": "Feature",
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        82.9629155940818,
+                                        55.0539668224114,
+                                        0
+                                    ]
+                                },
+                                "properties": {
+                                    "icon": "files/acc-map.png",
+                                    "name": "Мобильное ориентирование",
+                                    "styleUrl": "#Отделы_социальной_поддержки_населения_Style_00000002",
+                                    "styleHash": "-380cbca8"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "DGISLAYER307": {
+                    "name": "Пункт проката ТСР",
+                    "icon": "files/acc.png",
+                    "type": "folderNode",
+                    "geometries": {
+                        "type": "FeatureCollection",
+                        "features": [
+                            {
+                                "type": "Feature",
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        82.9629155940818,
+                                        55.0539668224114,
+                                        0
+                                    ]
+                                },
+                                "properties": {
+                                    "icon": "files/acc-map.png",
+                                    "name": "Пункт проката ТСР",
+                                    "styleUrl": "#Отделы_социальной_поддержки_населения_Style_00000002",
+                                    "styleHash": "-380cbca8"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "DGISLAYER309": {
+            "name": "Информационные услуги для инвалидов",
+            "icon": "files/acc.png",
+            "type": "folder",
+            "subfolders": {
+                "DGISLAYER310": {
+                    "name": "Интернет сайты",
+                    "icon": "files/acc.png",
+                    "type": "folderNode",
+                    "geometries": {
+                        "type": "FeatureCollection",
+                        "features": [
+                            {
+                                "type": "Feature",
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        82.9867,
+                                        55.0576666666667,
+                                        0
+                                    ]
+                                },
+                                "properties": {
+                                    "icon": "files/acc-map.png",
+                                    "name": "Портал \"Незримый Новосибирск\"",
+                                    "styleUrl": "#Отделы_социальной_поддержки_населения_Style_00000002",
+                                    "styleHash": "-380cbca8"
+                                }
+                            },
+                            {
+                                "type": "Feature",
+                                "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        82.8982888888889,
+                                        55.0381527777778,
+                                        0
+                                    ]
+                                },
+                                "properties": {
+                                    "icon": "files/acc-map.png",
+                                    "name": "Сайт \"Новосибирск - детям\"",
+                                    "styleUrl": "#Отделы_социальной_поддержки_населения_Style_00000002",
+                                    "styleHash": "-380cbca8"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

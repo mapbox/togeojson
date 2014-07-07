@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='utf-8'?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+    <Document>
+        <name>nsk_bike_11aprel14.kmz</name>
+        <Folder id="DGISLAYER127">
+            <name>Социальное обслуживание населения</name>
+            <visibility>1</visibility>
+            <open>0</open>
+            <styleUrl>#Социальное_обслуживание_населения_Style_00000001</styleUrl>
+            <Folder id="DGISLAYER170">
+                <name>Социальное обслуживание населения170</name>
+                <visibility>1</visibility>
+                <open>0</open>
+                <styleUrl>#Социальное_обслуживание_населения_Style_00000001</styleUrl>
+                <Folder id="DGISLAYER128">
+                    <name>Отделы социальной поддержки населения</name>
+                    <visibility>1</visibility>
+                    <open>0</open>
+                    <styleUrl>#Отделы_социальной_поддержки_населения_Style_00000002</styleUrl>
+                    <Placemark id="_2">
+                        <name>ОСПН Дзержинского района</name>
+                        <visibility>1</visibility>
+                        <address>Россия,Новосибирск,дзержинского проспект,16</address>
+                        <description><![CDATA[<div style="font-size: 13px; font-weight:bold; color:#17590E"> Отдел социальной поддержки населения Дзержинского района </div>]]></description>
+                        <styleUrl>#Отделы_социальной_поддержки_населения_Style_00000002</styleUrl>
+                        <Point>
+                            <coordinates>82.9668633489255,55.0510937512953,0</coordinates>
+                        </Point>
+                    </Placemark>
+                    <Placemark id="_2_0">
+                        <name>ОСПН Железнодорожного района</name>
+                        <visibility>1</visibility>
+                        <address>Россия,Новосибирск,ленина,57</address>
+                        <description><![CDATA[<div style="font-size: 13px; font-weight:bold; color:#17590E"> Отдел социальной поддержки населения Железнодорожного района</div>]]></description>
+                        <styleUrl>#Отделы_социальной_поддержки_населения_Style_00000002</styleUrl>
+                        <Point>
+                            <coordinates>82.9009926231011,55.0330780040838,0</coordinates>
+                        </Point>
+                    </Placemark>
+                    <Placemark id="_2_1">
+                        <name>ОСПН Заельцовского района</name>
+                        <visibility>1</visibility>
+                        <address>Россия,Новосибирск,дуси Ковальчук,179</address>
+                        <description><![CDATA[<div style="font-size: 13px; font-weight:bold; color:#17590E"> Отдел социальной поддержки населения Заельцовского района</div>]]></description>
+                        <styleUrl>#Отделы_социальной_поддержки_населения_Style_00000002</styleUrl>
+                        <Point>
+                            <coordinates>82.9095479601919,55.0586805649532,0</coordinates>
+                        </Point>
+                    </Placemark>
+                </Folder>
+            </Folder>
+            <Folder id="DGISLAYER139">
+                <name>Учреждения социального обслуживания населения</name>
+                <visibility>1</visibility>
+                <open>0</open>
+                <styleUrl>#Социальное_обслуживание_населения_Style_00000001</styleUrl>
+                <Placemark id="_2_9">
+                    <name>МБУ "КЦСОН Дзержинского района"</name>
+                    <visibility>1</visibility>
+                    <address>Россия,Новосибирск,Европейская,1а</address>
+                    <description><![CDATA[<div style="font-size: 13px; font-weight:bold; color:#17590E"> Муниципальное Бюджетное Учреждение г. Новосибирска "Комплексный центр социального обслуживания населения" Дзержинского района (МБУ "КЦСОН Дзержинского района")</div>]]></description>
+                    <styleUrl>#МБУ__КЦСОН_Дзержинского_района__Style_00000003</styleUrl>
+                    <Point>
+                        <coordinates>83.0032395722068,55.0712301585709,0</coordinates>
+                    </Point>
+                </Placemark>
+                <Placemark id="_2_10">
+                    <name>МБУ "КЦСОН Железнодорожного района"</name>
+                    <visibility>1</visibility>
+                    <address>Россия,Новосибирск,Революции,6</address>
+                    <description><![CDATA[<div style="font-size: 13px; font-weight:bold; color:#17590E"> Муниципальное Бюджетное Учреждение г. Новосибирска "Комплексный центр социального обслуживания населения" Железнодорожного района (МБУ "КЦСОН Железнодорожного района")</div>]]></description>
+                    <styleUrl>#МБУ__КЦСОН_Дзержинского_района__Style_00000003</styleUrl>
+                    <Point>
+                        <coordinates>82.9105416643526,55.0251929393546,0</coordinates>
+                    </Point>
+                </Placemark>
+            </Folder>
+        </Folder>
+        <Folder id="DGISLAYER150">
+        <name>Социальное обслуживание населенияololo</name>
+        <visibility>1</visibility>
+        <open>0</open>
+        <styleUrl>#Социальное_обслуживание_населения_Style_00000001</styleUrl>
+        </Folder>
+    </Document>
+</kml>
+

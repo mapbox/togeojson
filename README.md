@@ -1,5 +1,11 @@
 [![build status](https://secure.travis-ci.org/mapbox/togeojson.png)](http://travis-ci.org/mapbox/togeojson) [![Coverage Status](https://coveralls.io/repos/mapbox/togeojson/badge.png)](https://coveralls.io/r/mapbox/togeojson)
 
+# Fork togeojson library for 2gis additional layers
+
+* We don't need GPX support
+* Add folder support from KML
+* Add marker icons from KML style block
+
 # Convert KML and GPX to GeoJSON.
 
 This converts [KML](https://developers.google.com/kml/documentation/) & [GPX](http://www.topografix.com/gpx.asp)
@@ -32,15 +38,6 @@ holding an XML DOM.
 The output is a Javascript object of GeoJSON data. You can convert it to a string
 with [JSON.stringify](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
 or use it directly in libraries like [mapbox.js](http://www.mapbox.com/mapbox.js/).
-
-### `toGeoJSON.gpx(doc)`
-
-Convert a GPX document to GeoJSON. The first argument, `doc`, must be a GPX
-document as an XML DOM - not as a string. You can get this using jQuery's default
-`.ajax` function or using a bare XMLHttpRequest with the `.response` property
-holding an XML DOM.
-
-The output is a Javascript object of GeoJSON data, same as `.kml` outputs.
 
 
 ## Using it as a console utility
@@ -109,12 +106,6 @@ Not supported yet:
 * NetworkLinks
 * GroundOverlays
 
-## GPX
-
-Supported:
-
-* Line Paths
-* 'name', 'desc', 'author', 'copyright', 'link', 'time', 'keywords' tags
 
 ## FAQ
 

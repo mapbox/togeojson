@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='utf-8'?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Доступный город_2011.kmz</name>
+    <Style id="Социальное_обслуживание_населения_Style_00000001">
+      <LabelStyle>
+        <color>00000000</color>
+        <scale>1</scale>
+      </LabelStyle>
+      <LineStyle>
+        <color>ff000099</color>
+        <width>1</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>ff99ffff</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <ListStyle>
+        <ItemIcon>
+          <state>open closed</state>
+          <href>files/acc.png</href>
+        </ItemIcon>
+      </ListStyle>
+    </Style>
+    <Style id="Отделы_социальной_поддержки_населения_Style_00000002">
+      <IconStyle>
+        <scale>1.0</scale>
+        <heading>0</heading>
+        <Icon>
+          <href>files/acc-map.png</href>
+        </Icon>
+        <hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+      </IconStyle>
+      <LabelStyle>
+        <color>00000000</color>
+        <scale>1</scale>
+      </LabelStyle>
+      <LineStyle>
+        <color>ff000099</color>
+        <width>1</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>ff99ffff</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <ListStyle>
+        <ItemIcon>
+          <state>open closed</state>
+          <href>files/acc.png</href>
+        </ItemIcon>
+      </ListStyle>
+    </Style>
+    <Folder id="DGISLAYER300">
+      <name>Новые направления социальных услуг</name>
+      <visibility>1</visibility>
+      <open>0</open>
+      <styleUrl>#Социальное_обслуживание_населения_Style_00000001</styleUrl>
+      <Folder id="DGISLAYER303">
+        <name>Мобильное ориентирование</name>
+        <visibility>1</visibility>
+        <open>0</open>
+        <styleUrl>#Отделы_социальной_поддержки_населения_Style_00000002</styleUrl>
+        <Placemark id="_2_231">
+          <name>Мобильное ориентирование</name>
+          <visibility>1</visibility>
+          <address>Россия,Новосибирск,промышленная,1а</address>
+          <description></description>
+          <styleUrl>#Отделы_социальной_поддержки_населения_Style_00000002</styleUrl>
+          <Point>
+            <coordinates>82.9629155940818,55.0539668224114,0</coordinates>
+          </Point>
+        </Placemark>
+      </Folder>
+      <Folder id="DGISLAYER307">
+        <name>Пункт проката ТСР</name>
+        <visibility>1</visibility>
+        <open>0</open>
+        <styleUrl>#Отделы_социальной_поддержки_населения_Style_00000002</styleUrl>
+        <Placemark id="_2_233">
+          <name>Пункт проката ТСР</name>
+          <visibility>1</visibility>
+          <address>Россия,Новосибирск,промышленная,1а</address>
+          <description></description>
+          <styleUrl>#Отделы_социальной_поддержки_населения_Style_00000002</styleUrl>
+          <Point>
+            <coordinates>82.9629155940818,55.0539668224114,0</coordinates>
+          </Point>
+        </Placemark>
+      </Folder>
+    </Folder>
+    <Folder id="DGISLAYER309">
+      <name>Информационные услуги для инвалидов</name>
+      <visibility>1</visibility>
+      <open>0</open>
+      <styleUrl>#Отделы_социальной_поддержки_населения_Style_00000002</styleUrl>
+      <Folder id="DGISLAYER310">
+        <name>Интернет сайты</name>
+        <visibility>1</visibility>
+        <open>0</open>
+        <styleUrl>#Отделы_социальной_поддержки_населения_Style_00000002</styleUrl>
+        <Placemark id="_2_234">
+          <name>Портал "Незримый Новосибирск"</name>
+          <visibility>1</visibility>
+          <description></description>
+          <styleUrl>#Отделы_социальной_поддержки_населения_Style_00000002</styleUrl>
+          <Point>
+            <coordinates>82.9867,55.0576666666667,0</coordinates>
+          </Point>
+        </Placemark>
+        <Placemark id="_2_235">
+          <name>Сайт "Новосибирск - детям"</name>
+          <visibility>1</visibility>
+          <description></description>
+          <styleUrl>#Отделы_социальной_поддержки_населения_Style_00000002</styleUrl>
+          <Point>
+            <coordinates>82.8982888888889,55.0381527777778,0</coordinates>
+          </Point>
+        </Placemark>
+      </Folder>
+    </Folder>
+  </Document>
+</kml>
