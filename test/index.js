@@ -59,6 +59,9 @@ test('KML', function(t) {
     t.equal(
         JSON.stringify(JSON.parse(fs.readFileSync('test/data/selfclosing.geojson'))),
         JSON.stringify(tj.kml(toDOM(fs.readFileSync('test/data/selfclosing.kml')))), 'self-closing coord bug');
+    t.deepEqual(
+        JSON.parse(fs.readFileSync('test/data/styles-with-subfolders.geojson')),
+        tj.kml(toDOM(fs.readFileSync('test/data/styles-with-subfolders.kml'))), 'styles-with-subfolders');
     t.end();
 });
 

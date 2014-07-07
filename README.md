@@ -5,7 +5,6 @@
 * We don't need GPX support
 * Add folder support from KML
 * Add marker icons from KML style block
-* Remove inline styles from html in layer content description
 
 # Convert KML and GPX to GeoJSON.
 

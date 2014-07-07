@@ -73,12 +73,14 @@ toGeoJSON = (function() {
                 geotypes = ['Polygon', 'LineString', 'Point', 'Track', 'gx:Track'],
                 foldersList = get(doc, 'Folder'),
                 root,
-                styles = get(doc, 'Style');
+                styles = get(doc, 'Style'),
+                stylesById = {};
 
             for (var k = 0; k < styles.length; k++) {
-                styleIndex['#' + attr(styles[k], 'id')] = okhash(xml2str(styles[k])).toString(16);
+                var id = attr(styles[k], 'id');
+                stylesById['#' + id] = styles[k];
+                styleIndex['#' + id] = okhash(xml2str(styles[k])).toString(16);
             }
-
 
             if (foldersList.length > 1) {
                 root = {
@@ -106,7 +108,11 @@ toGeoJSON = (function() {
                     var folder = foldersList[i];
                     if (folder) {
                         var childFolders = parseChildFolders(get(folder, 'Folder')),
-                            currentFolder = fd(folder);
+                            currentFolder = fd(folder),
+                            styleUrl = nodeVal(get1(folder, 'styleUrl')),
+                            icon = getListIcon(styleUrl);
+
+                        if (icon) currentFolder.icon = icon;
 
                         if (childFolders && childFolders.folders) {
                             currentFolder.type = 'folder';
@@ -167,6 +173,30 @@ toGeoJSON = (function() {
                 for (var i = 0; i < elems.length; i++) coords.push(gxCoord(nodeVal(elems[i])));
                 return coords;
             }
+            function getListIcon(styleUrl) {
+                if (styleUrl) {
+                    var styleNode = stylesById[styleUrl];
+                    if (styleNode) {
+                        var iconNode = get1(styleNode, 'ItemIcon');
+                        if (iconNode) {
+                            return nodeVal(get1(iconNode, 'href'));
+                        }
+                    }
+                }
+                return null;
+            }
+            function getIcon(styleUrl) {
+                if (styleUrl) {
+                    var styleNode = stylesById[styleUrl];
+                    if (styleNode) {
+                        var iconNode = get1(styleNode, 'Icon');
+                        if (iconNode) {
+                            return nodeVal(get1(iconNode, 'href'));
+                        }
+                    }
+                }
+                return null;
+            }
             function getGeometry(root) {
                 var geomNode, geomNodes, i, j, k, geoms = [];
                 if (get1(root, 'MultiGeometry')) return getGeometry(get1(root, 'MultiGeometry'));
@@ -217,7 +247,10 @@ toGeoJSON = (function() {
                     timeSpan = get1(root, 'TimeSpan'),
                     extendedData = get1(root, 'ExtendedData'),
                     lineStyle = get1(root, 'LineStyle'),
-                    polyStyle = get1(root, 'PolyStyle');
+                    polyStyle = get1(root, 'PolyStyle'),
+                    icon = getIcon(styleUrl);
+                
+                if (icon) properties.icon = icon;
 
                 if (!geoms.length) return [];
                 if (name) properties.name = name;
