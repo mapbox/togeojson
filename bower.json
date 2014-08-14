@@ -1,5 +1,5 @@
 {
-  "version": "0.7.0",
+  "version": "0.8.0",
   "main": "togeojson.js",
   "repo": "git://github.com/mapbox/togeojson.git",
   "keywords": [
@@ -13,5 +13,7 @@
     "leaflet",
     "maps"
   ],
-  "description": "convert KML and GPX to GeoJSON"
+  "description": "convert KML and GPX to GeoJSON",
+  "name": "togeojson",
+  "license": "BSD"
 }
