@@ -17,10 +17,11 @@
   "name": "togeojson",
   "license": "BSD",
   "ignore": [
-	"**/.*",
-	"test",
-	"css",
-	"index.html",
-	"package.json"
-	]
+    "**/.*",
+    "test",
+    "css",
+    "*.md",
+    "index.html",
+    "package.json"
+  ]
 }
