@@ -15,5 +15,13 @@
   ],
   "description": "convert KML and GPX to GeoJSON",
   "name": "togeojson",
-  "license": "BSD"
+  "license": "BSD",
+  "ignore": [
+    "**/.*",
+    "test",
+    "css",
+    "*.md",
+    "index.html",
+    "package.json"
+  ]
 }
