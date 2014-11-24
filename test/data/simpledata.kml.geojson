@@ -1,0 +1,41 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122,
+                    37.002
+                ]
+            },
+            "properties": {
+                "name": "Easy trail",
+                "styleUrl": "#trailhead-balloon-template",
+                "styleHash": "ca0b0b",
+                "TrailHeadName": "Pi in the sky",
+                "TrailLength": "3.14159",
+                "ElevationGain": "10"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.998,
+                    37.0078
+                ]
+            },
+            "properties": {
+                "name": "Difficult trail",
+                "styleUrl": "#trailhead-balloon-template",
+                "styleHash": "ca0b0b",
+                "TrailHeadName": "Mount Everest",
+                "TrailLength": "347.45",
+                "ElevationGain": "10000"
+            }
+        }
+    ]
+}

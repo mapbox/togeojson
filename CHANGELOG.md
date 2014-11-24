@@ -1,3 +1,7 @@
+## 0.9.0
+
+* Encode KML id attributes on Placemarks as GeoJSON Feature id properties.
+
 ## 0.8.0
 
 * Support for the `gx:Track` and `gx:MultiTrack` extensions to GPX

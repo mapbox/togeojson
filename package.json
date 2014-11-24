@@ -12,10 +12,11 @@
     "browser": "browserify -t brfs test/index.js > test/bundle.js"
   },
   "devDependencies": {
-    "tape": "~2.12.3",
     "brfs": "~0.2.1",
     "coveralls": "~2.10.0",
-    "istanbul": "~0.2.11"
+    "glob": "^4.2.1",
+    "istanbul": "~0.2.11",
+    "tape": "~3.0.3"
   },
   "bin": {
     "togeojson": "togeojson"

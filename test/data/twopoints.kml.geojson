@@ -1,0 +1,35 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.0822035425683,
+                    37.42228990140251,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Simple placemark",
+                "description": "Attached to the ground. Intelligently places itself \n       at the height of the underlying terrain."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -120.0822035425683,
+                    37.42228990140251,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Simple placemark two",
+                "description": "Attached to the ground. Intelligently places itself \n       at the height of the underlying terrain."
+            }
+        }
+    ]
+}

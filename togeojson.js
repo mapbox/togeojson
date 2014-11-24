@@ -201,14 +201,16 @@ toGeoJSON = (function() {
                         properties[simpleDatas[i].getAttribute('name')] = nodeVal(simpleDatas[i]);
                     }
                 }
-                return [{
+                var feature = {
                     type: 'Feature',
                     geometry: (geoms.length === 1) ? geoms[0] : {
                         type: 'GeometryCollection',
                         geometries: geoms
                     },
                     properties: properties
-                }];
+                };
+                if (attr(root, 'id')) feature.id = attr(root, 'id');
+                return [feature];
             }
             return gj;
         },
