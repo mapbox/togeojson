@@ -105,10 +105,15 @@ toGeoJSON = (function() {
             }
             function gxCoord(v) { return numarray(v.split(' ')); }
             function gxCoords(root) {
-                var elems = get(root, 'coord', 'gx'), coords = [];
+                var elems = get(root, 'coord', 'gx'), coords = [], times = [];
                 if (elems.length === 0) elems = get(root, 'gx:coord');
                 for (var i = 0; i < elems.length; i++) coords.push(gxCoord(nodeVal(elems[i])));
-                return coords;
+                var timeElems = get(root, 'when');
+                for (var i = 0; i < timeElems.length; i++) times.push(nodeVal(timeElems[i]));
+                return {
+                    coords: coords,
+                    times: times
+                };
             }
             function getGeometry(root) {
                 var geomNode, geomNodes, i, j, k, geoms = [];
@@ -142,10 +147,13 @@ toGeoJSON = (function() {
                                 });
                             } else if (geotypes[i] == 'Track' ||
                                 geotypes[i] == 'gx:Track') {
-                                geoms.push({
+                                var track = gxCoords(geomNode);
+                                var trackObj = {
                                     type: 'LineString',
-                                    coordinates: gxCoords(geomNode)
-                                });
+                                    coordinates: track.coords
+                                };
+                                if (track.times.length) trackObj.times = track.times;
+                                geoms.push(trackObj);
                             }
                         }
                     }
