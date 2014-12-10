@@ -116,7 +116,7 @@ toGeoJSON = (function() {
                 };
             }
             function getGeometry(root) {
-                var geomNode, geomNodes, i, j, k, geoms = [];
+                var geomNode, geomNodes, i, j, k, geoms = [], coordTimes = [];
                 if (get1(root, 'MultiGeometry')) return getGeometry(get1(root, 'MultiGeometry'));
                 if (get1(root, 'MultiTrack')) return getGeometry(get1(root, 'MultiTrack'));
                 if (get1(root, 'gx:MultiTrack')) return getGeometry(get1(root, 'gx:MultiTrack'));
@@ -148,17 +148,19 @@ toGeoJSON = (function() {
                             } else if (geotypes[i] == 'Track' ||
                                 geotypes[i] == 'gx:Track') {
                                 var track = gxCoords(geomNode);
-                                var trackObj = {
+                                geoms.push({
                                     type: 'LineString',
                                     coordinates: track.coords
-                                };
-                                if (track.times.length) trackObj.times = track.times;
-                                geoms.push(trackObj);
+                                });
+                                if (track.times.length) coordTimes.push(track.times);
                             }
                         }
                     }
                 }
-                return geoms;
+                return {
+                    geoms: geoms,
+                    coordTimes: coordTimes
+                };
             }
             function getPlacemark(root) {
                 var geoms = getGeometry(root), i, properties = {},
@@ -170,7 +172,7 @@ toGeoJSON = (function() {
                     lineStyle = get1(root, 'LineStyle'),
                     polyStyle = get1(root, 'PolyStyle');
 
-                if (!geoms.length) return [];
+                if (!geoms.geoms.length) return [];
                 if (name) properties.name = name;
                 if (styleUrl && styleIndex[styleUrl]) {
                     properties.styleUrl = styleUrl;
@@ -213,11 +215,15 @@ toGeoJSON = (function() {
                         properties[simpleDatas[i].getAttribute('name')] = nodeVal(simpleDatas[i]);
                     }
                 }
+                if (geoms.coordTimes.length) {
+                    properties.coordTimes = (geoms.coordTimes.length === 1) ?
+                        geoms.coordTimes[0] : geoms.coordTimes;
+                }
                 var feature = {
                     type: 'Feature',
-                    geometry: (geoms.length === 1) ? geoms[0] : {
+                    geometry: (geoms.geoms.length === 1) ? geoms.geoms[0] : {
                         type: 'GeometryCollection',
-                        geometries: geoms
+                        geometries: geoms.geoms
                     },
                     properties: properties
                 };
@@ -267,16 +273,16 @@ toGeoJSON = (function() {
                     if (line.times.length) times.push(line.times);
                 }
                 if (track.length === 0) return;
-                var trackObj = {
+                var properties = getProperties(node);
+                if (times.length) properties.coordTimes = track.length === 1 ? times[0] : times;
+                return {
                     type: 'Feature',
-                    properties: getProperties(node),
+                    properties: properties,
                     geometry: {
                         type: track.length === 1 ? 'LineString' : 'MultiLineString',
                         coordinates: track.length === 1 ? track[0] : track
                     }
                 };
-                if (times.length) trackObj.geometry.times = track.length === 1 ? times[0] : times;
-                return trackObj;
             }
             function getRoute(node) {
                 var line = getPoints(node, 'rtept');
