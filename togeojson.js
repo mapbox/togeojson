@@ -163,7 +163,7 @@ toGeoJSON = (function() {
                 };
             }
             function getPlacemark(root) {
-                var geoms = getGeometry(root), i, properties = {},
+                var geomsAndTimes = getGeometry(root), i, properties = {},
                     name = nodeVal(get1(root, 'name')),
                     styleUrl = nodeVal(get1(root, 'styleUrl')),
                     description = nodeVal(get1(root, 'description')),
@@ -172,7 +172,7 @@ toGeoJSON = (function() {
                     lineStyle = get1(root, 'LineStyle'),
                     polyStyle = get1(root, 'PolyStyle');
 
-                if (!geoms.geoms.length) return [];
+                if (!geomsAndTimes.geoms.length) return [];
                 if (name) properties.name = name;
                 if (styleUrl && styleIndex[styleUrl]) {
                     properties.styleUrl = styleUrl;
@@ -215,15 +215,15 @@ toGeoJSON = (function() {
                         properties[simpleDatas[i].getAttribute('name')] = nodeVal(simpleDatas[i]);
                     }
                 }
-                if (geoms.coordTimes.length) {
-                    properties.coordTimes = (geoms.coordTimes.length === 1) ?
-                        geoms.coordTimes[0] : geoms.coordTimes;
+                if (geomsAndTimes.coordTimes.length) {
+                    properties.coordTimes = (geomsAndTimes.coordTimes.length === 1) ?
+                        geomsAndTimes.coordTimes[0] : geomsAndTimes.coordTimes;
                 }
                 var feature = {
                     type: 'Feature',
-                    geometry: (geoms.geoms.length === 1) ? geoms.geoms[0] : {
+                    geometry: (geomsAndTimes.geoms.length === 1) ? geomsAndTimes.geoms[0] : {
                         type: 'GeometryCollection',
-                        geometries: geoms.geoms
+                        geometries: geomsAndTimes.geoms
                     },
                     properties: properties
                 };
