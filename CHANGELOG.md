@@ -1,3 +1,7 @@
+## 0.10.0
+
+* Encode timestamps along lines in GPX and KML as a `coordTimes` property.
+
 ## 0.9.0
 
 * Encode KML id attributes on Placemarks as GeoJSON Feature id properties.
