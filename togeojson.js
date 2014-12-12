@@ -47,9 +47,13 @@ toGeoJSON = (function() {
     }
     function coordPair(x) {
         var ll = [attrf(x, 'lon'), attrf(x, 'lat')],
-            ele = get1(x, 'ele');
+            ele = get1(x, 'ele'),
+            time = get1(x, 'time');
         if (ele) ll.push(parseFloat(nodeVal(ele)));
-        return ll;
+        return {
+            coordinates: ll,
+            time: time ? nodeVal(time) : null
+        };
     }
 
     // create a new feature collection parent object
@@ -101,13 +105,18 @@ toGeoJSON = (function() {
             }
             function gxCoord(v) { return numarray(v.split(' ')); }
             function gxCoords(root) {
-                var elems = get(root, 'coord', 'gx'), coords = [];
+                var elems = get(root, 'coord', 'gx'), coords = [], times = [];
                 if (elems.length === 0) elems = get(root, 'gx:coord');
                 for (var i = 0; i < elems.length; i++) coords.push(gxCoord(nodeVal(elems[i])));
-                return coords;
+                var timeElems = get(root, 'when');
+                for (var i = 0; i < timeElems.length; i++) times.push(nodeVal(timeElems[i]));
+                return {
+                    coords: coords,
+                    times: times
+                };
             }
             function getGeometry(root) {
-                var geomNode, geomNodes, i, j, k, geoms = [];
+                var geomNode, geomNodes, i, j, k, geoms = [], coordTimes = [];
                 if (get1(root, 'MultiGeometry')) return getGeometry(get1(root, 'MultiGeometry'));
                 if (get1(root, 'MultiTrack')) return getGeometry(get1(root, 'MultiTrack'));
                 if (get1(root, 'gx:MultiTrack')) return getGeometry(get1(root, 'gx:MultiTrack'));
@@ -138,18 +147,23 @@ toGeoJSON = (function() {
                                 });
                             } else if (geotypes[i] == 'Track' ||
                                 geotypes[i] == 'gx:Track') {
+                                var track = gxCoords(geomNode);
                                 geoms.push({
                                     type: 'LineString',
-                                    coordinates: gxCoords(geomNode)
+                                    coordinates: track.coords
                                 });
+                                if (track.times.length) coordTimes.push(track.times);
                             }
                         }
                     }
                 }
-                return geoms;
+                return {
+                    geoms: geoms,
+                    coordTimes: coordTimes
+                };
             }
             function getPlacemark(root) {
-                var geoms = getGeometry(root), i, properties = {},
+                var geomsAndTimes = getGeometry(root), i, properties = {},
                     name = nodeVal(get1(root, 'name')),
                     styleUrl = nodeVal(get1(root, 'styleUrl')),
                     description = nodeVal(get1(root, 'description')),
@@ -158,7 +172,7 @@ toGeoJSON = (function() {
                     lineStyle = get1(root, 'LineStyle'),
                     polyStyle = get1(root, 'PolyStyle');
 
-                if (!geoms.length) return [];
+                if (!geomsAndTimes.geoms.length) return [];
                 if (name) properties.name = name;
                 if (styleUrl && styleIndex[styleUrl]) {
                     properties.styleUrl = styleUrl;
@@ -201,11 +215,15 @@ toGeoJSON = (function() {
                         properties[simpleDatas[i].getAttribute('name')] = nodeVal(simpleDatas[i]);
                     }
                 }
+                if (geomsAndTimes.coordTimes.length) {
+                    properties.coordTimes = (geomsAndTimes.coordTimes.length === 1) ?
+                        geomsAndTimes.coordTimes[0] : geomsAndTimes.coordTimes;
+                }
                 var feature = {
                     type: 'Feature',
-                    geometry: (geoms.length === 1) ? geoms[0] : {
+                    geometry: (geomsAndTimes.geoms.length === 1) ? geomsAndTimes.geoms[0] : {
                         type: 'GeometryCollection',
-                        geometries: geoms
+                        geometries: geomsAndTimes.geoms
                     },
                     properties: properties
                 };
@@ -234,24 +252,32 @@ toGeoJSON = (function() {
                 gj.features.push(getPoint(waypoints[i]));
             }
             function getPoints(node, pointname) {
-                var pts = get(node, pointname), line = [],
+                var pts = get(node, pointname), line = [], times = [],
                     l = pts.length;
                 if (l < 2) return;  // Invalid line in GeoJSON
                 for (var i = 0; i < l; i++) {
-                    line.push(coordPair(pts[i]));
+                    var c = coordPair(pts[i]);
+                    line.push(c.coordinates);
+                    if (c.time) times.push(c.time);
                 }
-                return line;
+                return {
+                    line: line,
+                    times: times
+                };
             }
             function getTrack(node) {
-                var segments = get(node, 'trkseg'), track = [], line;
+                var segments = get(node, 'trkseg'), track = [], times = [], line;
                 for (var i = 0; i < segments.length; i++) {
                     line = getPoints(segments[i], 'trkpt');
-                    if (line) track.push(line);
+                    if (line.line) track.push(line.line);
+                    if (line.times.length) times.push(line.times);
                 }
                 if (track.length === 0) return;
+                var properties = getProperties(node);
+                if (times.length) properties.coordTimes = track.length === 1 ? times[0] : times;
                 return {
                     type: 'Feature',
-                    properties: getProperties(node),
+                    properties: properties,
                     geometry: {
                         type: track.length === 1 ? 'LineString' : 'MultiLineString',
                         coordinates: track.length === 1 ? track[0] : track
@@ -261,7 +287,7 @@ toGeoJSON = (function() {
             function getRoute(node) {
                 var line = getPoints(node, 'rtept');
                 if (!line) return;
-                return {
+                var routeObj = {
                     type: 'Feature',
                     properties: getProperties(node),
                     geometry: {
@@ -269,6 +295,8 @@ toGeoJSON = (function() {
                         coordinates: line
                     }
                 };
+                if (line.times.length) routeObj.geometry.times = line.times;
+                return routeObj;
             }
             function getPoint(node) {
                 var prop = getProperties(node);
@@ -278,7 +306,7 @@ toGeoJSON = (function() {
                     properties: prop,
                     geometry: {
                         type: 'Point',
-                        coordinates: coordPair(node)
+                        coordinates: coordPair(node).coordinates
                     }
                 };
             }
