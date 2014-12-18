@@ -1,3 +1,8 @@
+## 0.10.1
+
+* Fix an IE9 error: IE9 'supports' `XMLSerializer` inasmuch as it will create
+  an instance that fails always and hard.
+
 ## 0.10.0
 
 * Encode timestamps along lines in GPX and KML as a `coordTimes` property.
