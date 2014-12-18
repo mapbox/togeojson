@@ -71,7 +71,11 @@ toGeoJSON = (function() {
     } else if (typeof exports === 'object' && typeof process === 'object' && !process.browser) {
         serializer = new (require('xmldom').XMLSerializer)();
     }
-    function xml2str(str) { return serializer.serializeToString(str); }
+    function xml2str(str) {
+        // IE9 will create a new XMLSerializer but it'll crash immediately.
+        if (str.xml !== undefined) return str.xml;
+        return serializer.serializeToString(str);
+    }
 
     var t = {
         kml: function(doc) {
