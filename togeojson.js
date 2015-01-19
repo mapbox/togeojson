@@ -258,7 +258,7 @@ toGeoJSON = (function() {
             function getPoints(node, pointname) {
                 var pts = get(node, pointname), line = [], times = [],
                     l = pts.length;
-                if (l < 2) return;  // Invalid line in GeoJSON
+                if (l < 2) return {};  // Invalid line in GeoJSON
                 for (var i = 0; i < l; i++) {
                     var c = coordPair(pts[i]);
                     line.push(c.coordinates);
