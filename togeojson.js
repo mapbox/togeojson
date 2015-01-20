@@ -274,7 +274,7 @@ toGeoJSON = (function() {
                 for (var i = 0; i < segments.length; i++) {
                     line = getPoints(segments[i], 'trkpt');
                     if (line.line) track.push(line.line);
-                    if (line.times.length) times.push(line.times);
+                    if (line.times && line.times.length) times.push(line.times);
                 }
                 if (track.length === 0) return;
                 var properties = getProperties(node);
