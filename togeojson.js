@@ -54,7 +54,7 @@ toGeoJSON = (function() {
         return {
             coordinates: ll,
             time: time ? nodeVal(time) : null,
-            heartRate: heartRate ? nodeVal(heartRate) : null
+            heartRate: heartRate ? parseFloat(nodeVal(heartRate)) : null
         };
     }
 
@@ -268,7 +268,7 @@ toGeoJSON = (function() {
                     var c = coordPair(pts[i]);
                     line.push(c.coordinates);
                     if (c.time) times.push(c.time);
-                    if (c.heartRate) heartRates.push(c.heartRates);
+                    if (c.heartRate) heartRates.push(c.heartRate);
                 }
                 return {
                     line: line,
@@ -277,15 +277,21 @@ toGeoJSON = (function() {
                 };
             }
             function getTrack(node) {
-                var segments = get(node, 'trkseg'), track = [], times = [], line;
+                var segments = get(node, 'trkseg'),
+                    track = [],
+                    times = [],
+                    heartRates = [],
+                    line;
                 for (var i = 0; i < segments.length; i++) {
                     line = getPoints(segments[i], 'trkpt');
                     if (line.line) track.push(line.line);
                     if (line.times && line.times.length) times.push(line.times);
+                    if (line.heartRates && line.heartRates.length) heartRates.push(line.heartRates);
                 }
                 if (track.length === 0) return;
                 var properties = getProperties(node);
                 if (times.length) properties.coordTimes = track.length === 1 ? times[0] : times;
+                if (heartRates.length) properties.heartRates = heartRates;
                 return {
                     type: 'Feature',
                     properties: properties,
