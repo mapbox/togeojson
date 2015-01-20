@@ -48,11 +48,13 @@ toGeoJSON = (function() {
     function coordPair(x) {
         var ll = [attrf(x, 'lon'), attrf(x, 'lat')],
             ele = get1(x, 'ele'),
+            heartRate = get1(x, 'gpxtpx:hr'),
             time = get1(x, 'time');
         if (ele) ll.push(parseFloat(nodeVal(ele)));
         return {
             coordinates: ll,
-            time: time ? nodeVal(time) : null
+            time: time ? nodeVal(time) : null,
+            heartRate: heartRate ? nodeVal(heartRate) : null
         };
     }
 
@@ -256,17 +258,22 @@ toGeoJSON = (function() {
                 gj.features.push(getPoint(waypoints[i]));
             }
             function getPoints(node, pointname) {
-                var pts = get(node, pointname), line = [], times = [],
+                var pts = get(node, pointname),
+                    line = [],
+                    times = [],
+                    heartRates = [],
                     l = pts.length;
                 if (l < 2) return;  // Invalid line in GeoJSON
                 for (var i = 0; i < l; i++) {
                     var c = coordPair(pts[i]);
                     line.push(c.coordinates);
                     if (c.time) times.push(c.time);
+                    if (c.heartRate) heartRates.push(c.heartRates);
                 }
                 return {
                     line: line,
-                    times: times
+                    times: times,
+                    heartRates: heartRates
                 };
             }
             function getTrack(node) {
