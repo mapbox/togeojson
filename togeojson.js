@@ -291,7 +291,7 @@ toGeoJSON = (function() {
                 if (track.length === 0) return;
                 var properties = getProperties(node);
                 if (times.length) properties.coordTimes = track.length === 1 ? times[0] : times;
-                if (heartRates.length) properties.heartRates = heartRates;
+                if (heartRates.length) properties.heartRates = track.length === 1 ? heartRates[0] : heartRates;
                 return {
                     type: 'Feature',
                     properties: properties,
