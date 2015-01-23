@@ -48,7 +48,8 @@ toGeoJSON = (function() {
     function coordPair(x) {
         var ll = [attrf(x, 'lon'), attrf(x, 'lat')],
             ele = get1(x, 'ele'),
-            heartRate = get1(x, 'gpxtpx:hr'),
+            // handle namespaced attribute in browser
+            heartRate = get1(x, 'gpxtpx:hr') || get1(x, 'hr'),
             time = get1(x, 'time');
         if (ele) ll.push(parseFloat(nodeVal(ele)));
         return {
