@@ -1,4 +1,4 @@
-toGeoJSON = (function() {
+var toGeoJSON = (function() {
     'use strict';
 
     var removeSpace = (/\s*/g),
@@ -21,12 +21,12 @@ toGeoJSON = (function() {
     function norm(el) { if (el.normalize) { el.normalize(); } return el; }
     // cast array x into numbers
     function numarray(x) {
-        for (var j = 0, o = []; j < x.length; j++) o[j] = parseFloat(x[j]);
+        for (var j = 0, o = []; j < x.length; j++) { o[j] = parseFloat(x[j]); }
         return o;
     }
     function clean(x) {
         var o = {};
-        for (var i in x) if (x[i]) o[i] = x[i];
+        for (var i in x) { if (x[i]) { o[i] = x[i]; } }
         return o;
     }
     // get the content of a text node, if any
@@ -51,7 +51,7 @@ toGeoJSON = (function() {
             // handle namespaced attribute in browser
             heartRate = get1(x, 'gpxtpx:hr') || get1(x, 'hr'),
             time = get1(x, 'time');
-        if (ele) ll.push(parseFloat(nodeVal(ele)));
+        if (ele) { ll.push(parseFloat(nodeVal(ele))); }
         return {
             coordinates: ll,
             time: time ? nodeVal(time) : null,
@@ -102,8 +102,8 @@ toGeoJSON = (function() {
             function kmlColor(v) {
                 var color, opacity;
                 v = v || "";
-                if (v.substr(0, 1) === "#") v = v.substr(1);
-                if (v.length === 6 || v.length === 3) color = v;
+                if (v.substr(0, 1) === "#") { v = v.substr(1); }
+                if (v.length === 6 || v.length === 3) { color = v; }
                 if (v.length === 8) {
                     opacity = parseInt(v.substr(0, 2), 16) / 255;
                     color = v.substr(2);
@@ -124,25 +124,25 @@ toGeoJSON = (function() {
             }
             function getGeometry(root) {
                 var geomNode, geomNodes, i, j, k, geoms = [], coordTimes = [];
-                if (get1(root, 'MultiGeometry')) return getGeometry(get1(root, 'MultiGeometry'));
-                if (get1(root, 'MultiTrack')) return getGeometry(get1(root, 'MultiTrack'));
-                if (get1(root, 'gx:MultiTrack')) return getGeometry(get1(root, 'gx:MultiTrack'));
+                if (get1(root, 'MultiGeometry')) { return getGeometry(get1(root, 'MultiGeometry')); }
+                if (get1(root, 'MultiTrack')) { return getGeometry(get1(root, 'MultiTrack')); }
+                if (get1(root, 'gx:MultiTrack')) { return getGeometry(get1(root, 'gx:MultiTrack')); }
                 for (i = 0; i < geotypes.length; i++) {
                     geomNodes = get(root, geotypes[i]);
                     if (geomNodes) {
                         for (j = 0; j < geomNodes.length; j++) {
                             geomNode = geomNodes[j];
-                            if (geotypes[i] == 'Point') {
+                            if (geotypes[i] === 'Point') {
                                 geoms.push({
                                     type: 'Point',
                                     coordinates: coord1(nodeVal(get1(geomNode, 'coordinates')))
                                 });
-                            } else if (geotypes[i] == 'LineString') {
+                            } else if (geotypes[i] === 'LineString') {
                                 geoms.push({
                                     type: 'LineString',
                                     coordinates: coord(nodeVal(get1(geomNode, 'coordinates')))
                                 });
-                            } else if (geotypes[i] == 'Polygon') {
+                            } else if (geotypes[i] === 'Polygon') {
                                 var rings = get(geomNode, 'LinearRing'),
                                     coords = [];
                                 for (k = 0; k < rings.length; k++) {
@@ -152,8 +152,8 @@ toGeoJSON = (function() {
                                     type: 'Polygon',
                                     coordinates: coords
                                 });
-                            } else if (geotypes[i] == 'Track' ||
-                                geotypes[i] == 'gx:Track') {
+                            } else if (geotypes[i] === 'Track' ||
+                                geotypes[i] === 'gx:Track') {
                                 var track = gxCoords(geomNode);
                                 geoms.push({
                                     type: 'LineString',
