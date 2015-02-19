@@ -1,3 +1,9 @@
+## 0.11.0
+
+* Add heartrate support for GPX tracks
+* Fix elevation support
+* Fix test runner
+
 ## 0.10.1
 
 * Fix an IE9 error: IE9 'supports' `XMLSerializer` inasmuch as it will create
