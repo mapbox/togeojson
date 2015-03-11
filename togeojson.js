@@ -50,8 +50,14 @@ var toGeoJSON = (function() {
             ele = get1(x, 'ele'),
             // handle namespaced attribute in browser
             heartRate = get1(x, 'gpxtpx:hr') || get1(x, 'hr'),
-            time = get1(x, 'time');
-        if (ele) { ll.push(parseFloat(nodeVal(ele))); }
+            time = get1(x, 'time'),
+            e;
+        if (ele) {
+            e = parseFloat(nodeVal(ele));
+            if (e) {
+              ll.push(e);
+            }
+        }
         return {
             coordinates: ll,
             time: time ? nodeVal(time) : null,
