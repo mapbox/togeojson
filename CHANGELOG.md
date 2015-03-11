@@ -1,3 +1,7 @@
+## 0.11.1
+
+* Omit elevation component if <ele> tag is empty
+
 ## 0.11.0
 
 * Add heartrate support for GPX tracks
