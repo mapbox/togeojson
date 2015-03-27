@@ -313,13 +313,15 @@ var toGeoJSON = (function() {
                 if (!line) return;
                 var routeObj = {
                     type: 'Feature',
-                    properties: getProperties(node),
                     geometry: {
                         type: 'LineString',
-                        coordinates: line
+                        coordinates: line.line
                     }
                 };
-                if (line.times.length) routeObj.geometry.times = line.times;
+                var properties = getProperties(node);
+                if (line.times.length) properties.coordTimes = line.times
+                if (line.heartRates.length) properties.heartRates = line.heartRates
+                routeObj.properties = properties
                 return routeObj;
             }
             function getPoint(node) {
