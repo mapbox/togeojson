@@ -316,10 +316,9 @@ var toGeoJSON = (function() {
                     properties: getProperties(node),
                     geometry: {
                         type: 'LineString',
-                        coordinates: line
+                        coordinates: line.line
                     }
                 };
-                if (line.times.length) routeObj.geometry.times = line.times;
                 return routeObj;
             }
             function getPoint(node) {
