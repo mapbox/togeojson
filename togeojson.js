@@ -32,7 +32,7 @@ var toGeoJSON = (function() {
     // get the content of a text node, if any
     function nodeVal(x) {
         if (x) { norm(x); }
-        return (x && x.firstChild && x.firstChild.nodeValue) || '';
+        return (x && x.textContent) || '';
     }
     // get one coordinate from a coordinate array, if any
     function coord1(v) { return numarray(v.replace(removeSpace, '').split(',')); }
