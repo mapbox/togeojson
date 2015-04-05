@@ -1,4 +1,5 @@
-[![build status](https://secure.travis-ci.org/mapbox/togeojson.png)](http://travis-ci.org/mapbox/togeojson) [![Coverage Status](https://coveralls.io/repos/mapbox/togeojson/badge.png)](https://coveralls.io/r/mapbox/togeojson)
+[![Build status](https://img.shields.io/travis/mapbox/togeojson.svg "Build status")](http://travis-ci.org/mapbox/togeojson)
+[![Coverage status](https://img.shields.io/coveralls/mapbox/togeojson.svg "Coverage status")](https://coveralls.io/r/mapbox/togeojson)
 
 # Convert KML and GPX to GeoJSON.
 
