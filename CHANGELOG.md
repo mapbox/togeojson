@@ -1,3 +1,8 @@
+## 0.12.0
+
+* Fix rte based GPX based tracks
+* Add CDATA support to KML
+
 ## 0.11.0
 
 * Add heartrate support for GPX tracks
