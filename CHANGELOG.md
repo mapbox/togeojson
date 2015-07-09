@@ -1,3 +1,7 @@
+## 0.12.1
+
+* Fix trackpoints with elevation=0 having their elevation skipped
+
 ## 0.12.0
 
 * Fix rte based GPX based tracks

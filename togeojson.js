@@ -54,7 +54,7 @@ var toGeoJSON = (function() {
             e;
         if (ele) {
             e = parseFloat(nodeVal(ele));
-            if (e) {
+            if (!isNaN(e)) {
               ll.push(e);
             }
         }

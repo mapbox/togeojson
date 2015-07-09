@@ -1,0 +1,38 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "BIG LOOP",
+                "desc": "Big loop around the base of Great Blue Hill",
+                "time": "2001-06-24T15:09:09Z",
+                "coordTimes": [
+                    "2001-06-24T15:09:09Z",
+                    "2001-06-24T15:09:29Z",
+                    "2001-06-24T15:16:04Z"
+                ]
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        -71.09622,
+                        42.210009,
+                        61.5696
+                    ],
+                    [
+                        -71.09622,
+                        42.210031,
+                        0
+                    ],
+                    [
+                        -71.096284,
+                        42.210052,
+                        62.484
+                    ]
+                ]
+            }
+        }
+    ]
+}

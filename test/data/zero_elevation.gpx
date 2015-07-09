@@ -1,0 +1,45 @@
+<?xml version="1.0" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="details.xsl"?>
+<gpx
+ version="1.0"
+ creator="ExpertGPS 1.1.1 - http://www.topografix.com"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns="http://www.topografix.com/GPX/1/0"
+ xmlns:topografix="http://www.topografix.com/GPX/Private/TopoGrafix/0/2"
+ xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/GPX/1/0/gpx.xsd http://www.topografix.com/GPX/Private/TopoGrafix/0/2 http://www.topografix.com/GPX/Private/TopoGrafix/0/2/topografix.xsd">
+<name><![CDATA[Blue Hills Reservation]]></name>
+<desc><![CDATA[]]></desc>
+<author><![CDATA[Dan Foster]]></author>
+<email>trails@topografix.com</email>
+<url><![CDATA[http://www.nemba.org/ridingzone/p_Blue_Hills_Reservation.html]]></url>
+<urlname><![CDATA[Blue Hills description at NEMBA]]></urlname>
+<time>2002-04-19T02:47:17Z</time>
+<keywords><![CDATA[blue hills, mountain biking, milton]]></keywords>
+<bounds minlat="42.204420" minlon="-71.123630" maxlat="42.228312" maxlon="-71.069634"/>
+<trk>
+ <name><![CDATA[BIG LOOP]]></name>
+ <desc><![CDATA[Big loop around the base of Great Blue Hill]]></desc>
+ <number>3</number>
+ <topografix:color>00ffff</topografix:color>
+<trkseg>
+<trkpt lat="42.210009" lon="-71.096220">
+ <ele>61.569600</ele>
+ <time>2001-06-24T15:09:09Z</time>
+ <cmt><![CDATA[Sun Jun 24 15:08:39 2001]]></cmt>
+ <sym>Dot</sym>
+</trkpt>
+<trkpt lat="42.210031" lon="-71.096220">
+ <ele>0</ele>
+ <time>2001-06-24T15:09:29Z</time>
+ <cmt><![CDATA[Sun Jun 24 15:08:59 2001]]></cmt>
+ <sym>Dot</sym>
+</trkpt>
+<trkpt lat="42.210052" lon="-71.096284">
+ <ele>62.484000</ele>
+ <time>2001-06-24T15:16:04Z</time>
+ <cmt><![CDATA[Sun Jun 24 15:15:34 2001]]></cmt>
+ <sym>Dot</sym>
+</trkpt>
+</trkseg>
+</trk>
+</gpx>
