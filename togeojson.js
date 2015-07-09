@@ -75,6 +75,7 @@ var toGeoJSON = (function() {
 
     var serializer;
     if (typeof XMLSerializer !== 'undefined') {
+        /* istanbul ignore next */
         serializer = new XMLSerializer();
     // only require xmldom in a node environment
     } else if (typeof exports === 'object' && typeof process === 'object' && !process.browser) {
