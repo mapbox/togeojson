@@ -98,10 +98,14 @@ var toGeoJSON = (function() {
                 geotypes = ['Polygon', 'LineString', 'Point', 'Track', 'gx:Track'],
                 // all root placemarks in the file
                 placemarks = get(doc, 'Placemark'),
-                styles = get(doc, 'Style');
+                styles = get(doc, 'Style'),
+                styleMaps = get(doc, 'StyleMap');
 
             for (var k = 0; k < styles.length; k++) {
                 styleIndex['#' + attr(styles[k], 'id')] = okhash(xml2str(styles[k])).toString(16);
+            }
+            for (var k = 0; k < styleMaps.length; k++) {
+                styleIndex['#' + attr(styleMaps[k], 'id')] = okhash(xml2str(styleMaps[k])).toString(16);
             }
             for (var j = 0; j < placemarks.length; j++) {
                 gj.features = gj.features.concat(getPlacemark(placemarks[j]));
