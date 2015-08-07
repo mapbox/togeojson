@@ -188,7 +188,7 @@ var toGeoJSON = (function() {
 
                 if (!geomsAndTimes.geoms.length) return [];
                 if (name) properties.name = name;
-                if (styleUrl && styleIndex[styleUrl]) {
+                if (styleUrl && styleIndex["#"+styleUrl]) {
                     properties.styleUrl = styleUrl;
                     properties.styleHash = styleIndex[styleUrl];
                 }
