@@ -188,9 +188,13 @@ var toGeoJSON = (function() {
 
                 if (!geomsAndTimes.geoms.length) return [];
                 if (name) properties.name = name;
-                if (styleUrl && styleIndex[styleUrl]) {
+                if (styleUrl && (styleIndex[styleUrl] || styleIndex[styleUrl + '-normal'])) {
                     properties.styleUrl = styleUrl;
-                    properties.styleHash = styleIndex[styleUrl];
+                    properties.styleNormalUrl = styleUrl + '-normal';
+                    properties.styleNormalHash = styleIndex[properties.styleNormalUrl];
+                    properties.styleHash = styleIndex[styleUrl] || properties.styleNormalHash;
+                    properties.styleHighlightUrl = styleUrl + '-highlight';
+                    properties.styleHighlightHash = styleIndex[properties.styleHighlightUrl];
                 }
                 if (description) properties.description = description;
                 if (timeSpan) {
