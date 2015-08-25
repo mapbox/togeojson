@@ -1,3 +1,10 @@
+## 0.13.0
+
+* Added support for StyleMap elements in Google-flavored KML
+* Improved test coverage
+* Made `#` prefix for internal style references optional
+* Uses `eslint` for code style uniformity
+
 ## 0.12.2
 
 * Fix `#` prefix on exported hex colors
