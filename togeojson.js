@@ -83,6 +83,8 @@ var toGeoJSON = (function() {
     }
     function xml2str(str) {
         // IE9 will create a new XMLSerializer but it'll crash immediately.
+        // This line is ignored because we don't run coverage tests in IE9
+        /* istanbul ignore next */
         if (str.xml !== undefined) return str.xml;
         return serializer.serializeToString(str);
     }
@@ -188,7 +190,10 @@ var toGeoJSON = (function() {
 
                 if (!geomsAndTimes.geoms.length) return [];
                 if (name) properties.name = name;
-                if (styleUrl && styleIndex['#' + styleUrl]) {
+                if (styleUrl[0] !== '#') {
+                    styleUrl = '#' + styleUrl;
+                }
+                if (styleUrl && styleIndex[styleUrl]) {
                     properties.styleUrl = styleUrl;
                     properties.styleHash = styleIndex[styleUrl];
                 }
@@ -311,7 +316,7 @@ var toGeoJSON = (function() {
             }
             function getRoute(node) {
                 var line = getPoints(node, 'rtept');
-                if (!line) return;
+                if (!line.line) return;
                 var routeObj = {
                     type: 'Feature',
                     properties: getProperties(node),
