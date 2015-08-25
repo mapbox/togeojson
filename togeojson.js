@@ -104,8 +104,8 @@ var toGeoJSON = (function() {
             for (var k = 0; k < styles.length; k++) {
                 styleIndex['#' + attr(styles[k], 'id')] = okhash(xml2str(styles[k])).toString(16);
             }
-            for (var k = 0; k < styleMaps.length; k++) {
-                styleIndex['#' + attr(styleMaps[k], 'id')] = okhash(xml2str(styleMaps[k])).toString(16);
+            for (var l = 0; l < styleMaps.length; l++) {
+                styleIndex['#' + attr(styleMaps[l], 'id')] = okhash(xml2str(styleMaps[l])).toString(16);
             }
             for (var j = 0; j < placemarks.length; j++) {
                 gj.features = gj.features.concat(getPlacemark(placemarks[j]));
