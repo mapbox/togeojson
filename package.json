@@ -1,19 +1,20 @@
 {
   "name": "togeojson",
-  "version": "0.12.1",
+  "version": "0.12.2",
   "description": "convert KML and GPX to GeoJSON",
   "main": "togeojson.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "tape test/*.js",
+    "test": "eslint togeojson.js && tape test/*.js",
     "cov": "istanbul cover test/index.js && coveralls < ./coverage/lcov.info",
     "browser": "browserify -t brfs test/index.js > test/bundle.js"
   },
   "devDependencies": {
     "brfs": "~0.2.1",
     "coveralls": "~2.10.0",
+    "eslint": "^1.2.1",
     "glob": "^4.2.1",
     "istanbul": "~0.2.11",
     "tape": "~3.0.3"

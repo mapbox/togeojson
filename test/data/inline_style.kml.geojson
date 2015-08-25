@@ -54,10 +54,10 @@
             },
             "properties": {
                 "name": "With all inline styles",
-                "stroke": "0000ff",
+                "stroke": "#0000ff",
                 "stroke-opacity": 0,
                 "stroke-width": 3,
-                "fill": "0011ff",
+                "fill": "#0011ff",
                 "fill-opacity": 1
             }
         },
@@ -114,7 +114,7 @@
             },
             "properties": {
                 "name": "With some inline styles",
-                "stroke": "0000ff",
+                "stroke": "#0000ff",
                 "stroke-opacity": 1,
                 "fill-opacity": 1
             }

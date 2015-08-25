@@ -12,9 +12,7 @@
                 ]
             },
             "properties": {
-                "name": "8/8/2013 17:20 (Start)",
-                "styleUrl": "#start",
-                "styleHash": "4c07829a"
+                "name": "8/8/2013 17:20 (Start)"
             }
         },
         {
@@ -106,8 +104,6 @@
             },
             "properties": {
                 "name": "8/8/2013 17:20",
-                "styleUrl": "#track",
-                "styleHash": "-1fdecab8",
                 "type": "walking",
                 "coordTimes": [
                     "2013-08-08T15:24:47.000Z",
@@ -141,9 +137,7 @@
                 ]
             },
             "properties": {
-                "name": "8/8/2013 17:20 (End)",
-                "styleUrl": "#end",
-                "styleHash": "15ca312f"
+                "name": "8/8/2013 17:20 (End)"
             }
         }
     ]
