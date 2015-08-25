@@ -12,6 +12,8 @@
             },
             "properties": {
                 "name": "Easy trail",
+                "styleUrl": "#trailhead-balloon-template",
+                "styleHash": "ca0b0b",
                 "TrailHeadName": "Pi in the sky",
                 "TrailLength": "3.14159",
                 "ElevationGain": "10"
@@ -28,6 +30,8 @@
             },
             "properties": {
                 "name": "Difficult trail",
+                "styleUrl": "#trailhead-balloon-template",
+                "styleHash": "ca0b0b",
                 "TrailHeadName": "Mount Everest",
                 "TrailLength": "347.45",
                 "ElevationGain": "10000"

@@ -54,6 +54,8 @@
             },
             "properties": {
                 "name": "With all inline styles",
+                "styleUrl": "#",
+                "styleHash": "-211050d",
                 "stroke": "#0000ff",
                 "stroke-opacity": 0,
                 "stroke-width": 3,
@@ -114,6 +116,8 @@
             },
             "properties": {
                 "name": "With some inline styles",
+                "styleUrl": "#",
+                "styleHash": "-211050d",
                 "stroke": "#0000ff",
                 "stroke-opacity": 1,
                 "fill-opacity": 1
@@ -155,7 +159,9 @@
                 ]
             },
             "properties": {
-                "name": "Without inline style"
+                "name": "Without inline style",
+                "styleUrl": "#",
+                "styleHash": "-211050d"
             }
         }
     ]
