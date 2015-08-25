@@ -1,9 +1,9 @@
 var toGeoJSON = (function() {
     'use strict';
 
-    var removeSpace = (/\s*/g),
-        trimSpace = (/^\s*|\s*$/g),
-        splitSpace = (/\s+/);
+    var removeSpace = /\s*/g,
+        trimSpace = /^\s*|\s*$/g,
+        splitSpace = /\s+/;
     // generate a short, numeric hash of a string
     function okhash(x) {
         if (!x || !x.length) return 0;
