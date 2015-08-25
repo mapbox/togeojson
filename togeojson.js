@@ -55,7 +55,7 @@ var toGeoJSON = (function() {
         if (ele) {
             e = parseFloat(nodeVal(ele));
             if (!isNaN(e)) {
-              ll.push(e);
+                ll.push(e);
             }
         }
         return {
@@ -108,8 +108,8 @@ var toGeoJSON = (function() {
             }
             function kmlColor(v) {
                 var color, opacity;
-                v = v || "";
-                if (v.substr(0, 1) === "#") { v = v.substr(1); }
+                v = v || '';
+                if (v.substr(0, 1) === '#') { v = v.substr(1); }
                 if (v.length === 6 || v.length === 3) { color = v; }
                 if (v.length === 8) {
                     opacity = parseInt(v.substr(0, 2), 16) / 255;
@@ -123,7 +123,7 @@ var toGeoJSON = (function() {
                 if (elems.length === 0) elems = get(root, 'gx:coord');
                 for (var i = 0; i < elems.length; i++) coords.push(gxCoord(nodeVal(elems[i])));
                 var timeElems = get(root, 'when');
-                for (var i = 0; i < timeElems.length; i++) times.push(nodeVal(timeElems[i]));
+                for (var j = 0; j < timeElems.length; j++) times.push(nodeVal(timeElems[j]));
                 return {
                     coords: coords,
                     times: times
@@ -188,7 +188,7 @@ var toGeoJSON = (function() {
 
                 if (!geomsAndTimes.geoms.length) return [];
                 if (name) properties.name = name;
-                if (styleUrl && styleIndex["#"+styleUrl]) {
+                if (styleUrl && styleIndex['#' + styleUrl]) {
                     properties.styleUrl = styleUrl;
                     properties.styleHash = styleIndex[styleUrl];
                 }
@@ -215,8 +215,8 @@ var toGeoJSON = (function() {
                         outline = nodeVal(get1(polyStyle, 'outline'));
                     if (pcolor) properties.fill = pcolor;
                     if (!isNaN(popacity)) properties['fill-opacity'] = popacity;
-                    if (fill) properties['fill-opacity'] = fill === "1" ? 1 : 0;
-                    if (outline) properties['stroke-opacity'] = outline === "1" ? 1 : 0;
+                    if (fill) properties['fill-opacity'] = fill === '1' ? 1 : 0;
+                    if (outline) properties['stroke-opacity'] = outline === '1' ? 1 : 0;
                 }
                 if (extendedData) {
                     var datas = get(extendedData, 'Data'),
