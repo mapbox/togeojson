@@ -190,7 +190,8 @@ var toGeoJSON = (function() {
                     timeSpan = get1(root, 'TimeSpan'),
                     extendedData = get1(root, 'ExtendedData'),
                     lineStyle = get1(root, 'LineStyle'),
-                    polyStyle = get1(root, 'PolyStyle');
+                    polyStyle = get1(root, 'PolyStyle'),
+                    visibility = get1(root, 'visibility');
 
                 if (!geomsAndTimes.geoms.length) return [];
                 if (name) properties.name = name;
@@ -237,6 +238,9 @@ var toGeoJSON = (function() {
                     for (i = 0; i < simpleDatas.length; i++) {
                         properties[simpleDatas[i].getAttribute('name')] = nodeVal(simpleDatas[i]);
                     }
+                }
+                if (visibility) {
+                    properties.visibility = nodeVal(visibility);
                 }
                 if (geomsAndTimes.coordTimes.length) {
                     properties.coordTimes = (geomsAndTimes.coordTimes.length === 1) ?
