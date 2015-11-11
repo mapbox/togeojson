@@ -76,10 +76,6 @@ var converted_with_styles = tj.kml(kml, { styles: true });
 Download it into your project like
 
     wget https://raw.github.com/tmcw/togeojson/gh-pages/togeojson.js
-    
-Or install with [Bower](http://bower.io)
-	
-    bower install togeojson
 
 ```html
 <script src='jquery.js'></script>
