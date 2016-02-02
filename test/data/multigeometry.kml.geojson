@@ -39,7 +39,8 @@
                 ]
             },
             "properties": {
-                "name": "SF Marina Harbor Master"
+                "name": "SF Marina Harbor Master",
+                "visibility": "0"
             }
         }
     ]
