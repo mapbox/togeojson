@@ -94,7 +94,9 @@ var toGeoJSON = (function() {
 
             var gj = fc(),
                 // styleindex keeps track of hashed styles in order to match features
-                styleIndex = {},
+                styleIndex = {}, styleByHash = {},
+                // stylemapindex keeps track of style maps to expose in properties
+                styleMapIndex = {},
                 // atomic geospatial types supported by KML - MultiGeometry is
                 // handled separately
                 geotypes = ['Polygon', 'LineString', 'Point', 'Track', 'gx:Track'],
@@ -104,10 +106,19 @@ var toGeoJSON = (function() {
                 styleMaps = get(doc, 'StyleMap');
 
             for (var k = 0; k < styles.length; k++) {
-                styleIndex['#' + attr(styles[k], 'id')] = okhash(xml2str(styles[k])).toString(16);
+                var hash = okhash(xml2str(styles[k])).toString(16);
+                styleIndex['#' + attr(styles[k], 'id')] = hash;
+                styleByHash[hash] = styles[k];
             }
             for (var l = 0; l < styleMaps.length; l++) {
                 styleIndex['#' + attr(styleMaps[l], 'id')] = okhash(xml2str(styleMaps[l])).toString(16);
+                var pairs = get(styleMaps[l], 'Pair');
+                var pairsMap = {};
+                for (var m = 0; m < pairs.length; m++) {
+                  pairsMap[nodeVal(get1(pairs[m], 'key'))] = nodeVal(get1(pairs[m], 'styleUrl'));
+                }
+                styleMapIndex['#' + attr(styleMaps[l], 'id')] = pairsMap;
+
             }
             for (var j = 0; j < placemarks.length; j++) {
                 gj.features = gj.features.concat(getPlacemark(placemarks[j]));
@@ -195,12 +206,23 @@ var toGeoJSON = (function() {
 
                 if (!geomsAndTimes.geoms.length) return [];
                 if (name) properties.name = name;
-                if (styleUrl[0] !== '#') {
-                    styleUrl = '#' + styleUrl;
-                }
-                if (styleUrl && styleIndex[styleUrl]) {
-                    properties.styleUrl = styleUrl;
+                if (styleUrl) {
+                  if (styleUrl[0] !== '#') {
+                      styleUrl = '#' + styleUrl;
+                  }
+
+                  properties.styleUrl = styleUrl;
+                  if (styleIndex[styleUrl]) {
                     properties.styleHash = styleIndex[styleUrl];
+                  }
+                  if (styleMapIndex[styleUrl]) {
+                    properties.styleMapHash = styleMapIndex[styleUrl];
+                    properties.styleHash = styleIndex[styleMapIndex[styleUrl].normal];
+                  }
+                  // Try to populate the lineStyle or polyStyle since we got the style hash
+                  var style = styleByHash[properties.styleHash];
+                  if (!lineStyle) lineStyle = get1(style, 'LineStyle');
+                  if (!polyStyle) polyStyle = get1(style, 'PolyStyle');
                 }
                 if (description) properties.description = description;
                 if (timeSpan) {
