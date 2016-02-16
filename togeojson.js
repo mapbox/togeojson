@@ -115,7 +115,7 @@ var toGeoJSON = (function() {
                 var pairs = get(styleMaps[l], 'Pair');
                 var pairsMap = {};
                 for (var m = 0; m < pairs.length; m++) {
-                  pairsMap[nodeVal(get1(pairs[m], 'key'))] = nodeVal(get1(pairs[m], 'styleUrl'));
+                    pairsMap[nodeVal(get1(pairs[m], 'key'))] = nodeVal(get1(pairs[m], 'styleUrl'));
                 }
                 styleMapIndex['#' + attr(styleMaps[l], 'id')] = pairsMap;
 
@@ -207,22 +207,22 @@ var toGeoJSON = (function() {
                 if (!geomsAndTimes.geoms.length) return [];
                 if (name) properties.name = name;
                 if (styleUrl) {
-                  if (styleUrl[0] !== '#') {
-                      styleUrl = '#' + styleUrl;
-                  }
+                    if (styleUrl[0] !== '#') {
+                        styleUrl = '#' + styleUrl;
+                    }
 
-                  properties.styleUrl = styleUrl;
-                  if (styleIndex[styleUrl]) {
-                    properties.styleHash = styleIndex[styleUrl];
-                  }
-                  if (styleMapIndex[styleUrl]) {
-                    properties.styleMapHash = styleMapIndex[styleUrl];
-                    properties.styleHash = styleIndex[styleMapIndex[styleUrl].normal];
-                  }
-                  // Try to populate the lineStyle or polyStyle since we got the style hash
-                  var style = styleByHash[properties.styleHash];
-                  if (!lineStyle) lineStyle = get1(style, 'LineStyle');
-                  if (!polyStyle) polyStyle = get1(style, 'PolyStyle');
+                    properties.styleUrl = styleUrl;
+                    if (styleIndex[styleUrl]) {
+                        properties.styleHash = styleIndex[styleUrl];
+                    }
+                    if (styleMapIndex[styleUrl]) {
+                        properties.styleMapHash = styleMapIndex[styleUrl];
+                        properties.styleHash = styleIndex[styleMapIndex[styleUrl].normal];
+                    }
+                    // Try to populate the lineStyle or polyStyle since we got the style hash
+                    var style = styleByHash[properties.styleHash];
+                    if (!lineStyle) lineStyle = get1(style, 'LineStyle');
+                    if (!polyStyle) polyStyle = get1(style, 'PolyStyle');
                 }
                 if (description) properties.description = description;
                 if (timeSpan) {
