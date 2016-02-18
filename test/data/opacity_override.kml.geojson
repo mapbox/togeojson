@@ -1,0 +1,29 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        2.3101624,
+                        48.7301875
+                    ],
+                    [
+                        2.3098714,
+                        48.7300247
+                    ]
+                ]
+            },
+            "properties": {
+                "styleUrl": "#",
+                "styleHash": "3e3043ea",
+                "stroke-width": 3,
+                "fill": "#ff0011",
+                "fill-opacity": 0.8,
+                "stroke-opacity": 0
+            }
+        }
+    ]
+}
