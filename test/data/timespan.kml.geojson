@@ -27,6 +27,7 @@
             },
             "properties": {
                 "name": "1",
+                "styleUrl": "#FEATURES",
                 "timespan": {
                     "begin": "0725",
                     "end": "0733"

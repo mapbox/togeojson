@@ -221,8 +221,10 @@ var toGeoJSON = (function() {
                     }
                     // Try to populate the lineStyle or polyStyle since we got the style hash
                     var style = styleByHash[properties.styleHash];
-                    if (!lineStyle) lineStyle = get1(style, 'LineStyle');
-                    if (!polyStyle) polyStyle = get1(style, 'PolyStyle');
+                    if (style) {
+                        if (!lineStyle) lineStyle = get1(style, 'LineStyle');
+                        if (!polyStyle) polyStyle = get1(style, 'PolyStyle');
+                    }
                 }
                 if (description) properties.description = description;
                 if (timeSpan) {

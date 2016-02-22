@@ -170,6 +170,9 @@
                 "styleUrl": "#track",
                 "styleHash": "-4182fe62",
                 "description": "\n\n   ",
+                "stroke": "#0000ff",
+                "stroke-opacity": 0.4980392156862745,
+                "stroke-width": 4,
                 "type": "\ncourse à pied\n     ",
                 "coordTimes": [
                     [
