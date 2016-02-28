@@ -249,8 +249,8 @@ var toGeoJSON = (function() {
                         outline = nodeVal(get1(polyStyle, 'outline'));
                     if (pcolor) properties.fill = pcolor;
                     if (!isNaN(popacity)) properties['fill-opacity'] = popacity;
-                    if (fill) properties['fill-opacity'] = fill === '1' ? 1 : 0;
-                    if (outline) properties['stroke-opacity'] = outline === '1' ? 1 : 0;
+                    if (fill) properties['fill-opacity'] = fill === '1' ? properties['fill-opacity'] || 1 : 0;
+                    if (outline) properties['stroke-opacity'] = outline === '1' ? properties['stroke-opacity'] || 1 : 0;
                 }
                 if (extendedData) {
                     var datas = get(extendedData, 'Data'),
