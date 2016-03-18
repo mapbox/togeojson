@@ -130,7 +130,9 @@ var toGeoJSON = (function() {
                 if (v.length === 6 || v.length === 3) { color = v; }
                 if (v.length === 8) {
                     opacity = parseInt(v.substr(0, 2), 16) / 255;
-                    color = '#'+v.substr(2);
+                    color = '#' + v.substr(6, 2) +
+                        v.substr(4, 2) +
+                        v.substr(2, 2);
                 }
                 return [color, isNaN(opacity) ? undefined : opacity];
             }

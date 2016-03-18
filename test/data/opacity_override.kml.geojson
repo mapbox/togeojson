@@ -17,10 +17,8 @@
                 ]
             },
             "properties": {
-                "styleUrl": "#",
-                "styleHash": "3e3043ea",
                 "stroke-width": 3,
-                "fill": "#ff0011",
+                "fill": "#1100ff",
                 "fill-opacity": 0.8,
                 "stroke-opacity": 0
             }
