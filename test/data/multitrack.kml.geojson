@@ -14,7 +14,8 @@
             "properties": {
                 "name": "8/8/2013 17:20 (Start)",
                 "styleUrl": "#start",
-                "styleHash": "4c07829a"
+                "styleHash": "4c07829a",
+                "timestamp": "2013-08-08T15:20:40.000Z"
             }
         },
         {
@@ -146,7 +147,8 @@
             "properties": {
                 "name": "8/8/2013 17:20 (End)",
                 "styleUrl": "#end",
-                "styleHash": "15ca312f"
+                "styleHash": "15ca312f",
+                "timestamp": "2013-08-08T16:25:57.000Z"
             }
         }
     ]

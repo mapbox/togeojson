@@ -15,7 +15,8 @@
                 "name": "\n12/04/2014 11:24 AM (départ)\n   ",
                 "styleUrl": "#start",
                 "styleHash": "-13d91d2a",
-                "description": "\n\n   "
+                "description": "\n\n   ",
+                "timestamp": "2014-04-12T14:26:16.702Z"
             }
         },
         {
@@ -223,7 +224,8 @@
                 "name": "\n12/04/2014 11:24 AM (fin)\n   ",
                 "styleUrl": "#end",
                 "styleHash": "10d07b61",
-                "description": "\nCréé par Google Mes parcours sur Android\n\nNom : 12/04/2014 11:24 AM\nType d'activité : course à pied\nDescription : -\nDistance totale : 10,43 km (6,5 mi)\nDurée totale : 1:13:38\nDurée du déplacement : 1:08:20\nVitesse moyenne : 8,49 km/h (5,3 mi/h)\nVitesse moyenne de déplacement : 9,16 km/h (5,7 mi/h)\nVitesse max. : 12,84 km/h (8,0 mi/h)\nVitesse moyenne : 7:04 min/km (11:22 min/mi)\nAllure moyenne : 6:33 min/km (10:33 min/mi)\nVitesse maximale : 4:40 min/km (7:31 min/mi)\nÉlévation max. : 1020 m (3347 pi)\nÉlévation min. : 678 m (2223 pi)\nDénivelé : 1095 m (3593 pi)\nInclinaison max. : 21 %\nInclinaison min. : -24 %\nDate d'enregistrement : 12/04/2014 11:24 AM\n\n   "
+                "description": "\nCréé par Google Mes parcours sur Android\n\nNom : 12/04/2014 11:24 AM\nType d'activité : course à pied\nDescription : -\nDistance totale : 10,43 km (6,5 mi)\nDurée totale : 1:13:38\nDurée du déplacement : 1:08:20\nVitesse moyenne : 8,49 km/h (5,3 mi/h)\nVitesse moyenne de déplacement : 9,16 km/h (5,7 mi/h)\nVitesse max. : 12,84 km/h (8,0 mi/h)\nVitesse moyenne : 7:04 min/km (11:22 min/mi)\nAllure moyenne : 6:33 min/km (10:33 min/mi)\nVitesse maximale : 4:40 min/km (7:31 min/mi)\nÉlévation max. : 1020 m (3347 pi)\nÉlévation min. : 678 m (2223 pi)\nDénivelé : 1095 m (3593 pi)\nInclinaison max. : 21 %\nInclinaison min. : -24 %\nDate d'enregistrement : 12/04/2014 11:24 AM\n\n   ",
+                "timestamp": "2014-04-12T15:38:07.678Z"
             }
         }
     ]

@@ -1,3 +1,7 @@
+## 0.14.0
+
+* Now includes TimeStamp property from Placemarks, if it exists.
+
 ## 0.13.0
 
 * Added support for StyleMap elements in Google-flavored KML
