@@ -105,6 +105,7 @@ Supported:
 * Styles with hashing
 * Tracks & MultiTracks with `gx:coords`, including altitude
 * [TimeSpan](https://developers.google.com/kml/documentation/kmlreference#timespan)
+* [TimeStamp](https://developers.google.com/kml/documentation/kmlreference#timestamp)
 
 Not supported yet:
 
