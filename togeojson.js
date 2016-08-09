@@ -236,8 +236,7 @@ var toGeoJSON = (function() {
                     properties.timespan = { begin: begin, end: end };
                 }
                 if (timeStamp) {
-                    var when = nodeVal(get1(timeStamp, 'when'));
-                    properties.timestamp = { when: when };
+                    properties.timestamp = nodeVal(get1(timeStamp, 'when'));
                 }
                 if (lineStyle) {
                     var linestyles = kmlColor(nodeVal(get1(lineStyle, 'color'))),
