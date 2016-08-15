@@ -5,20 +5,12 @@
 # Convert KML and GPX to GeoJSON.
 
 This converts [KML](https://developers.google.com/kml/documentation/) & [GPX](http://www.topografix.com/gpx.asp)
-to
-[GeoJSON](http://www.geojson.org/), in a browser or with [nodejs](http://nodejs.org/).
+to [GeoJSON](http://www.geojson.org/), in a browser or with [Node.js](http://nodejs.org/).
 
-It is
-
-* Dependency-free
-* Tiny
-* Written in vanilla javascript that's jshint-friendly
-* Tested
-
-It is not
-
-* Concerned about ugly extensions to KML
-* Concerned with having an 'internal format' of its own
+* [x] Dependency-free
+* [x] Tiny
+* [x] Tested
+* [x] Node.js + Browsers
 
 Want to use this with [Leaflet](http://leafletjs.com/)? Try [leaflet-omnivore](https://github.com/mapbox/leaflet-omnivore)!
 
@@ -44,8 +36,7 @@ holding an XML DOM.
 
 The output is a Javascript object of GeoJSON data, same as `.kml` outputs.
 
-
-## Using it as a console utility
+## CLI
 
 Install it into your path with `npm install -g togeojson`.
 
@@ -53,7 +44,7 @@ Install it into your path with `npm install -g togeojson`.
 ~> togeojson file.kml > file.geojson
 ```
 
-## Using it as a nodejs library
+## Node.js
 
 Install it into your project with `npm install --save togeojson`.
 
@@ -69,10 +60,10 @@ var kml = jsdom(fs.readFileSync('foo.kml', 'utf8'));
 
 var converted = tj.kml(kml);
 
-var converted_with_styles = tj.kml(kml, { styles: true });
+var convertedWithStyles = tj.kml(kml, { styles: true });
 ```
 
-## Using it as a browser library
+## Browser
 
 Download it into your project like
 
@@ -91,33 +82,26 @@ $.ajax('test/data/linestring.kml').done(function(xml) {
 toGeoJSON doesn't include AJAX - you can use [jQuery](http://jquery.com/) for
 just AJAX.
 
-## KML
+### KML Feature Support
 
-Supported:
+* [x] Point
+* [x] Polygon
+* [x] LineString
+* [x] name & description
+* [x] ExtendedData
+* [x] SimpleData
+* [x] MultiGeometry -> GeometryCollection
+* [x] Styles with hashing
+* [x] Tracks & MultiTracks with `gx:coords`, including altitude
+* [x] [TimeSpan](https://developers.google.com/kml/documentation/kmlreference#timespan)
+* [x] [TimeStamp](https://developers.google.com/kml/documentation/kmlreference#timestamp)
+* [ ] NetworkLinks
+* [ ] GroundOverlays
 
-* Point
-* Polygon
-* LineString
-* name & description
-* ExtendedData
-* SimpleData
-* MultiGeometry -> GeometryCollection
-* Styles with hashing
-* Tracks & MultiTracks with `gx:coords`, including altitude
-* [TimeSpan](https://developers.google.com/kml/documentation/kmlreference#timespan)
-* [TimeStamp](https://developers.google.com/kml/documentation/kmlreference#timestamp)
+### GPX Feature Support
 
-Not supported yet:
-
-* NetworkLinks
-* GroundOverlays
-
-## GPX
-
-Supported:
-
-* Line Paths
-* 'name', 'desc', 'author', 'copyright', 'link', 'time', 'keywords' tags
+* [x] Line Paths
+* [x] 'name', 'desc', 'author', 'copyright', 'link', 'time', 'keywords' tags
 
 ## FAQ
 
