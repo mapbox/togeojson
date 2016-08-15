@@ -1,4 +1,4 @@
-## 0.14.1
+## 0.14.2
 
 * Fixes a potential crash with QGIS-generated GPX files.
 
