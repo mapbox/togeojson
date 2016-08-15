@@ -1,3 +1,7 @@
+## 0.14.1
+
+* Fixes a potential crash with QGIS-generated GPX files.
+
 ## 0.14.0
 
 * Now includes TimeStamp property from Placemarks, if it exists.
