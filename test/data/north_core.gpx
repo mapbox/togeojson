@@ -1,0 +1,242 @@
+<?xml version="1.0"?>
+<gpx version="1.1" creator="GDAL 1.11.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ogr="http://osgeo.org/gdal" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<metadata><bounds minlat="10.228889000000001" minlon="-1.524722000000000" maxlat="13.520000000000000" maxlon="4.196806000000000"/></metadata>                   
+<trk>
+  <type>NC</type>
+  <extensions>
+    <ogr:SOURCE01>This Fixture demonstrates issue 102, a crash that can occur if trkseg and trkpoint don't match exactly</ogr:SOURCE01>
+    <ogr:SOURCE02>WB map archive IBRD #33246, #33245; June 2004</ogr:SOURCE02>
+    <ogr:DATE>2014/04/01</ogr:DATE>
+    <ogr:VALIDITE>2004.0</ogr:VALIDITE>
+    <ogr:CODE_PAYS>BEN</ogr:CODE_PAYS>
+    <ogr:NOM_LIGNE>Bimbereke - Kandi</ogr:NOM_LIGNE>
+    <ogr:PUISSANCE>161</ogr:PUISSANCE>
+    <ogr:STATUT>Ligne planifie</ogr:STATUT>
+    <ogr:NOM_PROJET>North Core Project, Benin - Niger</ogr:NOM_PROJET>
+  </extensions>
+  <trkseg>
+    <trkpt lat="10.228889" lon="2.665278">
+    </trkpt>
+    <trkpt lat="11.133333" lon="2.933333">
+    </trkpt>
+  </trkseg>
+</trk>
+<trk>
+  <type>NC</type>
+  <extensions>
+    <ogr:SOURCE01>African Infrastructure Country Diagnostics</ogr:SOURCE01>
+    <ogr:SOURCE02>WAPP North Core Project, Benin - Niger</ogr:SOURCE02>
+    <ogr:DATE>2014/04/01</ogr:DATE>
+    <ogr:VALIDITE>-99.0</ogr:VALIDITE>
+    <ogr:CODE_PAYS>BEN</ogr:CODE_PAYS>
+    <ogr:NOM_LIGNE>Bembereke - Zabori</ogr:NOM_LIGNE>
+    <ogr:PUISSANCE>330</ogr:PUISSANCE>
+    <ogr:STATUT>Ligne planifie</ogr:STATUT>
+    <ogr:NOM_PROJET>North Core Project, Benin - Niger</ogr:NOM_PROJET>
+  </extensions>
+  <trkseg>
+    <trkpt lat="11.133333" lon="2.933333">
+    </trkpt>
+    <trkpt lat="11.862522" lon="3.435664">
+    </trkpt>
+  </trkseg>
+</trk>
+<trk>
+  <type>NC</type>
+  <extensions>
+    <ogr:SOURCE01>African Infrastructure Country Diagnostics</ogr:SOURCE01>
+    <ogr:SOURCE02>WAPP North Core Project, Niger - Burkina Faso</ogr:SOURCE02>
+    <ogr:DATE>2014/04/01</ogr:DATE>
+    <ogr:VALIDITE>-99.0</ogr:VALIDITE>
+    <ogr:CODE_PAYS>BFA</ogr:CODE_PAYS>
+    <ogr:NOM_LIGNE>Birnin Kebbi - Ouagadougou</ogr:NOM_LIGNE>
+    <ogr:PUISSANCE>330</ogr:PUISSANCE>
+    <ogr:STATUT>Ligne planifie</ogr:STATUT>
+    <ogr:NOM_PROJET>North Core Project, Niger - Burkina Faso</ogr:NOM_PROJET>
+  </extensions>
+  <trkseg>
+    <trkpt lat="13.164212" lon="0.99212">
+    </trkpt>
+    <trkpt lat="12.688132" lon="-0.517094">
+    </trkpt>
+  </trkseg>
+  <trkseg>
+    <trkpt lat="12.688132" lon="-0.517094">
+    </trkpt>
+    <trkpt lat="12.640647" lon="-0.667626">
+    </trkpt>
+  </trkseg>
+  <trkseg>
+    <trkpt lat="12.640647" lon="-0.667626">
+    </trkpt>
+    <trkpt lat="12.370277" lon="-1.524722">
+    </trkpt>
+  </trkseg>
+</trk>
+<trk>
+  <type>NC</type>
+  <extensions>
+    <ogr:SOURCE01>African Infrastructure Country Diagnostics</ogr:SOURCE01>
+    <ogr:SOURCE02>WAPP North Core Project, Nigeria - Niger</ogr:SOURCE02>
+    <ogr:DATE>2014/04/01</ogr:DATE>
+    <ogr:VALIDITE>-99.0</ogr:VALIDITE>
+    <ogr:CODE_PAYS>NGA</ogr:CODE_PAYS>
+    <ogr:NOM_LIGNE>Dosso - Birnin Kebbi</ogr:NOM_LIGNE>
+    <ogr:PUISSANCE>330</ogr:PUISSANCE>
+    <ogr:STATUT>Ligne planifie</ogr:STATUT>
+    <ogr:NOM_PROJET>North Core Project, Nigeria - Niger</ogr:NOM_PROJET>
+  </extensions>
+  <trkseg>
+    <trkpt lat="12.667497" lon="3.816438">
+    </trkpt>
+    <trkpt lat="12.446262" lon="4.184197">
+    </trkpt>
+    <trkpt lat="12.450347" lon="4.196806">
+    </trkpt>
+  </trkseg>
+</trk>
+<trk>
+  <type>NC</type>
+  <extensions>
+    <ogr:SOURCE01>African Infrastructure Country Diagnostics</ogr:SOURCE01>
+    <ogr:SOURCE02>WAPP North Core Project, Nigeria - Niger</ogr:SOURCE02>
+    <ogr:DATE>2014/04/01</ogr:DATE>
+    <ogr:VALIDITE>-99.0</ogr:VALIDITE>
+    <ogr:CODE_PAYS>NGA</ogr:CODE_PAYS>
+    <ogr:NOM_LIGNE>Dosso - Birnin Kebbi</ogr:NOM_LIGNE>
+    <ogr:PUISSANCE>330</ogr:PUISSANCE>
+    <ogr:STATUT>Ligne planifie</ogr:STATUT>
+    <ogr:NOM_PROJET>North Core Project, Nigeria - Niger</ogr:NOM_PROJET>
+  </extensions>
+  <trkseg>
+    <trkpt lat="12.667498" lon="3.816435">
+    </trkpt>
+    <trkpt lat="12.667497" lon="3.816438">
+    </trkpt>
+  </trkseg>
+</trk>
+<trk>
+  <type>NC</type>
+  <extensions>
+    <ogr:SOURCE01>African Infrastructure Country Diagnostics</ogr:SOURCE01>
+    <ogr:SOURCE02>WAPP North Core Project, Nigeria - Niger</ogr:SOURCE02>
+    <ogr:DATE>2014/04/01</ogr:DATE>
+    <ogr:VALIDITE>-99.0</ogr:VALIDITE>
+    <ogr:CODE_PAYS>NER</ogr:CODE_PAYS>
+    <ogr:NOM_LIGNE>Dosso - Birnin Kebbi</ogr:NOM_LIGNE>
+    <ogr:PUISSANCE>330</ogr:PUISSANCE>
+    <ogr:STATUT>Ligne planifie</ogr:STATUT>
+    <ogr:NOM_PROJET>North Core Project, Nigeria - Niger</ogr:NOM_PROJET>
+  </extensions>
+  <trkseg>
+    <trkpt lat="13.05" lon="3.2">
+    </trkpt>
+    <trkpt lat="13.03917" lon="3.198604">
+    </trkpt>
+    <trkpt lat="12.814024" lon="3.572865">
+    </trkpt>
+  </trkseg>
+  <trkseg>
+    <trkpt lat="12.814024" lon="3.572865">
+    </trkpt>
+    <trkpt lat="12.667498" lon="3.816435">
+    </trkpt>
+  </trkseg>
+</trk>
+<trk>
+  <type>NC</type>
+  <extensions>
+    <ogr:SOURCE01>African Infrastructure Country Diagnostics</ogr:SOURCE01>
+    <ogr:SOURCE02>WAPP North Core Project, Nigeria - Niger</ogr:SOURCE02>
+    <ogr:DATE>2014/04/01</ogr:DATE>
+    <ogr:VALIDITE>-99.0</ogr:VALIDITE>
+    <ogr:CODE_PAYS>NER</ogr:CODE_PAYS>
+    <ogr:NOM_LIGNE>Dosso - Niamey</ogr:NOM_LIGNE>
+    <ogr:PUISSANCE>330</ogr:PUISSANCE>
+    <ogr:STATUT>Ligne planifie</ogr:STATUT>
+    <ogr:NOM_PROJET>North Core Project, Nigeria - Niger</ogr:NOM_PROJET>
+  </extensions>
+  <trkseg>
+    <trkpt lat="13.52" lon="2.12">
+    </trkpt>
+    <trkpt lat="13.50692" lon="2.124997">
+    </trkpt>
+    <trkpt lat="13.042749" lon="3.191601">
+    </trkpt>
+    <trkpt lat="13.05" lon="3.2">
+    </trkpt>
+  </trkseg>
+</trk>
+<trk>
+  <type>NC</type>
+  <extensions>
+    <ogr:SOURCE01>African Infrastructure Country Diagnostics</ogr:SOURCE01>
+    <ogr:SOURCE02>WAPP North Core Project, Niger - Burkina Faso</ogr:SOURCE02>
+    <ogr:DATE>2014/04/01</ogr:DATE>
+    <ogr:VALIDITE>-99.0</ogr:VALIDITE>
+    <ogr:CODE_PAYS>NER</ogr:CODE_PAYS>
+    <ogr:NOM_LIGNE>Birnin Kebbi - Ouagadougou</ogr:NOM_LIGNE>
+    <ogr:PUISSANCE>330</ogr:PUISSANCE>
+    <ogr:STATUT>Ligne planifie</ogr:STATUT>
+    <ogr:NOM_PROJET>North Core Project, Niger - Burkina Faso</ogr:NOM_PROJET>
+  </extensions>
+  <trkseg>
+    <trkpt lat="13.52" lon="2.119999">
+    </trkpt>
+    <trkpt lat="13.164212" lon="0.99212">
+    </trkpt>
+  </trkseg>
+  <trkseg>
+    <trkpt lat="13.52" lon="2.12">
+    </trkpt>
+    <trkpt lat="13.52" lon="2.119999">
+    </trkpt>
+  </trkseg>
+  <trkseg>
+    <trkpt lat="13.52" lon="2.12">
+    </trkpt>
+  </trkseg>
+</trk>
+<trk>
+  <type>NC</type>
+  <extensions>
+    <ogr:SOURCE01>African Infrastructure Country Diagnostics</ogr:SOURCE01>
+    <ogr:SOURCE02>WAPP North Core Project, Nigeria - Niger</ogr:SOURCE02>
+    <ogr:DATE>2014/04/01</ogr:DATE>
+    <ogr:VALIDITE>-99.0</ogr:VALIDITE>
+    <ogr:CODE_PAYS>NER</ogr:CODE_PAYS>
+    <ogr:NOM_LIGNE>Bembereke - Zabori</ogr:NOM_LIGNE>
+    <ogr:PUISSANCE>330</ogr:PUISSANCE>
+    <ogr:STATUT>Ligne planifie</ogr:STATUT>
+    <ogr:NOM_PROJET>North Core Project, Benin - Niger</ogr:NOM_PROJET>
+  </extensions>
+  <trkseg>
+    <trkpt lat="11.862522" lon="3.435664">
+    </trkpt>
+    <trkpt lat="11.883333" lon="3.45">
+    </trkpt>
+    <trkpt lat="12.814024" lon="3.572865">
+    </trkpt>
+  </trkseg>
+</trk>
+<trk>
+  <type>NC</type>
+  <extensions>
+    <ogr:SOURCE01>African Infrastructure Country Diagnostics</ogr:SOURCE01>
+    <ogr:SOURCE02>WAPP North Core Project, Nigeria - Niger</ogr:SOURCE02>
+    <ogr:DATE>2014/04/01</ogr:DATE>
+    <ogr:VALIDITE>-99.0</ogr:VALIDITE>
+    <ogr:CODE_PAYS>NER</ogr:CODE_PAYS>
+    <ogr:NOM_LIGNE>Dosso - Birnin Kebbi</ogr:NOM_LIGNE>
+    <ogr:PUISSANCE>330</ogr:PUISSANCE>
+    <ogr:STATUT>Ligne planifie</ogr:STATUT>
+    <ogr:NOM_PROJET>North Core Project, Nigeria - Niger</ogr:NOM_PROJET>
+  </extensions>
+  <trkseg>
+    <trkpt lat="12.667498" lon="3.816435">
+    </trkpt>
+    <trkpt lat="12.667497" lon="3.816438">
+    </trkpt>
+  </trkseg>
+</trk>
+</gpx>
