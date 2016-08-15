@@ -4,7 +4,7 @@
 <trk>
   <type>NC</type>
   <extensions>
-    <ogr:SOURCE01>African Infrastructure Country Diagnostics</ogr:SOURCE01>
+    <ogr:SOURCE01>This Fixture demonstrates issue 102, a crash that can occur if trkseg and trkpoint don't match exactly</ogr:SOURCE01>
     <ogr:SOURCE02>WB map archive IBRD #33246, #33245; June 2004</ogr:SOURCE02>
     <ogr:DATE>2014/04/01</ogr:DATE>
     <ogr:VALIDITE>2004.0</ogr:VALIDITE>
