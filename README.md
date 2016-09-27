@@ -53,10 +53,10 @@ Install it into your project with `npm install --save togeojson`.
 
 var tj = require('togeojson'),
     fs = require('fs'),
-    // node doesn't have xml parsing or a dom. use jsdom
-    jsdom = require('jsdom').jsdom;
+    // node doesn't have xml parsing or a dom. use xmldom
+    DOMParser = require('xmldom').DOMParser;
 
-var kml = jsdom(fs.readFileSync('foo.kml', 'utf8'));
+var kml = new DOMParser().parseFromString(fs.readFileSync('foo.kml', 'utf8'));
 
 var converted = tj.kml(kml);
 
