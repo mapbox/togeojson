@@ -380,8 +380,8 @@ var toGeoJSON = (function() {
                 };
             }
             function getProperties(node) {
-                var meta = ['name', 'desc', 'author', 'copyright', 'link',
-                            'time', 'keywords'],
+                var meta = ['name', 'cmt', 'desc', 'author', 'copyright',
+                            'link', 'time', 'keywords'],
                     prop = {},
                     k;
                 for (k = 0; k < meta.length; k++) {

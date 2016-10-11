@@ -5,6 +5,7 @@
             "type": "Feature",
             "properties": {
                 "name": "BIG LOOP",
+                "cmt": "Sun Jun 24 15:08:39 2001",
                 "desc": "Big loop around the base of Great Blue Hill",
                 "time": "2001-06-24T15:09:09Z",
                 "coordTimes": [
