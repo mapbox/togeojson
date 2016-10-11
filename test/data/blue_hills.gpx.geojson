@@ -5,6 +5,7 @@
             "type": "Feature",
             "properties": {
                 "name": "BIG LOOP",
+                "cmt": "Sun Jun 24 15:08:39 2001",
                 "desc": "Big loop around the base of Great Blue Hill",
                 "time": "2001-06-24T15:09:09Z",
                 "coordTimes": [
@@ -1900,6 +1901,7 @@
             "type": "Feature",
             "properties": {
                 "name": "BUCK HILL",
+                "cmt": "Sat Oct 13 17:55:25 2001",
                 "desc": "The usual ride around Buck Hill",
                 "time": "2001-10-13T17:55:59Z",
                 "coordTimes": [
@@ -4911,6 +4913,7 @@
             "type": "Feature",
             "properties": {
                 "name": "SHORT LOOP",
+                "cmt": "Sat May 26 15:14:37 2001",
                 "desc": "Short Loop skipping the loop around Buck Hill",
                 "time": "2001-05-26T15:15:07Z",
                 "coordTimes": [
