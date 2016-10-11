@@ -1,3 +1,7 @@
+## 0.15.0
+
+* Supports the `cmt` (comment) tag in GPX data.
+
 ## 0.14.2
 
 * Fixes a potential crash with QGIS-generated GPX files.
