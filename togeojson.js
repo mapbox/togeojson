@@ -24,15 +24,19 @@ var toGeoJSON = (function() {
         for (var j = 0, o = []; j < x.length; j++) { o[j] = parseFloat(x[j]); }
         return o;
     }
-    function clean(x) {
-        var o = {};
-        for (var i in x) { if (x[i]) { o[i] = x[i]; } }
-        return o;
-    }
     // get the content of a text node, if any
     function nodeVal(x) {
         if (x) { norm(x); }
         return (x && x.textContent) || '';
+    }
+    // get the contents of multiple text nodes, if present
+    function getMulti(x, ys) {
+        var o = {}, n, k;
+        for (k = 0; k < ys.length; k++) {
+            n = get1(x, ys[k]);
+            if (n) o[ys[k]] = nodeVal(n);
+        }
+        return o;
     }
     // get one coordinate from a coordinate array, if any
     function coord1(v) { return numarray(v.replace(removeSpace, '').split(',')); }
@@ -380,14 +384,16 @@ var toGeoJSON = (function() {
                 };
             }
             function getProperties(node) {
-                var meta = ['name', 'cmt', 'desc', 'author', 'copyright',
-                            'link', 'time', 'keywords'],
-                    prop = {},
-                    k;
-                for (k = 0; k < meta.length; k++) {
-                    prop[meta[k]] = nodeVal(get1(node, meta[k]));
+                var prop, links;
+                prop = getMulti(node, ['name', 'cmt', 'desc', 'time', 'keywords']);
+                links = get(node, 'link');
+                if (links.length) prop.links = [];
+                for (var i = 0, link; i < links.length; i++) {
+                    link = getMulti(links[i], ['text', 'type']);
+                    link.href = attr(links[i], 'href');
+                    prop.links.push(link);
                 }
-                return clean(prop);
+                return prop;
             }
             return gj;
         }
