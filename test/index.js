@@ -8,13 +8,6 @@ if (!process.browser) {
     var xmldom = require('xmldom');
 }
 
-test('GPX', function(t) {
-    glob.sync('test/data/*.gpx').forEach(function(file) {
-        gpxFixtureEqual(t, file);
-    });
-    t.end();
-});
-
 function kmlFixtureEqual(t, file) {
     if (process.env.UPDATE) {
         var output = tj.kml(toDOM(fs.readFileSync(file)));
@@ -41,6 +34,13 @@ function gpxFixtureEqual(t, file) {
 test('KML', function(t) {
     glob.sync('test/data/*.kml').forEach(function(file) {
         kmlFixtureEqual(t, file);
+    });
+    t.end();
+});
+
+test('GPX', function(t) {
+    glob.sync('test/data/*.gpx').forEach(function(file) {
+        gpxFixtureEqual(t, file);
     });
     t.end();
 });
