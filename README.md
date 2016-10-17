@@ -102,7 +102,7 @@ just AJAX.
 
 * [x] Line Paths
 * [ ] Properties
-  * [x] 'name', 'cmt', 'desc', 'link', 'time', 'keywords' tags
+  * [x] 'name', 'cmt', 'desc', 'link', 'time', 'keywords', 'sym', 'type' tags
   * [ ] 'author', 'copyright' tags
 
 ## FAQ

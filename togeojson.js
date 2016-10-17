@@ -38,6 +38,8 @@ var toGeoJSON = (function() {
         }
         return o;
     }
+    // add properties of Y to X, overwriting if present in both
+    function extend(x, y) { for (var k in y) x[k] = y[k]; }
     // get one coordinate from a coordinate array, if any
     function coord1(v) { return numarray(v.replace(removeSpace, '').split(',')); }
     // get all coordinates from a coordinate array as [[],[]]
@@ -373,7 +375,7 @@ var toGeoJSON = (function() {
             }
             function getPoint(node) {
                 var prop = getProperties(node);
-                prop.sym = nodeVal(get1(node, 'sym'));
+                extend(prop, getMulti(node, ['sym', 'type']));
                 return {
                     type: 'Feature',
                     properties: prop,
@@ -389,8 +391,8 @@ var toGeoJSON = (function() {
                 links = get(node, 'link');
                 if (links.length) prop.links = [];
                 for (var i = 0, link; i < links.length; i++) {
-                    link = getMulti(links[i], ['text', 'type']);
-                    link.href = attr(links[i], 'href');
+                    link = { href: attr(links[i], 'href') };
+                    extend(link, getMulti(links[i], ['text', 'type']));
                     prop.links.push(link);
                 }
                 return prop;
