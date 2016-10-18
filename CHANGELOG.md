@@ -1,3 +1,7 @@
+## 0.16.0
+
+* Support for `waypoint`, `link`, and `type` tags in GPX
+
 ## 0.15.0
 
 * Supports the `cmt` (comment) tag in GPX data.
