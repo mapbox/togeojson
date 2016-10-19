@@ -1,0 +1,1034 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" version="1.1" creator="ExpertGPS 2.7.4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd http://www.topografix.com/GPX/gpx_overlay/0/3 http://www.topografix.com/GPX/gpx_overlay/0/3/gpx_overlay.xsd http://www.topografix.com/GPX/gpx_modified/0/1 http://www.topografix.com/GPX/gpx_modified/0/1/gpx_modified.xsd http://www.topografix.com/GPX/Private/TopoGrafix/0/4 http://www.topografix.com/GPX/Private/TopoGrafix/0/4/topografix.xsd">
+<metadata>
+<bounds minlat="38.88899558" minlon="-106.46843300" maxlat="39.04315300" maxlon="-106.14903500"/>
+<extensions>
+<time xmlns="http://www.topografix.com/GPX/gpx_modified/0/1">2008-03-02T03:20:25.578Z</time>
+</extensions>
+</metadata>
+<trk>
+<name>Trail Double Track</name>
+<type>WM T Double Track</type>
+<extensions>
+<time xmlns="http://www.topografix.com/GPX/gpx_modified/0/1">2008-03-02T03:19:47.984Z</time>
+<label xmlns="http://www.topografix.com/GPX/gpx_overlay/0/3">
+<point lat="39.02298101" lon="-106.33118455"/>
+<label_text>Trail Double Track</label_text>
+<text xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<font>
+<family generic="sans-serif">
+<face>Arial</face>
+</family>
+</font>
+</text>
+</label>
+<line xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<color>893380</color>
+<opacity>1.00</opacity>
+<width>0.7920</width>
+<pattern>Solid</pattern>
+<extensions>
+<cased xmlns="http://www.topografix.com/GPX/Private/TopoGrafix/0/4">true</cased>
+</extensions>
+</line>
+</extensions>
+<trkseg>
+<trkpt lat="39.01344600" lon="-106.46480300"/>
+<trkpt lat="39.01898600" lon="-106.46187900"/>
+<trkpt lat="39.02040600" lon="-106.45895600"/>
+<trkpt lat="39.02168400" lon="-106.45310900"/>
+<trkpt lat="39.01827500" lon="-106.44543400"/>
+<trkpt lat="39.01344600" lon="-106.43794300"/>
+<trkpt lat="39.01273600" lon="-106.43611600"/>
+<trkpt lat="39.01103200" lon="-106.42076700"/>
+<trkpt lat="39.01145800" lon="-106.41967100"/>
+<trkpt lat="39.01444000" lon="-106.41656500"/>
+<trkpt lat="39.02111600" lon="-106.41802600"/>
+<trkpt lat="39.02409900" lon="-106.41181400"/>
+<trkpt lat="39.02154200" lon="-106.39536900"/>
+<trkpt lat="39.01699700" lon="-106.39646500"/>
+<trkpt lat="39.01259400" lon="-106.39409000"/>
+<trkpt lat="39.01117400" lon="-106.38130000"/>
+<trkpt lat="39.01699700" lon="-106.37728000"/>
+<trkpt lat="39.02324700" lon="-106.37563500"/>
+<trkpt lat="39.00975300" lon="-106.37271200"/>
+<trkpt lat="39.02296300" lon="-106.36229700"/>
+<trkpt lat="39.01017900" lon="-106.35973900"/>
+<trkpt lat="39.01500900" lon="-106.35754600"/>
+<trkpt lat="39.01074700" lon="-106.35535300"/>
+<trkpt lat="39.01074700" lon="-106.35133400"/>
+<trkpt lat="39.01586100" lon="-106.34347700"/>
+<trkpt lat="39.02296300" lon="-106.33379200"/>
+<trkpt lat="39.02324700" lon="-106.29268000"/>
+</trkseg>
+</trk>
+<trk>
+<name>Trail Concrete</name>
+<type>WM T Concrete</type>
+<extensions>
+<time xmlns="http://www.topografix.com/GPX/gpx_modified/0/1">2008-03-02T03:19:41.796Z</time>
+<label xmlns="http://www.topografix.com/GPX/gpx_overlay/0/3">
+<point lat="38.99643104" lon="-106.33195812"/>
+<label_text>Trail Concrete</label_text>
+<text xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<font>
+<family generic="sans-serif">
+<face>Arial</face>
+</family>
+</font>
+</text>
+</label>
+<line xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<color>32cd32</color>
+<opacity>1.00</opacity>
+<width>0.6250</width>
+<pattern>Long Dash</pattern>
+<dasharray>
+<dash mark="10.000" space="5.000"/>
+</dasharray>
+<extensions>
+<cased xmlns="http://www.topografix.com/GPX/Private/TopoGrafix/0/4">true</cased>
+</extensions>
+</line>
+</extensions>
+<trkseg>
+<trkpt lat="38.98688500" lon="-106.46731800"/>
+<trkpt lat="38.99242400" lon="-106.46439400"/>
+<trkpt lat="38.99384500" lon="-106.46147100"/>
+<trkpt lat="38.99512300" lon="-106.45562400"/>
+<trkpt lat="38.99171400" lon="-106.44794900"/>
+<trkpt lat="38.98688500" lon="-106.44045800"/>
+<trkpt lat="38.98617500" lon="-106.43863100"/>
+<trkpt lat="38.98447000" lon="-106.42328200"/>
+<trkpt lat="38.98489600" lon="-106.42218600"/>
+<trkpt lat="38.98787900" lon="-106.41908000"/>
+<trkpt lat="38.99455500" lon="-106.42054100"/>
+<trkpt lat="38.99753800" lon="-106.41432900"/>
+<trkpt lat="38.99498100" lon="-106.39788400"/>
+<trkpt lat="38.99043600" lon="-106.39898000"/>
+<trkpt lat="38.98603200" lon="-106.39660500"/>
+<trkpt lat="38.98461200" lon="-106.38381500"/>
+<trkpt lat="38.99043600" lon="-106.37979500"/>
+<trkpt lat="38.99668500" lon="-106.37815000"/>
+<trkpt lat="38.98319200" lon="-106.37522700"/>
+<trkpt lat="38.99640100" lon="-106.36481200"/>
+<trkpt lat="38.98361800" lon="-106.36225400"/>
+<trkpt lat="38.98844700" lon="-106.36006100"/>
+<trkpt lat="38.98418600" lon="-106.35786800"/>
+<trkpt lat="38.98418600" lon="-106.35384800"/>
+<trkpt lat="38.98929900" lon="-106.34599100"/>
+<trkpt lat="38.99640100" lon="-106.33630700"/>
+<trkpt lat="38.99668500" lon="-106.29519500"/>
+</trkseg>
+</trk>
+<trk>
+<name>Trail Primary/Single</name>
+<type>WM T Primary/Single</type>
+<extensions>
+<time xmlns="http://www.topografix.com/GPX/gpx_modified/0/1">2008-03-02T03:20:10.718Z</time>
+<label xmlns="http://www.topografix.com/GPX/gpx_overlay/0/3">
+<point lat="39.00934879" lon="-106.33118586"/>
+<label_text>Trail Primary/Single</label_text>
+<text xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<font>
+<family generic="sans-serif">
+<face>Arial</face>
+</family>
+</font>
+</text>
+</label>
+<line xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<color>893380</color>
+<opacity>1.00</opacity>
+<width>0.7920</width>
+<pattern>Dash Dot</pattern>
+<dasharray>
+<dash mark="6.000" space="2.000"/>
+<dash mark="2.000" space="2.000"/>
+</dasharray>
+<extensions>
+<cased xmlns="http://www.topografix.com/GPX/Private/TopoGrafix/0/4">true</cased>
+</extensions>
+</line>
+</extensions>
+<trkseg>
+<trkpt lat="38.99981100" lon="-106.46535100"/>
+<trkpt lat="39.00535000" lon="-106.46242700"/>
+<trkpt lat="39.00677100" lon="-106.45950400"/>
+<trkpt lat="39.00804900" lon="-106.45365700"/>
+<trkpt lat="39.00464000" lon="-106.44598200"/>
+<trkpt lat="38.99981100" lon="-106.43849100"/>
+<trkpt lat="38.99910100" lon="-106.43666400"/>
+<trkpt lat="38.99739600" lon="-106.42131500"/>
+<trkpt lat="38.99782200" lon="-106.42021900"/>
+<trkpt lat="39.00080500" lon="-106.41711300"/>
+<trkpt lat="39.00748100" lon="-106.41857400"/>
+<trkpt lat="39.01046400" lon="-106.41236200"/>
+<trkpt lat="39.00790700" lon="-106.39591700"/>
+<trkpt lat="39.00336200" lon="-106.39701300"/>
+<trkpt lat="38.99895800" lon="-106.39463800"/>
+<trkpt lat="38.99753800" lon="-106.38184800"/>
+<trkpt lat="39.00336200" lon="-106.37782800"/>
+<trkpt lat="39.00961100" lon="-106.37618300"/>
+<trkpt lat="38.99611800" lon="-106.37326000"/>
+<trkpt lat="39.00932700" lon="-106.36284500"/>
+<trkpt lat="38.99654400" lon="-106.36028700"/>
+<trkpt lat="39.00137300" lon="-106.35809400"/>
+<trkpt lat="38.99711200" lon="-106.35590100"/>
+<trkpt lat="38.99711200" lon="-106.35188100"/>
+<trkpt lat="39.00222500" lon="-106.34402400"/>
+<trkpt lat="39.00932700" lon="-106.33434000"/>
+<trkpt lat="39.00961100" lon="-106.29322800"/>
+</trkseg>
+</trk>
+<trk>
+<name>Trail Secondary</name>
+<type>WM T Secondary</type>
+<extensions>
+<time xmlns="http://www.topografix.com/GPX/gpx_modified/0/1">2008-03-02T03:20:20.812Z</time>
+<label xmlns="http://www.topografix.com/GPX/gpx_overlay/0/3">
+<point lat="38.96661953" lon="-106.33310056"/>
+<label_text>Trail Secondary</label_text>
+<text xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<font>
+<family generic="sans-serif">
+<face>Arial</face>
+</family>
+</font>
+</text>
+</label>
+<line xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<color>cb0017</color>
+<opacity>1.00</opacity>
+<width>0.6250</width>
+<pattern>Solid</pattern>
+<extensions>
+<cased xmlns="http://www.topografix.com/GPX/Private/TopoGrafix/0/4">true</cased>
+</extensions>
+</line>
+</extensions>
+<trkseg>
+<trkpt lat="38.95707900" lon="-106.46766200"/>
+<trkpt lat="38.96261800" lon="-106.46473800"/>
+<trkpt lat="38.96403900" lon="-106.46181500"/>
+<trkpt lat="38.96531700" lon="-106.45596800"/>
+<trkpt lat="38.96190800" lon="-106.44829300"/>
+<trkpt lat="38.95707900" lon="-106.44080200"/>
+<trkpt lat="38.95636900" lon="-106.43897500"/>
+<trkpt lat="38.95466400" lon="-106.42362600"/>
+<trkpt lat="38.95509000" lon="-106.42253000"/>
+<trkpt lat="38.95807300" lon="-106.41942400"/>
+<trkpt lat="38.96474900" lon="-106.42088500"/>
+<trkpt lat="38.96773200" lon="-106.41467300"/>
+<trkpt lat="38.96517500" lon="-106.39822800"/>
+<trkpt lat="38.96063000" lon="-106.39932400"/>
+<trkpt lat="38.95622600" lon="-106.39694900"/>
+<trkpt lat="38.95480600" lon="-106.38415900"/>
+<trkpt lat="38.96063000" lon="-106.38013900"/>
+<trkpt lat="38.96687900" lon="-106.37849400"/>
+<trkpt lat="38.95338600" lon="-106.37557100"/>
+<trkpt lat="38.96659500" lon="-106.36515600"/>
+<trkpt lat="38.95381200" lon="-106.36259800"/>
+<trkpt lat="38.95864100" lon="-106.36040500"/>
+<trkpt lat="38.95438000" lon="-106.35821200"/>
+<trkpt lat="38.95438000" lon="-106.35419200"/>
+<trkpt lat="38.95949300" lon="-106.34633500"/>
+<trkpt lat="38.96659500" lon="-106.33665100"/>
+<trkpt lat="38.96687900" lon="-106.29553900"/>
+</trkseg>
+</trk>
+<trk>
+<name>Trail Paved</name>
+<type>WM T Paved</type>
+<extensions>
+<time xmlns="http://www.topografix.com/GPX/gpx_modified/0/1">2008-03-02T03:20:05.125Z</time>
+<label xmlns="http://www.topografix.com/GPX/gpx_overlay/0/3">
+<point lat="38.98109460" lon="-106.33002334"/>
+<label_text>Trail Paved</label_text>
+<text xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<font>
+<family generic="sans-serif">
+<face>Arial</face>
+</family>
+</font>
+</text>
+</label>
+<line xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<color>800080</color>
+<opacity>1.00</opacity>
+<width>0.6250</width>
+<pattern>Long Dash</pattern>
+<dasharray>
+<dash mark="10.000" space="5.000"/>
+</dasharray>
+<extensions>
+<cased xmlns="http://www.topografix.com/GPX/Private/TopoGrafix/0/4">true</cased>
+</extensions>
+</line>
+</extensions>
+<trkseg>
+<trkpt lat="38.97154500" lon="-106.46589900"/>
+<trkpt lat="38.97708400" lon="-106.46297500"/>
+<trkpt lat="38.97850500" lon="-106.46005200"/>
+<trkpt lat="38.97978300" lon="-106.45420500"/>
+<trkpt lat="38.97637400" lon="-106.44653000"/>
+<trkpt lat="38.97154500" lon="-106.43903900"/>
+<trkpt lat="38.97083500" lon="-106.43721200"/>
+<trkpt lat="38.96913000" lon="-106.42186300"/>
+<trkpt lat="38.96955600" lon="-106.42076700"/>
+<trkpt lat="38.97253900" lon="-106.41766100"/>
+<trkpt lat="38.97921500" lon="-106.41912200"/>
+<trkpt lat="38.98219800" lon="-106.41291000"/>
+<trkpt lat="38.97964100" lon="-106.39646500"/>
+<trkpt lat="38.97509600" lon="-106.39756100"/>
+<trkpt lat="38.97069200" lon="-106.39518600"/>
+<trkpt lat="38.96927200" lon="-106.38239600"/>
+<trkpt lat="38.97509600" lon="-106.37837600"/>
+<trkpt lat="38.98134500" lon="-106.37673100"/>
+<trkpt lat="38.96785200" lon="-106.37380800"/>
+<trkpt lat="38.98106100" lon="-106.36339300"/>
+<trkpt lat="38.96827800" lon="-106.36083500"/>
+<trkpt lat="38.97310700" lon="-106.35864200"/>
+<trkpt lat="38.96884600" lon="-106.35644900"/>
+<trkpt lat="38.96884600" lon="-106.35242900"/>
+<trkpt lat="38.97395900" lon="-106.34457200"/>
+<trkpt lat="38.98106100" lon="-106.33488800"/>
+<trkpt lat="38.98134500" lon="-106.29377600"/>
+</trkseg>
+</trk>
+<trk>
+<name>Cross Country</name>
+<type>WM X Country Route</type>
+<extensions>
+<time xmlns="http://www.topografix.com/GPX/gpx_modified/0/1">2008-03-02T03:17:27.390Z</time>
+<label xmlns="http://www.topografix.com/GPX/gpx_overlay/0/3">
+<point lat="38.93543638" lon="-106.33386803"/>
+<label_text>Cross Country</label_text>
+<text xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<font>
+<family generic="sans-serif">
+<face>Arial</face>
+</family>
+</font>
+</text>
+</label>
+<line xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<color>cb0017</color>
+<opacity>1.00</opacity>
+<width>0.7920</width>
+<pattern>Dot</pattern>
+<linecap>round</linecap>
+<dasharray>
+<dash mark="1.000" space="2.500"/>
+</dasharray>
+<extensions>
+<cased xmlns="http://www.topografix.com/GPX/Private/TopoGrafix/0/4">true</cased>
+</extensions>
+</line>
+</extensions>
+<trkseg>
+<trkpt lat="38.92589900" lon="-106.46797400"/>
+<trkpt lat="38.93143800" lon="-106.46505000"/>
+<trkpt lat="38.93285900" lon="-106.46212700"/>
+<trkpt lat="38.93413700" lon="-106.45628000"/>
+<trkpt lat="38.93072800" lon="-106.44860500"/>
+<trkpt lat="38.92589900" lon="-106.44111400"/>
+<trkpt lat="38.92518900" lon="-106.43928700"/>
+<trkpt lat="38.92348400" lon="-106.42393800"/>
+<trkpt lat="38.92391000" lon="-106.42284200"/>
+<trkpt lat="38.92689300" lon="-106.41973600"/>
+<trkpt lat="38.93356900" lon="-106.42119700"/>
+<trkpt lat="38.93655200" lon="-106.41498500"/>
+<trkpt lat="38.93399500" lon="-106.39854000"/>
+<trkpt lat="38.92945000" lon="-106.39963600"/>
+<trkpt lat="38.92504600" lon="-106.39726100"/>
+<trkpt lat="38.92362600" lon="-106.38447100"/>
+<trkpt lat="38.92945000" lon="-106.38045100"/>
+<trkpt lat="38.93569900" lon="-106.37880600"/>
+<trkpt lat="38.92220600" lon="-106.37588300"/>
+<trkpt lat="38.93541500" lon="-106.36546800"/>
+<trkpt lat="38.92263200" lon="-106.36291000"/>
+<trkpt lat="38.92746100" lon="-106.36071700"/>
+<trkpt lat="38.92320000" lon="-106.35852400"/>
+<trkpt lat="38.92320000" lon="-106.35450400"/>
+<trkpt lat="38.92831300" lon="-106.34664700"/>
+<trkpt lat="38.93541500" lon="-106.33696300"/>
+<trkpt lat="38.93569900" lon="-106.29585100"/>
+</trkseg>
+</trk>
+<trk>
+<name>Trail Primitive</name>
+<type>WM T Primitive</type>
+<extensions>
+<time xmlns="http://www.topografix.com/GPX/gpx_modified/0/1">2008-03-02T03:20:15.937Z</time>
+<label xmlns="http://www.topografix.com/GPX/gpx_overlay/0/3">
+<point lat="38.95180062" lon="-106.33183082"/>
+<label_text>Trail Primitive</label_text>
+<text xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<font>
+<family generic="sans-serif">
+<face>Arial</face>
+</family>
+</font>
+</text>
+</label>
+<line xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<color>cb0017</color>
+<opacity>1.00</opacity>
+<width>0.6250</width>
+<pattern>Dash</pattern>
+<dasharray>
+<dash mark="3.000" space="3.000"/>
+</dasharray>
+<extensions>
+<cased xmlns="http://www.topografix.com/GPX/Private/TopoGrafix/0/4">true</cased>
+</extensions>
+</line>
+</extensions>
+<trkseg>
+<trkpt lat="38.94224600" lon="-106.46843300"/>
+<trkpt lat="38.94778500" lon="-106.46550900"/>
+<trkpt lat="38.94920600" lon="-106.46258600"/>
+<trkpt lat="38.95048400" lon="-106.45673900"/>
+<trkpt lat="38.94707500" lon="-106.44906400"/>
+<trkpt lat="38.94224600" lon="-106.44157300"/>
+<trkpt lat="38.94153600" lon="-106.43974600"/>
+<trkpt lat="38.93983100" lon="-106.42439700"/>
+<trkpt lat="38.94025700" lon="-106.42330100"/>
+<trkpt lat="38.94324000" lon="-106.42019500"/>
+<trkpt lat="38.94991600" lon="-106.42165600"/>
+<trkpt lat="38.95289900" lon="-106.41544400"/>
+<trkpt lat="38.95034200" lon="-106.39899900"/>
+<trkpt lat="38.94579700" lon="-106.40009500"/>
+<trkpt lat="38.94139300" lon="-106.39772000"/>
+<trkpt lat="38.93997300" lon="-106.38493000"/>
+<trkpt lat="38.94579700" lon="-106.38091000"/>
+<trkpt lat="38.95204600" lon="-106.37926500"/>
+<trkpt lat="38.93855300" lon="-106.37634200"/>
+<trkpt lat="38.95176200" lon="-106.36592700"/>
+<trkpt lat="38.93897900" lon="-106.36336900"/>
+<trkpt lat="38.94380800" lon="-106.36117600"/>
+<trkpt lat="38.93954700" lon="-106.35898300"/>
+<trkpt lat="38.93954700" lon="-106.35496300"/>
+<trkpt lat="38.94466000" lon="-106.34710600"/>
+<trkpt lat="38.95176200" lon="-106.33742200"/>
+<trkpt lat="38.95204600" lon="-106.29631000"/>
+</trkseg>
+</trk>
+<trk>
+<name>Trail MultiUse</name>
+<type>WM T MultiUse</type>
+<extensions>
+<time xmlns="http://www.topografix.com/GPX/gpx_modified/0/1">2008-03-02T03:19:54.625Z</time>
+<label xmlns="http://www.topografix.com/GPX/gpx_overlay/0/3">
+<point lat="39.03930300" lon="-106.33310476"/>
+<label_text>Trail MultiUse</label_text>
+<text xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<font>
+<family generic="sans-serif">
+<face>Arial</face>
+</family>
+</font>
+</text>
+</label>
+<line xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<color>009300</color>
+<opacity>1.00</opacity>
+<width>0.7920</width>
+<pattern>Solid</pattern>
+<extensions>
+<cased xmlns="http://www.topografix.com/GPX/Private/TopoGrafix/0/4">true</cased>
+</extensions>
+</line>
+</extensions>
+<trkseg>
+<trkpt lat="39.02977200" lon="-106.46628700"/>
+<trkpt lat="39.03531100" lon="-106.46336300"/>
+<trkpt lat="39.03673200" lon="-106.46044000"/>
+<trkpt lat="39.03801000" lon="-106.45459300"/>
+<trkpt lat="39.03460100" lon="-106.44691800"/>
+<trkpt lat="39.02977200" lon="-106.43942700"/>
+<trkpt lat="39.02906200" lon="-106.43760000"/>
+<trkpt lat="39.02735700" lon="-106.42225100"/>
+<trkpt lat="39.02778300" lon="-106.42115500"/>
+<trkpt lat="39.03076600" lon="-106.41804900"/>
+<trkpt lat="39.03744200" lon="-106.41951000"/>
+<trkpt lat="39.04042500" lon="-106.41329800"/>
+<trkpt lat="39.03786800" lon="-106.39685300"/>
+<trkpt lat="39.03332300" lon="-106.39794900"/>
+<trkpt lat="39.02891900" lon="-106.39557400"/>
+<trkpt lat="39.02749900" lon="-106.38278400"/>
+<trkpt lat="39.03332300" lon="-106.37876400"/>
+<trkpt lat="39.03957200" lon="-106.37711900"/>
+<trkpt lat="39.02607900" lon="-106.37419600"/>
+<trkpt lat="39.03928800" lon="-106.36378100"/>
+<trkpt lat="39.02650500" lon="-106.36122300"/>
+<trkpt lat="39.03133400" lon="-106.35903000"/>
+<trkpt lat="39.02707300" lon="-106.35683700"/>
+<trkpt lat="39.02707300" lon="-106.35281700"/>
+<trkpt lat="39.03218600" lon="-106.34496000"/>
+<trkpt lat="39.03928800" lon="-106.33527600"/>
+<trkpt lat="39.03957200" lon="-106.29416400"/>
+</trkseg>
+</trk>
+<trk>
+<name>Road Main</name>
+<type>WM R Main</type>
+<extensions>
+<time xmlns="http://www.topografix.com/GPX/gpx_modified/0/1">2008-03-02T03:18:03.156Z</time>
+<label xmlns="http://www.topografix.com/GPX/gpx_overlay/0/3">
+<point lat="39.02733800" lon="-106.26684487"/>
+<label_text>Road Main</label_text>
+<text xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<font>
+<family generic="sans-serif">
+<face>Arial</face>
+</family>
+</font>
+</text>
+</label>
+<line xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<color>000000</color>
+<opacity>1.00</opacity>
+<width>0.8750</width>
+<pattern>Solid</pattern>
+<extensions>
+<cased xmlns="http://www.topografix.com/GPX/Private/TopoGrafix/0/4">true</cased>
+</extensions>
+</line>
+</extensions>
+<trkseg>
+<trkpt lat="39.02733800" lon="-106.27304300"/>
+<trkpt lat="39.02733800" lon="-106.22280200"/>
+<trkpt lat="39.02085900" lon="-106.22255700"/>
+<trkpt lat="39.02066900" lon="-106.20711700"/>
+<trkpt lat="39.03057700" lon="-106.20736300"/>
+<trkpt lat="39.02028800" lon="-106.18530600"/>
+<trkpt lat="39.03114800" lon="-106.17305200"/>
+<trkpt lat="39.03095800" lon="-106.15271100"/>
+</trkseg>
+</trk>
+<trk>
+<name>Road Minor/Secondary</name>
+<type>WM R Minor/Secondary</type>
+<extensions>
+<time xmlns="http://www.topografix.com/GPX/gpx_modified/0/1">2008-03-02T03:18:40.031Z</time>
+<label xmlns="http://www.topografix.com/GPX/gpx_overlay/0/3">
+<point lat="39.01457100" lon="-106.26664459"/>
+<label_text>Road Minor/Secondary</label_text>
+<text xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<font>
+<family generic="sans-serif">
+<face>Arial</face>
+</family>
+</font>
+</text>
+</label>
+<line xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<color>000000</color>
+<opacity>1.00</opacity>
+<width>0.7920</width>
+<pattern>Long Dash</pattern>
+<dasharray>
+<dash mark="10.000" space="5.000"/>
+</dasharray>
+<extensions>
+<cased xmlns="http://www.topografix.com/GPX/Private/TopoGrafix/0/4">true</cased>
+</extensions>
+</line>
+</extensions>
+<trkseg>
+<trkpt lat="39.01457100" lon="-106.27279800"/>
+<trkpt lat="39.01457100" lon="-106.22255700"/>
+<trkpt lat="39.00809200" lon="-106.22231200"/>
+<trkpt lat="39.00790200" lon="-106.20687300"/>
+<trkpt lat="39.01781000" lon="-106.20711800"/>
+<trkpt lat="39.00752100" lon="-106.18506100"/>
+<trkpt lat="39.01838200" lon="-106.17280700"/>
+<trkpt lat="39.01819100" lon="-106.15246600"/>
+</trkseg>
+</trk>
+<trk>
+<name>Road Local</name>
+<type>WM R Local</type>
+<extensions>
+<time xmlns="http://www.topografix.com/GPX/gpx_modified/0/1">2008-03-02T03:17:58.015Z</time>
+<label xmlns="http://www.topografix.com/GPX/gpx_overlay/0/3">
+<point lat="39.00218600" lon="-106.26702656"/>
+<label_text>Road Local</label_text>
+<text xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<font>
+<family generic="sans-serif">
+<face>Arial</face>
+</family>
+</font>
+</text>
+</label>
+<line xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<color>000000</color>
+<opacity>1.00</opacity>
+<width>0.7920</width>
+<pattern>Dash</pattern>
+<dasharray>
+<dash mark="3.000" space="3.000"/>
+</dasharray>
+<extensions>
+<cased xmlns="http://www.topografix.com/GPX/Private/TopoGrafix/0/4">true</cased>
+</extensions>
+</line>
+</extensions>
+<trkseg>
+<trkpt lat="39.00218600" lon="-106.27181800"/>
+<trkpt lat="39.00218600" lon="-106.22157700"/>
+<trkpt lat="38.99570700" lon="-106.22133200"/>
+<trkpt lat="38.99551700" lon="-106.20589300"/>
+<trkpt lat="39.00542500" lon="-106.20613800"/>
+<trkpt lat="38.99513600" lon="-106.18408100"/>
+<trkpt lat="39.00599700" lon="-106.17182700"/>
+<trkpt lat="39.00580600" lon="-106.15148600"/>
+</trkseg>
+</trk>
+<trk>
+<name>Road Paved</name>
+<type>WM R Paved</type>
+<extensions>
+<time xmlns="http://www.topografix.com/GPX/gpx_modified/0/1">2008-03-02T03:19:28.875Z</time>
+<label xmlns="http://www.topografix.com/GPX/gpx_overlay/0/3">
+<point lat="38.98884800" lon="-106.26762741"/>
+<label_text>Road Paved</label_text>
+<text xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<font>
+<family generic="sans-serif">
+<face>Arial</face>
+</family>
+</font>
+</text>
+</label>
+<line xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<color>000000</color>
+<opacity>1.00</opacity>
+<width>0.8750</width>
+<pattern>Solid</pattern>
+<extensions>
+<cased xmlns="http://www.topografix.com/GPX/Private/TopoGrafix/0/4">true</cased>
+</extensions>
+</line>
+</extensions>
+<trkseg>
+<trkpt lat="38.98884800" lon="-106.27206300"/>
+<trkpt lat="38.98884800" lon="-106.22182200"/>
+<trkpt lat="38.98236900" lon="-106.22157700"/>
+<trkpt lat="38.98217900" lon="-106.20613800"/>
+<trkpt lat="38.99208700" lon="-106.20638300"/>
+<trkpt lat="38.98179800" lon="-106.18432600"/>
+<trkpt lat="38.99265900" lon="-106.17207200"/>
+<trkpt lat="38.99246800" lon="-106.15173100"/>
+</trkseg>
+</trk>
+<trk>
+<name>Road Gravel/Dirt</name>
+<type>WM R Gravel/Dirt</type>
+<extensions>
+<time xmlns="http://www.topografix.com/GPX/gpx_modified/0/1">2008-03-02T03:17:50.328Z</time>
+<label xmlns="http://www.topografix.com/GPX/gpx_overlay/0/3">
+<point lat="38.97589100" lon="-106.26643710"/>
+<label_text>Road Gravel/Dirt</label_text>
+<text xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<font>
+<family generic="sans-serif">
+<face>Arial</face>
+</family>
+</font>
+</text>
+</label>
+<line xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<color>000000</color>
+<opacity>1.00</opacity>
+<width>0.7080</width>
+<pattern>Dash Dot</pattern>
+<dasharray>
+<dash mark="6.000" space="2.000"/>
+<dash mark="2.000" space="2.000"/>
+</dasharray>
+<extensions>
+<cased xmlns="http://www.topografix.com/GPX/Private/TopoGrafix/0/4">true</cased>
+</extensions>
+</line>
+</extensions>
+<trkseg>
+<trkpt lat="38.97589100" lon="-106.27157200"/>
+<trkpt lat="38.97589100" lon="-106.22133100"/>
+<trkpt lat="38.96941200" lon="-106.22108600"/>
+<trkpt lat="38.96922200" lon="-106.20564700"/>
+<trkpt lat="38.97913000" lon="-106.20589200"/>
+<trkpt lat="38.96884100" lon="-106.18383500"/>
+<trkpt lat="38.97970200" lon="-106.17158100"/>
+<trkpt lat="38.97951100" lon="-106.15124000"/>
+</trkseg>
+</trk>
+<trk>
+<name>High Clearance</name>
+<type>WM R High Clearance</type>
+<extensions>
+<time xmlns="http://www.topografix.com/GPX/gpx_modified/0/1">2008-03-02T03:17:37.125Z</time>
+<label xmlns="http://www.topografix.com/GPX/gpx_overlay/0/3">
+<point lat="38.96331500" lon="-106.26626831"/>
+<label_text>High Clearance</label_text>
+<text xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<font>
+<family generic="sans-serif">
+<face>Arial</face>
+</family>
+</font>
+</text>
+</label>
+<line xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<color>666666</color>
+<opacity>1.00</opacity>
+<width>0.7080</width>
+<pattern>Long Dash</pattern>
+<dasharray>
+<dash mark="10.000" space="5.000"/>
+</dasharray>
+<extensions>
+<cased xmlns="http://www.topografix.com/GPX/Private/TopoGrafix/0/4">true</cased>
+</extensions>
+</line>
+</extensions>
+<trkseg>
+<trkpt lat="38.96331500" lon="-106.27132700"/>
+<trkpt lat="38.96331500" lon="-106.22108600"/>
+<trkpt lat="38.95683600" lon="-106.22084100"/>
+<trkpt lat="38.95664600" lon="-106.20540200"/>
+<trkpt lat="38.96655400" lon="-106.20564700"/>
+<trkpt lat="38.95626500" lon="-106.18359000"/>
+<trkpt lat="38.96712600" lon="-106.17133600"/>
+<trkpt lat="38.96693500" lon="-106.15099500"/>
+</trkseg>
+</trk>
+<trk>
+<name>Road 4wd</name>
+<type>WM R 4WD</type>
+<extensions>
+<time xmlns="http://www.topografix.com/GPX/gpx_modified/0/1">2008-03-02T03:17:42.281Z</time>
+<label xmlns="http://www.topografix.com/GPX/gpx_overlay/0/3">
+<point lat="38.95054900" lon="-106.26646456"/>
+<label_text>Road 4wd</label_text>
+<text xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<font>
+<family generic="sans-serif">
+<face>Arial</face>
+</family>
+</font>
+</text>
+</label>
+<line xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<color>666666</color>
+<opacity>1.00</opacity>
+<width>0.7080</width>
+<pattern>Dash</pattern>
+<dasharray>
+<dash mark="3.000" space="3.000"/>
+</dasharray>
+<extensions>
+<cased xmlns="http://www.topografix.com/GPX/Private/TopoGrafix/0/4">true</cased>
+</extensions>
+</line>
+</extensions>
+<trkseg>
+<trkpt lat="38.95054900" lon="-106.27083700"/>
+<trkpt lat="38.95054900" lon="-106.22059600"/>
+<trkpt lat="38.94407000" lon="-106.22035100"/>
+<trkpt lat="38.94388000" lon="-106.20491200"/>
+<trkpt lat="38.95378800" lon="-106.20515700"/>
+<trkpt lat="38.94349900" lon="-106.18310000"/>
+<trkpt lat="38.95436000" lon="-106.17084600"/>
+<trkpt lat="38.95416900" lon="-106.15050500"/>
+</trkseg>
+</trk>
+<trk>
+<name>Road Old</name>
+<type>WM R Old</type>
+<extensions>
+<time xmlns="http://www.topografix.com/GPX/gpx_modified/0/1">2008-03-02T03:19:13.046Z</time>
+<label xmlns="http://www.topografix.com/GPX/gpx_overlay/0/3">
+<point lat="38.93816300" lon="-106.26722008"/>
+<label_text>Road Old</label_text>
+<text xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<font>
+<family generic="sans-serif">
+<face>Arial</face>
+</family>
+</font>
+</text>
+</label>
+<line xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<color>000000</color>
+<opacity>1.00</opacity>
+<width>0.9170</width>
+<pattern>Dot</pattern>
+<linecap>round</linecap>
+<dasharray>
+<dash mark="1.000" space="2.500"/>
+</dasharray>
+<extensions>
+<cased xmlns="http://www.topografix.com/GPX/Private/TopoGrafix/0/4">true</cased>
+</extensions>
+</line>
+</extensions>
+<trkseg>
+<trkpt lat="38.93816300" lon="-106.27083700"/>
+<trkpt lat="38.93816300" lon="-106.22059600"/>
+<trkpt lat="38.93168400" lon="-106.22035100"/>
+<trkpt lat="38.93149400" lon="-106.20491200"/>
+<trkpt lat="38.94140200" lon="-106.20515700"/>
+<trkpt lat="38.93111300" lon="-106.18310000"/>
+<trkpt lat="38.94197400" lon="-106.17084600"/>
+<trkpt lat="38.94178300" lon="-106.15050500"/>
+</trkseg>
+</trk>
+<trk>
+<name>Road Service/Utility</name>
+<type>WM R Service/Utility</type>
+<extensions>
+<time xmlns="http://www.topografix.com/GPX/gpx_modified/0/1">2008-03-02T03:19:34.312Z</time>
+<label xmlns="http://www.topografix.com/GPX/gpx_overlay/0/3">
+<point lat="38.92539700" lon="-106.26549515"/>
+<label_text>Road Service/Utility</label_text>
+<text xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<font>
+<family generic="sans-serif">
+<face>Arial</face>
+</family>
+</font>
+</text>
+</label>
+<line xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<color>7f7f7f</color>
+<opacity>1.00</opacity>
+<width>0.7080</width>
+<pattern>Dash</pattern>
+<dasharray>
+<dash mark="3.000" space="3.000"/>
+</dasharray>
+<extensions>
+<cased xmlns="http://www.topografix.com/GPX/Private/TopoGrafix/0/4">true</cased>
+</extensions>
+</line>
+</extensions>
+<trkseg>
+<trkpt lat="38.92539700" lon="-106.27034700"/>
+<trkpt lat="38.92539700" lon="-106.22010600"/>
+<trkpt lat="38.91891800" lon="-106.21986100"/>
+<trkpt lat="38.91872800" lon="-106.20442200"/>
+<trkpt lat="38.92863600" lon="-106.20466700"/>
+<trkpt lat="38.91834700" lon="-106.18261000"/>
+<trkpt lat="38.92920800" lon="-106.17035600"/>
+<trkpt lat="38.92901700" lon="-106.15001500"/>
+</trkseg>
+</trk>
+<trk>
+<name>Road Other/Misc</name>
+<type>WM R Other/Misc.</type>
+<extensions>
+<time xmlns="http://www.topografix.com/GPX/gpx_modified/0/1">2008-03-02T03:19:19.125Z</time>
+<label xmlns="http://www.topografix.com/GPX/gpx_overlay/0/3">
+<point lat="38.91224900" lon="-106.26393963"/>
+<label_text>Road Other/Misc</label_text>
+<text xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<font>
+<family generic="sans-serif">
+<face>Arial</face>
+</family>
+</font>
+</text>
+</label>
+<line xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<color>000000</color>
+<opacity>1.00</opacity>
+<width>1.0830</width>
+<pattern>Dot</pattern>
+<linecap>round</linecap>
+<dasharray>
+<dash mark="1.000" space="2.500"/>
+</dasharray>
+<extensions>
+<cased xmlns="http://www.topografix.com/GPX/Private/TopoGrafix/0/4">true</cased>
+</extensions>
+</line>
+</extensions>
+<trkseg>
+<trkpt lat="38.91224900" lon="-106.26936700"/>
+<trkpt lat="38.91224900" lon="-106.21912600"/>
+<trkpt lat="38.90577000" lon="-106.21888100"/>
+<trkpt lat="38.90558000" lon="-106.20344200"/>
+<trkpt lat="38.91548800" lon="-106.20368700"/>
+<trkpt lat="38.90519900" lon="-106.18163000"/>
+<trkpt lat="38.91606000" lon="-106.16937600"/>
+<trkpt lat="38.91586900" lon="-106.14903500"/>
+</trkseg>
+</trk>
+<trk>
+<name>Road Major</name>
+<type>WM R Major</type>
+<extensions>
+<time xmlns="http://www.topografix.com/GPX/gpx_modified/0/1">2008-03-02T03:18:09.312Z</time>
+<label xmlns="http://www.topografix.com/GPX/gpx_overlay/0/3">
+<point lat="39.03934200" lon="-106.26568962"/>
+<label_text>Road Major</label_text>
+<text xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<font>
+<family generic="sans-serif">
+<face>Arial</face>
+</family>
+</font>
+</text>
+</label>
+<line xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<color>000000</color>
+<opacity>1.00</opacity>
+<width>1.0420</width>
+<pattern>Solid</pattern>
+<extensions>
+<cased xmlns="http://www.topografix.com/GPX/Private/TopoGrafix/0/4">true</cased>
+</extensions>
+</line>
+</extensions>
+<trkseg>
+<trkpt lat="39.03934200" lon="-106.27328800"/>
+<trkpt lat="39.03934200" lon="-106.22304700"/>
+<trkpt lat="39.03286300" lon="-106.22280200"/>
+<trkpt lat="39.03267300" lon="-106.20736300"/>
+<trkpt lat="39.04258100" lon="-106.20760800"/>
+<trkpt lat="39.03229200" lon="-106.18555100"/>
+<trkpt lat="39.04315300" lon="-106.17329700"/>
+<trkpt lat="39.04296200" lon="-106.15295600"/>
+</trkseg>
+</trk>
+<trk>
+<name>Trail Old</name>
+<type>WM T Old</type>
+<extensions>
+<time xmlns="http://www.topografix.com/GPX/gpx_modified/0/1">2008-03-02T03:20:00.250Z</time>
+<label xmlns="http://www.topografix.com/GPX/gpx_overlay/0/3">
+<point lat="38.90226004" lon="-106.32844209"/>
+<label_text>Trail Old</label_text>
+<text xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<font>
+<family generic="sans-serif">
+<face>Arial</face>
+</family>
+</font>
+</text>
+</label>
+<line xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<color>cb0017</color>
+<opacity>1.00</opacity>
+<width>0.7920</width>
+<pattern>Dot</pattern>
+<linecap>round</linecap>
+<dasharray>
+<dash mark="1.000" space="2.500"/>
+</dasharray>
+<extensions>
+<cased xmlns="http://www.topografix.com/GPX/Private/TopoGrafix/0/4">true</cased>
+</extensions>
+</line>
+</extensions>
+<trkseg>
+<trkpt lat="38.89268858" lon="-106.46748280"/>
+<trkpt lat="38.89822758" lon="-106.46455880"/>
+<trkpt lat="38.89964858" lon="-106.46163580"/>
+<trkpt lat="38.90092658" lon="-106.45578880"/>
+<trkpt lat="38.89751758" lon="-106.44811380"/>
+<trkpt lat="38.89268858" lon="-106.44062280"/>
+<trkpt lat="38.89197858" lon="-106.43879580"/>
+<trkpt lat="38.89027358" lon="-106.42344680"/>
+<trkpt lat="38.89069958" lon="-106.42235080"/>
+<trkpt lat="38.89368258" lon="-106.41924480"/>
+<trkpt lat="38.90035858" lon="-106.42070580"/>
+<trkpt lat="38.90334158" lon="-106.41449380"/>
+<trkpt lat="38.90078458" lon="-106.39804880"/>
+<trkpt lat="38.89623958" lon="-106.39914480"/>
+<trkpt lat="38.89183558" lon="-106.39676980"/>
+<trkpt lat="38.89041558" lon="-106.38397980"/>
+<trkpt lat="38.88932062" lon="-106.38077197"/>
+<trkpt lat="38.88932063" lon="-106.38077196"/>
+<trkpt lat="38.89623958" lon="-106.37995980"/>
+<trkpt lat="38.90248858" lon="-106.37831480"/>
+<trkpt lat="38.88899558" lon="-106.37539180"/>
+<trkpt lat="38.90220458" lon="-106.36497680"/>
+<trkpt lat="38.88942158" lon="-106.36241880"/>
+<trkpt lat="38.89425058" lon="-106.36022580"/>
+<trkpt lat="38.88998958" lon="-106.35803280"/>
+<trkpt lat="38.88998958" lon="-106.35401280"/>
+<trkpt lat="38.89510258" lon="-106.34615580"/>
+<trkpt lat="38.90220458" lon="-106.33647180"/>
+<trkpt lat="38.90248858" lon="-106.29535980"/>
+</trkseg>
+</trk>
+<trk>
+<name>Trail Other/Misc</name>
+<type>WM T Other/Misc</type>
+<extensions>
+<time xmlns="http://www.topografix.com/GPX/gpx_modified/0/1">2008-03-02T03:20:25.578Z</time>
+<label xmlns="http://www.topografix.com/GPX/gpx_overlay/0/3">
+<point lat="38.92004551" lon="-106.33186350"/>
+<label_text>Trail Other/Misc</label_text>
+<text xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<font>
+<family generic="sans-serif">
+<face>Arial</face>
+</family>
+</font>
+</text>
+</label>
+<line xmlns="http://www.topografix.com/GPX/gpx_style/0/2">
+<color>000000</color>
+<opacity>1.00</opacity>
+<width>0.7920</width>
+<pattern>Dot</pattern>
+<linecap>round</linecap>
+<dasharray>
+<dash mark="1.000" space="2.500"/>
+</dasharray>
+<extensions>
+<cased xmlns="http://www.topografix.com/GPX/Private/TopoGrafix/0/4">true</cased>
+</extensions>
+</line>
+</extensions>
+<trkseg>
+<trkpt lat="38.91049261" lon="-106.46821602"/>
+<trkpt lat="38.91603161" lon="-106.46529202"/>
+<trkpt lat="38.91745261" lon="-106.46236902"/>
+<trkpt lat="38.91873061" lon="-106.45652202"/>
+<trkpt lat="38.91532161" lon="-106.44884702"/>
+<trkpt lat="38.91049261" lon="-106.44135602"/>
+<trkpt lat="38.90978261" lon="-106.43952902"/>
+<trkpt lat="38.90807761" lon="-106.42418002"/>
+<trkpt lat="38.90850361" lon="-106.42308402"/>
+<trkpt lat="38.91148661" lon="-106.41997802"/>
+<trkpt lat="38.91816261" lon="-106.42143902"/>
+<trkpt lat="38.92114561" lon="-106.41522702"/>
+<trkpt lat="38.91858861" lon="-106.39878202"/>
+<trkpt lat="38.91404361" lon="-106.39987802"/>
+<trkpt lat="38.90963961" lon="-106.39750302"/>
+<trkpt lat="38.90821961" lon="-106.38471302"/>
+<trkpt lat="38.90712465" lon="-106.38150519"/>
+<trkpt lat="38.90712466" lon="-106.38150518"/>
+<trkpt lat="38.91404361" lon="-106.38069302"/>
+<trkpt lat="38.92029261" lon="-106.37904802"/>
+<trkpt lat="38.90679961" lon="-106.37612502"/>
+<trkpt lat="38.92000861" lon="-106.36571002"/>
+<trkpt lat="38.90722561" lon="-106.36315202"/>
+<trkpt lat="38.91205461" lon="-106.36095902"/>
+<trkpt lat="38.90779361" lon="-106.35876602"/>
+<trkpt lat="38.90779361" lon="-106.35474602"/>
+<trkpt lat="38.91290661" lon="-106.34688902"/>
+<trkpt lat="38.92000861" lon="-106.33720502"/>
+<trkpt lat="38.92029261" lon="-106.29609302"/>
+</trkseg>
+</trk>
+<extensions>
+</extensions>
+</gpx>
