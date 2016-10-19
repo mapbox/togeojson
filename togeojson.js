@@ -375,7 +375,7 @@ var toGeoJSON = (function() {
             }
             function getPoint(node) {
                 var prop = getProperties(node);
-                extend(prop, getMulti(node, ['sym', 'type']));
+                extend(prop, getMulti(node, ['sym']));
                 return {
                     type: 'Feature',
                     properties: prop,
@@ -386,9 +386,8 @@ var toGeoJSON = (function() {
                 };
             }
             function getProperties(node) {
-                var prop, links;
-                prop = getMulti(node, ['name', 'cmt', 'desc', 'time', 'keywords']);
-                links = get(node, 'link');
+                var prop = getMulti(node, ['name', 'cmt', 'desc', 'type', 'time', 'keywords']),
+                    links = get(node, 'link');
                 if (links.length) prop.links = [];
                 for (var i = 0, link; i < links.length; i++) {
                     link = { href: attr(links[i], 'href') };
