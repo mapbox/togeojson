@@ -119,7 +119,7 @@ chosen.
 Implied here is that this does not try to represent all data contained in KML
 styles.
 
-### What doesn't toGeoJSON support NetworkLinks?
+### Why doesn't toGeoJSON support NetworkLinks?
 
 The NetworkLink KML construct allows KML files to refer to other online
 or local KML files for their content. It's often used to let people pass around
