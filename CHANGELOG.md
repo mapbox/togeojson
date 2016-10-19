@@ -1,6 +1,7 @@
 ## 0.16.0
 
-* Support for `waypoint`, `link`, and `type` tags in GPX
+* Supports the `link` tag in GPX data.
+* Supports the `type` tag for waypoints in GPX data.
 
 ## 0.15.0
 
