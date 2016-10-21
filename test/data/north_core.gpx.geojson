@@ -3,7 +3,9 @@
     "features": [
         {
             "type": "Feature",
-            "properties": {},
+            "properties": {
+                "type": "NC"
+            },
             "geometry": {
                 "type": "LineString",
                 "coordinates": [
@@ -20,7 +22,9 @@
         },
         {
             "type": "Feature",
-            "properties": {},
+            "properties": {
+                "type": "NC"
+            },
             "geometry": {
                 "type": "LineString",
                 "coordinates": [
@@ -37,7 +41,9 @@
         },
         {
             "type": "Feature",
-            "properties": {},
+            "properties": {
+                "type": "NC"
+            },
             "geometry": {
                 "type": "MultiLineString",
                 "coordinates": [
@@ -76,7 +82,9 @@
         },
         {
             "type": "Feature",
-            "properties": {},
+            "properties": {
+                "type": "NC"
+            },
             "geometry": {
                 "type": "LineString",
                 "coordinates": [
@@ -97,7 +105,9 @@
         },
         {
             "type": "Feature",
-            "properties": {},
+            "properties": {
+                "type": "NC"
+            },
             "geometry": {
                 "type": "LineString",
                 "coordinates": [
@@ -114,7 +124,9 @@
         },
         {
             "type": "Feature",
-            "properties": {},
+            "properties": {
+                "type": "NC"
+            },
             "geometry": {
                 "type": "MultiLineString",
                 "coordinates": [
@@ -147,7 +159,9 @@
         },
         {
             "type": "Feature",
-            "properties": {},
+            "properties": {
+                "type": "NC"
+            },
             "geometry": {
                 "type": "LineString",
                 "coordinates": [
@@ -172,7 +186,9 @@
         },
         {
             "type": "Feature",
-            "properties": {},
+            "properties": {
+                "type": "NC"
+            },
             "geometry": {
                 "type": "MultiLineString",
                 "coordinates": [
@@ -201,7 +217,9 @@
         },
         {
             "type": "Feature",
-            "properties": {},
+            "properties": {
+                "type": "NC"
+            },
             "geometry": {
                 "type": "LineString",
                 "coordinates": [
@@ -222,7 +240,9 @@
         },
         {
             "type": "Feature",
-            "properties": {},
+            "properties": {
+                "type": "NC"
+            },
             "geometry": {
                 "type": "LineString",
                 "coordinates": [

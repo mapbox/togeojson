@@ -101,9 +101,10 @@ just AJAX.
 ### GPX Feature Support
 
 * [x] Line Paths
-* [x] Properties
+* [x] Line styles
+* [ ] Properties
   * [x] 'name', 'cmt', 'desc', 'link', 'time', 'keywords', 'sym', 'type' tags
-  * [x] 'author', 'copyright' tags
+  * [ ] 'author', 'copyright' tags
 
 ## FAQ
 

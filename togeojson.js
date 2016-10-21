@@ -349,6 +349,7 @@ var toGeoJSON = (function() {
                 }
                 if (track.length === 0) return;
                 var properties = getProperties(node);
+                extend(properties, getLineStyle(get1(node, 'extensions')));
                 if (times.length) properties.coordTimes = track.length === 1 ? times[0] : times;
                 if (heartRates.length) properties.heartRates = track.length === 1 ? heartRates[0] : heartRates;
                 return {
@@ -363,9 +364,11 @@ var toGeoJSON = (function() {
             function getRoute(node) {
                 var line = getPoints(node, 'rtept');
                 if (!line.line) return;
+                var prop = getProperties(node);
+                extend(prop, getLineStyle(get1(node, 'extensions')));
                 var routeObj = {
                     type: 'Feature',
-                    properties: getProperties(node),
+                    properties: prop,
                     geometry: {
                         type: 'LineString',
                         coordinates: line.line
@@ -375,7 +378,7 @@ var toGeoJSON = (function() {
             }
             function getPoint(node) {
                 var prop = getProperties(node);
-                extend(prop, getMulti(node, ['sym', 'type']));
+                extend(prop, getMulti(node, ['sym']));
                 return {
                     type: 'Feature',
                     properties: prop,
@@ -385,10 +388,25 @@ var toGeoJSON = (function() {
                     }
                 };
             }
+            function getLineStyle(extensions) {
+                var style = {};
+                if (extensions) {
+                    var lineStyle = get1(extensions, 'line');
+                    if (lineStyle) {
+                        var color = nodeVal(get1(lineStyle, 'color')),
+                            opacity = parseFloat(nodeVal(get1(lineStyle, 'opacity'))),
+                            width = parseFloat(nodeVal(get1(lineStyle, 'width')));
+                        if (color) style.stroke = color;
+                        if (!isNaN(opacity)) style['stroke-opacity'] = opacity;
+                        // GPX width is in mm, convert to px with 96 px per inch
+                        if (!isNaN(width)) style['stroke-width'] = width * 96 / 25.4;
+                    }
+                }
+                return style;
+            }
             function getProperties(node) {
-                var prop, links;
-                prop = getMulti(node, ['name', 'cmt', 'desc', 'time', 'keywords']);
-                links = get(node, 'link');
+                var prop = getMulti(node, ['name', 'cmt', 'desc', 'type', 'time', 'keywords']),
+                    links = get(node, 'link');
                 if (links.length) prop.links = [];
                 for (var i = 0, link; i < links.length; i++) {
                     link = { href: attr(links[i], 'href') };
