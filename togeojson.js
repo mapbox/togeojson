@@ -204,6 +204,7 @@ var toGeoJSON = (function() {
             function getPlacemark(root) {
                 var geomsAndTimes = getGeometry(root), i, properties = {},
                     name = nodeVal(get1(root, 'name')),
+                    address = nodeVal(get1(root, 'address')),
                     styleUrl = nodeVal(get1(root, 'styleUrl')),
                     description = nodeVal(get1(root, 'description')),
                     timeSpan = get1(root, 'TimeSpan'),
@@ -215,6 +216,7 @@ var toGeoJSON = (function() {
 
                 if (!geomsAndTimes.geoms.length) return [];
                 if (name) properties.name = name;
+                if (address) properties.address = address;
                 if (styleUrl) {
                     if (styleUrl[0] !== '#') {
                         styleUrl = '#' + styleUrl;

@@ -1,0 +1,479 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "GeometryCollection",
+                "geometries": [
+                    {
+                        "type": "Point",
+                        "coordinates": [
+                            null
+                        ]
+                    },
+                    {
+                        "type": "LineString",
+                        "coordinates": []
+                    }
+                ]
+            },
+            "properties": {
+                "name": "In transit",
+                "description": " In transit from 2015-07-31T17:00:00.000Z to 2015-08-01T00:00:00.000Z. Distance 0m ",
+                "timespan": {
+                    "begin": "2015-07-31T17:00:00.000Z",
+                    "end": "2015-08-01T00:00:00.000Z"
+                },
+                "Category": "In transit",
+                "Distance": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "GeometryCollection",
+                "geometries": [
+                    {
+                        "type": "Point",
+                        "coordinates": [
+                            null
+                        ]
+                    },
+                    {
+                        "type": "LineString",
+                        "coordinates": [
+                            [
+                                100.5513698,
+                                13.7987389,
+                                0
+                            ],
+                            [
+                                100.5515619,
+                                13.7992727,
+                                0
+                            ]
+                        ]
+                    }
+                ]
+            },
+            "properties": {
+                "name": "Moving",
+                "description": " Moving from 2015-08-01T00:00:00.000Z to 2015-08-01T09:04:32.323Z. Distance 173m ",
+                "timespan": {
+                    "begin": "2015-08-01T00:00:00.000Z",
+                    "end": "2015-08-01T09:04:32.323Z"
+                },
+                "Category": "Moving",
+                "Distance": "173"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "GeometryCollection",
+                "geometries": [
+                    {
+                        "type": "Point",
+                        "coordinates": [
+                            null
+                        ]
+                    },
+                    {
+                        "type": "LineString",
+                        "coordinates": []
+                    }
+                ]
+            },
+            "properties": {
+                "name": "Walking",
+                "description": " Walking from 2015-08-01T09:04:32.323Z to 2015-08-01T09:16:56.610Z. Distance 0m ",
+                "timespan": {
+                    "begin": "2015-08-01T09:04:32.323Z",
+                    "end": "2015-08-01T09:16:56.610Z"
+                },
+                "Category": "Walking",
+                "Distance": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "GeometryCollection",
+                "geometries": [
+                    {
+                        "type": "Point",
+                        "coordinates": [
+                            null
+                        ]
+                    },
+                    {
+                        "type": "LineString",
+                        "coordinates": [
+                            [
+                                100.5343967,
+                                13.745564,
+                                0
+                            ]
+                        ]
+                    }
+                ]
+            },
+            "properties": {
+                "name": "On the subway",
+                "description": " On the subway from 2015-08-01T09:16:56.610Z to 2015-08-01T09:43:53.321Z. Distance 4470m ",
+                "timespan": {
+                    "begin": "2015-08-01T09:16:56.610Z",
+                    "end": "2015-08-01T09:43:53.321Z"
+                },
+                "Category": "On the subway",
+                "Distance": "4470"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "GeometryCollection",
+                "geometries": [
+                    {
+                        "type": "Point",
+                        "coordinates": [
+                            null
+                        ]
+                    },
+                    {
+                        "type": "LineString",
+                        "coordinates": [
+                            [
+                                100.52868400000001,
+                                13.746737,
+                                0
+                            ]
+                        ]
+                    }
+                ]
+            },
+            "properties": {
+                "name": "Lub d - Bangkok Siam",
+                "address": "925/9 Rama 1 Rd. Wangmai, Pathum Wan, Bangkok 10330, Thailand",
+                "description": " Budget Hotel from 2015-08-01T09:43:58.715Z to 2015-08-01T16:31:30.753Z. Distance 0m ",
+                "timespan": {
+                    "begin": "2015-08-01T09:43:58.715Z",
+                    "end": "2015-08-01T16:31:30.753Z"
+                },
+                "Category": "Budget Hotel",
+                "Distance": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "GeometryCollection",
+                "geometries": [
+                    {
+                        "type": "Point",
+                        "coordinates": [
+                            null
+                        ]
+                    },
+                    {
+                        "type": "LineString",
+                        "coordinates": [
+                            [
+                                100.52868400000001,
+                                13.746737,
+                                0
+                            ]
+                        ]
+                    }
+                ]
+            },
+            "properties": {
+                "name": "In transit",
+                "description": " In transit from 2015-08-01T16:31:30.753Z to 2015-08-01T16:55:33.088Z. Distance 0m ",
+                "timespan": {
+                    "begin": "2015-08-01T16:31:30.753Z",
+                    "end": "2015-08-01T16:55:33.088Z"
+                },
+                "Category": "In transit",
+                "Distance": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "GeometryCollection",
+                "geometries": [
+                    {
+                        "type": "Point",
+                        "coordinates": [
+                            null
+                        ]
+                    },
+                    {
+                        "type": "LineString",
+                        "coordinates": [
+                            [
+                                100.59150720000001,
+                                13.749175999999999,
+                                0
+                            ]
+                        ]
+                    }
+                ]
+            },
+            "properties": {
+                "name": "Bang Kapi",
+                "address": "Huai Khwang, Bangkok, Thailand",
+                "description": " Sublocality2 from 2015-08-01T16:55:39.324Z to 2015-08-01T17:13:08.282Z. Distance 0m ",
+                "timespan": {
+                    "begin": "2015-08-01T16:55:39.324Z",
+                    "end": "2015-08-01T17:13:08.282Z"
+                },
+                "Category": "Sublocality2",
+                "Distance": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "GeometryCollection",
+                "geometries": [
+                    {
+                        "type": "Point",
+                        "coordinates": [
+                            null
+                        ]
+                    },
+                    {
+                        "type": "LineString",
+                        "coordinates": [
+                            [
+                                100.57488623703713,
+                                13.752278881572217,
+                                0
+                            ]
+                        ]
+                    }
+                ]
+            },
+            "properties": {
+                "name": "Driving",
+                "description": " Driving from 2015-08-01T17:13:08.282Z to 2015-08-01T17:34:21.480Z. Distance 0m ",
+                "timespan": {
+                    "begin": "2015-08-01T17:13:08.282Z",
+                    "end": "2015-08-01T17:34:21.480Z"
+                },
+                "Category": "Driving",
+                "Distance": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "GeometryCollection",
+                "geometries": [
+                    {
+                        "type": "Point",
+                        "coordinates": [
+                            null
+                        ]
+                    },
+                    {
+                        "type": "LineString",
+                        "coordinates": []
+                    }
+                ]
+            },
+            "properties": {
+                "name": "Walking",
+                "description": " Walking from 2015-08-01T17:34:21.480Z to 2015-08-01T17:49:42.729Z. Distance 0m ",
+                "timespan": {
+                    "begin": "2015-08-01T17:34:21.480Z",
+                    "end": "2015-08-01T17:49:42.729Z"
+                },
+                "Category": "Walking",
+                "Distance": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "GeometryCollection",
+                "geometries": [
+                    {
+                        "type": "Point",
+                        "coordinates": [
+                            null
+                        ]
+                    },
+                    {
+                        "type": "LineString",
+                        "coordinates": []
+                    }
+                ]
+            },
+            "properties": {
+                "name": "Driving",
+                "description": " Driving from 2015-08-01T17:49:42.729Z to 2015-08-01T18:10:35.378Z. Distance 0m ",
+                "timespan": {
+                    "begin": "2015-08-01T17:49:42.729Z",
+                    "end": "2015-08-01T18:10:35.378Z"
+                },
+                "Category": "Driving",
+                "Distance": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "GeometryCollection",
+                "geometries": [
+                    {
+                        "type": "Point",
+                        "coordinates": [
+                            null
+                        ]
+                    },
+                    {
+                        "type": "LineString",
+                        "coordinates": []
+                    }
+                ]
+            },
+            "properties": {
+                "name": "Walking",
+                "description": " Walking from 2015-08-01T18:10:35.378Z to 2015-08-01T18:58:19.307Z. Distance 0m ",
+                "timespan": {
+                    "begin": "2015-08-01T18:10:35.378Z",
+                    "end": "2015-08-01T18:58:19.307Z"
+                },
+                "Category": "Walking",
+                "Distance": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "GeometryCollection",
+                "geometries": [
+                    {
+                        "type": "Point",
+                        "coordinates": [
+                            null
+                        ]
+                    },
+                    {
+                        "type": "LineString",
+                        "coordinates": []
+                    }
+                ]
+            },
+            "properties": {
+                "name": "Driving",
+                "description": " Driving from 2015-08-01T18:58:19.307Z to 2015-08-01T19:16:48.446Z. Distance 0m ",
+                "timespan": {
+                    "begin": "2015-08-01T18:58:19.307Z",
+                    "end": "2015-08-01T19:16:48.446Z"
+                },
+                "Category": "Driving",
+                "Distance": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "GeometryCollection",
+                "geometries": [
+                    {
+                        "type": "Point",
+                        "coordinates": [
+                            null
+                        ]
+                    },
+                    {
+                        "type": "LineString",
+                        "coordinates": []
+                    }
+                ]
+            },
+            "properties": {
+                "name": "Walking",
+                "description": " Walking from 2015-08-01T19:16:48.446Z to 2015-08-01T19:29:38.452Z. Distance 0m ",
+                "timespan": {
+                    "begin": "2015-08-01T19:16:48.446Z",
+                    "end": "2015-08-01T19:29:38.452Z"
+                },
+                "Category": "Walking",
+                "Distance": "0"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "GeometryCollection",
+                "geometries": [
+                    {
+                        "type": "Point",
+                        "coordinates": [
+                            null
+                        ]
+                    },
+                    {
+                        "type": "LineString",
+                        "coordinates": [
+                            [
+                                100.5481932,
+                                13.7562302,
+                                0
+                            ],
+                            [
+                                100.5403726,
+                                13.7563681,
+                                0
+                            ]
+                        ]
+                    }
+                ]
+            },
+            "properties": {
+                "name": "Driving",
+                "description": " Driving from 2015-08-01T19:29:38.452Z to 2015-08-01T19:35:18.504Z. Distance 885m ",
+                "timespan": {
+                    "begin": "2015-08-01T19:29:38.452Z",
+                    "end": "2015-08-01T19:35:18.504Z"
+                },
+                "Category": "Driving",
+                "Distance": "885"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "GeometryCollection",
+                "geometries": [
+                    {
+                        "type": "Point",
+                        "coordinates": [
+                            null
+                        ]
+                    },
+                    {
+                        "type": "LineString",
+                        "coordinates": []
+                    }
+                ]
+            },
+            "properties": {
+                "name": "Walking",
+                "description": " Walking from 2015-08-01T19:35:18.504Z to 2015-08-01T19:39:28.251Z. Distance 0m ",
+                "timespan": {
+                    "begin": "2015-08-01T19:35:18.504Z",
+                    "end": "2015-08-01T19:39:28.251Z"
+                },
+                "Category": "Walking",
+                "Distance": "0"
+            }
+        }
+    ]
+}
