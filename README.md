@@ -38,7 +38,7 @@ The output is a JavaScript object of GeoJSON data, same as `.kml` outputs.
 
 ## CLI
 
-Install it into your path with `npm install -g togeojson`.
+Install it into your path with `npm install -g @mapbox/togeojson`.
 
 ```
 ~> togeojson file.kml > file.geojson
@@ -46,7 +46,7 @@ Install it into your path with `npm install -g togeojson`.
 
 ## Node.js
 
-Install it into your project with `npm install --save togeojson`.
+Install it into your project with `npm install --save @mapbox/togeojson`.
 
 ```javascript
 // using togeojson in nodejs
