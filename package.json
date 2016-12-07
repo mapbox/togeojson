@@ -14,6 +14,7 @@
   "devDependencies": {
     "brfs": "~1.4.3",
     "coveralls": "~2.11.12",
+    "cz-conventional-changelog": "^1.2.0",
     "eslint": "^3.3.0",
     "glob": "^7.0.5",
     "istanbul": "~0.4.4",
@@ -50,5 +51,10 @@
     "input",
     "leaflet",
     "maps"
-  ]
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }

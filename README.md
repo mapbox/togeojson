@@ -135,6 +135,20 @@ in order to convert files.
 NetworkLink support could be implemented in a separate library as a pre-processing
 step if desired.
 
+### Should toGeoJSON support feature X from KML?
+
+This module should support converting all KML and GPX features that have commonplace
+equivalents in GeoJSON.
+
+KML is a very complex format with many features. Some of these features, like NetworkLinks,
+folders, and GroundOverlays, don't have a GeoJSON equivalent. In these cases,
+toGeoJSON doesn't convert the features. It also doesn't crash on these constructs:
+toGeoJSON should be able to run on all valid KML and GPX files without crashing:
+but for some files it may have no output.
+
+We encourage other libraries to look into supporting these features, but
+support for them is out of scope for toGeoJSON.
+
 ## Protips:
 
 Have a string of XML and need an XML DOM?
