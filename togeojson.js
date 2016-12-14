@@ -6,8 +6,9 @@ var toGeoJSON = (function() {
         splitSpace = /\s+/;
     // generate a short, numeric hash of a string
     function okhash(x) {
+        var i, h;
         if (!x || !x.length) return 0;
-        for (var i = 0, h = 0; i < x.length; i++) {
+        for (i = 0, h = 0; i < x.length; i++) {
             h = ((h << 5) - h) + x.charCodeAt(i) | 0;
         } return h;
     }
@@ -21,7 +22,8 @@ var toGeoJSON = (function() {
     function norm(el) { if (el.normalize) { el.normalize(); } return el; }
     // cast array x into numbers
     function numarray(x) {
-        for (var j = 0, o = []; j < x.length; j++) { o[j] = parseFloat(x[j]); }
+        var j, o=[];
+        for (j = 0; j < x.length; j++) { o[j] = parseFloat(x[j]); }
         return o;
     }
     // get the content of a text node, if any
