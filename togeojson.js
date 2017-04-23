@@ -235,6 +235,14 @@ var toGeoJSON = (function() {
                     if (style) {
                         if (!lineStyle) lineStyle = get1(style, 'LineStyle');
                         if (!polyStyle) polyStyle = get1(style, 'PolyStyle');
+                        var iconStyle = get1(style, 'IconStyle');
+                        if (iconStyle) {
+                            var icon = get1(iconStyle, 'Icon');
+                            if (icon) {
+                                var href = nodeVal(get1(icon, 'href'));
+                                if (href) properties.icon = href;
+                            }
+                        }
                     }
                 }
                 if (description) properties.description = description;
