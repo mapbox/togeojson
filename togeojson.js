@@ -83,9 +83,14 @@ var toGeoJSON = (function() {
     if (typeof XMLSerializer !== 'undefined') {
         /* istanbul ignore next */
         serializer = new XMLSerializer();
-    // only require xmldom in a node environment
-    } else if (typeof exports === 'object' && typeof process === 'object' && !process.browser) {
-        serializer = new (require('xmldom').XMLSerializer)();
+    } else {
+        var isNodeEnv = (typeof process === 'object' && !process.browser);
+        var isTitaniumEnv = (typeof Titanium === 'object');
+        if (typeof exports === 'object' && (isNodeEnv || isTitaniumEnv)) {
+            serializer = new (require('xmldom').XMLSerializer)();
+        } else {
+            throw new Error('Unable to initialize serializer');
+        }
     }
     function xml2str(str) {
         // IE9 will create a new XMLSerializer but it'll crash immediately.
