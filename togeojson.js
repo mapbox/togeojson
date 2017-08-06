@@ -316,6 +316,12 @@ var toGeoJSON = (function() {
             for (i = 0; i < waypoints.length; i++) {
                 gj.features.push(getPoint(waypoints[i]));
             }
+            function initializeArray(arr, size) {
+                for (var h = 0; h < size; h++) {
+                    arr.push(null);
+                }
+                return arr;
+            }
             function getPoints(node, pointname) {
                 var pts = get(node, pointname),
                     line = [],
@@ -327,7 +333,10 @@ var toGeoJSON = (function() {
                     var c = coordPair(pts[i]);
                     line.push(c.coordinates);
                     if (c.time) times.push(c.time);
-                    if (c.heartRate) heartRates.push(c.heartRate);
+                    if (c.heartRate || heartRates.length) {
+                        if (!heartRates.length) initializeArray(heartRates, i);
+                        heartRates.push(c.heartRate || null);
+                    }
                 }
                 return {
                     line: line,
@@ -346,7 +355,18 @@ var toGeoJSON = (function() {
                     if (line) {
                         if (line.line) track.push(line.line);
                         if (line.times && line.times.length) times.push(line.times);
-                        if (line.heartRates && line.heartRates.length) heartRates.push(line.heartRates);
+                        if (heartRates.length || (line.heartRates && line.heartRates.length)) {
+                            if (!heartRates.length) {
+                                for (var s = 0; s < i; s++) {
+                                    heartRates.push(initializeArray([], track[s].length));
+                                }
+                            }
+                            if (line.heartRates && line.heartRates.length) {
+                                heartRates.push(line.heartRates);
+                            } else {
+                                heartRates.push(initializeArray([], line.line.length || 0));
+                            }
+                        }
                     }
                 }
                 if (track.length === 0) return;
