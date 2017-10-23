@@ -14,7 +14,7 @@
             "properties": {
                 "name": "8/8/2013 17:20 (Start)",
                 "styleUrl": "#start",
-                "styleHash": "4c07829a",
+                "styleHash": "5a145216",
                 "timestamp": "2013-08-08T15:20:40.000Z"
             }
         },
@@ -108,7 +108,7 @@
             "properties": {
                 "name": "8/8/2013 17:20",
                 "styleUrl": "#track",
-                "styleHash": "-1fdecab8",
+                "styleHash": "66da7df6",
                 "stroke": "#ff0000",
                 "stroke-opacity": 0.4980392156862745,
                 "stroke-width": 4,
@@ -147,7 +147,7 @@
             "properties": {
                 "name": "8/8/2013 17:20 (End)",
                 "styleUrl": "#end",
-                "styleHash": "15ca312f",
+                "styleHash": "-77e98803",
                 "timestamp": "2013-08-08T16:25:57.000Z"
             }
         }
