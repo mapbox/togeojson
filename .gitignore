@@ -1,7 +1,5 @@
 .DS_Store
 .nyc_output/
 coverage/
-css/
 node_modules/
-test/
 npm-debug.log
