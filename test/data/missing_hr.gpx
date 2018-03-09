@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gpx creator="Oregon 600" version="1.1"
+	xmlns="http://www.topografix.com/GPX/1/1"
+	xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1"
+	xmlns:gpxtrkx="http://www.garmin.com/xmlschemas/TrackStatsExtension/v1"
+	xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3"
+	xmlns:wptx1="http://www.garmin.com/xmlschemas/WaypointExtension/v1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www8.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackStatsExtension/v1 http://www8.garmin.com/xmlschemas/TrackStatsExtension.xsd http://www.garmin.com/xmlschemas/WaypointExtension/v1 http://www8.garmin.com/xmlschemas/WaypointExtensionv1.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd">
+	<metadata>
+		<link href="http://www.garmin.com">
+			<text>Garmin International</text>
+		</link>
+	</metadata>
+	<trk>
+		<name>missing hr</name>
+		<trkseg>
+			<trkpt lat="47.8728961386" lon="13.8153798692">
+				<ele>434.94</ele>
+				<time>2017-05-27T04:00:00Z</time>
+			</trkpt>
+			<trkpt lat="47.8728824761" lon="13.8153836410">
+				<ele>434.98</ele>
+				<time>2017-05-27T04:00:01Z</time>
+			</trkpt>
+			<trkpt lat="47.8728688974" lon="13.8153921068">
+				<ele>435.04</ele>
+				<time>2017-05-27T04:00:02Z</time>
+			</trkpt>
+		</trkseg>
+		<trkseg>
+			<trkpt lat="47.8728961386" lon="13.8153798692">
+				<ele>434.94</ele>
+				<time>2017-05-27T04:01:00Z</time>
+				<extensions>
+					<gpxtpx:TrackPointExtension>
+						<gpxtpx:hr>104</gpxtpx:hr>
+					</gpxtpx:TrackPointExtension>
+				</extensions>
+			</trkpt>
+			<trkpt lat="47.8728824761" lon="13.8153836410">
+				<ele>434.98</ele>
+				<time>2017-05-27T04:01:01Z</time>
+				<extensions>
+					<gpxtpx:TrackPointExtension>
+						<gpxtpx:hr>104</gpxtpx:hr>
+					</gpxtpx:TrackPointExtension>
+				</extensions>
+			</trkpt>
+			<trkpt lat="47.8728688974" lon="13.8153921068">
+				<ele>435.04</ele>
+				<time>2017-05-27T04:01:02Z</time>
+				<extensions>
+					<gpxtpx:TrackPointExtension>
+						<gpxtpx:hr>104</gpxtpx:hr>
+					</gpxtpx:TrackPointExtension>
+				</extensions>
+			</trkpt>
+			<trkpt lat="47.8728551511" lon="13.8154002372">
+				<ele>435.11</ele>
+				<time>2017-05-27T04:01:03Z</time>
+				<extensions>
+					<gpxtpx:TrackPointExtension>
+						<gpxtpx:hr>105</gpxtpx:hr>
+					</gpxtpx:TrackPointExtension>
+				</extensions>
+			</trkpt>
+			<trkpt lat="47.8728421591" lon="13.8154059369">
+				<ele>435.22</ele>
+				<time>2017-05-27T04:01:04Z</time>
+				<extensions>
+					<gpxtpx:TrackPointExtension>
+						<gpxtpx:hr>105</gpxtpx:hr>
+					</gpxtpx:TrackPointExtension>
+				</extensions>
+			</trkpt>
+			<trkpt lat="47.8727505449" lon="13.8154452480">
+				<ele>436.63</ele>
+				<time>2017-05-27T04:01:13Z</time>
+			</trkpt>
+			<trkpt lat="47.8726570029" lon="13.8154713996">
+				<ele>437.70</ele>
+				<time>2017-05-27T04:01:20Z</time>
+				<extensions>
+					<gpxtpx:TrackPointExtension>
+						<gpxtpx:hr>107</gpxtpx:hr>
+					</gpxtpx:TrackPointExtension>
+				</extensions>
+			</trkpt>
+			<trkpt lat="47.8725669812" lon="13.8155080285">
+				<ele>439.19</ele>
+				<time>2017-05-27T04:01:27Z</time>
+				<extensions>
+					<gpxtpx:TrackPointExtension>
+						<gpxtpx:hr>116</gpxtpx:hr>
+					</gpxtpx:TrackPointExtension>
+				</extensions>
+			</trkpt>
+			<trkpt lat="47.8724601120" lon="13.8155217748">
+				<ele>440.16</ele>
+				<time>2017-05-27T04:01:34Z</time>
+				<extensions>
+					<gpxtpx:TrackPointExtension>
+						<gpxtpx:hr>120</gpxtpx:hr>
+					</gpxtpx:TrackPointExtension>
+				</extensions>
+			</trkpt>
+			<trkpt lat="47.8724118322" lon="13.8155432325">
+				<ele>440.70</ele>
+				<time>2017-05-27T04:01:38Z</time>
+				<extensions>
+					<gpxtpx:TrackPointExtension>
+						<gpxtpx:hr>131</gpxtpx:hr>
+					</gpxtpx:TrackPointExtension>
+				</extensions>
+			</trkpt>
+		</trkseg>
+		<trkseg>
+			<trkpt lat="47.8728961386" lon="13.8153798692">
+				<ele>434.94</ele>
+				<time>2017-05-27T04:02:00Z</time>
+			</trkpt>
+			<trkpt lat="47.8728824761" lon="13.8153836410">
+				<ele>434.98</ele>
+				<time>2017-05-27T04:02:01Z</time>
+			</trkpt>
+			<trkpt lat="47.8728688974" lon="13.8153921068">
+				<ele>435.04</ele>
+				<time>2017-05-27T04:02:02Z</time>
+			</trkpt>
+		</trkseg>
+	</trk>
+</gpx>
