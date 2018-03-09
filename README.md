@@ -1,6 +1,7 @@
 [![Build status](https://img.shields.io/travis/mapbox/togeojson.svg "Build status")](http://travis-ci.org/mapbox/togeojson)
 [![Coverage status](https://img.shields.io/coveralls/mapbox/togeojson.svg "Coverage status")](https://coveralls.io/r/mapbox/togeojson)
 [![stable](http://badges.github.io/stability-badges/dist/stable.svg)](http://github.com/badges/stability-badges)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fmapbox%2Ftogeojson.svg?type=shield)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fmapbox%2Ftogeojson?ref=badge_shield)
 
 # Convert KML and GPX to GeoJSON.
 
@@ -156,3 +157,6 @@ Have a string of XML and need an XML DOM?
 ```js
 var dom = (new DOMParser()).parseFromString(xmlStr, 'text/xml');
 ```
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fmapbox%2Ftogeojson.svg?type=large)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fmapbox%2Ftogeojson?ref=badge_large)
