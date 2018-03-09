@@ -67,7 +67,7 @@ var convertedWithStyles = tj.kml(kml, { styles: true });
 
 Download it into your project like
 
-    wget https://raw.github.com/tmcw/togeojson/gh-pages/togeojson.js
+    wget https://raw.githubusercontent.com/mapbox/togeojson/master/togeojson.js
 
 ```html
 <script src='jquery.js'></script>
