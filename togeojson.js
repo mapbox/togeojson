@@ -385,6 +385,7 @@ var toGeoJSON = (function() {
                 if (track.length === 0) return;
                 var properties = getProperties(node);
                 extend(properties, getLineStyle(get1(node, 'extensions')));
+                properties.origin = 'trk';
                 if (times.length) properties.coordTimes = track.length === 1 ? times[0] : times;
                 if (heartRates.length) properties.heartRates = track.length === 1 ? heartRates[0] : heartRates;
                 return {
@@ -401,6 +402,7 @@ var toGeoJSON = (function() {
                 if (!line.line) return;
                 var prop = getProperties(node);
                 extend(prop, getLineStyle(get1(node, 'extensions')));
+                prop.origin = 'rte';
                 var routeObj = {
                     type: 'Feature',
                     properties: prop,
@@ -414,6 +416,7 @@ var toGeoJSON = (function() {
             function getPoint(node) {
                 var prop = getProperties(node);
                 extend(prop, getMulti(node, ['sym']));
+                prop.origin = 'wpt';
                 return {
                     type: 'Feature',
                     properties: prop,
