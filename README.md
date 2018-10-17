@@ -52,7 +52,7 @@ Install it into your project with `npm install --save @mapbox/togeojson`.
 ```javascript
 // using togeojson in nodejs
 
-var tj = require('togeojson'),
+var tj = require('@mapbox/togeojson'),
     fs = require('fs'),
     // node doesn't have xml parsing or a dom. use xmldom
     DOMParser = require('xmldom').DOMParser;
