@@ -149,8 +149,7 @@ var toGeoJSON = (function() {
             }
             function gxCoord(v) { return numarray(v.split(' ')); }
             function gxCoords(root) {
-                var elems = get(root, 'coord', 'gx'), coords = [], times = [];
-                if (elems.length === 0) elems = get(root, 'gx:coord');
+                var elems = get(root, 'gx:coord'), coords = [], times = [];
                 for (var i = 0; i < elems.length; i++) coords.push(gxCoord(nodeVal(elems[i])));
                 var timeElems = get(root, 'when');
                 for (var j = 0; j < timeElems.length; j++) times.push(nodeVal(timeElems[j]));
