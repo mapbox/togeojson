@@ -13,8 +13,7 @@
     "test": "jest",
     "prepublish": "microbundle",
     "pretest": "microbundle",
-    "release": "standard-version",
-    "cov": "istanbul cover test/index.js && coveralls < ./coverage/lcov.info"
+    "release": "standard-version"
   },
   "devDependencies": {
     "cz-conventional-changelog": "^2.1.0",
@@ -32,7 +31,7 @@
   },
   "license": "BSD-2-Clause",
   "dependencies": {
-    "concat-stream": "~2.0.0",
+    "get-stdin": "^6.0.0",
     "minimist": "1.2.0",
     "xmldom": "~0.1.19"
   },

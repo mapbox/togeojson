@@ -1,28 +1,41 @@
 #!/usr/bin/env node
 
-var tj = require('./'),
-    argv = require('minimist')(process.argv.slice(2)),
-    concat = require('concat-stream'),
-    fs = require('fs'),
-    xmldom = new (require('xmldom').DOMParser)();
+const tj = require("./"),
+const argv = require("minimist")(process.argv.slice(2));
+const getStdin = require("get-stdin");
+const fs = require("fs");
+const xmldom = new (require("xmldom")).DOMParser();
 
-var filename = argv._[0] || '',
-    filetype = (argv.f || 'kml');
+var filename = argv._[0] || "",
+  filetype = argv.f || "kml";
 
-if (filename.match(/\.kml$/i)) filetype = 'kml';
-if (filename.match(/\.gpx$/i)) filetype = 'gpx';
+if (filename.match(/\.kml$/i)) filetype = "kml";
+if (filename.match(/\.gpx$/i)) filetype = "gpx";
 
 if (!tj[filetype] || (process.stdin.isTTY && !argv._[0])) {
-    return help();
+  help();
+  process.exit(0);
 }
 
-(argv._.length ? fs.createReadStream(argv._[0]) : process.stdin).pipe(concat(convert));
+if (argv._.length) {
+  convert(fs.readFileSync(argv._[0], "utf8"));
+} else {
+  getStdin().then(convert);
+}
 
-function convert(data) { process.stdout.write(
-    JSON.stringify(tj[filetype](xmldom.parseFromString(data.toString())), null, 4));
+function convert(data) {
+  process.stdout.write(
+    JSON.stringify(
+      tj[filetype](xmldom.parseFromString(data.toString())),
+      null,
+      4
+    )
+  );
 }
 
 function help() {
-    console.error('Usage: togeojson [-f format] FILE\n' +
-        '-f    file format. if not given, will be detected by filename');
+  console.error(
+    "Usage: togeojson [-f format] FILE\n" +
+      "-f    file format. if not given, will be detected by filename"
+  );
 }
