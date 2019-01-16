@@ -1,11 +1,12 @@
-var removeSpace = /\s*/g,
-  trimSpace = /^\s*|\s*$/g,
-  splitSpace = /\s+/;
+const removeSpace = /\s*/g;
+const trimSpace = /^\s*|\s*$/g;
+const splitSpace = /\s+/;
 
 // generate a short, numeric hash of a string
 function okhash(x) {
   if (!x || !x.length) return 0;
-  for (var i = 0, h = 0; i < x.length; i++) {
+  let h = 0;
+  for (let i = 0; i < x.length; i++) {
     h = ((h << 5) - h + x.charCodeAt(i)) | 0;
   }
   return h;
@@ -20,13 +21,9 @@ function attr(x, y) {
   return x.getAttribute(y);
 }
 
-function attrf(x, y) {
-  return parseFloat(attr(x, y));
-}
-
 // one Y child of X, if any, otherwise null
 function get1(x, y) {
-  var n = get(x, y);
+  const n = get(x, y);
   return n.length ? n[0] : null;
 }
 
@@ -40,7 +37,8 @@ function norm(el) {
 
 // cast array x into numbers
 function numarray(x) {
-  for (var j = 0, o = []; j < x.length; j++) {
+  let o = [];
+  for (let j = 0; j < x.length; j++) {
     o[j] = parseFloat(x[j]);
   }
   return o;
@@ -56,7 +54,7 @@ function nodeVal(x) {
 
 // get the contents of multiple text nodes, if present
 function getMulti(x, ys) {
-  var o = {},
+  let o = {},
     n,
     k;
   for (k = 0; k < ys.length; k++) {
@@ -68,7 +66,7 @@ function getMulti(x, ys) {
 
 // add properties of Y to X, overwriting if present in both
 function extend(x, y) {
-  for (var k in y) x[k] = y[k];
+  for (let k in y) x[k] = y[k];
 }
 
 // get one coordinate from a coordinate array, if any
@@ -78,16 +76,16 @@ function coord1(v) {
 
 // get all coordinates from a coordinate array as [[],[]]
 function coord(v) {
-  var coords = v.replace(trimSpace, "").split(splitSpace),
+  const coords = v.replace(trimSpace, "").split(splitSpace),
     o = [];
-  for (var i = 0; i < coords.length; i++) {
+  for (let i = 0; i < coords.length; i++) {
     o.push(coord1(coords[i]));
   }
   return o;
 }
 
 function coordPair(x) {
-  var ll = [attrf(x, "lon"), attrf(x, "lat")],
+  let ll = [parseFloat(attr(x, "lon")), parseFloat(attr(x, "lat"))],
     ele = get1(x, "ele"),
     // handle namespaced attribute in browser
     heartRate = get1(x, "gpxtpx:hr") || get1(x, "hr"),
@@ -106,22 +104,14 @@ function coordPair(x) {
   };
 }
 
-// create a new feature collection parent object
-function fc() {
-  return {
-    type: "FeatureCollection",
-    features: []
-  };
-}
-
-var serializer;
+let serializer;
 
 if (typeof XMLSerializer !== "undefined") {
   /* istanbul ignore next */
   serializer = new XMLSerializer();
 } else {
-  var isNodeEnv = typeof process === "object" && !process.browser;
-  var isTitaniumEnv = typeof Titanium === "object";
+  const isNodeEnv = typeof process === "object" && !process.browser;
+  const isTitaniumEnv = typeof Titanium === "object";
   if (typeof exports === "object" && (isNodeEnv || isTitaniumEnv)) {
     serializer = new (require("xmldom")).XMLSerializer();
   } else {
@@ -137,8 +127,13 @@ function xml2str(str) {
   return serializer.serializeToString(str);
 }
 
+const geotypes = ["Polygon", "LineString", "Point", "Track", "gx:Track"];
+
 export function kml(doc) {
-  var gj = fc(),
+  let gj = {
+      type: "FeatureCollection",
+      features: []
+    },
     // styleindex keeps track of hashed styles in order to match features
     styleIndex = {},
     styleByHash = {},
@@ -146,35 +141,34 @@ export function kml(doc) {
     styleMapIndex = {},
     // atomic geospatial types supported by KML - MultiGeometry is
     // handled separately
-    geotypes = ["Polygon", "LineString", "Point", "Track", "gx:Track"],
     // all root placemarks in the file
     placemarks = get(doc, "Placemark"),
     styles = get(doc, "Style"),
     styleMaps = get(doc, "StyleMap");
 
-  for (var k = 0; k < styles.length; k++) {
-    var hash = okhash(xml2str(styles[k])).toString(16);
+  for (let k = 0; k < styles.length; k++) {
+    let hash = okhash(xml2str(styles[k])).toString(16);
     styleIndex["#" + attr(styles[k], "id")] = hash;
     styleByHash[hash] = styles[k];
   }
-  for (var l = 0; l < styleMaps.length; l++) {
+  for (let l = 0; l < styleMaps.length; l++) {
     styleIndex["#" + attr(styleMaps[l], "id")] = okhash(
       xml2str(styleMaps[l])
     ).toString(16);
-    var pairs = get(styleMaps[l], "Pair");
-    var pairsMap = {};
-    for (var m = 0; m < pairs.length; m++) {
+    let pairs = get(styleMaps[l], "Pair");
+    let pairsMap = {};
+    for (let m = 0; m < pairs.length; m++) {
       pairsMap[nodeVal(get1(pairs[m], "key"))] = nodeVal(
         get1(pairs[m], "styleUrl")
       );
     }
     styleMapIndex["#" + attr(styleMaps[l], "id")] = pairsMap;
   }
-  for (var j = 0; j < placemarks.length; j++) {
+  for (let j = 0; j < placemarks.length; j++) {
     gj.features = gj.features.concat(getPlacemark(placemarks[j]));
   }
   function kmlColor(v) {
-    var color, opacity;
+    let color, opacity;
     v = v || "";
     if (v.substr(0, 1) === "#") {
       v = v.substr(1);
@@ -192,14 +186,14 @@ export function kml(doc) {
     return numarray(v.split(" "));
   }
   function gxCoords(root) {
-    var elems = get(root, "coord"),
+    let elems = get(root, "coord"),
       coords = [],
       times = [];
     if (elems.length === 0) elems = get(root, "gx:coord");
-    for (var i = 0; i < elems.length; i++)
+    for (let i = 0; i < elems.length; i++)
       coords.push(gxCoord(nodeVal(elems[i])));
-    var timeElems = get(root, "when");
-    for (var j = 0; j < timeElems.length; j++)
+    let timeElems = get(root, "when");
+    for (let j = 0; j < timeElems.length; j++)
       times.push(nodeVal(timeElems[j]));
     return {
       coords: coords,
@@ -207,7 +201,7 @@ export function kml(doc) {
     };
   }
   function getGeometry(root) {
-    var geomNode,
+    let geomNode,
       geomNodes,
       i,
       j,
@@ -239,7 +233,7 @@ export function kml(doc) {
               coordinates: coord(nodeVal(get1(geomNode, "coordinates")))
             });
           } else if (geotypes[i] === "Polygon") {
-            var rings = get(geomNode, "LinearRing"),
+            let rings = get(geomNode, "LinearRing"),
               coords = [];
             for (k = 0; k < rings.length; k++) {
               coords.push(coord(nodeVal(get1(rings[k], "coordinates"))));
@@ -249,7 +243,7 @@ export function kml(doc) {
               coordinates: coords
             });
           } else if (geotypes[i] === "Track" || geotypes[i] === "gx:Track") {
-            var track = gxCoords(geomNode);
+            let track = gxCoords(geomNode);
             geoms.push({
               type: "LineString",
               coordinates: track.coords
@@ -265,7 +259,7 @@ export function kml(doc) {
     };
   }
   function getPlacemark(root) {
-    var geomsAndTimes = getGeometry(root),
+    let geomsAndTimes = getGeometry(root),
       i,
       properties = {},
       name = nodeVal(get1(root, "name")),
@@ -296,15 +290,15 @@ export function kml(doc) {
         properties.styleHash = styleIndex[styleMapIndex[styleUrl].normal];
       }
       // Try to populate the lineStyle or polyStyle since we got the style hash
-      var style = styleByHash[properties.styleHash];
+      let style = styleByHash[properties.styleHash];
       if (style) {
         if (!lineStyle) lineStyle = get1(style, "LineStyle");
         if (!polyStyle) polyStyle = get1(style, "PolyStyle");
-        var iconStyle = get1(style, "IconStyle");
+        let iconStyle = get1(style, "IconStyle");
         if (iconStyle) {
-          var icon = get1(iconStyle, "Icon");
+          let icon = get1(iconStyle, "Icon");
           if (icon) {
-            var href = nodeVal(get1(icon, "href"));
+            let href = nodeVal(get1(icon, "href"));
             if (href) properties.icon = href;
           }
         }
@@ -312,15 +306,15 @@ export function kml(doc) {
     }
     if (description) properties.description = description;
     if (timeSpan) {
-      var begin = nodeVal(get1(timeSpan, "begin"));
-      var end = nodeVal(get1(timeSpan, "end"));
+      let begin = nodeVal(get1(timeSpan, "begin"));
+      let end = nodeVal(get1(timeSpan, "end"));
       properties.timespan = { begin: begin, end: end };
     }
     if (timeStamp) {
       properties.timestamp = nodeVal(get1(timeStamp, "when"));
     }
     if (lineStyle) {
-      var linestyles = kmlColor(nodeVal(get1(lineStyle, "color"))),
+      let linestyles = kmlColor(nodeVal(get1(lineStyle, "color"))),
         color = linestyles[0],
         opacity = linestyles[1],
         width = parseFloat(nodeVal(get1(lineStyle, "width")));
@@ -329,7 +323,7 @@ export function kml(doc) {
       if (!isNaN(width)) properties["stroke-width"] = width;
     }
     if (polyStyle) {
-      var polystyles = kmlColor(nodeVal(get1(polyStyle, "color"))),
+      let polystyles = kmlColor(nodeVal(get1(polyStyle, "color"))),
         pcolor = polystyles[0],
         popacity = polystyles[1],
         fill = nodeVal(get1(polyStyle, "fill")),
@@ -344,7 +338,7 @@ export function kml(doc) {
           outline === "1" ? properties["stroke-opacity"] || 1 : 0;
     }
     if (extendedData) {
-      var datas = get(extendedData, "Data"),
+      let datas = get(extendedData, "Data"),
         simpleDatas = get(extendedData, "SimpleData");
 
       for (i = 0; i < datas.length; i++) {
@@ -367,7 +361,7 @@ export function kml(doc) {
           ? geomsAndTimes.coordTimes[0]
           : geomsAndTimes.coordTimes;
     }
-    var feature = {
+    let feature = {
       type: "Feature",
       geometry:
         geomsAndTimes.geoms.length === 1
@@ -385,12 +379,15 @@ export function kml(doc) {
 }
 
 export function gpx(doc) {
-  var i,
+  let i,
     tracks = get(doc, "trk"),
     routes = get(doc, "rte"),
     waypoints = get(doc, "wpt"),
     // a feature collection
-    gj = fc(),
+    gj = {
+      type: "FeatureCollection",
+      features: []
+    },
     feature;
   for (i = 0; i < tracks.length; i++) {
     feature = getTrack(tracks[i]);
@@ -404,20 +401,20 @@ export function gpx(doc) {
     gj.features.push(getPoint(waypoints[i]));
   }
   function initializeArray(arr, size) {
-    for (var h = 0; h < size; h++) {
+    for (let h = 0; h < size; h++) {
       arr.push(null);
     }
     return arr;
   }
   function getPoints(node, pointname) {
-    var pts = get(node, pointname),
+    let pts = get(node, pointname),
       line = [],
       times = [],
       heartRates = [],
       l = pts.length;
     if (l < 2) return {}; // Invalid line in GeoJSON
-    for (var i = 0; i < l; i++) {
-      var c = coordPair(pts[i]);
+    for (let i = 0; i < l; i++) {
+      let c = coordPair(pts[i]);
       line.push(c.coordinates);
       if (c.time) times.push(c.time);
       if (c.heartRate || heartRates.length) {
@@ -432,19 +429,19 @@ export function gpx(doc) {
     };
   }
   function getTrack(node) {
-    var segments = get(node, "trkseg"),
+    let segments = get(node, "trkseg"),
       track = [],
       times = [],
       heartRates = [],
       line;
-    for (var i = 0; i < segments.length; i++) {
+    for (let i = 0; i < segments.length; i++) {
       line = getPoints(segments[i], "trkpt");
       if (line) {
         if (line.line) track.push(line.line);
         if (line.times && line.times.length) times.push(line.times);
         if (heartRates.length || (line.heartRates && line.heartRates.length)) {
           if (!heartRates.length) {
-            for (var s = 0; s < i; s++) {
+            for (let s = 0; s < i; s++) {
               heartRates.push(initializeArray([], track[s].length));
             }
           }
@@ -457,7 +454,7 @@ export function gpx(doc) {
       }
     }
     if (track.length === 0) return;
-    var properties = getProperties(node);
+    let properties = getProperties(node);
     extend(properties, getLineStyle(get1(node, "extensions")));
     if (times.length)
       properties.coordTimes = track.length === 1 ? times[0] : times;
@@ -473,11 +470,11 @@ export function gpx(doc) {
     };
   }
   function getRoute(node) {
-    var line = getPoints(node, "rtept");
+    let line = getPoints(node, "rtept");
     if (!line.line) return;
-    var prop = getProperties(node);
+    let prop = getProperties(node);
     extend(prop, getLineStyle(get1(node, "extensions")));
-    var routeObj = {
+    let routeObj = {
       type: "Feature",
       properties: prop,
       geometry: {
@@ -488,7 +485,7 @@ export function gpx(doc) {
     return routeObj;
   }
   function getPoint(node) {
-    var prop = getProperties(node);
+    let prop = getProperties(node);
     extend(prop, getMulti(node, ["sym"]));
     return {
       type: "Feature",
@@ -500,11 +497,11 @@ export function gpx(doc) {
     };
   }
   function getLineStyle(extensions) {
-    var style = {};
+    let style = {};
     if (extensions) {
-      var lineStyle = get1(extensions, "line");
+      let lineStyle = get1(extensions, "line");
       if (lineStyle) {
-        var color = nodeVal(get1(lineStyle, "color")),
+        let color = nodeVal(get1(lineStyle, "color")),
           opacity = parseFloat(nodeVal(get1(lineStyle, "opacity"))),
           width = parseFloat(nodeVal(get1(lineStyle, "width")));
         if (color) style.stroke = color;
@@ -516,7 +513,7 @@ export function gpx(doc) {
     return style;
   }
   function getProperties(node) {
-    var prop = getMulti(node, [
+    let prop = getMulti(node, [
         "name",
         "cmt",
         "desc",
@@ -526,7 +523,7 @@ export function gpx(doc) {
       ]),
       links = get(node, "link");
     if (links.length) prop.links = [];
-    for (var i = 0, link; i < links.length; i++) {
+    for (let i = 0, link; i < links.length; i++) {
       link = { href: attr(links[i], "href") };
       extend(link, getMulti(links[i], ["text", "type"]));
       prop.links.push(link);
