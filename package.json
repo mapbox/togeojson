@@ -17,12 +17,11 @@
     "cov": "istanbul cover test/index.js && coveralls < ./coverage/lcov.info"
   },
   "devDependencies": {
-    "cz-conventional-changelog": "^1.2.0",
+    "cz-conventional-changelog": "^2.1.0",
     "glob": "^7.0.5",
     "jest": "^23.6.0",
     "microbundle": "^0.9.0",
-    "standard-version": "^4.4.0",
-    "tape": "~4.6.0"
+    "standard-version": "^4.4.0"
   },
   "bin": {
     "togeojson": "togeojson"
