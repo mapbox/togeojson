@@ -2,6 +2,9 @@
 
 [![CircleCI](https://circleci.com/gh/tmcw/togeojson/tree/master.svg?style=svg)](https://circleci.com/gh/tmcw/togeojson/tree/master)
 
+:sparkles: _This is a maintained and modernized fork of the toGeoJSON project, which I (Tom) wrote while at Mapbox,
+and am now maintaining on a personal basis because the Mapbox-owned project is abandoned._
+
 This converts [KML](https://developers.google.com/kml/documentation/) & [GPX](http://www.topografix.com/gpx.asp)
 to [GeoJSON](http://www.geojson.org/), in a browser or with [Node.js](http://nodejs.org/).
 
@@ -9,8 +12,6 @@ to [GeoJSON](http://www.geojson.org/), in a browser or with [Node.js](http://nod
 * [x] Tiny
 * [x] Tested
 * [x] Node.js + Browsers
-
-Want to use this with [Leaflet](http://leafletjs.com/)? Try [leaflet-omnivore](https://github.com/mapbox/leaflet-omnivore)!
 
 ## API
 
@@ -23,7 +24,7 @@ holding an XML DOM.
 
 The output is a JavaScript object of GeoJSON data. You can convert it to a string
 with [JSON.stringify](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
-or use it directly in libraries like [mapbox.js](http://www.mapbox.com/mapbox.js/).
+or use it directly in libraries.js](http://www.mapbox.com/mapbox.js/).
 
 ### `toGeoJSON.gpx(doc)`
 
@@ -36,7 +37,7 @@ The output is a JavaScript object of GeoJSON data, same as `.kml` outputs.
 
 ## CLI
 
-Install it into your path with `npm install -g @mapbox/togeojson`.
+Install it into your path with `npm install -g @tmcw/togeojson`.
 
 ```
 ~> togeojson file.kml > file.geojson
@@ -44,7 +45,7 @@ Install it into your path with `npm install -g @mapbox/togeojson`.
 
 ## Node.js
 
-Install it into your project with `npm install --save @mapbox/togeojson`.
+Install it into your project with `npm install --save @tmcw/togeojson`.
 
 ```javascript
 // using togeojson in nodejs
@@ -63,22 +64,16 @@ var convertedWithStyles = tj.kml(kml, { styles: true });
 
 ## Browser
 
-Download it into your project like
-
-    wget https://raw.githubusercontent.com/mapbox/togeojson/master/togeojson.js
-
 ```html
-<script src='jquery.js'></script>
-<script src='togeojson.js'></script>
-<script>
-$.ajax('test/data/linestring.kml').done(function(xml) {
-    console.log(toGeoJSON.kml(xml));
+<script type=module>
+import {kml} from "https://unpkg.com/@tmcw/togeojson?module";
+fetch('test/data/linestring.kml').then(function(response) {
+  return response.xml();
+}).then(function(xml) {
+  console.log(kml(xml));
 });
 </script>
 ```
-
-toGeoJSON doesn't include AJAX - you can use [jQuery](http://jquery.com/) for
-just AJAX.
 
 ### KML Feature Support
 
