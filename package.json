@@ -6,9 +6,11 @@
   "umd:main": "dist/togeojson.umd.js",
   "module": "dist/togeojson.es.js",
   "main": "dist/togeojson.js",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "tape test/*.js",
+    "test": "jest",
     "prepublish": "microbundle",
     "pretest": "microbundle",
     "release": "standard-version",
@@ -17,6 +19,7 @@
   "devDependencies": {
     "cz-conventional-changelog": "^1.2.0",
     "glob": "^7.0.5",
+    "jest": "^23.6.0",
     "microbundle": "^0.9.0",
     "standard-version": "^4.4.0",
     "tape": "~4.6.0"
