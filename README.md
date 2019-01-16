@@ -50,7 +50,7 @@ Install it into your project with `npm install --save @tmcw/togeojson`.
 ```javascript
 // using togeojson in nodejs
 
-var tj = require('togeojson'),
+var tj = require('@tmcw/togeojson'),
     fs = require('fs'),
     // node doesn't have xml parsing or a dom. use xmldom
     DOMParser = require('xmldom').DOMParser;
