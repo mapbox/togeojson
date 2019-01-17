@@ -12,10 +12,12 @@
   "scripts": {
     "test": "jest",
     "prepublish": "microbundle",
-    "pretest": "microbundle",
     "release": "standard-version"
   },
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.6.0",
+    "babel-preset-env": "^1.7.0",
     "cz-conventional-changelog": "^2.1.0",
     "glob": "^7.0.5",
     "jest": "^23.6.0",

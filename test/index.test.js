@@ -1,7 +1,7 @@
-const glob = require("glob");
-const fs = require("fs");
-const tj = require("../");
-const xmldom = require("xmldom");
+import glob from "glob";
+import fs from "fs";
+import * as tj from "../index";
+import xmldom from "xmldom";
 
 it("KML", () => {
   glob.sync("test/data/*.kml").forEach(file => {
