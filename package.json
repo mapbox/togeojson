@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "test": "eslint lib && jest",
-    "prepublish": "microbundle",
+    "prepare": "microbundle",
     "release": "standard-version"
   },
   "devDependencies": {
