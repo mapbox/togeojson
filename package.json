@@ -10,7 +10,7 @@
     "dist"
   ],
   "scripts": {
-    "test": "jest",
+    "test": "eslint lib && jest",
     "prepublish": "microbundle",
     "release": "standard-version"
   },
@@ -19,6 +19,7 @@
     "babel-jest": "^23.6.0",
     "babel-preset-env": "^1.7.0",
     "cz-conventional-changelog": "^2.1.0",
+    "eslint": "^5.12.1",
     "glob": "^7.0.5",
     "jest": "^23.6.0",
     "microbundle": "^0.9.0",
