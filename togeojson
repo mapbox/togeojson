@@ -1,41 +1,33 @@
 #!/usr/bin/env node
 
-const tj = require("./"),
+const tj = require("./");
 const argv = require("minimist")(process.argv.slice(2));
 const getStdin = require("get-stdin");
 const fs = require("fs");
 const xmldom = new (require("xmldom")).DOMParser();
 
-var filename = argv._[0] || "",
-  filetype = argv.f || "kml";
-
-if (filename.match(/\.kml$/i)) filetype = "kml";
-if (filename.match(/\.gpx$/i)) filetype = "gpx";
-
-if (!tj[filetype] || (process.stdin.isTTY && !argv._[0])) {
-  help();
-  process.exit(0);
-}
-
-if (argv._.length) {
-  convert(fs.readFileSync(argv._[0], "utf8"));
-} else {
-  getStdin().then(convert);
-}
+const filename = argv._[0] || "";
+const filetype = argv.f
+  ? argv.f
+  : filename.match(/\.kml$/i)
+    ? "kml"
+    : filename.match(/\.gpx$/i)
+      ? "gpx"
+      : "kml";
 
 function convert(data) {
   process.stdout.write(
-    JSON.stringify(
-      tj[filetype](xmldom.parseFromString(data.toString())),
-      null,
-      4
-    )
+    JSON.stringify(tj[filetype](xmldom.parseFromString(data)), null, 4)
   );
 }
 
-function help() {
+if (!tj[filetype] || (process.stdin.isTTY && !argv._.length)) {
   console.error(
     "Usage: togeojson [-f format] FILE\n" +
-      "-f    file format. if not given, will be detected by filename"
+      "-f    file format. if not given, will be detected by filename (kml or gpx)"
   );
+} else if (argv._.length) {
+  convert(fs.readFileSync(argv._[0], "utf8"));
+} else {
+  getStdin().then(convert);
 }

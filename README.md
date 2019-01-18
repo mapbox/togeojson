@@ -24,7 +24,7 @@ holding an XML DOM.
 
 The output is a JavaScript object of GeoJSON data. You can convert it to a string
 with [JSON.stringify](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
-or use it directly in libraries.js](http://www.mapbox.com/mapbox.js/).
+or use it directly in libraries.
 
 ### `toGeoJSON.gpx(doc)`
 
@@ -50,16 +50,16 @@ Install it into your project with `npm install --save @tmcw/togeojson`.
 ```javascript
 // using togeojson in nodejs
 
-var tj = require('@tmcw/togeojson'),
-    fs = require('fs'),
-    // node doesn't have xml parsing or a dom. use xmldom
-    DOMParser = require('xmldom').DOMParser;
+const tj = require('@tmcw/togeojson');
+const fs = require('fs');
+// node doesn't have xml parsing or a dom. use xmldom
+const DOMParser = require('xmldom').DOMParser;
 
-var kml = new DOMParser().parseFromString(fs.readFileSync('foo.kml', 'utf8'));
+const kml = new DOMParser().parseFromString(fs.readFileSync('foo.kml', 'utf8'));
 
-var converted = tj.kml(kml);
+const converted = tj.kml(kml);
 
-var convertedWithStyles = tj.kml(kml, { styles: true });
+const convertedWithStyles = tj.kml(kml, { styles: true });
 ```
 
 ## Browser
@@ -67,6 +67,7 @@ var convertedWithStyles = tj.kml(kml, { styles: true });
 ```html
 <script type=module>
 import {kml} from "https://unpkg.com/@tmcw/togeojson?module";
+
 fetch('test/data/linestring.kml').then(function(response) {
   return response.xml();
 }).then(function(xml) {
