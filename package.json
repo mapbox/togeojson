@@ -1,6 +1,6 @@
 {
   "name": "@tmcw/togeojson",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-alpha.0",
   "description": "convert KML and GPX to GeoJSON",
   "source": "index.js",
   "umd:main": "dist/togeojson.umd.js",
