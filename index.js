@@ -1,2 +1,2 @@
-export { gpx } from "./lib/gpx";
-export { kml } from "./lib/kml";
+export { gpx, gpxGen } from "./lib/gpx";
+export { kml, kmlGen } from "./lib/kml";

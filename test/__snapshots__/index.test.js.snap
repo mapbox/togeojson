@@ -9082,7 +9082,7 @@ Object {
         "name": "
 12/04/2014 11:24 AM (départ)
    ",
-        "styleHash": "1a92f2da",
+        "styleHash": "7f350914",
         "styleUrl": "#start",
         "timestamp": "2014-04-12T14:26:16.702Z",
       },
@@ -9278,7 +9278,7 @@ Object {
         "stroke": "#ff0000",
         "stroke-opacity": 0.4980392156862745,
         "stroke-width": 4,
-        "styleHash": "23ae7d4c",
+        "styleHash": "-7aff0fa",
         "styleUrl": "#track",
         "type": "
 course à pied
@@ -9323,7 +9323,7 @@ Date d'enregistrement : 12/04/2014 11:24 AM
         "name": "
 12/04/2014 11:24 AM (fin)
    ",
-        "styleHash": "-8cb39ad",
+        "styleHash": "-16b4bba1",
         "styleUrl": "#end",
         "timestamp": "2014-04-12T15:38:07.678Z",
       },
@@ -9941,7 +9941,7 @@ Object {
       "properties": Object {
         "icon": "http://maps.google.com/mapfiles/kml/paddle/grn-circle.png",
         "name": "8/8/2013 17:20 (Start)",
-        "styleHash": "5a145216",
+        "styleHash": "7f350914",
         "styleUrl": "#start",
         "timestamp": "2013-08-08T15:20:40.000Z",
       },
@@ -10058,7 +10058,7 @@ Object {
         "stroke": "#ff0000",
         "stroke-opacity": 0.4980392156862745,
         "stroke-width": 4,
-        "styleHash": "66da7df6",
+        "styleHash": "-7aff0fa",
         "styleUrl": "#track",
         "type": "walking",
       },
@@ -10076,7 +10076,7 @@ Object {
       "properties": Object {
         "icon": "http://maps.google.com/mapfiles/kml/paddle/red-circle.png",
         "name": "8/8/2013 17:20 (End)",
-        "styleHash": "-77e98803",
+        "styleHash": "-16b4bba1",
         "styleUrl": "#end",
         "timestamp": "2013-08-08T16:25:57.000Z",
       },
@@ -41569,7 +41569,7 @@ Object {
       "properties": Object {
         "icon": "http://maps.google.com/mapfiles/kml/paddle/grn-circle.png",
         "name": "8/8/2013 17:20 (Start)",
-        "styleHash": "5a145216",
+        "styleHash": "7f350914",
         "styleUrl": "#start",
         "timestamp": "2013-08-08T15:20:40.000Z",
       },
@@ -41686,7 +41686,7 @@ Object {
         "stroke": "#ff0000",
         "stroke-opacity": 0.4980392156862745,
         "stroke-width": 4,
-        "styleHash": "66da7df6",
+        "styleHash": "-7aff0fa",
         "styleUrl": "#track",
         "type": "walking",
       },
@@ -41704,7 +41704,7 @@ Object {
       "properties": Object {
         "icon": "http://maps.google.com/mapfiles/kml/paddle/red-circle.png",
         "name": "8/8/2013 17:20 (End)",
-        "styleHash": "-77e98803",
+        "styleHash": "-16b4bba1",
         "styleUrl": "#end",
         "timestamp": "2013-08-08T16:25:57.000Z",
       },
@@ -73993,7 +73993,7 @@ Object {
         "TrailHeadName": "Pi in the sky",
         "TrailLength": "3.14159",
         "name": "Easy trail",
-        "styleHash": "721d7249",
+        "styleHash": "-584e03c9",
         "styleUrl": "#trailhead-balloon-template",
       },
       "type": "Feature",
@@ -74011,7 +74011,7 @@ Object {
         "TrailHeadName": "Mount Everest",
         "TrailLength": "347.45",
         "name": "Difficult trail",
-        "styleHash": "721d7249",
+        "styleHash": "-584e03c9",
         "styleUrl": "#trailhead-balloon-template",
       },
       "type": "Feature",
@@ -75829,7 +75829,7 @@ Object {
         "description": "Here is some descriptive text",
         "icon": "http://myserver.com/icon.jpg",
         "name": "Google Earth - New Polygon",
-        "styleHash": "-1d694122",
+        "styleHash": "34215c41",
         "styleUrl": "#a",
       },
       "type": "Feature",
@@ -75846,7 +75846,7 @@ Object {
       "properties": Object {
         "icon": "http://myserver.com/icon.jpg",
         "name": "Google Earth - New Path",
-        "styleHash": "-5b6ad921",
+        "styleHash": "149ab242",
         "styleUrl": "#b",
       },
       "type": "Feature",
@@ -75967,7 +75967,7 @@ Object {
         "fill-opacity": 0.49019607843137253,
         "name": "Building 41",
         "stroke-width": 1.5,
-        "styleHash": "-109facd6",
+        "styleHash": "-25ae1a08",
         "styleUrl": "#transBluePoly",
       },
       "type": "Feature",

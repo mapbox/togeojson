@@ -26,6 +26,11 @@ The output is a JavaScript object of GeoJSON data. You can convert it to a strin
 with [JSON.stringify](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
 or use it directly in libraries.
 
+### `toGeoJSON.kmlGen(doc)`
+
+Convert KML to GeoJSON incrementally, returning a [Generator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+that yields output feature by feature.
+
 ### `toGeoJSON.gpx(doc)`
 
 Convert a GPX document to GeoJSON. The first argument, `doc`, must be a GPX
@@ -34,6 +39,11 @@ document as an XML DOM - not as a string. You can get this using jQuery's defaul
 holding an XML DOM.
 
 The output is a JavaScript object of GeoJSON data, same as `.kml` outputs.
+
+### `toGeoJSON.gpxGen(doc)`
+
+Convert GPX to GeoJSON incrementally, returning a [Generator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+that yields output feature by feature.
 
 ## CLI
 

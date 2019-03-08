@@ -2,7 +2,6 @@
   "name": "@tmcw/togeojson",
   "version": "1.0.0",
   "description": "convert KML and GPX to GeoJSON",
-  "source": "index.js",
   "umd:main": "dist/togeojson.umd.js",
   "unpkg": "dist/togeojson.umd.js",
   "browser": "dist/togeojson.umd.js",
@@ -14,7 +13,7 @@
   ],
   "scripts": {
     "test": "eslint lib && jest",
-    "prepare": "microbundle",
+    "prepare": "rollup -c rollup.config.js",
     "release": "standard-version"
   },
   "devDependencies": {
@@ -23,24 +22,18 @@
     "babel-preset-env": "^1.7.0",
     "cz-conventional-changelog": "^2.1.0",
     "eslint": "^5.12.1",
-    "glob": "^7.0.5",
     "jest": "^23.6.0",
-    "microbundle": "^0.9.0",
-    "standard-version": "^4.4.0"
-  },
-  "bin": {
-    "togeojson": "togeojson"
+    "rollup": "^1.4.0",
+    "rollup-plugin-terser": "^4.0.4",
+    "standard-version": "^4.4.0",
+    "xmldom": "^0.1.27"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/tmcw/togeojson.git"
   },
   "license": "BSD-2-Clause",
-  "dependencies": {
-    "get-stdin": "^6.0.0",
-    "minimist": "1.2.0",
-    "xmldom": "~0.1.19"
-  },
+  "dependencies": {},
   "keywords": [
     "kml",
     "geojson",
