@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/tmcw/togeojson/compare/v1.0.0...v2.0.0) (2019-03-08)
+
+
+### Features
+
+* Generator methods, removed CLI ([f37a30b](https://github.com/tmcw/togeojson/commit/f37a30b))
+
+
+### BREAKING CHANGES
+
+* the cli that was previously installed along with togeojson has been removed, and will be installable as @tmcw/togeojson-cli
+
+Other changes in this pass:
+
+- Switch from microbundle to rollup to build
+- Remove dependencies
+- Remove reliance on XMLSerializer. This will make togeojson work in worker contexts.
+
+
+
 <a name="1.0.0"></a>
 # [1.0.0](https://github.com/tmcw/togeojson/compare/v1.0.0-alpha.1...v1.0.0) (2019-01-18)
 
