@@ -47,11 +47,8 @@ that yields output feature by feature.
 
 ## CLI
 
-Install it into your path with `npm install -g @tmcw/togeojson`.
-
-```
-~> togeojson file.kml > file.geojson
-```
+Use [@tmcw/togeojson-cli](https://github.com/tmcw/togeojson-cli) to use this
+software as a command-line tool.
 
 ## Node.js
 
