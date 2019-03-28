@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.0.0"></a>
+# [3.0.0](https://github.com/tmcw/togeojson/compare/v2.0.0...v3.0.0) (2019-03-28)
+
+
+### Code Refactoring
+
+* switch from initializeArray to Array.fill ([#11](https://github.com/tmcw/togeojson/issues/11)) ([dac617a](https://github.com/tmcw/togeojson/commit/dac617a)), closes [#10](https://github.com/tmcw/togeojson/issues/10)
+
+
+### BREAKING CHANGES
+
+* this may modify browser support if you’re using
+an old browser. See the MDN page for full details:
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill
+
+
+
 <a name="2.0.0"></a>
 # [2.0.0](https://github.com/tmcw/togeojson/compare/v1.0.0...v2.0.0) (2019-03-08)
 
