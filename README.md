@@ -8,10 +8,10 @@ and am now maintaining on a personal basis because the Mapbox-owned project is a
 This converts [KML](https://developers.google.com/kml/documentation/) & [GPX](http://www.topografix.com/gpx.asp)
 to [GeoJSON](http://www.geojson.org/), in a browser or with [Node.js](http://nodejs.org/).
 
-* [x] Dependency-free
-* [x] Tiny
-* [x] Tested
-* [x] Node.js + Browsers
+- [x] Dependency-free
+- [x] Tiny
+- [x] Tested
+- [x] Node.js + Browsers
 
 ## API
 
@@ -57,12 +57,12 @@ Install it into your project with `npm install --save @tmcw/togeojson`.
 ```javascript
 // using togeojson in nodejs
 
-const tj = require('@tmcw/togeojson');
-const fs = require('fs');
+const tj = require("@tmcw/togeojson");
+const fs = require("fs");
 // node doesn't have xml parsing or a dom. use xmldom
-const DOMParser = require('xmldom').DOMParser;
+const DOMParser = require("xmldom").DOMParser;
 
-const kml = new DOMParser().parseFromString(fs.readFileSync('foo.kml', 'utf8'));
+const kml = new DOMParser().parseFromString(fs.readFileSync("foo.kml", "utf8"));
 
 const converted = tj.kml(kml);
 
@@ -72,42 +72,57 @@ const convertedWithStyles = tj.kml(kml, { styles: true });
 ## Browser
 
 ```html
-<script type=module>
-import {kml} from "https://unpkg.com/@tmcw/togeojson?module";
+<script type="module">
+  import { kml } from "https://unpkg.com/@tmcw/togeojson?module";
 
-fetch('test/data/linestring.kml').then(function(response) {
-  return response.xml();
-}).then(function(xml) {
-  console.log(kml(xml));
-});
+  fetch("test/data/linestring.kml")
+    .then(function(response) {
+      return response.xml();
+    })
+    .then(function(xml) {
+      console.log(kml(xml));
+    });
 </script>
 ```
 
 ### KML Feature Support
 
-* [x] Point
-* [x] Polygon
-* [x] LineString
-* [x] name & description
-* [x] ExtendedData
-* [x] SimpleData
-* [x] MultiGeometry -> GeometryCollection
-* [x] Styles with hashing
-* [x] Tracks & MultiTracks with `gx:coords`, including altitude
-* [x] [TimeSpan](https://developers.google.com/kml/documentation/kmlreference#timespan)
-* [x] [TimeStamp](https://developers.google.com/kml/documentation/kmlreference#timestamp)
-* [ ] NetworkLinks
-* [ ] GroundOverlays
+- [x] Point
+- [x] Polygon
+- [x] LineString
+- [x] name & description
+- [x] ExtendedData
+- [x] SimpleData
+- [x] MultiGeometry -> GeometryCollection
+- [x] Styles with hashing
+- [x] Tracks & MultiTracks with `gx:coords`, including altitude
+- [x] [TimeSpan](https://developers.google.com/kml/documentation/kmlreference#timespan)
+- [x] [TimeStamp](https://developers.google.com/kml/documentation/kmlreference#timestamp)
+- [ ] NetworkLinks
+- [ ] GroundOverlays
 
 ### GPX Feature Support
 
-* [x] Line Paths
-* [x] Line styles
-* [ ] Properties
-  * [x] 'name', 'cmt', 'desc', 'link', 'time', 'keywords', 'sym', 'type' tags
-  * [ ] 'author', 'copyright' tags
+- [x] Line Paths
+- [x] Line styles
+- [ ] Properties
+  - [x] 'name', 'cmt', 'desc', 'link', 'time', 'keywords', 'sym', 'type' tags
+  - [ ] 'author', 'copyright' tags
 
 ## FAQ
+
+### How does this differ from mapbox/togeojson?
+
+- It’s available as an ES Module. If you're using a modern JavaScript bundler or
+  using ES Modules in the browser, this makes it a bit more efficient and sometimes
+  easier to use.
+- Conversion methods are available as generators, which makes the conversion of big
+  files more efficient.
+- The command line utility was moved to [tmcw/togeojson-cli](https://github.com/tmcw/togeojson-cli),
+  which lets this module enjoy reduced dependencies: installing @tmcw/togeojson doesn’t
+  require any other dependencies.
+- The hashing method is improved, which means that parsing is the same between browsers and
+  Node.js, and there are no runtime dependencies.
 
 ### What is hashing?
 
@@ -155,5 +170,5 @@ support for them is out of scope for toGeoJSON.
 Have a string of XML and need an XML DOM?
 
 ```js
-var dom = (new DOMParser()).parseFromString(xmlStr, 'text/xml');
+var dom = new DOMParser().parseFromString(xmlStr, "text/xml");
 ```
