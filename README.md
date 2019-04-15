@@ -13,6 +13,11 @@ to [GeoJSON](http://www.geojson.org/), in a browser or with [Node.js](http://nod
 - [x] Tested
 - [x] Node.js + Browsers
 
+_This is a JavaScript library that lets projects convert KML and GPX to GeoJSON. If you're
+looking for a command line too, use [@tmcw/togeojson-cli](https://github.com/tmcw/togeojson-cli). If you
+want to convert one KML or GPX file, use [my online tool](https://observablehq.com/@tmcw/convert-kml-to-geojson).
+If you want to convert another format, consider [GDAL](https://www.gdal.org/)._
+
 ## API
 
 ### `toGeoJSON.kml(doc)`
