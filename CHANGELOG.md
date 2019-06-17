@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.0.1"></a>
+## [3.0.1](https://github.com/tmcw/togeojson/compare/v3.0.0...v3.0.1) (2019-06-17)
+
+
+### Bug Fixes
+
+* Typo in rollup configuration ([1af08f6](https://github.com/tmcw/togeojson/commit/1af08f6))
+
+
+
 <a name="3.0.0"></a>
 # [3.0.0](https://github.com/tmcw/togeojson/compare/v2.0.0...v3.0.0) (2019-03-28)
 
