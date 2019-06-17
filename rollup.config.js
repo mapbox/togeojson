@@ -23,7 +23,7 @@ export default [
   {
     input,
     output: {
-      file: "dist/togeojsons.min.js",
+      file: "dist/togeojson.umd.js",
       format: "umd",
       name: "toGeoJSON",
       sourcemap
