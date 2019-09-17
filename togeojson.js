@@ -248,6 +248,10 @@ var toGeoJSON = (function() {
                                 if (href) properties.icon = href;
                             }
                         }
+                        var color = get1(iconStyle, 'color');
+                        if(color){
+                            properties.color = nodeVal(color);
+                        }
                     }
                 }
                 if (description) properties.description = description;
