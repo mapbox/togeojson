@@ -247,6 +247,10 @@ var toGeoJSON = (function() {
                                 var href = nodeVal(get1(icon, 'href'));
                                 if (href) properties.icon = href;
                             }
+                            var placemarkColor = get1(iconStyle, 'color');
+                            if(placemarkColor){
+                                properties.color = nodeVal(placemarkColor);
+                            }
                         }
                     }
                 }
