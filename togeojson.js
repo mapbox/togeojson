@@ -315,9 +315,14 @@ var toGeoJSON = (function() {
                 tracks = get(doc, 'trk'),
                 routes = get(doc, 'rte'),
                 waypoints = get(doc, 'wpt'),
+                metadata = get(doc, 'metadata'),
                 // a feature collection
                 gj = fc(),
                 feature;
+            // keep metadata
+            if (metadata && metadata[0]) {
+              gj.metadata = getMetadata(metadata[0]);
+            }
             for (i = 0; i < tracks.length; i++) {
                 feature = getTrack(tracks[i]);
                 if (feature) gj.features.push(feature);
@@ -328,6 +333,16 @@ var toGeoJSON = (function() {
             }
             for (i = 0; i < waypoints.length; i++) {
                 gj.features.push(getPoint(waypoints[i]));
+            }
+            // returns GPX metadata
+            function getMetadata(metadata) {
+              var md = {};
+              var item = metadata.firstElementChild;
+              while (item) {
+                md[item.tagName] = item.textContent.trim();
+                item = item.nextElementSibling;
+              }
+              return md;
             }
             function initializeArray(arr, size) {
                 for (var h = 0; h < size; h++) {
