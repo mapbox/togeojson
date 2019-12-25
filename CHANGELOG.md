@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.1.0"></a>
+# [3.1.0](https://github.com/tmcw/togeojson/compare/v3.0.1...v3.1.0) (2019-12-25)
+
+
+### Features
+
+* Add parsing of GPX extensions speed, course, hAcc, vAcc ([#18](https://github.com/tmcw/togeojson/issues/18)) ([99301bd](https://github.com/tmcw/togeojson/commit/99301bd))
+
+
+
 <a name="3.0.1"></a>
 ## [3.0.1](https://github.com/tmcw/togeojson/compare/v3.0.0...v3.0.1) (2019-06-17)
 
