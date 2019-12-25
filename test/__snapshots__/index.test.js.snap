@@ -489,6 +489,476 @@ Object {
       "geometry": Object {
         "coordinates": Array [
           Array [
+            -81.097216,
+            32.064999,
+            14.601502,
+          ],
+          Array [
+            -81.097202,
+            32.064998,
+            14.59698,
+          ],
+          Array [
+            -81.097189,
+            32.064996,
+            14.592359,
+          ],
+          Array [
+            -81.097175,
+            32.064994,
+            14.587512,
+          ],
+          Array [
+            -81.097161,
+            32.064993,
+            14.58237,
+          ],
+          Array [
+            -81.097147,
+            32.064991,
+            14.576988,
+          ],
+          Array [
+            -81.097132,
+            32.064989,
+            14.57149,
+          ],
+          Array [
+            -81.097118,
+            32.064987,
+            14.566015,
+          ],
+          Array [
+            -81.097103,
+            32.064985,
+            14.560769,
+          ],
+          Array [
+            -81.097088,
+            32.064983,
+            14.556011,
+          ],
+          Array [
+            -81.097073,
+            32.064981,
+            14.552022,
+          ],
+          Array [
+            -81.097058,
+            32.064979,
+            14.549116,
+          ],
+          Array [
+            -81.097043,
+            32.064976,
+            14.547609,
+          ],
+          Array [
+            -81.097028,
+            32.064973,
+            14.547782,
+          ],
+          Array [
+            -81.097012,
+            32.064969,
+            14.549855,
+          ],
+          Array [
+            -81.096997,
+            32.064965,
+            14.553957,
+          ],
+          Array [
+            -81.096981,
+            32.06496,
+            14.560096,
+          ],
+          Array [
+            -81.096966,
+            32.064955,
+            14.568182,
+          ],
+          Array [
+            -81.096951,
+            32.06495,
+            14.578081,
+          ],
+          Array [
+            -81.096936,
+            32.064944,
+            14.589677,
+          ],
+          Array [
+            -81.096921,
+            32.064938,
+            14.602872,
+          ],
+          Array [
+            -81.096906,
+            32.064932,
+            14.617559,
+          ],
+          Array [
+            -81.096891,
+            32.064926,
+            14.633617,
+          ],
+          Array [
+            -81.096877,
+            32.064919,
+            14.650906,
+          ],
+          Array [
+            -81.096862,
+            32.064913,
+            14.669218,
+          ],
+          Array [
+            -81.096847,
+            32.064906,
+            14.688211,
+          ],
+          Array [
+            -81.096832,
+            32.0649,
+            14.707409,
+          ],
+          Array [
+            -81.096817,
+            32.064894,
+            14.726293,
+          ],
+          Array [
+            -81.096802,
+            32.064888,
+            14.744314,
+          ],
+          Array [
+            -81.096786,
+            32.064883,
+            14.760869,
+          ],
+          Array [
+            -81.09677,
+            32.064878,
+            14.775327,
+          ],
+          Array [
+            -81.096753,
+            32.064873,
+            14.78709,
+          ],
+          Array [
+            -81.096736,
+            32.064869,
+            14.795608,
+          ],
+          Array [
+            -81.096718,
+            32.064865,
+            14.800388,
+          ],
+          Array [
+            -81.0967,
+            32.064862,
+            14.801034,
+          ],
+          Array [
+            -81.096681,
+            32.06486,
+            14.797257,
+          ],
+          Array [
+            -81.096662,
+            32.064858,
+            14.788924,
+          ],
+          Array [
+            -81.096642,
+            32.064857,
+            14.776076,
+          ],
+          Array [
+            -81.096622,
+            32.064856,
+            14.758899,
+          ],
+          Array [
+            -81.096602,
+            32.064856,
+            14.737757,
+          ],
+          Array [
+            -81.096582,
+            32.064856,
+            14.713353,
+          ],
+          Array [
+            -81.096561,
+            32.064856,
+            14.686797,
+          ],
+          Array [
+            -81.09654,
+            32.064857,
+            14.659438,
+          ],
+          Array [
+            -81.09652,
+            32.064857,
+            14.632606,
+          ],
+        ],
+        "type": "LineString",
+      },
+      "properties": Object {
+        "coordTimes": Array [
+          "2019-12-15T20:19:55Z",
+          "2019-12-15T20:19:56Z",
+          "2019-12-15T20:19:57Z",
+          "2019-12-15T20:19:58Z",
+          "2019-12-15T20:19:59Z",
+          "2019-12-15T20:20:00Z",
+          "2019-12-15T20:20:01Z",
+          "2019-12-15T20:20:02Z",
+          "2019-12-15T20:20:03Z",
+          "2019-12-15T20:20:04Z",
+          "2019-12-15T20:20:05Z",
+          "2019-12-15T20:20:06Z",
+          "2019-12-15T20:20:07Z",
+          "2019-12-15T20:20:08Z",
+          "2019-12-15T20:20:09Z",
+          "2019-12-15T20:20:10Z",
+          "2019-12-15T20:20:11Z",
+          "2019-12-15T20:20:12Z",
+          "2019-12-15T20:20:13Z",
+          "2019-12-15T20:20:14Z",
+          "2019-12-15T20:20:15Z",
+          "2019-12-15T20:20:16Z",
+          "2019-12-15T20:20:17Z",
+          "2019-12-15T20:20:18Z",
+          "2019-12-15T20:20:19Z",
+          "2019-12-15T20:20:20Z",
+          "2019-12-15T20:20:21Z",
+          "2019-12-15T20:20:22Z",
+          "2019-12-15T20:20:23Z",
+          "2019-12-15T20:20:24Z",
+          "2019-12-15T20:20:25Z",
+          "2019-12-15T20:20:26Z",
+          "2019-12-15T20:20:27Z",
+          "2019-12-15T20:20:28Z",
+          "2019-12-15T20:20:29Z",
+          "2019-12-15T20:20:30Z",
+          "2019-12-15T20:20:31Z",
+          "2019-12-15T20:20:32Z",
+          "2019-12-15T20:20:33Z",
+          "2019-12-15T20:20:34Z",
+          "2019-12-15T20:20:35Z",
+          "2019-12-15T20:20:36Z",
+          "2019-12-15T20:20:37Z",
+          "2019-12-15T20:20:38Z",
+        ],
+        "courses": Array [
+          101.747269,
+          116.967209,
+          115.938606,
+          100.759422,
+          99.803406,
+          106.322136,
+          98.490616,
+          93.63662,
+          99.619659,
+          97.715126,
+          100.03331,
+          104.357742,
+          101.23983,
+          105.863258,
+          107.797836,
+          109.13266,
+          111.736015,
+          107.549797,
+          107.469467,
+          106.547134,
+          104.63105,
+          104.488838,
+          107.260277,
+          108.223557,
+          104.477165,
+          106.137283,
+          103.228004,
+          103.63652,
+          103.880707,
+          104.499054,
+          104.216476,
+          104.624397,
+          105.061386,
+          105.140884,
+          101.698204,
+          109.761932,
+          112.532829,
+          107.184669,
+          85.002533,
+          65.522507,
+          63.038013,
+          65.656158,
+          75.189133,
+          79.346809,
+        ],
+        "hAccs": Array [
+          1.801682,
+          1.589515,
+          1.420663,
+          1.293719,
+          1.204536,
+          1.146679,
+          1.112553,
+          1.094755,
+          1.087068,
+          1.084877,
+          1.085094,
+          1.085867,
+          1.086233,
+          1.085813,
+          1.084578,
+          1.082684,
+          1.080359,
+          1.077836,
+          1.075317,
+          1.072953,
+          1.070842,
+          1.069036,
+          1.067549,
+          1.066368,
+          1.065462,
+          1.064791,
+          1.064312,
+          1.063982,
+          1.063766,
+          1.063631,
+          1.063552,
+          1.06351,
+          1.06349,
+          1.063483,
+          1.063482,
+          1.063483,
+          1.063483,
+          1.063483,
+          1.063481,
+          1.063477,
+          1.063473,
+          1.063469,
+          1.063464,
+          1.06346,
+        ],
+        "name": "Route 2019-12-15 3:50pm",
+        "speeds": Array [
+          1.310662,
+          1.312005,
+          1.316493,
+          1.324632,
+          1.336241,
+          1.35115,
+          1.369206,
+          1.389537,
+          1.411005,
+          1.432582,
+          1.453162,
+          1.471838,
+          1.488342,
+          1.503155,
+          1.516881,
+          1.529673,
+          1.54115,
+          1.550511,
+          1.557044,
+          1.560606,
+          1.561666,
+          1.561068,
+          1.559719,
+          1.558704,
+          1.559332,
+          1.562959,
+          1.570671,
+          1.583026,
+          1.600173,
+          1.621762,
+          1.647064,
+          1.675539,
+          1.706759,
+          1.739982,
+          1.774224,
+          1.808595,
+          1.842176,
+          1.87379,
+          1.901936,
+          1.924664,
+          1.939762,
+          1.945541,
+          1.941502,
+          1.928319,
+        ],
+        "time": "2019-12-15T20:19:55Z",
+        "vAccs": Array [
+          1.189247,
+          1.044055,
+          0.930221,
+          0.846459,
+          0.789337,
+          0.753744,
+          0.733883,
+          0.724354,
+          0.720838,
+          0.720288,
+          0.720789,
+          0.721278,
+          0.721276,
+          0.720662,
+          0.719508,
+          0.717977,
+          0.716249,
+          0.714488,
+          0.712816,
+          0.711317,
+          0.710037,
+          0.708988,
+          0.708161,
+          0.707535,
+          0.707077,
+          0.706756,
+          0.70654,
+          0.706402,
+          0.706318,
+          0.706272,
+          0.706248,
+          0.706238,
+          0.706235,
+          0.706235,
+          0.706236,
+          0.706236,
+          0.706235,
+          0.706233,
+          0.70623,
+          0.706227,
+          0.706224,
+          0.706221,
+          0.706218,
+          0.706215,
+        ],
+      },
+      "type": "Feature",
+    },
+  ],
+  "type": "FeatureCollection",
+}
+`;
+
+exports[`toGeoJSON 3`] = `
+Object {
+  "features": Array [
+    Object {
+      "geometry": Object {
+        "coordinates": Array [
+          Array [
             Array [
               -71.09622,
               42.210009,
@@ -8857,7 +9327,7 @@ Object {
 }
 `;
 
-exports[`toGeoJSON 3`] = `
+exports[`toGeoJSON 4`] = `
 Object {
   "features": Array [
     Object {
@@ -8883,7 +9353,7 @@ Object {
 }
 `;
 
-exports[`toGeoJSON 4`] = `
+exports[`toGeoJSON 5`] = `
 Object {
   "features": Array [
     Object {
@@ -8914,14 +9384,14 @@ Object {
 }
 `;
 
-exports[`toGeoJSON 5`] = `
+exports[`toGeoJSON 6`] = `
 Object {
   "features": Array [],
   "type": "FeatureCollection",
 }
 `;
 
-exports[`toGeoJSON 6`] = `
+exports[`toGeoJSON 7`] = `
 Object {
   "features": Array [
     Object {
@@ -8946,7 +9416,7 @@ Object {
 }
 `;
 
-exports[`toGeoJSON 7`] = `
+exports[`toGeoJSON 8`] = `
 Object {
   "features": Array [
     Object {
@@ -9062,7 +9532,7 @@ Object {
 }
 `;
 
-exports[`toGeoJSON 8`] = `
+exports[`toGeoJSON 9`] = `
 Object {
   "features": Array [
     Object {
@@ -9334,7 +9804,7 @@ Date d'enregistrement : 12/04/2014 11:24 AM
 }
 `;
 
-exports[`toGeoJSON 9`] = `
+exports[`toGeoJSON 10`] = `
 Object {
   "features": Array [
     Object {
@@ -9396,7 +9866,7 @@ Object {
 }
 `;
 
-exports[`toGeoJSON 10`] = `
+exports[`toGeoJSON 11`] = `
 Object {
   "features": Array [
     Object {
@@ -9561,7 +10031,7 @@ Object {
 }
 `;
 
-exports[`toGeoJSON 11`] = `
+exports[`toGeoJSON 12`] = `
 Object {
   "features": Array [
     Object {
@@ -9611,7 +10081,7 @@ Object {
 }
 `;
 
-exports[`toGeoJSON 12`] = `
+exports[`toGeoJSON 13`] = `
 Object {
   "features": Array [
     Object {
@@ -9679,7 +10149,7 @@ Object {
 }
 `;
 
-exports[`toGeoJSON 13`] = `
+exports[`toGeoJSON 14`] = `
 Object {
   "features": Array [
     Object {
@@ -9833,7 +10303,7 @@ Object {
 }
 `;
 
-exports[`toGeoJSON 14`] = `
+exports[`toGeoJSON 15`] = `
 Object {
   "features": Array [
     Object {
@@ -9883,7 +10353,7 @@ Object {
 }
 `;
 
-exports[`toGeoJSON 15`] = `
+exports[`toGeoJSON 16`] = `
 Object {
   "features": Array [
     Object {
@@ -9926,7 +10396,7 @@ Object {
 }
 `;
 
-exports[`toGeoJSON 16`] = `
+exports[`toGeoJSON 17`] = `
 Object {
   "features": Array [
     Object {
@@ -10087,7 +10557,7 @@ Object {
 }
 `;
 
-exports[`toGeoJSON 17`] = `
+exports[`toGeoJSON 18`] = `
 Object {
   "features": Array [
     Object {
@@ -41547,14 +42017,14 @@ Object {
 }
 `;
 
-exports[`toGeoJSON 18`] = `
+exports[`toGeoJSON 19`] = `
 Object {
   "features": Array [],
   "type": "FeatureCollection",
 }
 `;
 
-exports[`toGeoJSON 19`] = `
+exports[`toGeoJSON 20`] = `
 Object {
   "features": Array [
     Object {
@@ -41715,7 +42185,7 @@ Object {
 }
 `;
 
-exports[`toGeoJSON 20`] = `
+exports[`toGeoJSON 21`] = `
 Object {
   "features": Array [
     Object {
@@ -41782,7 +42252,7 @@ Object {
 }
 `;
 
-exports[`toGeoJSON 21`] = `
+exports[`toGeoJSON 22`] = `
 Object {
   "features": Array [
     Object {
@@ -42046,7 +42516,7 @@ Object {
 }
 `;
 
-exports[`toGeoJSON 22`] = `
+exports[`toGeoJSON 23`] = `
 Object {
   "features": Array [
     Object {
@@ -42076,7 +42546,7 @@ Object {
 }
 `;
 
-exports[`toGeoJSON 23`] = `
+exports[`toGeoJSON 24`] = `
 Object {
   "features": Array [
     Object {
@@ -64518,30 +64988,6 @@ Object {
 }
 `;
 
-exports[`toGeoJSON 24`] = `
-Object {
-  "features": Array [
-    Object {
-      "geometry": Object {
-        "coordinates": Array [
-          -122.0822035425683,
-          37.42228990140251,
-          0,
-        ],
-        "type": "Point",
-      },
-      "properties": Object {
-        "description": "Attached to the ground. Intelligently places itself 
-       at the height of the underlying terrain.",
-        "name": "Simple placemark",
-      },
-      "type": "Feature",
-    },
-  ],
-  "type": "FeatureCollection",
-}
-`;
-
 exports[`toGeoJSON 25`] = `
 Object {
   "features": Array [
@@ -64567,6 +65013,30 @@ Object {
 `;
 
 exports[`toGeoJSON 26`] = `
+Object {
+  "features": Array [
+    Object {
+      "geometry": Object {
+        "coordinates": Array [
+          -122.0822035425683,
+          37.42228990140251,
+          0,
+        ],
+        "type": "Point",
+      },
+      "properties": Object {
+        "description": "Attached to the ground. Intelligently places itself 
+       at the height of the underlying terrain.",
+        "name": "Simple placemark",
+      },
+      "type": "Feature",
+    },
+  ],
+  "type": "FeatureCollection",
+}
+`;
+
+exports[`toGeoJSON 27`] = `
 Object {
   "features": Array [
     Object {
@@ -64639,7 +65109,7 @@ Object {
 }
 `;
 
-exports[`toGeoJSON 27`] = `
+exports[`toGeoJSON 28`] = `
 Object {
   "features": Array [
     Object {
@@ -66105,7 +66575,7 @@ Object {
 }
 `;
 
-exports[`toGeoJSON 28`] = `
+exports[`toGeoJSON 29`] = `
 Object {
   "features": Array [
     Object {
@@ -73955,7 +74425,7 @@ Object {
 }
 `;
 
-exports[`toGeoJSON 29`] = `
+exports[`toGeoJSON 30`] = `
 Object {
   "features": Array [
     Object {
@@ -73977,7 +74447,7 @@ Object {
 }
 `;
 
-exports[`toGeoJSON 30`] = `
+exports[`toGeoJSON 31`] = `
 Object {
   "features": Array [
     Object {
@@ -74021,7 +74491,7 @@ Object {
 }
 `;
 
-exports[`toGeoJSON 31`] = `
+exports[`toGeoJSON 32`] = `
 Object {
   "features": Array [
     Object {
@@ -75813,7 +76283,7 @@ Object {
 }
 `;
 
-exports[`toGeoJSON 32`] = `
+exports[`toGeoJSON 33`] = `
 Object {
   "features": Array [
     Object {
@@ -75856,7 +76326,7 @@ Object {
 }
 `;
 
-exports[`toGeoJSON 33`] = `
+exports[`toGeoJSON 34`] = `
 Object {
   "features": Array [
     Object {
@@ -75977,7 +76447,7 @@ Object {
 }
 `;
 
-exports[`toGeoJSON 34`] = `
+exports[`toGeoJSON 35`] = `
 Object {
   "features": Array [
     Object {
@@ -76018,7 +76488,7 @@ Object {
 }
 `;
 
-exports[`toGeoJSON 35`] = `
+exports[`toGeoJSON 36`] = `
 Object {
   "features": Array [
     Object {
@@ -76635,14 +77105,14 @@ Object {
 }
 `;
 
-exports[`toGeoJSON 36`] = `
+exports[`toGeoJSON 37`] = `
 Object {
   "features": Array [],
   "type": "FeatureCollection",
 }
 `;
 
-exports[`toGeoJSON 37`] = `
+exports[`toGeoJSON 38`] = `
 Object {
   "features": Array [
     Object {
@@ -76682,14 +77152,14 @@ Object {
 }
 `;
 
-exports[`toGeoJSON 38`] = `
+exports[`toGeoJSON 39`] = `
 Object {
   "features": Array [],
   "type": "FeatureCollection",
 }
 `;
 
-exports[`toGeoJSON 39`] = `
+exports[`toGeoJSON 40`] = `
 Object {
   "features": Array [
     Object {
@@ -77137,7 +77607,7 @@ Object {
 }
 `;
 
-exports[`toGeoJSON 40`] = `
+exports[`toGeoJSON 41`] = `
 Object {
   "features": Array [
     Object {
