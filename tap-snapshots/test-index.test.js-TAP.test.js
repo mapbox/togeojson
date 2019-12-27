@@ -9416,6 +9416,122 @@ Object {
 }
 `
 
+exports[`test/index.test.js TAP toGeoJSON > garmin_extensions.gpx 1`] = `
+Object {
+  "features": Array [
+    Object {
+      "geometry": Object {
+        "coordinates": Array [
+          Array [
+            Array [
+              15,
+              14,
+              16,
+            ],
+            Array [
+              18,
+              17,
+              19,
+            ],
+          ],
+          Array [
+            Array [
+              21,
+              20,
+              22,
+            ],
+            Array [
+              24,
+              23,
+              25,
+            ],
+          ],
+        ],
+        "type": "MultiLineString",
+      },
+      "properties": Object {
+        "name": "track name",
+      },
+      "type": "Feature",
+    },
+    Object {
+      "geometry": Object {
+        "coordinates": Array [
+          Array [
+            6,
+            5,
+            7,
+          ],
+          Array [
+            9,
+            8,
+            10,
+          ],
+          Array [
+            12,
+            11,
+            13,
+          ],
+        ],
+        "type": "LineString",
+      },
+      "properties": Object {
+        "name": "route name",
+        "time": "2007-11-25T17:58:00Z",
+      },
+      "type": "Feature",
+    },
+    Object {
+      "geometry": Object {
+        "coordinates": Array [
+          1,
+          0,
+          2,
+        ],
+        "type": "Point",
+      },
+      "properties": Object {
+        "cmt": "waypoint comment",
+        "desc": "waypoint description",
+        "links": Array [
+          Object {
+            "href": "href",
+            "text": "text",
+            "type": "type",
+          },
+          Object {
+            "href": "href2",
+            "text": "text2",
+            "type": "type2",
+          },
+          Object {
+            "href": "href3",
+            "text": "text3",
+            "type": "type3",
+          },
+        ],
+        "name": "waypoint name",
+        "time": "2007-11-25T17:58:00+01:00",
+        "type": "type",
+      },
+      "type": "Feature",
+    },
+    Object {
+      "geometry": Object {
+        "coordinates": Array [
+          4,
+          3,
+        ],
+        "type": "Point",
+      },
+      "properties": Object {},
+      "type": "Feature",
+    },
+  ],
+  "type": "FeatureCollection",
+}
+`
+
 exports[`test/index.test.js TAP toGeoJSON > gdal.gpx 1`] = `
 Object {
   "features": Array [
@@ -42210,270 +42326,6 @@ Object {
         "stroke": "ff0",
         "stroke-opacity": 0,
         "stroke-width": 3,
-      },
-      "type": "Feature",
-    },
-  ],
-  "type": "FeatureCollection",
-}
-`
-
-exports[`test/index.test.js TAP toGeoJSON > north_core-2.gpx 1`] = `
-Object {
-  "features": Array [
-    Object {
-      "geometry": Object {
-        "coordinates": Array [
-          Array [
-            2.665278,
-            10.228889,
-          ],
-          Array [
-            2.933333,
-            11.133333,
-          ],
-        ],
-        "type": "LineString",
-      },
-      "properties": Object {
-        "type": "NC",
-      },
-      "type": "Feature",
-    },
-    Object {
-      "geometry": Object {
-        "coordinates": Array [
-          Array [
-            2.933333,
-            11.133333,
-          ],
-          Array [
-            3.435664,
-            11.862522,
-          ],
-        ],
-        "type": "LineString",
-      },
-      "properties": Object {
-        "type": "NC",
-      },
-      "type": "Feature",
-    },
-    Object {
-      "geometry": Object {
-        "coordinates": Array [
-          Array [
-            Array [
-              0.99212,
-              13.164212,
-            ],
-            Array [
-              -0.517094,
-              12.688132,
-            ],
-          ],
-          Array [
-            Array [
-              -0.517094,
-              12.688132,
-            ],
-            Array [
-              -0.667626,
-              12.640647,
-            ],
-          ],
-          Array [
-            Array [
-              -0.667626,
-              12.640647,
-            ],
-            Array [
-              -1.524722,
-              12.370277,
-            ],
-          ],
-        ],
-        "type": "MultiLineString",
-      },
-      "properties": Object {
-        "type": "NC",
-      },
-      "type": "Feature",
-    },
-    Object {
-      "geometry": Object {
-        "coordinates": Array [
-          Array [
-            3.816438,
-            12.667497,
-          ],
-          Array [
-            4.184197,
-            12.446262,
-          ],
-          Array [
-            4.196806,
-            12.450347,
-          ],
-        ],
-        "type": "LineString",
-      },
-      "properties": Object {
-        "type": "NC",
-      },
-      "type": "Feature",
-    },
-    Object {
-      "geometry": Object {
-        "coordinates": Array [
-          Array [
-            3.816435,
-            12.667498,
-          ],
-          Array [
-            3.816438,
-            12.667497,
-          ],
-        ],
-        "type": "LineString",
-      },
-      "properties": Object {
-        "type": "NC",
-      },
-      "type": "Feature",
-    },
-    Object {
-      "geometry": Object {
-        "coordinates": Array [
-          Array [
-            Array [
-              3.2,
-              13.05,
-            ],
-            Array [
-              3.198604,
-              13.03917,
-            ],
-            Array [
-              3.572865,
-              12.814024,
-            ],
-          ],
-          Array [
-            Array [
-              3.572865,
-              12.814024,
-            ],
-            Array [
-              3.816435,
-              12.667498,
-            ],
-          ],
-        ],
-        "type": "MultiLineString",
-      },
-      "properties": Object {
-        "type": "NC",
-      },
-      "type": "Feature",
-    },
-    Object {
-      "geometry": Object {
-        "coordinates": Array [
-          Array [
-            2.12,
-            13.52,
-          ],
-          Array [
-            2.124997,
-            13.50692,
-          ],
-          Array [
-            3.191601,
-            13.042749,
-          ],
-          Array [
-            3.2,
-            13.05,
-          ],
-        ],
-        "type": "LineString",
-      },
-      "properties": Object {
-        "type": "NC",
-      },
-      "type": "Feature",
-    },
-    Object {
-      "geometry": Object {
-        "coordinates": Array [
-          Array [
-            Array [
-              2.119999,
-              13.52,
-            ],
-            Array [
-              0.99212,
-              13.164212,
-            ],
-          ],
-          Array [
-            Array [
-              2.12,
-              13.52,
-            ],
-            Array [
-              2.119999,
-              13.52,
-            ],
-          ],
-        ],
-        "type": "MultiLineString",
-      },
-      "properties": Object {
-        "type": "NC",
-      },
-      "type": "Feature",
-    },
-    Object {
-      "geometry": Object {
-        "coordinates": Array [
-          Array [
-            3.435664,
-            11.862522,
-          ],
-          Array [
-            3.45,
-            11.883333,
-          ],
-          Array [
-            3.572865,
-            12.814024,
-          ],
-        ],
-        "type": "LineString",
-      },
-      "properties": Object {
-        "type": "NC",
-      },
-      "type": "Feature",
-    },
-    Object {
-      "geometry": Object {
-        "coordinates": Array [
-          Array [
-            3.816435,
-            12.667498,
-          ],
-          Array [
-            3.816438,
-            12.667497,
-          ],
-        ],
-        "type": "LineString",
-      },
-      "properties": Object {
-        "type": "NC",
       },
       "type": "Feature",
     },
