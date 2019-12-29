@@ -8,7 +8,7 @@ const d = "./test/data/";
 
 test("toGeoJSON", t => {
   // Loop through all files except hidden ones
-  for (let file of fs.readdirSync(d).filter(item => !(/(^|\/)\.[^\/\.]/g).test(item))) {
+  for (let file of fs.readdirSync(d).filter(item => !item.startsWith("."))) {
     t.matchSnapshot(
       tj[path.extname(file).substring(1)](
         new xmldom.DOMParser().parseFromString(
