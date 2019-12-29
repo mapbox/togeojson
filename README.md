@@ -110,12 +110,14 @@ const convertedWithStyles = tj.kml(kml, { styles: true });
 - [x] Line styles
 - [ ] Properties
   - [x] 'name', 'cmt', 'desc', 'link', 'time', 'keywords', 'sym', 'type' tags
+  - [x] gpxx Garmin extensions on tracks and routes
   - [ ] 'author', 'copyright' tags
 
 ## FAQ
 
 ### How does this differ from mapbox/togeojson?
 
+- This repository is maintained.
 - It’s available as an ES Module. If you're using a modern JavaScript bundler or
   using ES Modules in the browser, this makes it a bit more efficient and sometimes
   easier to use.
