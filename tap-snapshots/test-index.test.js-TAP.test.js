@@ -1,6 +1,11 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`toGeoJSON 1`] = `
+/* IMPORTANT
+ * This snapshot file is auto-generated, but designed for humans.
+ * It should be checked into source control and tracked carefully.
+ * Re-generate by setting TAP_SNAPSHOT=1 and running tests.
+ * Make sure to inspect the output below.  Do not ignore changes!
+ */
+'use strict'
+exports[`test/index.test.js TAP toGeoJSON > addresses.kml 1`] = `
 Object {
   "features": Array [
     Object {
@@ -8,7 +13,7 @@ Object {
         "geometries": Array [
           Object {
             "coordinates": Array [
-              NaN,
+              null,
             ],
             "type": "Point",
           },
@@ -21,8 +26,8 @@ Object {
       },
       "properties": Object {
         "Category": "In transit",
-        "Distance": "0",
         "description": " In transit from 2015-07-31T17:00:00.000Z to 2015-08-01T00:00:00.000Z. Distance 0m ",
+        "Distance": "0",
         "name": "In transit",
         "timespan": Object {
           "begin": "2015-07-31T17:00:00.000Z",
@@ -36,7 +41,7 @@ Object {
         "geometries": Array [
           Object {
             "coordinates": Array [
-              NaN,
+              null,
             ],
             "type": "Point",
           },
@@ -60,8 +65,8 @@ Object {
       },
       "properties": Object {
         "Category": "Moving",
-        "Distance": "173",
         "description": " Moving from 2015-08-01T00:00:00.000Z to 2015-08-01T09:04:32.323Z. Distance 173m ",
+        "Distance": "173",
         "name": "Moving",
         "timespan": Object {
           "begin": "2015-08-01T00:00:00.000Z",
@@ -75,7 +80,7 @@ Object {
         "geometries": Array [
           Object {
             "coordinates": Array [
-              NaN,
+              null,
             ],
             "type": "Point",
           },
@@ -88,8 +93,8 @@ Object {
       },
       "properties": Object {
         "Category": "Walking",
-        "Distance": "0",
         "description": " Walking from 2015-08-01T09:04:32.323Z to 2015-08-01T09:16:56.610Z. Distance 0m ",
+        "Distance": "0",
         "name": "Walking",
         "timespan": Object {
           "begin": "2015-08-01T09:04:32.323Z",
@@ -103,7 +108,7 @@ Object {
         "geometries": Array [
           Object {
             "coordinates": Array [
-              NaN,
+              null,
             ],
             "type": "Point",
           },
@@ -122,8 +127,8 @@ Object {
       },
       "properties": Object {
         "Category": "On the subway",
-        "Distance": "4470",
         "description": " On the subway from 2015-08-01T09:16:56.610Z to 2015-08-01T09:43:53.321Z. Distance 4470m ",
+        "Distance": "4470",
         "name": "On the subway",
         "timespan": Object {
           "begin": "2015-08-01T09:16:56.610Z",
@@ -137,7 +142,7 @@ Object {
         "geometries": Array [
           Object {
             "coordinates": Array [
-              NaN,
+              null,
             ],
             "type": "Point",
           },
@@ -155,10 +160,10 @@ Object {
         "type": "GeometryCollection",
       },
       "properties": Object {
-        "Category": "Budget Hotel",
-        "Distance": "0",
         "address": "925/9 Rama 1 Rd. Wangmai, Pathum Wan, Bangkok 10330, Thailand",
+        "Category": "Budget Hotel",
         "description": " Budget Hotel from 2015-08-01T09:43:58.715Z to 2015-08-01T16:31:30.753Z. Distance 0m ",
+        "Distance": "0",
         "name": "Lub d - Bangkok Siam",
         "timespan": Object {
           "begin": "2015-08-01T09:43:58.715Z",
@@ -172,7 +177,7 @@ Object {
         "geometries": Array [
           Object {
             "coordinates": Array [
-              NaN,
+              null,
             ],
             "type": "Point",
           },
@@ -191,8 +196,8 @@ Object {
       },
       "properties": Object {
         "Category": "In transit",
-        "Distance": "0",
         "description": " In transit from 2015-08-01T16:31:30.753Z to 2015-08-01T16:55:33.088Z. Distance 0m ",
+        "Distance": "0",
         "name": "In transit",
         "timespan": Object {
           "begin": "2015-08-01T16:31:30.753Z",
@@ -206,7 +211,7 @@ Object {
         "geometries": Array [
           Object {
             "coordinates": Array [
-              NaN,
+              null,
             ],
             "type": "Point",
           },
@@ -224,10 +229,10 @@ Object {
         "type": "GeometryCollection",
       },
       "properties": Object {
-        "Category": "Sublocality2",
-        "Distance": "0",
         "address": "Huai Khwang, Bangkok, Thailand",
+        "Category": "Sublocality2",
         "description": " Sublocality2 from 2015-08-01T16:55:39.324Z to 2015-08-01T17:13:08.282Z. Distance 0m ",
+        "Distance": "0",
         "name": "Bang Kapi",
         "timespan": Object {
           "begin": "2015-08-01T16:55:39.324Z",
@@ -241,7 +246,7 @@ Object {
         "geometries": Array [
           Object {
             "coordinates": Array [
-              NaN,
+              null,
             ],
             "type": "Point",
           },
@@ -260,8 +265,8 @@ Object {
       },
       "properties": Object {
         "Category": "Driving",
-        "Distance": "0",
         "description": " Driving from 2015-08-01T17:13:08.282Z to 2015-08-01T17:34:21.480Z. Distance 0m ",
+        "Distance": "0",
         "name": "Driving",
         "timespan": Object {
           "begin": "2015-08-01T17:13:08.282Z",
@@ -275,7 +280,7 @@ Object {
         "geometries": Array [
           Object {
             "coordinates": Array [
-              NaN,
+              null,
             ],
             "type": "Point",
           },
@@ -288,8 +293,8 @@ Object {
       },
       "properties": Object {
         "Category": "Walking",
-        "Distance": "0",
         "description": " Walking from 2015-08-01T17:34:21.480Z to 2015-08-01T17:49:42.729Z. Distance 0m ",
+        "Distance": "0",
         "name": "Walking",
         "timespan": Object {
           "begin": "2015-08-01T17:34:21.480Z",
@@ -303,7 +308,7 @@ Object {
         "geometries": Array [
           Object {
             "coordinates": Array [
-              NaN,
+              null,
             ],
             "type": "Point",
           },
@@ -316,8 +321,8 @@ Object {
       },
       "properties": Object {
         "Category": "Driving",
-        "Distance": "0",
         "description": " Driving from 2015-08-01T17:49:42.729Z to 2015-08-01T18:10:35.378Z. Distance 0m ",
+        "Distance": "0",
         "name": "Driving",
         "timespan": Object {
           "begin": "2015-08-01T17:49:42.729Z",
@@ -331,7 +336,7 @@ Object {
         "geometries": Array [
           Object {
             "coordinates": Array [
-              NaN,
+              null,
             ],
             "type": "Point",
           },
@@ -344,8 +349,8 @@ Object {
       },
       "properties": Object {
         "Category": "Walking",
-        "Distance": "0",
         "description": " Walking from 2015-08-01T18:10:35.378Z to 2015-08-01T18:58:19.307Z. Distance 0m ",
+        "Distance": "0",
         "name": "Walking",
         "timespan": Object {
           "begin": "2015-08-01T18:10:35.378Z",
@@ -359,7 +364,7 @@ Object {
         "geometries": Array [
           Object {
             "coordinates": Array [
-              NaN,
+              null,
             ],
             "type": "Point",
           },
@@ -372,8 +377,8 @@ Object {
       },
       "properties": Object {
         "Category": "Driving",
-        "Distance": "0",
         "description": " Driving from 2015-08-01T18:58:19.307Z to 2015-08-01T19:16:48.446Z. Distance 0m ",
+        "Distance": "0",
         "name": "Driving",
         "timespan": Object {
           "begin": "2015-08-01T18:58:19.307Z",
@@ -387,7 +392,7 @@ Object {
         "geometries": Array [
           Object {
             "coordinates": Array [
-              NaN,
+              null,
             ],
             "type": "Point",
           },
@@ -400,8 +405,8 @@ Object {
       },
       "properties": Object {
         "Category": "Walking",
-        "Distance": "0",
         "description": " Walking from 2015-08-01T19:16:48.446Z to 2015-08-01T19:29:38.452Z. Distance 0m ",
+        "Distance": "0",
         "name": "Walking",
         "timespan": Object {
           "begin": "2015-08-01T19:16:48.446Z",
@@ -415,7 +420,7 @@ Object {
         "geometries": Array [
           Object {
             "coordinates": Array [
-              NaN,
+              null,
             ],
             "type": "Point",
           },
@@ -439,8 +444,8 @@ Object {
       },
       "properties": Object {
         "Category": "Driving",
-        "Distance": "885",
         "description": " Driving from 2015-08-01T19:29:38.452Z to 2015-08-01T19:35:18.504Z. Distance 885m ",
+        "Distance": "885",
         "name": "Driving",
         "timespan": Object {
           "begin": "2015-08-01T19:29:38.452Z",
@@ -454,7 +459,7 @@ Object {
         "geometries": Array [
           Object {
             "coordinates": Array [
-              NaN,
+              null,
             ],
             "type": "Point",
           },
@@ -467,8 +472,8 @@ Object {
       },
       "properties": Object {
         "Category": "Walking",
-        "Distance": "0",
         "description": " Walking from 2015-08-01T19:35:18.504Z to 2015-08-01T19:39:28.251Z. Distance 0m ",
+        "Distance": "0",
         "name": "Walking",
         "timespan": Object {
           "begin": "2015-08-01T19:35:18.504Z",
@@ -480,9 +485,9 @@ Object {
   ],
   "type": "FeatureCollection",
 }
-`;
+`
 
-exports[`toGeoJSON 2`] = `
+exports[`test/index.test.js TAP toGeoJSON > apple_watch_route.gpx 1`] = `
 Object {
   "features": Array [
     Object {
@@ -950,9 +955,9 @@ Object {
   ],
   "type": "FeatureCollection",
 }
-`;
+`
 
-exports[`toGeoJSON 3`] = `
+exports[`test/index.test.js TAP toGeoJSON > blue_hills.gpx 1`] = `
 Object {
   "features": Array [
     Object {
@@ -9325,9 +9330,9 @@ Object {
   ],
   "type": "FeatureCollection",
 }
-`;
+`
 
-exports[`toGeoJSON 4`] = `
+exports[`test/index.test.js TAP toGeoJSON > cdata.kml 1`] = `
 Object {
   "features": Array [
     Object {
@@ -9340,20 +9345,16 @@ Object {
         "type": "Point",
       },
       "properties": Object {
-        "description": "
-      
-
-             Here is some text
-      ",
+        "description": "\\n      \\n\\n             Here is some text\\n      ",
       },
       "type": "Feature",
     },
   ],
   "type": "FeatureCollection",
 }
-`;
+`
 
-exports[`toGeoJSON 5`] = `
+exports[`test/index.test.js TAP toGeoJSON > empty_ele.gpx 1`] = `
 Object {
   "features": Array [
     Object {
@@ -9382,16 +9383,16 @@ Object {
   ],
   "type": "FeatureCollection",
 }
-`;
+`
 
-exports[`toGeoJSON 6`] = `
+exports[`test/index.test.js TAP toGeoJSON > empty_trk.gpx 1`] = `
 Object {
   "features": Array [],
   "type": "FeatureCollection",
 }
-`;
+`
 
-exports[`toGeoJSON 7`] = `
+exports[`test/index.test.js TAP toGeoJSON > extended_data.kml 1`] = `
 Object {
   "features": Array [
     Object {
@@ -9404,8 +9405,7 @@ Object {
         "type": "Point",
       },
       "properties": Object {
-        "description": "Attached to the ground. Intelligently places itself 
-       at the height of the underlying terrain.",
+        "description": "Attached to the ground. Intelligently places itself \\n       at the height of the underlying terrain.",
         "foo": "bar",
         "name": "Extended data placemark",
       },
@@ -9414,9 +9414,9 @@ Object {
   ],
   "type": "FeatureCollection",
 }
-`;
+`
 
-exports[`toGeoJSON 8`] = `
+exports[`test/index.test.js TAP toGeoJSON > gdal.gpx 1`] = `
 Object {
   "features": Array [
     Object {
@@ -9530,9 +9530,9 @@ Object {
   ],
   "type": "FeatureCollection",
 }
-`;
+`
 
-exports[`toGeoJSON 9`] = `
+exports[`test/index.test.js TAP toGeoJSON > gxmultitrack.kml 1`] = `
 Object {
   "features": Array [
     Object {
@@ -9545,13 +9545,9 @@ Object {
         "type": "Point",
       },
       "properties": Object {
-        "description": "
-
-   ",
+        "description": "\\n\\n   ",
         "icon": "http://maps.google.com/mapfiles/kml/paddle/grn-circle.png",
-        "name": "
-12/04/2014 11:24 AM (départ)
-   ",
+        "name": "\\n12/04/2014 11:24 AM (départ)\\n   ",
         "styleHash": "7f350914",
         "styleUrl": "#start",
         "timestamp": "2014-04-12T14:26:16.702Z",
@@ -9738,21 +9734,15 @@ Object {
             "2014-04-12T14:27:24.638Z",
           ],
         ],
-        "description": "
-
-   ",
+        "description": "\\n\\n   ",
         "icon": "http://earth.google.com/images/kml-icons/track-directional/track-0.png",
-        "name": "
-12/04/2014 11:24 AM
-   ",
+        "name": "\\n12/04/2014 11:24 AM\\n   ",
         "stroke": "#ff0000",
         "stroke-opacity": 0.4980392156862745,
         "stroke-width": 4,
         "styleHash": "-7aff0fa",
         "styleUrl": "#track",
-        "type": "
-course à pied
-     ",
+        "type": "\\ncourse à pied\\n     ",
       },
       "type": "Feature",
     },
@@ -9766,33 +9756,9 @@ course à pied
         "type": "Point",
       },
       "properties": Object {
-        "description": "
-Créé par Google Mes parcours sur Android
-
-Nom : 12/04/2014 11:24 AM
-Type d'activité : course à pied
-Description : -
-Distance totale : 10,43 km (6,5 mi)
-Durée totale : 1:13:38
-Durée du déplacement : 1:08:20
-Vitesse moyenne : 8,49 km/h (5,3 mi/h)
-Vitesse moyenne de déplacement : 9,16 km/h (5,7 mi/h)
-Vitesse max. : 12,84 km/h (8,0 mi/h)
-Vitesse moyenne : 7:04 min/km (11:22 min/mi)
-Allure moyenne : 6:33 min/km (10:33 min/mi)
-Vitesse maximale : 4:40 min/km (7:31 min/mi)
-Élévation max. : 1020 m (3347 pi)
-Élévation min. : 678 m (2223 pi)
-Dénivelé : 1095 m (3593 pi)
-Inclinaison max. : 21 %
-Inclinaison min. : -24 %
-Date d'enregistrement : 12/04/2014 11:24 AM
-
-   ",
+        "description": "\\nCréé par Google Mes parcours sur Android\\n\\nNom : 12/04/2014 11:24 AM\\nType d'activité : course à pied\\nDescription : -\\nDistance totale : 10,43 km (6,5 mi)\\nDurée totale : 1:13:38\\nDurée du déplacement : 1:08:20\\nVitesse moyenne : 8,49 km/h (5,3 mi/h)\\nVitesse moyenne de déplacement : 9,16 km/h (5,7 mi/h)\\nVitesse max. : 12,84 km/h (8,0 mi/h)\\nVitesse moyenne : 7:04 min/km (11:22 min/mi)\\nAllure moyenne : 6:33 min/km (10:33 min/mi)\\nVitesse maximale : 4:40 min/km (7:31 min/mi)\\nÉlévation max. : 1020 m (3347 pi)\\nÉlévation min. : 678 m (2223 pi)\\nDénivelé : 1095 m (3593 pi)\\nInclinaison max. : 21 %\\nInclinaison min. : -24 %\\nDate d'enregistrement : 12/04/2014 11:24 AM\\n\\n   ",
         "icon": "http://maps.google.com/mapfiles/kml/paddle/red-circle.png",
-        "name": "
-12/04/2014 11:24 AM (fin)
-   ",
+        "name": "\\n12/04/2014 11:24 AM (fin)\\n   ",
         "styleHash": "-16b4bba1",
         "styleUrl": "#end",
         "timestamp": "2014-04-12T15:38:07.678Z",
@@ -9802,9 +9768,9 @@ Date d'enregistrement : 12/04/2014 11:24 AM
   ],
   "type": "FeatureCollection",
 }
-`;
+`
 
-exports[`toGeoJSON 10`] = `
+exports[`test/index.test.js TAP toGeoJSON > gxtrack.kml 1`] = `
 Object {
   "features": Array [
     Object {
@@ -9864,9 +9830,9 @@ Object {
   ],
   "type": "FeatureCollection",
 }
-`;
+`
 
-exports[`toGeoJSON 11`] = `
+exports[`test/index.test.js TAP toGeoJSON > inline_style.kml 1`] = `
 Object {
   "features": Array [
     Object {
@@ -10029,9 +9995,9 @@ Object {
   ],
   "type": "FeatureCollection",
 }
-`;
+`
 
-exports[`toGeoJSON 12`] = `
+exports[`test/index.test.js TAP toGeoJSON > linestring.kml 1`] = `
 Object {
   "features": Array [
     Object {
@@ -10079,9 +10045,9 @@ Object {
   ],
   "type": "FeatureCollection",
 }
-`;
+`
 
-exports[`toGeoJSON 13`] = `
+exports[`test/index.test.js TAP toGeoJSON > literal_color.kml 1`] = `
 Object {
   "features": Array [
     Object {
@@ -10147,9 +10113,9 @@ Object {
   ],
   "type": "FeatureCollection",
 }
-`;
+`
 
-exports[`toGeoJSON 14`] = `
+exports[`test/index.test.js TAP toGeoJSON > missing_hr.gpx 1`] = `
 Object {
   "features": Array [
     Object {
@@ -10301,9 +10267,9 @@ Object {
   ],
   "type": "FeatureCollection",
 }
-`;
+`
 
-exports[`toGeoJSON 15`] = `
+exports[`test/index.test.js TAP toGeoJSON > multigeometry.kml 1`] = `
 Object {
   "features": Array [
     Object {
@@ -10351,9 +10317,9 @@ Object {
   ],
   "type": "FeatureCollection",
 }
-`;
+`
 
-exports[`toGeoJSON 16`] = `
+exports[`test/index.test.js TAP toGeoJSON > multigeometry_discrete.kml 1`] = `
 Object {
   "features": Array [
     Object {
@@ -10394,9 +10360,9 @@ Object {
   ],
   "type": "FeatureCollection",
 }
-`;
+`
 
-exports[`toGeoJSON 17`] = `
+exports[`test/index.test.js TAP toGeoJSON > multitrack.kml 1`] = `
 Object {
   "features": Array [
     Object {
@@ -10555,9 +10521,9 @@ Object {
   ],
   "type": "FeatureCollection",
 }
-`;
+`
 
-exports[`toGeoJSON 18`] = `
+exports[`test/index.test.js TAP toGeoJSON > multitrackgpx.gpx 1`] = `
 Object {
   "features": Array [
     Object {
@@ -42015,16 +41981,16 @@ Object {
   ],
   "type": "FeatureCollection",
 }
-`;
+`
 
-exports[`toGeoJSON 19`] = `
+exports[`test/index.test.js TAP toGeoJSON > nogeomplacemark.kml 1`] = `
 Object {
   "features": Array [],
   "type": "FeatureCollection",
 }
-`;
+`
 
-exports[`toGeoJSON 20`] = `
+exports[`test/index.test.js TAP toGeoJSON > non_gx_multitrack.kml 1`] = `
 Object {
   "features": Array [
     Object {
@@ -42183,9 +42149,9 @@ Object {
   ],
   "type": "FeatureCollection",
 }
-`;
+`
 
-exports[`toGeoJSON 21`] = `
+exports[`test/index.test.js TAP toGeoJSON > noname.kml 1`] = `
 Object {
   "features": Array [
     Object {
@@ -42250,9 +42216,9 @@ Object {
   ],
   "type": "FeatureCollection",
 }
-`;
+`
 
-exports[`toGeoJSON 22`] = `
+exports[`test/index.test.js TAP toGeoJSON > north_core-2.gpx 1`] = `
 Object {
   "features": Array [
     Object {
@@ -42514,9 +42480,273 @@ Object {
   ],
   "type": "FeatureCollection",
 }
-`;
+`
 
-exports[`toGeoJSON 23`] = `
+exports[`test/index.test.js TAP toGeoJSON > north_core.gpx 1`] = `
+Object {
+  "features": Array [
+    Object {
+      "geometry": Object {
+        "coordinates": Array [
+          Array [
+            2.665278,
+            10.228889,
+          ],
+          Array [
+            2.933333,
+            11.133333,
+          ],
+        ],
+        "type": "LineString",
+      },
+      "properties": Object {
+        "type": "NC",
+      },
+      "type": "Feature",
+    },
+    Object {
+      "geometry": Object {
+        "coordinates": Array [
+          Array [
+            2.933333,
+            11.133333,
+          ],
+          Array [
+            3.435664,
+            11.862522,
+          ],
+        ],
+        "type": "LineString",
+      },
+      "properties": Object {
+        "type": "NC",
+      },
+      "type": "Feature",
+    },
+    Object {
+      "geometry": Object {
+        "coordinates": Array [
+          Array [
+            Array [
+              0.99212,
+              13.164212,
+            ],
+            Array [
+              -0.517094,
+              12.688132,
+            ],
+          ],
+          Array [
+            Array [
+              -0.517094,
+              12.688132,
+            ],
+            Array [
+              -0.667626,
+              12.640647,
+            ],
+          ],
+          Array [
+            Array [
+              -0.667626,
+              12.640647,
+            ],
+            Array [
+              -1.524722,
+              12.370277,
+            ],
+          ],
+        ],
+        "type": "MultiLineString",
+      },
+      "properties": Object {
+        "type": "NC",
+      },
+      "type": "Feature",
+    },
+    Object {
+      "geometry": Object {
+        "coordinates": Array [
+          Array [
+            3.816438,
+            12.667497,
+          ],
+          Array [
+            4.184197,
+            12.446262,
+          ],
+          Array [
+            4.196806,
+            12.450347,
+          ],
+        ],
+        "type": "LineString",
+      },
+      "properties": Object {
+        "type": "NC",
+      },
+      "type": "Feature",
+    },
+    Object {
+      "geometry": Object {
+        "coordinates": Array [
+          Array [
+            3.816435,
+            12.667498,
+          ],
+          Array [
+            3.816438,
+            12.667497,
+          ],
+        ],
+        "type": "LineString",
+      },
+      "properties": Object {
+        "type": "NC",
+      },
+      "type": "Feature",
+    },
+    Object {
+      "geometry": Object {
+        "coordinates": Array [
+          Array [
+            Array [
+              3.2,
+              13.05,
+            ],
+            Array [
+              3.198604,
+              13.03917,
+            ],
+            Array [
+              3.572865,
+              12.814024,
+            ],
+          ],
+          Array [
+            Array [
+              3.572865,
+              12.814024,
+            ],
+            Array [
+              3.816435,
+              12.667498,
+            ],
+          ],
+        ],
+        "type": "MultiLineString",
+      },
+      "properties": Object {
+        "type": "NC",
+      },
+      "type": "Feature",
+    },
+    Object {
+      "geometry": Object {
+        "coordinates": Array [
+          Array [
+            2.12,
+            13.52,
+          ],
+          Array [
+            2.124997,
+            13.50692,
+          ],
+          Array [
+            3.191601,
+            13.042749,
+          ],
+          Array [
+            3.2,
+            13.05,
+          ],
+        ],
+        "type": "LineString",
+      },
+      "properties": Object {
+        "type": "NC",
+      },
+      "type": "Feature",
+    },
+    Object {
+      "geometry": Object {
+        "coordinates": Array [
+          Array [
+            Array [
+              2.119999,
+              13.52,
+            ],
+            Array [
+              0.99212,
+              13.164212,
+            ],
+          ],
+          Array [
+            Array [
+              2.12,
+              13.52,
+            ],
+            Array [
+              2.119999,
+              13.52,
+            ],
+          ],
+        ],
+        "type": "MultiLineString",
+      },
+      "properties": Object {
+        "type": "NC",
+      },
+      "type": "Feature",
+    },
+    Object {
+      "geometry": Object {
+        "coordinates": Array [
+          Array [
+            3.435664,
+            11.862522,
+          ],
+          Array [
+            3.45,
+            11.883333,
+          ],
+          Array [
+            3.572865,
+            12.814024,
+          ],
+        ],
+        "type": "LineString",
+      },
+      "properties": Object {
+        "type": "NC",
+      },
+      "type": "Feature",
+    },
+    Object {
+      "geometry": Object {
+        "coordinates": Array [
+          Array [
+            3.816435,
+            12.667498,
+          ],
+          Array [
+            3.816438,
+            12.667497,
+          ],
+        ],
+        "type": "LineString",
+      },
+      "properties": Object {
+        "type": "NC",
+      },
+      "type": "Feature",
+    },
+  ],
+  "type": "FeatureCollection",
+}
+`
+
+exports[`test/index.test.js TAP toGeoJSON > opacity_override.kml 1`] = `
 Object {
   "features": Array [
     Object {
@@ -42544,9 +42774,9 @@ Object {
   ],
   "type": "FeatureCollection",
 }
-`;
+`
 
-exports[`toGeoJSON 24`] = `
+exports[`test/index.test.js TAP toGeoJSON > osm.gpx 1`] = `
 Object {
   "features": Array [
     Object {
@@ -64986,9 +65216,9 @@ Object {
   ],
   "type": "FeatureCollection",
 }
-`;
+`
 
-exports[`toGeoJSON 25`] = `
+exports[`test/index.test.js TAP toGeoJSON > point.kml 1`] = `
 Object {
   "features": Array [
     Object {
@@ -65001,8 +65231,7 @@ Object {
         "type": "Point",
       },
       "properties": Object {
-        "description": "Attached to the ground. Intelligently places itself 
-       at the height of the underlying terrain.",
+        "description": "Attached to the ground. Intelligently places itself \\n       at the height of the underlying terrain.",
         "name": "Simple placemark",
       },
       "type": "Feature",
@@ -65010,9 +65239,9 @@ Object {
   ],
   "type": "FeatureCollection",
 }
-`;
+`
 
-exports[`toGeoJSON 26`] = `
+exports[`test/index.test.js TAP toGeoJSON > point_id.kml 1`] = `
 Object {
   "features": Array [
     Object {
@@ -65025,8 +65254,7 @@ Object {
         "type": "Point",
       },
       "properties": Object {
-        "description": "Attached to the ground. Intelligently places itself 
-       at the height of the underlying terrain.",
+        "description": "Attached to the ground. Intelligently places itself \\n       at the height of the underlying terrain.",
         "name": "Simple placemark",
       },
       "type": "Feature",
@@ -65034,9 +65262,9 @@ Object {
   ],
   "type": "FeatureCollection",
 }
-`;
+`
 
-exports[`toGeoJSON 27`] = `
+exports[`test/index.test.js TAP toGeoJSON > polygon.kml 1`] = `
 Object {
   "features": Array [
     Object {
@@ -65107,9 +65335,9 @@ Object {
   ],
   "type": "FeatureCollection",
 }
-`;
+`
 
-exports[`toGeoJSON 28`] = `
+exports[`test/index.test.js TAP toGeoJSON > run.gpx 1`] = `
 Object {
   "features": Array [
     Object {
@@ -66573,9 +66801,9 @@ Object {
   ],
   "type": "FeatureCollection",
 }
-`;
+`
 
-exports[`toGeoJSON 29`] = `
+exports[`test/index.test.js TAP toGeoJSON > run_gpxtpx.gpx 1`] = `
 Object {
   "features": Array [
     Object {
@@ -74423,16 +74651,16 @@ Object {
   ],
   "type": "FeatureCollection",
 }
-`;
+`
 
-exports[`toGeoJSON 30`] = `
+exports[`test/index.test.js TAP toGeoJSON > selfclosing.kml 1`] = `
 Object {
   "features": Array [
     Object {
       "geometry": Object {
         "coordinates": Array [
           Array [
-            NaN,
+            null,
           ],
         ],
         "type": "LineString",
@@ -74445,9 +74673,9 @@ Object {
   ],
   "type": "FeatureCollection",
 }
-`;
+`
 
-exports[`toGeoJSON 31`] = `
+exports[`test/index.test.js TAP toGeoJSON > simpledata.kml 1`] = `
 Object {
   "features": Array [
     Object {
@@ -74460,11 +74688,11 @@ Object {
       },
       "properties": Object {
         "ElevationGain": "10",
-        "TrailHeadName": "Pi in the sky",
-        "TrailLength": "3.14159",
         "name": "Easy trail",
         "styleHash": "-584e03c9",
         "styleUrl": "#trailhead-balloon-template",
+        "TrailHeadName": "Pi in the sky",
+        "TrailLength": "3.14159",
       },
       "type": "Feature",
     },
@@ -74478,20 +74706,20 @@ Object {
       },
       "properties": Object {
         "ElevationGain": "10000",
-        "TrailHeadName": "Mount Everest",
-        "TrailLength": "347.45",
         "name": "Difficult trail",
         "styleHash": "-584e03c9",
         "styleUrl": "#trailhead-balloon-template",
+        "TrailHeadName": "Mount Everest",
+        "TrailLength": "347.45",
       },
       "type": "Feature",
     },
   ],
   "type": "FeatureCollection",
 }
-`;
+`
 
-exports[`toGeoJSON 32`] = `
+exports[`test/index.test.js TAP toGeoJSON > style.gpx 1`] = `
 Object {
   "features": Array [
     Object {
@@ -76281,9 +76509,9 @@ Object {
   ],
   "type": "FeatureCollection",
 }
-`;
+`
 
-exports[`toGeoJSON 33`] = `
+exports[`test/index.test.js TAP toGeoJSON > style.kml 1`] = `
 Object {
   "features": Array [
     Object {
@@ -76324,9 +76552,9 @@ Object {
   ],
   "type": "FeatureCollection",
 }
-`;
+`
 
-exports[`toGeoJSON 34`] = `
+exports[`test/index.test.js TAP toGeoJSON > style_url.kml 1`] = `
 Object {
   "features": Array [
     Object {
@@ -76445,9 +76673,9 @@ Object {
   ],
   "type": "FeatureCollection",
 }
-`;
+`
 
-exports[`toGeoJSON 35`] = `
+exports[`test/index.test.js TAP toGeoJSON > timespan.kml 1`] = `
 Object {
   "features": Array [
     Object {
@@ -76486,9 +76714,9 @@ Object {
   ],
   "type": "FeatureCollection",
 }
-`;
+`
 
-exports[`toGeoJSON 36`] = `
+exports[`test/index.test.js TAP toGeoJSON > trek.gpx 1`] = `
 Object {
   "features": Array [
     Object {
@@ -77103,16 +77331,16 @@ Object {
   ],
   "type": "FeatureCollection",
 }
-`;
+`
 
-exports[`toGeoJSON 37`] = `
+exports[`test/index.test.js TAP toGeoJSON > trek_no_rtept.gpx 1`] = `
 Object {
   "features": Array [],
   "type": "FeatureCollection",
 }
-`;
+`
 
-exports[`toGeoJSON 38`] = `
+exports[`test/index.test.js TAP toGeoJSON > twopoints.kml 1`] = `
 Object {
   "features": Array [
     Object {
@@ -77125,8 +77353,7 @@ Object {
         "type": "Point",
       },
       "properties": Object {
-        "description": "Attached to the ground. Intelligently places itself 
-       at the height of the underlying terrain.",
+        "description": "Attached to the ground. Intelligently places itself \\n       at the height of the underlying terrain.",
         "name": "Simple placemark",
       },
       "type": "Feature",
@@ -77141,8 +77368,7 @@ Object {
         "type": "Point",
       },
       "properties": Object {
-        "description": "Attached to the ground. Intelligently places itself 
-       at the height of the underlying terrain.",
+        "description": "Attached to the ground. Intelligently places itself \\n       at the height of the underlying terrain.",
         "name": "Simple placemark two",
       },
       "type": "Feature",
@@ -77150,16 +77376,16 @@ Object {
   ],
   "type": "FeatureCollection",
 }
-`;
+`
 
-exports[`toGeoJSON 39`] = `
+exports[`test/index.test.js TAP toGeoJSON > unique_trkpt.gpx 1`] = `
 Object {
   "features": Array [],
   "type": "FeatureCollection",
 }
-`;
+`
 
-exports[`toGeoJSON 40`] = `
+exports[`test/index.test.js TAP toGeoJSON > wpt.gpx 1`] = `
 Object {
   "features": Array [
     Object {
@@ -77605,9 +77831,9 @@ Object {
   ],
   "type": "FeatureCollection",
 }
-`;
+`
 
-exports[`toGeoJSON 41`] = `
+exports[`test/index.test.js TAP toGeoJSON > zero_elevation.gpx 1`] = `
 Object {
   "features": Array [
     Object {
@@ -77647,4 +77873,4 @@ Object {
   ],
   "type": "FeatureCollection",
 }
-`;
+`
