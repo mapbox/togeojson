@@ -27,11 +27,16 @@
   <rtept lat="11" lon="12">
       <ele>13</ele> 
   </rtept>
-</rte>
+  </rte>
 <rte>
     <name>empty route</name>
 </rte>
 <trk>
+    <extensions>
+      <gpxx:TrackExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+        <gpxx:DisplayColor>Magenta</gpxx:DisplayColor>
+      </gpxx:TrackExtension>
+    </extensions>
     <name>track name</name>
     <trkseg>
         <trkpt lat="14" lon="15">
