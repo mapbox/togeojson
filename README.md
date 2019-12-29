@@ -1,7 +1,5 @@
 # Convert KML and GPX to GeoJSON.
 
-[![CircleCI](https://circleci.com/gh/tmcw/togeojson/tree/master.svg?style=svg)](https://circleci.com/gh/tmcw/togeojson/tree/master)
-
 :sparkles: _This is a maintained and modernized fork of the toGeoJSON project, which I (Tom) wrote while at Mapbox,
 and am now maintaining on a personal basis because the Mapbox-owned project is abandoned._
 
