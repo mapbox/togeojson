@@ -11397,7 +11397,20 @@ Object {
 
 exports[`test/index.test.js TAP toGeoJSON > nogeomplacemark.kml 1`] = `
 Object {
-  "features": Array [],
+  "features": Array [
+    Object {
+      "geometry": null,
+      "properties": Object {
+        "fill": "ff0011",
+        "fill-opacity": 1,
+        "name": "With all inline styles",
+        "stroke": "ff0",
+        "stroke-opacity": 0,
+        "stroke-width": 3,
+      },
+      "type": "Feature",
+    },
+  ],
   "type": "FeatureCollection",
 }
 `
