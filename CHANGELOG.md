@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0](https://github.com/tmcw/togeojson/compare/v3.2.0...v4.0.0) (2020-04-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* Previously, togeojson would ignore Placemarks that did not have
+associated geometry. [Per the GeoJSON
+
+### Features
+
+* Output features with null geometries instead of omitting those features ([cc30a8b](https://github.com/tmcw/togeojson/commit/cc30a8b751d8470d89d686898bfee0b7f0e5e07b)), closes [/tools.ietf.org/html/rfc7946#section-3](https://github.com/tmcw//tools.ietf.org/html/rfc7946/issues/section-3) [#24](https://github.com/tmcw/togeojson/issues/24)
+
 ## [3.2.0](https://github.com/tmcw/togeojson/compare/v3.1.0...v3.2.0) (2019-12-29)
 
 
