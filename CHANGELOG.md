@@ -9,10 +9,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 * Previously, togeojson would ignore Placemarks that did not have
 associated geometry. [Per the GeoJSON
-
-### Features
-
-* Output features with null geometries instead of omitting those features ([cc30a8b](https://github.com/tmcw/togeojson/commit/cc30a8b751d8470d89d686898bfee0b7f0e5e07b)), closes [/tools.ietf.org/html/rfc7946#section-3](https://github.com/tmcw//tools.ietf.org/html/rfc7946/issues/section-3) [#24](https://github.com/tmcw/togeojson/issues/24)
+specification](https://tools.ietf.org/html/rfc7946#section-3.2),
+Feature objects can have null geometries. After this change, togeojson
+will output features with null geometries as the translation of KML
+Placemarks with no geometry, instead of ommitting those items entirely.
 
 ## [3.2.0](https://github.com/tmcw/togeojson/compare/v3.1.0...v3.2.0) (2019-12-29)
 
