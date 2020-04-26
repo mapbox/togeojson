@@ -39,7 +39,7 @@
   "dependencies": {
     "xmldom": "~0.1.19",
     "concat-stream": "~1.5.1",
-    "minimist": "1.2.3"
+    "minimist": "~1.2.3"
   },
   "keywords": [
     "kml",
