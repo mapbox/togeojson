@@ -80,10 +80,10 @@ const convertedWithStyles = tj.kml(kml, { styles: true });
 
   fetch("test/data/linestring.kml")
     .then(function(response) {
-      return response.xml();
+      return response.text();
     })
     .then(function(xml) {
-      console.log(kml(xml));
+      console.log(kml(new DOMParser().parseFromString(xml, "text/xml")));
     });
 </script>
 ```
