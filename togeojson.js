@@ -86,7 +86,7 @@ var toGeoJSON = (function() {
             // extract xml name spaces used in the extensions
             var xmlnsAll = ptExt.match(/\sxmlns\:\w+="[^"]+"/g);
             // store in array, in not already stored
-            xmlnsArr = appendUnique(xmlnsArr, xmlnsAll, 
+            xmlnsArr = appendUnique(xmlnsArr, xmlnsAll,
                 function(x){
                     return x.trim()
                 }
@@ -391,7 +391,7 @@ var toGeoJSON = (function() {
                     heartRates = [],
                     ptExts = [],
                     l = pts.length;
-                if (l < 2) return {};  // Invalid line in GeoJSON
+                if (l < 2) return undefined;  // Invalid line in GeoJSON
                 for (var i = 0; i < l; i++) {
                     var c = coordPair(pts[i]);
                     line.push(c.coordinates);
@@ -448,7 +448,7 @@ var toGeoJSON = (function() {
                             }
                             ptExts.push(line.ptExts);
                         } else if (ptExts.length) {
-                            ptExts.push(initializeArray([], line.line.length || 0));
+                            ptExts.push(initializeArray([], line.line ? line.line.length : 0));
                         }
                         // store xmlns per segment, so that app can ignore xmlns from discarded/ignored segments
                         if (line.xmlnsArr && line.xmlnsArr.length) {
