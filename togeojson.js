@@ -482,7 +482,7 @@ var toGeoJSON = (function() {
             }
             function getRoute(node) {
                 var line = getPoints(node, 'rtept');
-                if (!line.line) return;
+                if (!line || !line.line) return;
                 var prop = getProperties(node);
                 extend(prop, getLineStyle(get1(node, 'extensions')));
                 var routeObj = {
