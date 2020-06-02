@@ -82,19 +82,19 @@ var toGeoJSON = (function() {
         if (ptExt) {
             // remove spaces
             ptExt = ptExt.innerHTML.trim();
-            ptExt = ptExt.replace(/\s+</g, "<");
+            ptExt = ptExt.replace(/\s+</g, '<');
             // extract xml name spaces used in the extensions
             var xmlnsAll = ptExt.match(/\sxmlns\:\w+="[^"]+"/g);
             // store in array, in not already stored
             xmlnsArr = appendUnique(xmlnsArr, xmlnsAll,
                 function(x){
-                    return x.trim()
+                    return x.trim();
                 }
             );
             // remove xmlns details (only keep name)
-            ptExt = ptExt.replace(/\s+xmlns\:\w+="[^"]+"/g, "")
+            ptExt = ptExt.replace(/\s+xmlns\:\w+="[^"]+"/g, '');
             // remove the base GPX xmlns
-            ptExt = ptExt.replace(/\s+xmlns="[^"]+"/g, "")
+            ptExt = ptExt.replace(/\s+xmlns="[^"]+"/g, '');
         }
         return {
             coordinates: ll,
@@ -355,7 +355,7 @@ var toGeoJSON = (function() {
                 feature;
             // keep metadata
             if (metadata && metadata[0]) {
-              gj.metadata = getMetadata(metadata[0]);
+                gj.metadata = getMetadata(metadata[0]);
             }
             for (i = 0; i < tracks.length; i++) {
                 feature = getTrack(tracks[i]);
@@ -370,13 +370,13 @@ var toGeoJSON = (function() {
             }
             // returns GPX metadata
             function getMetadata(metadata) {
-              var md = {};
-              var item = metadata.firstElementChild;
-              while (item) {
-                md[item.tagName] = item.textContent.trim();
-                item = item.nextElementSibling;
-              }
-              return md;
+                var md = {};
+                var item = metadata.firstElementChild;
+                while (item) {
+                    md[item.tagName] = item.textContent.trim();
+                    item = item.nextElementSibling;
+                }
+                return md;
             }
             function initializeArray(arr, size) {
                 for (var h = 0; h < size; h++) {
@@ -421,7 +421,8 @@ var toGeoJSON = (function() {
                     heartRates = [],
                     ptExts = [],
                     line,
-                    xmlnsArr = [];
+                    xmlnsArr = [],
+                    s;
                 for (var i = 0; i < segments.length; i++) {
                     line = getPoints(segments[i], 'trkpt');
                     if (line) {
@@ -429,7 +430,7 @@ var toGeoJSON = (function() {
                         if (line.times && line.times.length) times.push(line.times);
                         if (heartRates.length || (line.heartRates && line.heartRates.length)) {
                             if (!heartRates.length) {
-                                for (var s = 0; s < i; s++) {
+                                for (s = 0; s < i; s++) {
                                     heartRates.push(initializeArray([], track[s].length));
                                 }
                             }
@@ -442,7 +443,7 @@ var toGeoJSON = (function() {
                         // GPX trkpt extensions
                         if (line.ptExts && line.ptExts.length) {
                             if (!ptExts.length) {
-                                for (var s = 0; s < i; s++) {
+                                for (s = 0; s < i; s++) {
                                     ptExts.push(initializeArray([], track[s].length));
                                 }
                             }
@@ -453,7 +454,7 @@ var toGeoJSON = (function() {
                         // store xmlns per segment, so that app can ignore xmlns from discarded/ignored segments
                         if (line.xmlnsArr && line.xmlnsArr.length) {
                             if (!xmlnsArr.length) {
-                                for (var s = 0; s < i; s++) {
+                                for (s = 0; s < i; s++) {
                                     xmlnsArr[s] = [];
                                 }
                             }
