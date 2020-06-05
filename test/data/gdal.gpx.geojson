@@ -69,6 +69,7 @@
                 "name": "waypoint name",
                 "cmt": "waypoint comment",
                 "desc": "waypoint description",
+                "type": "type",
                 "time": "2007-11-25T17:58:00+01:00",
                 "links": [
                     {
@@ -86,8 +87,7 @@
                         "text": "text3",
                         "type": "type3"
                     }
-                ],
-                "type": "type"
+                ]
             },
             "geometry": {
                 "type": "Point",
