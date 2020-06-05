@@ -79,9 +79,9 @@ var toGeoJSON = (function() {
                 ll.push(e);
             }
         }
+        ptExt = ptExt ? ptExt.innerHTML : undefined;
+        ptExt = ptExt ? ptExt.trim() : undefined; // remove spaces
         if (ptExt) {
-            // remove spaces
-            ptExt = ptExt.innerHTML.trim();
             ptExt = ptExt.replace(/\s+</g, '<');
             // extract xml name spaces used in the extensions
             var xmlnsAll = ptExt.match(/\sxmlns\:\w+="[^"]+"/g);
@@ -355,7 +355,10 @@ var toGeoJSON = (function() {
                 feature;
             // keep metadata
             if (metadata && metadata[0]) {
-                gj.metadata = getMetadata(metadata[0]);
+                var md =getMetadata(metadata[0]);
+                if (md) {
+                    gj.metadata = md;
+                }
             }
             for (i = 0; i < tracks.length; i++) {
                 feature = getTrack(tracks[i]);
@@ -372,11 +375,13 @@ var toGeoJSON = (function() {
             function getMetadata(metadata) {
                 var md = {};
                 var item = metadata.firstElementChild;
+                var cnt = 0;
                 while (item) {
                     md[item.tagName] = item.textContent.trim();
+                    cnt++;
                     item = item.nextElementSibling;
                 }
-                return md;
+                return cnt ? md : undefined;
             }
             function initializeArray(arr, size) {
                 for (var h = 0; h < size; h++) {
