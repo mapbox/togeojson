@@ -9664,6 +9664,11 @@ Object {
       "properties": Object {
         "description": "\\n\\n   ",
         "icon": "http://maps.google.com/mapfiles/kml/paddle/grn-circle.png",
+        "icon-offset": Array [
+          32,
+          1,
+        ],
+        "icon-size": 1.3,
         "name": "\\n12/04/2014 11:24 AM (départ)\\n   ",
         "styleHash": "7f350914",
         "styleUrl": "#start",
@@ -9853,6 +9858,7 @@ Object {
         ],
         "description": "\\n\\n   ",
         "icon": "http://earth.google.com/images/kml-icons/track-directional/track-0.png",
+        "icon-size": 1.3,
         "name": "\\n12/04/2014 11:24 AM\\n   ",
         "stroke": "#ff0000",
         "stroke-opacity": 0.4980392156862745,
@@ -9875,6 +9881,11 @@ Object {
       "properties": Object {
         "description": "\\nCréé par Google Mes parcours sur Android\\n\\nNom : 12/04/2014 11:24 AM\\nType d'activité : course à pied\\nDescription : -\\nDistance totale : 10,43 km (6,5 mi)\\nDurée totale : 1:13:38\\nDurée du déplacement : 1:08:20\\nVitesse moyenne : 8,49 km/h (5,3 mi/h)\\nVitesse moyenne de déplacement : 9,16 km/h (5,7 mi/h)\\nVitesse max. : 12,84 km/h (8,0 mi/h)\\nVitesse moyenne : 7:04 min/km (11:22 min/mi)\\nAllure moyenne : 6:33 min/km (10:33 min/mi)\\nVitesse maximale : 4:40 min/km (7:31 min/mi)\\nÉlévation max. : 1020 m (3347 pi)\\nÉlévation min. : 678 m (2223 pi)\\nDénivelé : 1095 m (3593 pi)\\nInclinaison max. : 21 %\\nInclinaison min. : -24 %\\nDate d'enregistrement : 12/04/2014 11:24 AM\\n\\n   ",
         "icon": "http://maps.google.com/mapfiles/kml/paddle/red-circle.png",
+        "icon-offset": Array [
+          32,
+          1,
+        ],
+        "icon-size": 1.3,
         "name": "\\n12/04/2014 11:24 AM (fin)\\n   ",
         "styleHash": "-16b4bba1",
         "styleUrl": "#end",
@@ -10493,6 +10504,11 @@ Object {
       },
       "properties": Object {
         "icon": "http://maps.google.com/mapfiles/kml/paddle/grn-circle.png",
+        "icon-offset": Array [
+          32,
+          1,
+        ],
+        "icon-size": 1.3,
         "name": "8/8/2013 17:20 (Start)",
         "styleHash": "7f350914",
         "styleUrl": "#start",
@@ -10607,6 +10623,7 @@ Object {
           "2013-08-08T15:25:03.000Z",
         ],
         "icon": "http://earth.google.com/images/kml-icons/track-directional/track-0.png",
+        "icon-size": 1.3,
         "name": "8/8/2013 17:20",
         "stroke": "#ff0000",
         "stroke-opacity": 0.4980392156862745,
@@ -10628,6 +10645,11 @@ Object {
       },
       "properties": Object {
         "icon": "http://maps.google.com/mapfiles/kml/paddle/red-circle.png",
+        "icon-offset": Array [
+          32,
+          1,
+        ],
+        "icon-size": 1.3,
         "name": "8/8/2013 17:20 (End)",
         "styleHash": "-16b4bba1",
         "styleUrl": "#end",
@@ -11429,6 +11451,11 @@ Object {
       },
       "properties": Object {
         "icon": "http://maps.google.com/mapfiles/kml/paddle/grn-circle.png",
+        "icon-offset": Array [
+          32,
+          1,
+        ],
+        "icon-size": 1.3,
         "name": "8/8/2013 17:20 (Start)",
         "styleHash": "7f350914",
         "styleUrl": "#start",
@@ -11543,6 +11570,7 @@ Object {
           "2013-08-08T15:25:03.000Z",
         ],
         "icon": "http://earth.google.com/images/kml-icons/track-directional/track-0.png",
+        "icon-size": 1.3,
         "name": "8/8/2013 17:20",
         "stroke": "#ff0000",
         "stroke-opacity": 0.4980392156862745,
@@ -11564,6 +11592,11 @@ Object {
       },
       "properties": Object {
         "icon": "http://maps.google.com/mapfiles/kml/paddle/red-circle.png",
+        "icon-offset": Array [
+          32,
+          1,
+        ],
+        "icon-size": 1.3,
         "name": "8/8/2013 17:20 (End)",
         "styleHash": "-16b4bba1",
         "styleUrl": "#end",
@@ -17615,6 +17648,9 @@ Object {
       "properties": Object {
         "description": "Here is some descriptive text",
         "icon": "http://myserver.com/icon.jpg",
+        "icon-color": "#ff00ff",
+        "icon-opacity": 0.6313725490196078,
+        "icon-size": 1.399999976158142,
         "name": "Google Earth - New Polygon",
         "styleHash": "34215c41",
         "styleUrl": "#a",
@@ -17632,9 +17668,35 @@ Object {
       },
       "properties": Object {
         "icon": "http://myserver.com/icon.jpg",
+        "icon-color": "#ff00ff",
+        "icon-opacity": 0.6313725490196078,
+        "icon-size": 1.399999976158142,
         "name": "Google Earth - New Path",
         "styleHash": "149ab242",
         "styleUrl": "#b",
+      },
+      "type": "Feature",
+    },
+    Object {
+      "geometry": Object {
+        "coordinates": Array [
+          -122.0822035425683,
+          37.42228990140251,
+          0,
+        ],
+        "type": "Point",
+      },
+      "properties": Object {
+        "icon": "http://myserver.com/icon.jpg",
+        "icon-color": "#ff00ff",
+        "icon-opacity": 0.6313725490196078,
+        "icon-size": 1.399999976158142,
+        "name": "Google Earth - New Label",
+        "styleHash": "-6528509d",
+        "styleUrl": "#c",
+        "text-color": "#000000",
+        "text-field": "name",
+        "text-opacity": 1,
       },
       "type": "Feature",
     },
