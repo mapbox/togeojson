@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.1.0](https://github.com/tmcw/togeojson/compare/v4.0.0...v4.1.0) (2020-06-13)
+
+
+### Features
+
+* Add LabelStyle support and complete IconStyle support for KML ([f920b16](https://github.com/tmcw/togeojson/commit/f920b16493a79b7d5370a940387ae77386a00771))
+
 ## [4.0.0](https://github.com/tmcw/togeojson/compare/v3.2.0...v4.0.0) (2020-04-05)
 
 
