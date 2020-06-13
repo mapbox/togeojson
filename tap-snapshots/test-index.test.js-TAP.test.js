@@ -17695,7 +17695,6 @@ Object {
         "styleHash": "-6528509d",
         "styleUrl": "#c",
         "text-color": "#000000",
-        "text-field": "name",
         "text-opacity": 1,
       },
       "type": "Feature",
