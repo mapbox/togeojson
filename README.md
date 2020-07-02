@@ -72,6 +72,14 @@ const converted = tj.kml(kml);
 const convertedWithStyles = tj.kml(kml, { styles: true });
 ```
 
+## ES Modules
+
+```javascript
+// The ES Module provides named exports, to import kml, gpx,
+// and other parts of the module by name.
+import { kml } from "@tmcw/togeojson";
+```
+
 ## Browser
 
 ```html
