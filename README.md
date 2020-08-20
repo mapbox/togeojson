@@ -41,7 +41,9 @@ document as an XML DOM - not as a string. You can get this using jQuery's defaul
 `.ajax` function or using a bare XMLHttpRequest with the `.response` property
 holding an XML DOM.
 
-The output is a JavaScript object of GeoJSON data, same as `.kml` outputs.
+The output is a JavaScript object of GeoJSON data, same as `.kml` outputs, with the
+addition of a `_gpxType` property on each `LineString` feature that indicates whether
+the feature was encoded as a route (`rte`) or track (`trk`) in the GPX document.
 
 ### `toGeoJSON.gpxGen(doc)`
 

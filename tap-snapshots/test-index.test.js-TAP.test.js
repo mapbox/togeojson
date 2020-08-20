@@ -717,6 +717,7 @@ Object {
         "type": "LineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "coordTimes": Array [
           "2019-12-15T20:19:55Z",
           "2019-12-15T20:19:56Z",
@@ -2523,6 +2524,7 @@ Object {
         "type": "MultiLineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "cmt": "Sun Jun 24 15:08:39 2001",
         "coordTimes": Array [
           Array [
@@ -5357,6 +5359,7 @@ Object {
         "type": "MultiLineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "cmt": "Sat Oct 13 17:55:25 2001",
         "coordTimes": Array [
           Array [
@@ -8061,6 +8064,7 @@ Object {
         "type": "MultiLineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "cmt": "Sat May 26 15:14:37 2001",
         "coordTimes": Array [
           Array [
@@ -9372,6 +9376,7 @@ Object {
         "type": "LineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "coordTimes": Array [
           "2007-05-11T15:22:06Z",
           "2007-05-11T15:22:06Z",
@@ -9450,6 +9455,7 @@ Object {
         "type": "MultiLineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "gpxx_TrackExtension": "\\n        Magenta\\n      ",
         "name": "track name",
       },
@@ -9477,6 +9483,7 @@ Object {
         "type": "LineString",
       },
       "properties": Object {
+        "_gpxType": "rte",
         "name": "route name",
         "time": "2007-11-25T17:58:00Z",
       },
@@ -9567,6 +9574,7 @@ Object {
         "type": "MultiLineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "name": "track name",
       },
       "type": "Feature",
@@ -9593,6 +9601,7 @@ Object {
         "type": "LineString",
       },
       "properties": Object {
+        "_gpxType": "rte",
         "name": "route name",
         "time": "2007-11-25T17:58:00Z",
       },
@@ -10339,6 +10348,7 @@ Object {
         "type": "MultiLineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "coordTimes": Array [
           Array [
             "2017-05-27T04:00:00Z",
@@ -10862,6 +10872,7 @@ Object {
         "type": "LineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "coordTimes": Array [
           "2008-07-12T09:58:23Z",
           "2008-07-12T09:58:24Z",
@@ -11240,6 +11251,7 @@ Object {
         "type": "LineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "coordTimes": Array [
           "2008-07-13T07:57:31Z",
           "2008-07-13T07:57:32Z",
@@ -11390,6 +11402,7 @@ Object {
         "type": "LineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "coordTimes": Array [
           "2008-07-14T07:08:19Z",
           "2008-07-14T07:08:20Z",
@@ -11694,6 +11707,7 @@ Object {
         "type": "LineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "type": "NC",
       },
       "type": "Feature",
@@ -11713,6 +11727,7 @@ Object {
         "type": "LineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "type": "NC",
       },
       "type": "Feature",
@@ -11754,6 +11769,7 @@ Object {
         "type": "MultiLineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "type": "NC",
       },
       "type": "Feature",
@@ -11777,6 +11793,7 @@ Object {
         "type": "LineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "type": "NC",
       },
       "type": "Feature",
@@ -11796,6 +11813,7 @@ Object {
         "type": "LineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "type": "NC",
       },
       "type": "Feature",
@@ -11831,6 +11849,7 @@ Object {
         "type": "MultiLineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "type": "NC",
       },
       "type": "Feature",
@@ -11858,6 +11877,7 @@ Object {
         "type": "LineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "type": "NC",
       },
       "type": "Feature",
@@ -11889,6 +11909,7 @@ Object {
         "type": "MultiLineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "type": "NC",
       },
       "type": "Feature",
@@ -11912,6 +11933,7 @@ Object {
         "type": "LineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "type": "NC",
       },
       "type": "Feature",
@@ -11931,6 +11953,7 @@ Object {
         "type": "LineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "type": "NC",
       },
       "type": "Feature",
@@ -12220,6 +12243,7 @@ Object {
         "type": "LineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "coordTimes": Array [
           "2007-05-11T15:23:00Z",
           "2007-05-11T15:23:00Z",
@@ -12755,6 +12779,7 @@ Object {
         "type": "LineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "coordTimes": Array [
           "2009-09-13T09:51:22Z",
           "2009-09-13T09:51:23Z",
@@ -13864,7 +13889,9 @@ Object {
         ],
         "type": "LineString",
       },
-      "properties": Object {},
+      "properties": Object {
+        "_gpxType": "trk",
+      },
       "type": "Feature",
     },
   ],
@@ -15031,6 +15058,7 @@ Object {
         "type": "LineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "coordTimes": Array [
           "2012-10-24T23:29:40.000Z",
           "2012-10-24T23:30:00.000Z",
@@ -15677,6 +15705,7 @@ Object {
         "type": "LineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "coordTimes": Array [
           "2015-01-19T21:24:20Z",
           "2015-01-19T21:24:21Z",
@@ -15959,6 +15988,7 @@ Object {
         "type": "LineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "name": "Trail Double Track",
         "stroke": "893380",
         "stroke-opacity": 1,
@@ -16083,6 +16113,7 @@ Object {
         "type": "LineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "name": "Trail Concrete",
         "stroke": "32cd32",
         "stroke-opacity": 1,
@@ -16207,6 +16238,7 @@ Object {
         "type": "LineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "name": "Trail Primary/Single",
         "stroke": "893380",
         "stroke-opacity": 1,
@@ -16331,6 +16363,7 @@ Object {
         "type": "LineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "name": "Trail Secondary",
         "stroke": "cb0017",
         "stroke-opacity": 1,
@@ -16455,6 +16488,7 @@ Object {
         "type": "LineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "name": "Trail Paved",
         "stroke": "800080",
         "stroke-opacity": 1,
@@ -16579,6 +16613,7 @@ Object {
         "type": "LineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "name": "Cross Country",
         "stroke": "cb0017",
         "stroke-opacity": 1,
@@ -16703,6 +16738,7 @@ Object {
         "type": "LineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "name": "Trail Primitive",
         "stroke": "cb0017",
         "stroke-opacity": 1,
@@ -16827,6 +16863,7 @@ Object {
         "type": "LineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "name": "Trail MultiUse",
         "stroke": "009300",
         "stroke-opacity": 1,
@@ -16875,6 +16912,7 @@ Object {
         "type": "LineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "name": "Road Main",
         "stroke": "000000",
         "stroke-opacity": 1,
@@ -16923,6 +16961,7 @@ Object {
         "type": "LineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "name": "Road Minor/Secondary",
         "stroke": "000000",
         "stroke-opacity": 1,
@@ -16971,6 +17010,7 @@ Object {
         "type": "LineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "name": "Road Local",
         "stroke": "000000",
         "stroke-opacity": 1,
@@ -17019,6 +17059,7 @@ Object {
         "type": "LineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "name": "Road Paved",
         "stroke": "000000",
         "stroke-opacity": 1,
@@ -17067,6 +17108,7 @@ Object {
         "type": "LineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "name": "Road Gravel/Dirt",
         "stroke": "000000",
         "stroke-opacity": 1,
@@ -17115,6 +17157,7 @@ Object {
         "type": "LineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "name": "High Clearance",
         "stroke": "666666",
         "stroke-opacity": 1,
@@ -17163,6 +17206,7 @@ Object {
         "type": "LineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "name": "Road 4wd",
         "stroke": "666666",
         "stroke-opacity": 1,
@@ -17211,6 +17255,7 @@ Object {
         "type": "LineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "name": "Road Old",
         "stroke": "000000",
         "stroke-opacity": 1,
@@ -17259,6 +17304,7 @@ Object {
         "type": "LineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "name": "Road Service/Utility",
         "stroke": "7f7f7f",
         "stroke-opacity": 1,
@@ -17307,6 +17353,7 @@ Object {
         "type": "LineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "name": "Road Other/Misc",
         "stroke": "000000",
         "stroke-opacity": 1,
@@ -17355,6 +17402,7 @@ Object {
         "type": "LineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "name": "Road Major",
         "stroke": "000000",
         "stroke-opacity": 1,
@@ -17487,6 +17535,7 @@ Object {
         "type": "LineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "name": "Trail Old",
         "stroke": "cb0017",
         "stroke-opacity": 1,
@@ -17619,6 +17668,7 @@ Object {
         "type": "LineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "name": "Trail Other/Misc",
         "stroke": "000000",
         "stroke-opacity": 1,
@@ -18475,7 +18525,9 @@ Object {
         ],
         "type": "LineString",
       },
-      "properties": Object {},
+      "properties": Object {
+        "_gpxType": "rte",
+      },
       "type": "Feature",
     },
   ],
@@ -19008,6 +19060,7 @@ Object {
         "type": "LineString",
       },
       "properties": Object {
+        "_gpxType": "trk",
         "cmt": "Sun Jun 24 15:08:39 2001",
         "coordTimes": Array [
           "2001-06-24T15:09:09Z",
