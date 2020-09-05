@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.2.0](https://github.com/tmcw/togeojson/compare/v4.1.0...v4.2.0) (2020-09-05)
+
+
+### Features
+
+* Preserve GPX linestring type in a _gpxType property that is either rte or trk ([54fa558](https://github.com/tmcw/togeojson/commit/54fa5581a99095f87ccfe937c6da539f6b7d9995))
+* TCX Support ([6df0878](https://github.com/tmcw/togeojson/commit/6df087891dffa06474479b17fc0595110ff76b3e))
+
 ## [4.1.0](https://github.com/tmcw/togeojson/compare/v4.0.0...v4.1.0) (2020-06-13)
 
 
