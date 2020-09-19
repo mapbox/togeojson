@@ -50,6 +50,35 @@ the feature was encoded as a route (`rte`) or track (`trk`) in the GPX document.
 Convert GPX to GeoJSON incrementally, returning a [Generator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
 that yields output feature by feature.
 
+### `toGeoJSON.tcx(doc)`
+
+Convert a TCX document to GeoJSON. The first argument, `doc`, must be a TCX
+document as an XML DOM - not as a string.
+
+
+## Property conversions
+
+In addition to converting KML’s `<ExtendedData>` verbatim, @tmcw/togeojson
+also encodes parts of KML, GPX, and TCX files that otherwise would be lost.
+
+**KML**
+
+- Style properties: `fill-color`, `fill-opacity`, `stroke`, `stroke-opacity`,
+  `icon-color`, `icon-opacity`, `label-color`, `label-opacity`, `icon-scale`,
+  `icon-heading`, `icon-offset`
+
+**GPX**
+
+- Style properties: `stroke`, `stroke-opacity`, `stroke-width`
+
+**TCX**
+
+- Line properties: `totalTimeSeconds`, `distanceMeters`, `maxSpeed`,
+  `avgHeartRate`, `maxHeartRate`, `avgSpeed`, `avgWatts`, `maxWatts`
+
+This also emits the [geojson-coordinate-properties](https://github.com/mapbox/geojson-coordinate-properties) format
+to include time and other attributes that apply to each coordinate of a LineString.
+
 ## CLI
 
 Use [@tmcw/togeojson-cli](https://github.com/tmcw/togeojson-cli) to use this
