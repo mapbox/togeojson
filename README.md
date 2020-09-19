@@ -3,7 +3,7 @@
 :sparkles: _This is a maintained and modernized fork of the toGeoJSON project, which I (Tom) wrote while at Mapbox,
 and am now maintaining on a personal basis because the Mapbox-owned project is abandoned._
 
-This converts [KML](https://developers.google.com/kml/documentation/) & [GPX](http://www.topografix.com/gpx.asp)
+This converts [KML](https://developers.google.com/kml/documentation/), [TCX](https://en.wikipedia.org/wiki/Training_Center_XML), & [GPX](http://www.topografix.com/gpx.asp)
 to [GeoJSON](http://www.geojson.org/), in a browser or with [Node.js](http://nodejs.org/).
 
 - [x] Dependency-free
