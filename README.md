@@ -130,7 +130,7 @@ files but keep the actual content on servers.
 In order to support NetworkLinks, toGeoJSON would need to be asynchronous
 and perform network requests. These changes would make it more complex and less
 reliable in order to hit a limited usecase - we'd rather keep it simple
-and not require users to think about network connectivity and bandwith
+and not require users to think about network connectivity and bandwidth
 in order to convert files.
 
 NetworkLink support could be implemented in a separate library as a pre-processing
