@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.3.0](https://github.com/tmcw/togeojson/compare/v4.2.0...v4.3.0) (2020-12-28)
+
+
+### Features
+
+* Add heartRates to geojson properties for tcx files ([#42](https://github.com/tmcw/togeojson/issues/42)) ([ecde092](https://github.com/tmcw/togeojson/commit/ecde09219abdb507527f70358a400c799b01c2d1))
+
 ## [4.2.0](https://github.com/tmcw/togeojson/compare/v4.1.0...v4.2.0) (2020-09-05)
 
 
