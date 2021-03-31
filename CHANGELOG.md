@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.4.0](https://github.com/tmcw/togeojson/compare/v4.3.0...v4.4.0) (2021-03-31)
+
+
+### Features
+
+* Add coordinate properties  for times and heartRates ([#47](https://github.com/tmcw/togeojson/issues/47)) ([5e3958b](https://github.com/tmcw/togeojson/commit/5e3958b18509a85eba4b9b78ef5095b01d7dc213))
+
 ## [4.3.0](https://github.com/tmcw/togeojson/compare/v4.2.0...v4.3.0) (2020-12-28)
 
 
