@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.4.1](https://github.com/tmcw/togeojson/compare/v4.4.0...v4.4.1) (2021-04-27)
+
+
+### Bug Fixes
+
+* Rename heartRates coordinate property to heart ([#48](https://github.com/tmcw/togeojson/issues/48)) ([8fc03f2](https://github.com/tmcw/togeojson/commit/8fc03f2a65ab01a53b81564f7ed6fac2a66452ad))
+
 ## [4.4.0](https://github.com/tmcw/togeojson/compare/v4.3.0...v4.4.0) (2021-03-31)
 
 
