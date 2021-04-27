@@ -13245,7 +13245,7 @@ Object {
       "properties": Object {
         "_gpxType": "trk",
         "coordinateProperties": Object {
-          "heartRates": Array [
+          "heart": Array [
             Array [
               null,
               null,
@@ -17971,7 +17971,7 @@ Object {
       "properties": Object {
         "_gpxType": "trk",
         "coordinateProperties": Object {
-          "heartRates": Array [
+          "heart": Array [
             130,
             134,
             139,
@@ -18620,7 +18620,7 @@ Object {
       "properties": Object {
         "_gpxType": "trk",
         "coordinateProperties": Object {
-          "heartRates": Array [
+          "heart": Array [
             111,
             111,
             111,
@@ -23356,7 +23356,7 @@ Object {
       },
       "properties": Object {
         "coordinateProperties": Object {
-          "heartRates": Array [
+          "heart": Array [
             121,
             122,
             123,
