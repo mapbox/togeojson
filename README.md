@@ -1,7 +1,6 @@
 # Convert KML and GPX to GeoJSON.
 
-:sparkles: _This is a maintained and modernized fork of the toGeoJSON project, which I (Tom) wrote while at Mapbox,
-and am now maintaining on a personal basis because the Mapbox-owned project is abandoned._
+_togeojson development is supported by 🌎 [placemark.io](https://placemark.io/)_
 
 This converts [KML](https://developers.google.com/kml/documentation/), [TCX](https://en.wikipedia.org/wiki/Training_Center_XML), & [GPX](http://www.topografix.com/gpx.asp)
 to [GeoJSON](http://www.geojson.org/), in a browser or with [Node.js](http://nodejs.org/).
@@ -54,7 +53,6 @@ that yields output feature by feature.
 
 Convert a TCX document to GeoJSON. The first argument, `doc`, must be a TCX
 document as an XML DOM - not as a string.
-
 
 ## Property conversions
 
@@ -118,10 +116,10 @@ import { kml } from "@tmcw/togeojson";
   import { kml } from "https://unpkg.com/@tmcw/togeojson?module";
 
   fetch("test/data/linestring.kml")
-    .then(function(response) {
+    .then(function (response) {
       return response.text();
     })
-    .then(function(xml) {
+    .then(function (xml) {
       console.log(kml(new DOMParser().parseFromString(xml, "text/xml")));
     });
 </script>
@@ -216,3 +214,7 @@ Have a string of XML and need an XML DOM?
 ```js
 var dom = new DOMParser().parseFromString(xmlStr, "text/xml");
 ```
+
+---
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/b3673a9a9f6e132ec991/maintainability)](https://codeclimate.com/github/placemark/togeojson/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/b3673a9a9f6e132ec991/test_coverage)](https://codeclimate.com/github/placemark/togeojson/test_coverage)
