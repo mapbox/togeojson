@@ -97,8 +97,6 @@ const DOMParser = require("xmldom").DOMParser;
 const kml = new DOMParser().parseFromString(fs.readFileSync("foo.kml", "utf8"));
 
 const converted = tj.kml(kml);
-
-const convertedWithStyles = tj.kml(kml, { styles: true });
 ```
 
 ## ES Modules
