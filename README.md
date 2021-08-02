@@ -1,4 +1,4 @@
-# Convert KML and GPX to GeoJSON.
+# Convert KML, GPX, and TCX to GeoJSON.
 
 _togeojson development is supported by 🌎 [placemark.io](https://placemark.io/)_
 
@@ -52,6 +52,12 @@ that yields output feature by feature.
 ### `toGeoJSON.tcx(doc)`
 
 Convert a TCX document to GeoJSON. The first argument, `doc`, must be a TCX
+document as an XML DOM - not as a string.
+
+### `toGeoJSON.tcxGen(doc)`
+
+Convert a TCX document to GeoJSON incrementally, returning a [Generator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+that yields output feature by feature. The first argument, `doc`, must be a TCX
 document as an XML DOM - not as a string.
 
 ## Property conversions
