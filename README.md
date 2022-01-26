@@ -213,7 +213,21 @@ support for them is out of scope for toGeoJSON.
 
 ## Protips:
 
-Have a string of XML and need an XML DOM?
+Have a string of XML and need an XML DOM? There are two main options:
+
+- Use [xmldom](https://www.npmjs.com/package/@xmldom/xmldom), a JavaScript module that contains its own XML parser
+- Use [`DOMParser`](https://developer.mozilla.org/en-US/docs/Web/API/DOMParser), the native platform XML parser
+
+We recommend that **you use xmldom**, not the platform. DOMParser requires XML to be valid, which means that any XML namespaces that a KML, GPX, or TCX file contains are valid. A lot of existing data is invalid XML, and will be parsed only in part by DOMParser, but can be fully parsed by xmldom.
+
+Using xmldom (recommended):
+
+```js
+const xmldom = require("@xmldom/xmldom");
+const dom = new xmldom.DOMParser().parseFromString(xmlStr, "text/xml");
+```
+
+Using DOMParser:
 
 ```js
 var dom = new DOMParser().parseFromString(xmlStr, "text/xml");
