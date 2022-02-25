@@ -1,14 +1,14 @@
 import fs from "fs";
 import path from "path";
-import * as tj from "../index";
-import xmldom from "xmldom";
+import * as tj from "../index.js";
+import xmldom from "@xmldom/xmldom";
 import { test } from "tap";
 
 const d = "./test/data/";
 
-test("toGeoJSON", t => {
+test("toGeoJSON", (t) => {
   // Loop through all files except hidden ones
-  for (let file of fs.readdirSync(d).filter(item => !item.startsWith("."))) {
+  for (let file of fs.readdirSync(d).filter((item) => !item.startsWith("."))) {
     t.matchSnapshot(
       tj[path.extname(file).substring(1)](
         new xmldom.DOMParser().parseFromString(
