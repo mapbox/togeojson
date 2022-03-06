@@ -14,7 +14,9 @@
   ],
   "scripts": {
     "test": "eslint lib && tap",
+    "snapshot": "tap --snapshot",
     "prepare": "rollup -c rollup.config.js",
+    "watch": "rollup -c rollup.config.js --watch",
     "release": "standard-version"
   },
   "devDependencies": {
@@ -37,6 +39,7 @@
     "kml",
     "geojson",
     "gpx",
+    "tcx",
     "geo",
     "parser",
     "formatter",

@@ -1,10 +1,77 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
-    <meta charset='utf-8'>
-  </head>
-  <body>
-    <script src='bundle.js'></script>
-  </body>
+
+<head>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+  <meta charset='utf-8'>
+  <title>Browser Test</title>
+  <style>
+    html { scrollbar-width: thin; }
+    html, body { scroll-behavior: smooth; }
+    details { margin: 1em 0.5em; }
+    details summary { cursor: pointer; user-select: none; }
+    details pre { max-height: 80vh; overflow-y: scroll; background-color: lightyellow; }
+    address { text-align: center; }
+  </style>
+  <script src="//unpkg.com/json-format-highlight@1.0.1/dist/json-format-highlight.js" type="text/javascript" charset="utf-8"></script> 
+   <script src='../dist/togeojson.umd.js'></script>
+</head>
+<body>
+
+  <pre><h1>toGeoJSON</h1></pre>
+  <hr>
+
+  <script>
+    const KEEP_FOCUS_ON  = 'strava.gpx'; // Test single files in browser
+    const KEEP_ALL_OPEN  = false;        // Test whole files in browser
+    const current        = document.currentScript;
+
+    /**
+     * Loop and test sample files within your browser.
+     * 
+     * NB you should enable directory listings (eg. "Options +Indexes") on your development server to make it work
+     */
+    fetch('./data/')
+      .then((response) => response.text())
+      .then((data) => {
+        (new DOMParser())
+          .parseFromString(data, "text/html")
+          .querySelectorAll('li > a')   
+          .forEach(file => {
+            if(file.href == window.location.href.split("#")[0]) return;
+            const url = file.href.replace(window.location.href.split("#")[0], './data/');
+            const filename = url.replace('./data/', '');
+            const type = filename.split('.').pop();
+            fetch(url)
+              .then((response) => response.text())
+              .then((data) => {
+                const xml = (new DOMParser()).parseFromString(data, "text/xml");
+                const geojson  = toGeoJSON[type](xml);
+                const details = document.createElement('details');
+                const summary = document.createElement('summary');
+                const pre = document.createElement('pre');
+                const name = document.createElement('b');
+                name.innerHTML = filename;
+                pre.innerHTML = jsonFormatHighlight ? jsonFormatHighlight(geojson) : JSON.stringify(geojson,  null, 4);
+                current.insertAdjacentElement('afterend', details);
+                summary.appendChild(name);
+                details.appendChild(summary);
+                details.appendChild(pre);
+                details.id = filename;
+                if(KEEP_ALL_OPEN) {
+                  details.open = true;
+                }
+                if(KEEP_FOCUS_ON == filename) {
+                  details.open = true;
+                  details.scrollIntoView({behavior: "smooth"});
+                }
+              }).catch((err) => console.warn(err));
+        });
+      });
+  </script>
+  
+  <hr>
+  <address><a href="https://github.com/placemark/togeojson">View on GitHub</a></address>
+</body>
+
 </html>

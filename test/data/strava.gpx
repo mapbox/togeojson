@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx creator="StravaGPX" version="1.1" xmlns="http://www.topografix.com/GPX/1/1"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd"
+     xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1"
+     xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+  <metadata>
+    <time>2018-05-14T14:54:21Z</time>
+  </metadata>
+  <trk>
+    <name>120' moderate and hard</name>
+    <desc>Strava sample file based on: https://github.com/sports-alliance/sports-lib/blob/develop/samples/gpx/strava.gpx</desc>
+    <trkseg>
+      <trkpt lat="42.9410590" lon="0.9630410">
+        <ele>721.2</ele>
+        <time>2018-05-14T14:54:21Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:hr>117</gpxtpx:hr>
+            <gpxtpx:cad>85</gpxtpx:cad>
+            <gpxtpx:atemp>22</gpxtpx:atemp>
+          </gpxtpx:TrackPointExtension>
+           <!-- Just a custom attribute -->
+          <power>75</power>
+        </extensions>
+      </trkpt>
+      <trkpt lat="42.9078660" lon="0.9454710">
+        <ele>1118.8</ele>
+        <time>2018-05-14T15:57:18Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:atemp>11</gpxtpx:atemp>
+            <gpxtpx:hr>154</gpxtpx:hr>
+            <gpxtpx:cad>79</gpxtpx:cad>
+            <gpxtpx:atemp>20</gpxtpx:atemp>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="42.9369510" lon="0.9623040">
+        <ele>592.2</ele>
+        <time>2018-05-14T17:03:04Z</time>
+        <extensions>
+          <gpxtpx:TrackPointExtension>
+            <gpxtpx:atemp>9</gpxtpx:atemp>
+            <gpxtpx:hr>160</gpxtpx:hr>
+            <gpxtpx:cad>85</gpxtpx:cad>
+            <gpxtpx:atemp>21</gpxtpx:atemp>
+          </gpxtpx:TrackPointExtension>
+        </extensions>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>
