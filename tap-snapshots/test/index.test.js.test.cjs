@@ -719,7 +719,7 @@ Object {
       "properties": Object {
         "_gpxType": "trk",
         "coordinateProperties": Object {
-          "course": Array [
+          "courses": Array [
             101.747269,
             116.967209,
             115.938606,
@@ -765,7 +765,7 @@ Object {
             75.189133,
             79.346809,
           ],
-          "hAcc": Array [
+          "hAccs": Array [
             1.801682,
             1.589515,
             1.420663,
@@ -811,7 +811,7 @@ Object {
             1.063464,
             1.06346,
           ],
-          "speed": Array [
+          "speeds": Array [
             1.310662,
             1.312005,
             1.316493,
@@ -857,7 +857,7 @@ Object {
             1.941502,
             1.928319,
           ],
-          "time": Array [
+          "times": Array [
             "2019-12-15T20:19:55Z",
             "2019-12-15T20:19:56Z",
             "2019-12-15T20:19:57Z",
@@ -903,7 +903,7 @@ Object {
             "2019-12-15T20:20:37Z",
             "2019-12-15T20:20:38Z",
           ],
-          "vAcc": Array [
+          "vAccs": Array [
             1.189247,
             1.044055,
             0.930221,
@@ -2529,7 +2529,7 @@ Object {
         "_gpxType": "trk",
         "cmt": "Sun Jun 24 15:08:39 2001",
         "coordinateProperties": Object {
-          "time": Array [
+          "times": Array [
             Array [
               "2001-06-24T15:09:09Z",
               "2001-06-24T15:09:29Z",
@@ -5366,7 +5366,7 @@ Object {
         "_gpxType": "trk",
         "cmt": "Sat Oct 13 17:55:25 2001",
         "coordinateProperties": Object {
-          "time": Array [
+          "times": Array [
             Array [
               "2001-10-13T17:55:59Z",
               "2001-10-13T17:56:05Z",
@@ -8073,7 +8073,7 @@ Object {
         "_gpxType": "trk",
         "cmt": "Sat May 26 15:14:37 2001",
         "coordinateProperties": Object {
-          "time": Array [
+          "times": Array [
             Array [
               "2001-05-26T15:15:07Z",
               "2001-05-26T15:15:18Z",
@@ -9392,7 +9392,7 @@ Object {
       "properties": Object {
         "_gpxType": "trk",
         "coordinateProperties": Object {
-          "time": Array [
+          "times": Array [
             "2007-05-11T15:22:06Z",
             "2007-05-11T15:22:06Z",
           ],
@@ -13306,7 +13306,7 @@ Object {
       "properties": Object {
         "_gpxType": "trk",
         "coordinateProperties": Object {
-          "hr": Array [
+          "heart": Array [
             Array [
               null,
               null,
@@ -13330,7 +13330,7 @@ Object {
               null,
             ],
           ],
-          "time": Array [
+          "times": Array [
             Array [
               "2017-05-27T04:00:00Z",
               "2017-05-27T04:00:01Z",
@@ -13834,7 +13834,7 @@ Object {
       "properties": Object {
         "_gpxType": "trk",
         "coordinateProperties": Object {
-          "time": Array [
+          "times": Array [
             "2008-07-12T09:58:23Z",
             "2008-07-12T09:58:24Z",
             "2008-07-12T09:58:26Z",
@@ -14219,7 +14219,7 @@ Object {
       "properties": Object {
         "_gpxType": "trk",
         "coordinateProperties": Object {
-          "time": Array [
+          "times": Array [
             "2008-07-13T07:57:31Z",
             "2008-07-13T07:57:32Z",
             "2008-07-13T07:58:03Z",
@@ -14376,7 +14376,7 @@ Object {
       "properties": Object {
         "_gpxType": "trk",
         "coordinateProperties": Object {
-          "time": Array [
+          "times": Array [
             "2008-07-14T07:08:19Z",
             "2008-07-14T07:08:20Z",
             "2008-07-14T07:08:37Z",
@@ -15225,7 +15225,7 @@ Object {
       "properties": Object {
         "_gpxType": "trk",
         "coordinateProperties": Object {
-          "time": Array [
+          "times": Array [
             "2007-05-11T15:23:00Z",
             "2007-05-11T15:23:00Z",
             "2007-05-11T15:23:00Z",
@@ -15763,7 +15763,7 @@ Object {
       "properties": Object {
         "_gpxType": "trk",
         "coordinateProperties": Object {
-          "time": Array [
+          "times": Array [
             "2009-09-13T09:51:22Z",
             "2009-09-13T09:51:23Z",
             "2009-09-13T09:51:24Z",
@@ -18050,7 +18050,7 @@ Object {
       "properties": Object {
         "_gpxType": "trk",
         "coordinateProperties": Object {
-          "hr": Array [
+          "heart": Array [
             130,
             134,
             139,
@@ -18258,7 +18258,7 @@ Object {
             186,
             186,
           ],
-          "time": Array [
+          "times": Array [
             "2012-10-24T23:29:40.000Z",
             "2012-10-24T23:30:00.000Z",
             "2012-10-24T23:30:01.000Z",
@@ -18699,7 +18699,7 @@ Object {
       "properties": Object {
         "_gpxType": "trk",
         "coordinateProperties": Object {
-          "hr": Array [
+          "heart": Array [
             111,
             111,
             111,
@@ -18743,7 +18743,7 @@ Object {
             152,
             150,
           ],
-          "time": Array [
+          "times": Array [
             "2015-01-19T21:24:20Z",
             "2015-01-19T21:24:21Z",
             "2015-01-19T21:24:22Z",
@@ -19080,27 +19080,27 @@ Object {
       "properties": Object {
         "_gpxType": "trk",
         "coordinateProperties": Object {
-          "atemp": Array [
+          "atemps": Array [
             22,
             20,
             21,
           ],
-          "cad": Array [
+          "cads": Array [
             85,
             79,
             85,
           ],
-          "hr": Array [
+          "heart": Array [
             117,
             154,
             160,
           ],
-          "power": Array [
+          "powers": Array [
             75,
             null,
             null,
           ],
-          "time": Array [
+          "times": Array [
             "2018-05-14T14:54:21Z",
             "2018-05-14T15:57:18Z",
             "2018-05-14T17:03:04Z",
@@ -25802,7 +25802,7 @@ Object {
         "_gpxType": "trk",
         "cmt": "Sun Jun 24 15:08:39 2001",
         "coordinateProperties": Object {
-          "time": Array [
+          "times": Array [
             "2001-06-24T15:09:09Z",
             "2001-06-24T15:09:29Z",
             "2001-06-24T15:16:04Z",

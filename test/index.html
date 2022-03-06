@@ -22,52 +22,60 @@
   <hr>
 
   <script>
-    const KEEP_FOCUS_ON  = 'strava.gpx'; // Test single files in browser
-    const KEEP_ALL_OPEN  = false;        // Test whole files in browser
-    const current        = document.currentScript;
+    const KEEP_FOCUS_ON     = 'strava.gpx'; // Test single files in browser
+    const KEEP_ALL_OPEN     = false;        // Test whole files in browser
+    const TEST_ALL          = true;         // Set this to false if you want to debug a specific file
+    const current           = document.currentScript;
 
     /**
      * Loop and test sample files within your browser.
      * 
      * NB you should enable directory listings (eg. "Options +Indexes") on your development server to make it work
      */
-    fetch('./data/')
-      .then((response) => response.text())
-      .then((data) => {
-        (new DOMParser())
-          .parseFromString(data, "text/html")
-          .querySelectorAll('li > a')   
-          .forEach(file => {
-            if(file.href == window.location.href.split("#")[0]) return;
-            const url = file.href.replace(window.location.href.split("#")[0], './data/');
-            const filename = url.replace('./data/', '');
-            const type = filename.split('.').pop();
-            fetch(url)
-              .then((response) => response.text())
-              .then((data) => {
-                const xml = (new DOMParser()).parseFromString(data, "text/xml");
-                const geojson  = toGeoJSON[type](xml);
-                const details = document.createElement('details');
-                const summary = document.createElement('summary');
-                const pre = document.createElement('pre');
-                const name = document.createElement('b');
-                name.innerHTML = filename;
-                pre.innerHTML = jsonFormatHighlight ? jsonFormatHighlight(geojson) : JSON.stringify(geojson,  null, 4);
-                current.insertAdjacentElement('afterend', details);
-                summary.appendChild(name);
-                details.appendChild(summary);
-                details.appendChild(pre);
-                details.id = filename;
-                if(KEEP_ALL_OPEN) {
-                  details.open = true;
-                }
-                if(KEEP_FOCUS_ON == filename) {
-                  details.open = true;
-                  details.scrollIntoView({behavior: "smooth"});
-                }
-              }).catch((err) => console.warn(err));
+    if (TEST_ALL) {
+      fetch('./data/')
+        .then((response) => response.text())
+        .then((data) => {
+          (new DOMParser())
+            .parseFromString(data, "text/html")
+            .querySelectorAll('li > a')   
+            .forEach(file => test(file));
         });
-      });
+    } else {
+      test({href: './data/' + KEEP_FOCUS_ON });
+    }
+
+    function test(file){
+      if(file.href == window.location.href.split("#")[0]) return;
+      const url = file.href.replace(window.location.href.split("#")[0], './data/');
+      const filename = url.replace('./data/', '');
+      const type = filename.split('.').pop();
+      fetch(url)
+        .then((response) => response.text())
+        .then((data) => {
+          const xml = (new DOMParser()).parseFromString(data, "text/xml");
+          const geojson  = toGeoJSON[type](xml);
+          const details = document.createElement('details');
+          const summary = document.createElement('summary');
+          const pre = document.createElement('pre');
+          const name = document.createElement('b');
+          name.innerHTML = filename;
+          pre.innerHTML = jsonFormatHighlight ? jsonFormatHighlight(geojson) : JSON.stringify(geojson,  null, 4);
+          current.insertAdjacentElement('afterend', details);
+          summary.appendChild(name);
+          details.appendChild(summary);
+          details.appendChild(pre);
+          details.id = filename;
+          if(KEEP_ALL_OPEN) {
+            details.open = true;
+          }
+          if(KEEP_FOCUS_ON == filename) {
+            details.open = true;
+            details.scrollIntoView({behavior: "smooth"});
+            console.debug(geojson);
+          }
+        }).catch((err) => console.warn(err));
+    }
   </script>
   
   <hr>
