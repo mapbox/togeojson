@@ -7,8 +7,12 @@
   "browser": "dist/togeojson.umd.js",
   "jsdelivr": "dist/togeojson.umd.js",
   "module": "dist/togeojson.es.js",
-  "main": "dist/togeojson.js",
+  "main": "dist/togeojson.cjs",
   "type": "module",
+  "exports": {
+    "require": "./dist/togeojson.ccjs",
+    "default": "./dist/togeojson.es.js"
+  },
   "files": [
     "dist"
   ],

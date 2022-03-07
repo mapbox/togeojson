@@ -9,16 +9,16 @@ export default [
     output: {
       file: "dist/togeojson.es.js",
       format: "es",
-      sourcemap
-    }
+      sourcemap,
+    },
   },
   {
     input,
     output: {
-      file: "dist/togeojson.js",
+      file: "dist/togeojson.cjs",
       format: "cjs",
-      sourcemap
-    }
+      sourcemap,
+    },
   },
   {
     input,
@@ -26,8 +26,8 @@ export default [
       file: "dist/togeojson.umd.js",
       format: "umd",
       name: "toGeoJSON",
-      sourcemap
+      sourcemap,
     },
-    plugins: [terser()]
-  }
+    plugins: [terser()],
+  },
 ];
