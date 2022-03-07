@@ -37,6 +37,7 @@
     "kml",
     "geojson",
     "gpx",
+    "tcx",
     "geo",
     "parser",
     "formatter",
