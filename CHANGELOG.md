@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.6.0](https://github.com/tmcw/togeojson/compare/v4.5.0...v4.6.0) (2022-03-07)
+
+
+### Features
+
+* Support additional GPX extensions ([ae2f00f](https://github.com/tmcw/togeojson/commit/ae2f00f685f5fd1e74b19864b0bba8211310d31a))
+
 ## [4.5.0](https://github.com/tmcw/togeojson/compare/v4.4.1...v4.5.0) (2021-08-03)
 
 
