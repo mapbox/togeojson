@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.6.1-1](https://github.com/tmcw/togeojson/compare/v4.6.1-0...v4.6.1-1) (2022-03-07)
+
+
+### Bug Fixes
+
+* Typo ([9cb1ed0](https://github.com/tmcw/togeojson/commit/9cb1ed06ffcd60954c629838d0cc5ba8df3aa953))
+
 ### [4.6.1-0](https://github.com/tmcw/togeojson/compare/v4.6.0...v4.6.1-0) (2022-03-07)
 
 
