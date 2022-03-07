@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.6.1-0](https://github.com/tmcw/togeojson/compare/v4.6.0...v4.6.1-0) (2022-03-07)
+
+
+### Bug Fixes
+
+* Make module system more convoluted ([845ff7a](https://github.com/tmcw/togeojson/commit/845ff7a2c08220d8b87860231b262709d8db070a))
+
 ## [4.6.0](https://github.com/tmcw/togeojson/compare/v4.5.0...v4.6.0) (2022-03-07)
 
 
