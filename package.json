@@ -29,7 +29,8 @@
     "rollup": "^2.70.0",
     "rollup-plugin-terser": "^7.0.2",
     "standard-version": "^9.3.2",
-    "tap": "^16.0.0"
+    "tap": "^16.0.0",
+    "typescript": "^4.6.2"
   },
   "repository": {
     "type": "git",
