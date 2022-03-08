@@ -21122,6 +21122,101 @@ Object {
 }
 `
 
+exports[`test/index.test.js TAP toGeoJSON > styles.kml 1`] = `
+Object {
+  "features": Array [
+    Object {
+      "geometry": Object {
+        "coordinates": Array [
+          21.00062301000721,
+          48.77257131826958,
+          1011.317797185818,
+        ],
+        "type": "Point",
+      },
+      "id": "00A083AD2520769B213A",
+      "properties": Object {
+        "description": "<div>Ahoj <b>PM</b></div>",
+        "fill": "#ffffff",
+        "fill-opacity": 0.25098039215686274,
+        "icon": "https://earth.google.com/earth/rpc/cc/icon?color=1976d2&id=2006&scale=4",
+        "icon-offset": Array [
+          64,
+          128,
+        ],
+        "name": "Untitled Placemark",
+        "stroke": "#fbc02d",
+        "stroke-opacity": 1,
+        "stroke-width": 2.13333,
+        "styleHash": "-42577181",
+        "styleMapHash": Object {
+          "highlight": "#__managed_style_21BB934A3420769B4A67",
+          "normal": "#__managed_style_1AF19DBC7E20769B4A67",
+        },
+        "styleUrl": "#__managed_style_04D1BA179420769B4A67",
+      },
+      "type": "Feature",
+    },
+    Object {
+      "geometry": Object {
+        "coordinates": Array [
+          Array [
+            Array [
+              20.99533143425753,
+              48.76385474037835,
+              817.5844849086294,
+            ],
+            Array [
+              21.00506376944139,
+              48.76355632184772,
+              896.3736545453368,
+            ],
+            Array [
+              21.00499721332549,
+              48.77057344889175,
+              1026.856093377534,
+            ],
+            Array [
+              20.99495695589513,
+              48.77073832155815,
+              991.0859038879247,
+            ],
+            Array [
+              20.99533143425753,
+              48.76385474037835,
+              817.5844849086294,
+            ],
+          ],
+        ],
+        "type": "Polygon",
+      },
+      "id": "0F66A23B9820769D44FC",
+      "properties": Object {
+        "fill": "#ffee58",
+        "fill-opacity": 0.25098039215686274,
+        "icon": "https://earth.google.com/earth/rpc/cc/icon?color=1976d2&id=2000&scale=4",
+        "icon-offset": Array [
+          64,
+          128,
+        ],
+        "name": "Untitled Polygon",
+        "stroke": "#303f9f",
+        "stroke-opacity": 1,
+        "stroke-width": 2.13333,
+        "styleHash": "1b52cb1d",
+        "styleMapHash": Object {
+          "highlight": "#__managed_style_24D42D73B520769D5922",
+          "normal": "#__managed_style_1CAC85685820769D5922",
+        },
+        "styleUrl": "#__managed_style_01C13F4A1E20769D5922",
+      },
+      "type": "Feature",
+    },
+  ],
+  "type": "FeatureCollection",
+}
+`
+
 exports[`test/index.test.js TAP toGeoJSON > tcx-courses.tcx 1`] = `
 Object {
   "features": Array [
