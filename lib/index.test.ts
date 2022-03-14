@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { check } from "@placemarkio/check-geojson";
-import * as tj from "../index";
+import * as tj from "./index";
 import xmldom from "@xmldom/xmldom";
 
 const d = "./test/data/";
