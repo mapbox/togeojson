@@ -15,51 +15,6 @@ looking for a command line too, use [@tmcw/togeojson-cli](https://github.com/tmc
 want to convert one KML or GPX file, use [my online tool](https://observablehq.com/@tmcw/convert-kml-to-geojson).
 If you want to convert another format, consider [GDAL](https://www.gdal.org/)._
 
-## API
-
-### `toGeoJSON.kml(doc)`
-
-Convert a KML document to GeoJSON. The first argument, `doc`, must be a KML
-document as an XML DOM - not as a string. You can get this using jQuery's default
-`.ajax` function or using a bare XMLHttpRequest with the `.response` property
-holding an XML DOM.
-
-The output is a JavaScript object of GeoJSON data. You can convert it to a string
-with [JSON.stringify](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
-or use it directly in libraries.
-
-### `toGeoJSON.kmlGen(doc)`
-
-Convert KML to GeoJSON incrementally, returning a [Generator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
-that yields output feature by feature.
-
-### `toGeoJSON.gpx(doc)`
-
-Convert a GPX document to GeoJSON. The first argument, `doc`, must be a GPX
-document as an XML DOM - not as a string. You can get this using jQuery's default
-`.ajax` function or using a bare XMLHttpRequest with the `.response` property
-holding an XML DOM.
-
-The output is a JavaScript object of GeoJSON data, same as `.kml` outputs, with the
-addition of a `_gpxType` property on each `LineString` feature that indicates whether
-the feature was encoded as a route (`rte`) or track (`trk`) in the GPX document.
-
-### `toGeoJSON.gpxGen(doc)`
-
-Convert GPX to GeoJSON incrementally, returning a [Generator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
-that yields output feature by feature.
-
-### `toGeoJSON.tcx(doc)`
-
-Convert a TCX document to GeoJSON. The first argument, `doc`, must be a TCX
-document as an XML DOM - not as a string.
-
-### `toGeoJSON.tcxGen(doc)`
-
-Convert a TCX document to GeoJSON incrementally, returning a [Generator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
-that yields output feature by feature. The first argument, `doc`, must be a TCX
-document as an XML DOM - not as a string.
-
 ## Property conversions
 
 In addition to converting KML’s `<ExtendedData>` verbatim, @tmcw/togeojson
@@ -138,10 +93,11 @@ import { kml } from "@tmcw/togeojson";
 - [x] ExtendedData
 - [x] SimpleData
 - [x] MultiGeometry -> GeometryCollection
-- [x] Styles with hashing
+- [x] Styles
 - [x] Tracks & MultiTracks with `gx:coords`, including altitude
 - [x] [TimeSpan](https://developers.google.com/kml/documentation/kmlreference#timespan)
 - [x] [TimeStamp](https://developers.google.com/kml/documentation/kmlreference#timestamp)
+- [x] Folders (with kmlWithFolders)
 - [ ] NetworkLinks
 - [ ] GroundOverlays
 
@@ -167,20 +123,6 @@ import { kml } from "@tmcw/togeojson";
 - The command line utility was moved to [tmcw/togeojson-cli](https://github.com/tmcw/togeojson-cli),
   which lets this module enjoy reduced dependencies: installing @tmcw/togeojson doesn’t
   require any other dependencies.
-- The hashing method is improved, which means that parsing is the same between browsers and
-  Node.js, and there are no runtime dependencies.
-
-### What is hashing?
-
-KML's style system isn't semantic: a typical document made through official tools
-(read Google) has hundreds of identical styles. So, togeojson does its best to
-make this into something usable, by taking a quick hash of each style and exposing
-`styleUrl` and `styleHash` to users. This lets you work backwards from the awful
-representation and build your own styles or derive data based on the classes
-chosen.
-
-Implied here is that this does not try to represent all data contained in KML
-styles.
 
 ### Why doesn't toGeoJSON support NetworkLinks?
 

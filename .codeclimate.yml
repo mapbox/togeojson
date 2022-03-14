@@ -1,0 +1,20 @@
+version: "2"
+checks:
+  argument-count:
+    config:
+      threshold: 6
+  return-statements:
+    config:
+      threshold: 10
+  complex-logic:
+    config:
+      threshold: 10
+  file-lines:
+    config:
+      threshold: 200
+  method-complexity:
+    config:
+      threshold: 10
+  method-lines:
+    config:
+      threshold: 50

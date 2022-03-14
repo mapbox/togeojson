@@ -1,8 +1,11 @@
-import { nodeVal, get1 } from "./shared.js";
+import { Feature, FeatureCollection, Position } from "geojson";
+import { P, $, get, num1, nodeVal, get1 } from "./shared";
+
+type PropertyMapping = readonly [string, string][];
 
 const EXTENSIONS_NS = "http://www.garmin.com/xmlschemas/ActivityExtension/v2";
 
-const TRACKPOINT_ATTRIBUTES = [
+const TRACKPOINT_ATTRIBUTES: PropertyMapping = [
   ["heartRate", "heartRates"],
   ["Cadence", "cadences"],
   // Extended Trackpoint attributes
@@ -10,7 +13,7 @@ const TRACKPOINT_ATTRIBUTES = [
   ["Watts", "watts"],
 ];
 
-const LAP_ATTRIBUTES = [
+const LAP_ATTRIBUTES: PropertyMapping = [
   ["TotalTimeSeconds", "totalTimeSeconds"],
   ["DistanceMeters", "distanceMeters"],
   ["MaximumSpeed", "maxSpeed"],
@@ -23,15 +26,7 @@ const LAP_ATTRIBUTES = [
   ["MaxWatts", "maxWatts"],
 ];
 
-function fromEntries(arr) {
-  const obj = {};
-  for (const [key, value] of arr) {
-    obj[key] = value;
-  }
-  return obj;
-}
-
-function getProperties(node, attributeNames) {
+function getProperties(node: Element, attributeNames: PropertyMapping) {
   const properties = [];
 
   for (const [tag, alias] of attributeNames) {
@@ -51,49 +46,52 @@ function getProperties(node, attributeNames) {
   return properties;
 }
 
-function coordPair(x) {
-  const lon = nodeVal(get1(x, "LongitudeDegrees"));
-  const lat = nodeVal(get1(x, "LatitudeDegrees"));
-  if (!lon.length || !lat.length) {
+function coordPair(node: Element) {
+  const ll = [num1(node, "LongitudeDegrees"), num1(node, "LatitudeDegrees")];
+  if (
+    ll[0] === undefined ||
+    isNaN(ll[0]) ||
+    ll[1] === undefined ||
+    isNaN(ll[1])
+  ) {
     return null;
   }
-  const ll = [parseFloat(lon), parseFloat(lat)];
-  const alt = get1(x, "AltitudeMeters");
-  const heartRate = get1(x, "HeartRateBpm");
-  const time = get1(x, "Time");
-  let a;
-  if (alt) {
-    a = parseFloat(nodeVal(alt));
+  const heartRate = get1(node, "HeartRateBpm");
+  const time = nodeVal(get1(node, "Time"));
+  get1(node, "AltitudeMeters", (alt) => {
+    const a = parseFloat(nodeVal(alt));
     if (!isNaN(a)) {
       ll.push(a);
     }
-  }
+  });
   return {
-    coordinates: ll,
-    time: time ? nodeVal(time) : null,
+    coordinates: ll as number[],
+    time: time || null,
     heartRate: heartRate ? parseFloat(nodeVal(heartRate)) : null,
-    extensions: getProperties(x, TRACKPOINT_ATTRIBUTES),
+    extensions: getProperties(node, TRACKPOINT_ATTRIBUTES),
   };
 }
 
-function getPoints(node, pointname) {
-  const pts = node.getElementsByTagName(pointname);
-  const line = [];
+function getPoints(node: Element) {
+  const pts = $(node, "Trackpoint");
+  const line: Position[] = [];
   const times = [];
   const heartRates = [];
   if (pts.length < 2) return null; // Invalid line in GeoJSON
-  const result = { extendedProperties: {} };
+  const extendedProperties: P = {};
+  const result = { extendedProperties };
   for (let i = 0; i < pts.length; i++) {
     const c = coordPair(pts[i]);
     if (c === null) continue;
     line.push(c.coordinates);
-    if (c.time) times.push(c.time);
-    if (c.heartRate) heartRates.push(c.heartRate);
-    for (const [alias, value] of c.extensions) {
-      if (!result.extendedProperties[alias]) {
-        result.extendedProperties[alias] = Array(pts.length).fill(null);
+    const { time, heartRate, extensions } = c;
+    if (time) times.push(time);
+    if (heartRate) heartRates.push(heartRate);
+    for (const [alias, value] of extensions) {
+      if (!extendedProperties[alias]) {
+        extendedProperties[alias] = Array(pts.length).fill(null);
       }
-      result.extendedProperties[alias][i] = value;
+      extendedProperties[alias][i] = value;
     }
   }
   return Object.assign(result, {
@@ -103,22 +101,22 @@ function getPoints(node, pointname) {
   });
 }
 
-function getLap(node) {
-  const segments = node.getElementsByTagName("Track");
+function getLap(node: Element): Feature | null {
+  const segments = $(node, "Track");
   const track = [];
   const times = [];
   const heartRates = [];
   const allExtendedProperties = [];
   let line;
-  const properties = fromEntries(getProperties(node, LAP_ATTRIBUTES));
+  const properties: P = Object.assign(
+    Object.fromEntries(getProperties(node, LAP_ATTRIBUTES)),
+    get(node, "Name", (nameElement) => {
+      return { name: nodeVal(nameElement) };
+    })
+  );
 
-  const nameElement = get1(node, "Name");
-  if (nameElement) {
-    properties.name = nodeVal(nameElement);
-  }
-
-  for (let i = 0; i < segments.length; i++) {
-    line = getPoints(segments[i], "Trackpoint");
+  for (const segment of segments) {
+    line = getPoints(segment);
     if (line) {
       track.push(line.line);
       if (line.times.length) times.push(line.times);
@@ -130,7 +128,9 @@ function getLap(node) {
     const extendedProperties = allExtendedProperties[i];
     for (const property in extendedProperties) {
       if (segments.length === 1) {
-        properties[property] = line.extendedProperties[property];
+        if (line) {
+          properties[property] = line.extendedProperties[property];
+        }
       } else {
         if (!properties[property]) {
           properties[property] = track.map((track) =>
@@ -141,7 +141,8 @@ function getLap(node) {
       }
     }
   }
-  if (track.length === 0) return;
+
+  if (track.length === 0) return null;
 
   if (times.length || heartRates.length) {
     properties.coordinateProperties = Object.assign(
@@ -161,32 +162,43 @@ function getLap(node) {
   return {
     type: "Feature",
     properties: properties,
-    geometry: {
-      type: track.length === 1 ? "LineString" : "MultiLineString",
-      coordinates: track.length === 1 ? track[0] : track,
-    },
+    geometry:
+      track.length === 1
+        ? {
+            type: "LineString",
+            coordinates: track[0],
+          }
+        : {
+            type: "MultiLineString",
+            coordinates: track,
+          },
   };
 }
 
-export function* tcxGen(doc) {
-  const laps = doc.getElementsByTagName("Lap");
-
-  for (let i = 0; i < laps.length; i++) {
-    const feature = getLap(laps[i]);
+/**
+ * Incrementally convert a TCX document to GeoJSON. The
+ * first argument, `doc`, must be a TCX
+ * document as an XML DOM - not as a string.
+ */
+export function* tcxGen(node: Document): Generator<Feature> {
+  for (const lap of $(node, "Lap")) {
+    const feature = getLap(lap);
     if (feature) yield feature;
   }
 
-  const courses = doc.getElementsByTagName("Courses");
-
-  for (let i = 0; i < courses.length; i++) {
-    const feature = getLap(courses[i]);
+  for (const course of $(node, "Courses")) {
+    const feature = getLap(course);
     if (feature) yield feature;
   }
 }
 
-export function tcx(doc) {
+/**
+ * Convert a TCX document to GeoJSON. The first argument, `doc`, must be a TCX
+ * document as an XML DOM - not as a string.
+ */
+export function tcx(node: Document): FeatureCollection {
   return {
     type: "FeatureCollection",
-    features: Array.from(tcxGen(doc)),
+    features: Array.from(tcxGen(node)),
   };
 }

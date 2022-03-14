@@ -1,0 +1,164 @@
+<!DOCTYPE html><html class="default"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>@tmcw/togeojson</title><meta name="description" content="Documentation for @tmcw/togeojson"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script async src="assets/search.js" id="search-script"></script></head><body><script>document.body.classList.add(localStorage.getItem("tsd-theme") || "os")</script><header><div class="tsd-page-toolbar"><div class="container"><div class="table-wrap"><div class="table-cell" id="tsd-search" data-base="."><div class="field"><label for="tsd-search-field" class="tsd-widget search no-caption">Search</label><input type="text" id="tsd-search-field"/></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">@tmcw/togeojson</a></div><div class="table-cell" id="tsd-widgets"><div id="tsd-filter"><a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a><div class="tsd-filter-group"><div class="tsd-select" id="tsd-filter-visibility"><span class="tsd-select-label">All</span><ul class="tsd-select-list"><li data-value="public">Public</li><li data-value="protected">Public/Protected</li><li data-value="private" class="selected">All</li></ul></div> <input type="checkbox" id="tsd-filter-inherited" checked/><label class="tsd-widget" for="tsd-filter-inherited">Inherited</label><input type="checkbox" id="tsd-filter-externals" checked/><label class="tsd-widget" for="tsd-filter-externals">Externals</label></div></div><a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a></div></div></div></div><div class="tsd-page-title"><div class="container"><h1>@tmcw/togeojson</h1></div></div></header><div class="container container-main"><div class="row"><div class="col-8 col-content"><div class="tsd-panel tsd-typography">
+<a href="#convert-kml-gpx-and-tcx-to-geojson" id="convert-kml-gpx-and-tcx-to-geojson" style="color: inherit; text-decoration: none;">
+  <h1>Convert KML, GPX, and TCX to GeoJSON.</h1>
+</a>
+<p><em>togeojson development is supported by 🌎 <a href="https://placemark.io/">placemark.io</a></em></p>
+<p>This converts <a href="https://developers.google.com/kml/documentation/">KML</a>, <a href="https://en.wikipedia.org/wiki/Training_Center_XML">TCX</a>, &amp; <a href="http://www.topografix.com/gpx.asp">GPX</a>
+to <a href="http://www.geojson.org/">GeoJSON</a>, in a browser or with <a href="http://nodejs.org/">Node.js</a>.</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Dependency-free</li>
+<li><input checked="" disabled="" type="checkbox"> Tiny</li>
+<li><input checked="" disabled="" type="checkbox"> Tested</li>
+<li><input checked="" disabled="" type="checkbox"> Node.js + Browsers</li>
+</ul>
+<p><em>This is a JavaScript library that lets projects convert KML and GPX to GeoJSON. If you&#39;re
+looking for a command line too, use <a href="https://github.com/tmcw/togeojson-cli">@tmcw/togeojson-cli</a>. If you
+want to convert one KML or GPX file, use <a href="https://observablehq.com/@tmcw/convert-kml-to-geojson">my online tool</a>.
+If you want to convert another format, consider <a href="https://www.gdal.org/">GDAL</a>.</em></p>
+
+<a href="#property-conversions" id="property-conversions" style="color: inherit; text-decoration: none;">
+  <h2>Property conversions</h2>
+</a>
+<p>In addition to converting KML’s <code>&lt;ExtendedData&gt;</code> verbatim, @tmcw/togeojson
+also encodes parts of KML, GPX, and TCX files that otherwise would be lost.</p>
+<p><strong>KML</strong></p>
+<ul>
+<li>Style properties: <code>fill-color</code>, <code>fill-opacity</code>, <code>stroke</code>, <code>stroke-opacity</code>,
+<code>icon-color</code>, <code>icon-opacity</code>, <code>label-color</code>, <code>label-opacity</code>, <code>icon-scale</code>,
+<code>icon-heading</code>, <code>icon-offset</code></li>
+</ul>
+<p><strong>GPX</strong></p>
+<ul>
+<li>Style properties: <code>stroke</code>, <code>stroke-opacity</code>, <code>stroke-width</code></li>
+</ul>
+<p><strong>TCX</strong></p>
+<ul>
+<li>Line properties: <code>totalTimeSeconds</code>, <code>distanceMeters</code>, <code>maxSpeed</code>,
+<code>avgHeartRate</code>, <code>maxHeartRate</code>, <code>avgSpeed</code>, <code>avgWatts</code>, <code>maxWatts</code></li>
+</ul>
+<p>This also emits the <a href="https://github.com/mapbox/geojson-coordinate-properties">geojson-coordinate-properties</a> format
+to include time and other attributes that apply to each coordinate of a LineString.</p>
+
+<a href="#cli" id="cli" style="color: inherit; text-decoration: none;">
+  <h2>CLI</h2>
+</a>
+<p>Use <a href="https://github.com/tmcw/togeojson-cli">@tmcw/togeojson-cli</a> to use this
+software as a command-line tool.</p>
+
+<a href="#nodejs" id="nodejs" style="color: inherit; text-decoration: none;">
+  <h2>Node.js</h2>
+</a>
+<p>Install it into your project with <code>npm install --save @tmcw/togeojson</code>.</p>
+<pre><code class="language-javascript"><span class="hl-3">// using togeojson in nodejs</span><br/><br/><span class="hl-4">const</span><span class="hl-0"> </span><span class="hl-5">tj</span><span class="hl-0"> = </span><span class="hl-6">require</span><span class="hl-0">(</span><span class="hl-1">&quot;@tmcw/togeojson&quot;</span><span class="hl-0">);</span><br/><span class="hl-4">const</span><span class="hl-0"> </span><span class="hl-5">fs</span><span class="hl-0"> = </span><span class="hl-6">require</span><span class="hl-0">(</span><span class="hl-1">&quot;fs&quot;</span><span class="hl-0">);</span><br/><span class="hl-3">// node doesn&#39;t have xml parsing or a dom. use xmldom</span><br/><span class="hl-4">const</span><span class="hl-0"> </span><span class="hl-5">DOMParser</span><span class="hl-0"> = </span><span class="hl-6">require</span><span class="hl-0">(</span><span class="hl-1">&quot;xmldom&quot;</span><span class="hl-0">).</span><span class="hl-2">DOMParser</span><span class="hl-0">;</span><br/><br/><span class="hl-4">const</span><span class="hl-0"> </span><span class="hl-5">kml</span><span class="hl-0"> = </span><span class="hl-4">new</span><span class="hl-0"> </span><span class="hl-6">DOMParser</span><span class="hl-0">().</span><span class="hl-6">parseFromString</span><span class="hl-0">(</span><span class="hl-2">fs</span><span class="hl-0">.</span><span class="hl-6">readFileSync</span><span class="hl-0">(</span><span class="hl-1">&quot;foo.kml&quot;</span><span class="hl-0">, </span><span class="hl-1">&quot;utf8&quot;</span><span class="hl-0">));</span><br/><br/><span class="hl-4">const</span><span class="hl-0"> </span><span class="hl-5">converted</span><span class="hl-0"> = </span><span class="hl-2">tj</span><span class="hl-0">.</span><span class="hl-6">kml</span><span class="hl-0">(</span><span class="hl-2">kml</span><span class="hl-0">);</span>
+</code></pre>
+
+<a href="#es-modules" id="es-modules" style="color: inherit; text-decoration: none;">
+  <h2>ES Modules</h2>
+</a>
+<pre><code class="language-javascript"><span class="hl-3">// The ES Module provides named exports, to import kml, gpx,</span><br/><span class="hl-3">// and other parts of the module by name.</span><br/><span class="hl-7">import</span><span class="hl-0"> { </span><span class="hl-2">kml</span><span class="hl-0"> } </span><span class="hl-7">from</span><span class="hl-0"> </span><span class="hl-1">&quot;@tmcw/togeojson&quot;</span><span class="hl-0">;</span>
+</code></pre>
+
+<a href="#browser" id="browser" style="color: inherit; text-decoration: none;">
+  <h2>Browser</h2>
+</a>
+<pre><code class="language-html"><span class="hl-8">&lt;</span><span class="hl-9">script</span><span class="hl-10"> </span><span class="hl-11">type</span><span class="hl-10">=</span><span class="hl-12">&quot;module&quot;</span><span class="hl-8">&gt;</span><br/><span class="hl-10">  </span><span class="hl-7">import</span><span class="hl-10"> { </span><span class="hl-2">kml</span><span class="hl-10"> } </span><span class="hl-7">from</span><span class="hl-10"> </span><span class="hl-1">&quot;https://unpkg.com/@tmcw/togeojson?module&quot;</span><span class="hl-10">;</span><br/><br/><span class="hl-10">  </span><span class="hl-6">fetch</span><span class="hl-10">(</span><span class="hl-1">&quot;test/data/linestring.kml&quot;</span><span class="hl-10">)</span><br/><span class="hl-10">    .</span><span class="hl-6">then</span><span class="hl-10">(</span><span class="hl-4">function</span><span class="hl-10"> (</span><span class="hl-2">response</span><span class="hl-10">) {</span><br/><span class="hl-10">      </span><span class="hl-7">return</span><span class="hl-10"> </span><span class="hl-2">response</span><span class="hl-10">.</span><span class="hl-6">text</span><span class="hl-10">();</span><br/><span class="hl-10">    })</span><br/><span class="hl-10">    .</span><span class="hl-6">then</span><span class="hl-10">(</span><span class="hl-4">function</span><span class="hl-10"> (</span><span class="hl-2">xml</span><span class="hl-10">) {</span><br/><span class="hl-10">      </span><span class="hl-2">console</span><span class="hl-10">.</span><span class="hl-6">log</span><span class="hl-10">(</span><span class="hl-6">kml</span><span class="hl-10">(</span><span class="hl-4">new</span><span class="hl-10"> </span><span class="hl-6">DOMParser</span><span class="hl-10">().</span><span class="hl-6">parseFromString</span><span class="hl-10">(</span><span class="hl-2">xml</span><span class="hl-10">, </span><span class="hl-1">&quot;text/xml&quot;</span><span class="hl-10">)));</span><br/><span class="hl-10">    });</span><br/><span class="hl-8">&lt;/</span><span class="hl-9">script</span><span class="hl-8">&gt;</span>
+</code></pre>
+
+<a href="#kml-feature-support" id="kml-feature-support" style="color: inherit; text-decoration: none;">
+  <h3>KML Feature Support</h3>
+</a>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Point</li>
+<li><input checked="" disabled="" type="checkbox"> Polygon</li>
+<li><input checked="" disabled="" type="checkbox"> LineString</li>
+<li><input checked="" disabled="" type="checkbox"> name &amp; description</li>
+<li><input checked="" disabled="" type="checkbox"> ExtendedData</li>
+<li><input checked="" disabled="" type="checkbox"> SimpleData</li>
+<li><input checked="" disabled="" type="checkbox"> MultiGeometry -&gt; GeometryCollection</li>
+<li><input checked="" disabled="" type="checkbox"> Styles</li>
+<li><input checked="" disabled="" type="checkbox"> Tracks &amp; MultiTracks with <code>gx:coords</code>, including altitude</li>
+<li><input checked="" disabled="" type="checkbox"> <a href="https://developers.google.com/kml/documentation/kmlreference#timespan">TimeSpan</a></li>
+<li><input checked="" disabled="" type="checkbox"> <a href="https://developers.google.com/kml/documentation/kmlreference#timestamp">TimeStamp</a></li>
+<li><input checked="" disabled="" type="checkbox"> Folders (with kmlWithFolders)</li>
+<li><input disabled="" type="checkbox"> NetworkLinks</li>
+<li><input disabled="" type="checkbox"> GroundOverlays</li>
+</ul>
+
+<a href="#gpx-feature-support" id="gpx-feature-support" style="color: inherit; text-decoration: none;">
+  <h3>GPX Feature Support</h3>
+</a>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Line Paths</li>
+<li><input checked="" disabled="" type="checkbox"> Line styles</li>
+<li><input disabled="" type="checkbox"> Properties<ul>
+<li><input checked="" disabled="" type="checkbox"> &#39;name&#39;, &#39;cmt&#39;, &#39;desc&#39;, &#39;link&#39;, &#39;time&#39;, &#39;keywords&#39;, &#39;sym&#39;, &#39;type&#39; tags</li>
+<li><input checked="" disabled="" type="checkbox"> gpxx Garmin extensions on tracks and routes</li>
+<li><input disabled="" type="checkbox"> &#39;author&#39;, &#39;copyright&#39; tags</li>
+</ul>
+</li>
+</ul>
+
+<a href="#faq" id="faq" style="color: inherit; text-decoration: none;">
+  <h2>FAQ</h2>
+</a>
+
+<a href="#how-does-this-differ-from-mapboxtogeojson" id="how-does-this-differ-from-mapboxtogeojson" style="color: inherit; text-decoration: none;">
+  <h3>How does this differ from mapbox/togeojson?</h3>
+</a>
+<ul>
+<li>This repository is maintained.</li>
+<li>It’s available as an ES Module. If you&#39;re using a modern JavaScript bundler or
+using ES Modules in the browser, this makes it a bit more efficient and sometimes
+easier to use.</li>
+<li>Conversion methods are available as generators, which makes the conversion of big
+files more efficient.</li>
+<li>The command line utility was moved to <a href="https://github.com/tmcw/togeojson-cli">tmcw/togeojson-cli</a>,
+which lets this module enjoy reduced dependencies: installing @tmcw/togeojson doesn’t
+require any other dependencies.</li>
+</ul>
+
+<a href="#why-doesn39t-togeojson-support-networklinks" id="why-doesn39t-togeojson-support-networklinks" style="color: inherit; text-decoration: none;">
+  <h3>Why doesn&#39;t toGeoJSON support NetworkLinks?</h3>
+</a>
+<p>The NetworkLink KML construct allows KML files to refer to other online
+or local KML files for their content. It&#39;s often used to let people pass around
+files but keep the actual content on servers.</p>
+<p>In order to support NetworkLinks, toGeoJSON would need to be asynchronous
+and perform network requests. These changes would make it more complex and less
+reliable in order to hit a limited usecase - we&#39;d rather keep it simple
+and not require users to think about network connectivity and bandwith
+in order to convert files.</p>
+<p>NetworkLink support could be implemented in a separate library as a pre-processing
+step if desired.</p>
+
+<a href="#should-togeojson-support-feature-x-from-kml" id="should-togeojson-support-feature-x-from-kml" style="color: inherit; text-decoration: none;">
+  <h3>Should toGeoJSON support feature X from KML?</h3>
+</a>
+<p>This module should support converting all KML and GPX features that have commonplace
+equivalents in GeoJSON.</p>
+<p>KML is a very complex format with many features. Some of these features, like NetworkLinks,
+folders, and GroundOverlays, don&#39;t have a GeoJSON equivalent. In these cases,
+toGeoJSON doesn&#39;t convert the features. It also doesn&#39;t crash on these constructs:
+toGeoJSON should be able to run on all valid KML and GPX files without crashing:
+but for some files it may have no output.</p>
+<p>We encourage other libraries to look into supporting these features, but
+support for them is out of scope for toGeoJSON.</p>
+
+<a href="#protips" id="protips" style="color: inherit; text-decoration: none;">
+  <h2>Protips:</h2>
+</a>
+<p>Have a string of XML and need an XML DOM? There are two main options:</p>
+<ul>
+<li>Use <a href="https://www.npmjs.com/package/@xmldom/xmldom">xmldom</a>, a JavaScript module that contains its own XML parser</li>
+<li>Use <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMParser"><code>DOMParser</code></a>, the native platform XML parser</li>
+</ul>
+<p>We recommend that <strong>you use xmldom</strong>, not the platform. DOMParser requires XML to be valid, which means that any XML namespaces that a KML, GPX, or TCX file contains are valid. A lot of existing data is invalid XML, and will be parsed only in part by DOMParser, but can be fully parsed by xmldom.</p>
+<p>Using xmldom (recommended):</p>
+<pre><code class="language-js"><span class="hl-4">const</span><span class="hl-0"> </span><span class="hl-5">xmldom</span><span class="hl-0"> = </span><span class="hl-6">require</span><span class="hl-0">(</span><span class="hl-1">&quot;@xmldom/xmldom&quot;</span><span class="hl-0">);</span><br/><span class="hl-4">const</span><span class="hl-0"> </span><span class="hl-5">dom</span><span class="hl-0"> = </span><span class="hl-4">new</span><span class="hl-0"> </span><span class="hl-2">xmldom</span><span class="hl-0">.</span><span class="hl-6">DOMParser</span><span class="hl-0">().</span><span class="hl-6">parseFromString</span><span class="hl-0">(</span><span class="hl-2">xmlStr</span><span class="hl-0">, </span><span class="hl-1">&quot;text/xml&quot;</span><span class="hl-0">);</span>
+</code></pre>
+<p>Using DOMParser:</p>
+<pre><code class="language-js"><span class="hl-4">var</span><span class="hl-0"> </span><span class="hl-2">dom</span><span class="hl-0"> = </span><span class="hl-4">new</span><span class="hl-0"> </span><span class="hl-6">DOMParser</span><span class="hl-0">().</span><span class="hl-6">parseFromString</span><span class="hl-0">(</span><span class="hl-2">xmlStr</span><span class="hl-0">, </span><span class="hl-1">&quot;text/xml&quot;</span><span class="hl-0">);</span>
+</code></pre>
+<hr>
+<p><a href="https://codeclimate.com/github/placemark/togeojson/maintainability"><img src="https://api.codeclimate.com/v1/badges/b3673a9a9f6e132ec991/maintainability" alt="Maintainability"></a> <a href="https://codeclimate.com/github/placemark/togeojson/test_coverage"><img src="https://api.codeclimate.com/v1/badges/b3673a9a9f6e132ec991/test_coverage" alt="Test Coverage"></a></p>
+</div></div><div class="col-4 col-menu menu-sticky-wrap menu-highlight"><nav class="tsd-navigation primary"><ul><li class="current"><a href="modules.html">Exports</a></li></ul></nav><nav class="tsd-navigation secondary menu-sticky"><ul><li class="tsd-kind-function"><a href="modules.html#gpx" class="tsd-kind-icon">gpx</a></li><li class="tsd-kind-function"><a href="modules.html#gpxGen" class="tsd-kind-icon">gpx<wbr/>Gen</a></li><li class="tsd-kind-function"><a href="modules.html#kml" class="tsd-kind-icon">kml</a></li><li class="tsd-kind-function"><a href="modules.html#kmlGen" class="tsd-kind-icon">kml<wbr/>Gen</a></li><li class="tsd-kind-function"><a href="modules.html#kmlWithFolders" class="tsd-kind-icon">kml<wbr/>With<wbr/>Folders</a></li><li class="tsd-kind-function"><a href="modules.html#tcx" class="tsd-kind-icon">tcx</a></li><li class="tsd-kind-function"><a href="modules.html#tcxGen" class="tsd-kind-icon">tcx<wbr/>Gen</a></li></ul></nav></div></div></div><footer class="with-border-bottom"><div class="container"><h2>Settings</h2><p>Theme <select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></p></div></footer><div class="container tsd-generator"><p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div><div class="overlay"></div><script src="assets/main.js"></script></body></html>

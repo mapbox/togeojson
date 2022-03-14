@@ -1,14 +1,15 @@
 {
   "name": "@tmcw/togeojson",
-  "version": "4.7.0",
+  "version": "4.7.1-0",
   "description": "convert KML and GPX to GeoJSON",
+  "source": "lib/index.ts",
   "umd:main": "dist/togeojson.umd.js",
   "unpkg": "dist/togeojson.umd.js",
+  "types": "dist/togeojson.d.ts",
   "browser": "dist/togeojson.umd.js",
   "jsdelivr": "dist/togeojson.umd.js",
   "module": "dist/togeojson.es.js",
   "main": "dist/togeojson.cjs",
-  "type": "module",
   "exports": {
     "require": "./dist/togeojson.cjs",
     "default": "./dist/togeojson.es.js"
@@ -17,26 +18,36 @@
     "dist"
   ],
   "scripts": {
-    "test": "eslint lib && tap",
-    "prepare": "rollup -c rollup.config.js",
+    "test": "jest",
+    "lint": "eslint",
+    "doc": "typedoc --options ./typedoc.json",
+    "prepare": "microbundle && npm run doc",
     "release": "standard-version"
   },
+  "peerDependencies": {
+    "@types/geojson": "*"
+  },
   "devDependencies": {
+    "@placemarkio/check-geojson": "^0.1.8",
+    "@types/geojson": "^7946.0.8",
+    "@types/jest": "^27.4.1",
+    "@typescript-eslint/eslint-plugin": "^5.14.0",
+    "@typescript-eslint/parser": "^5.14.0",
     "@xmldom/xmldom": "^0.8.1",
-    "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^8.10.0",
+    "eslint": "^8.11.0",
+    "jest": "^27.5.1",
+    "microbundle": "^0.14.2",
     "prettier": "^2.5.1",
-    "rollup": "^2.70.0",
-    "rollup-plugin-terser": "^7.0.2",
     "standard-version": "^9.3.2",
-    "tap": "^16.0.0"
+    "ts-jest": "^27.1.3",
+    "typedoc": "^0.22.13",
+    "typescript": "^4.6.2"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/tmcw/togeojson.git"
   },
   "license": "BSD-2-Clause",
-  "dependencies": {},
   "keywords": [
     "kml",
     "geojson",
