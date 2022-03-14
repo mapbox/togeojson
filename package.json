@@ -5,7 +5,7 @@
   "source": "lib/index.ts",
   "umd:main": "dist/togeojson.umd.js",
   "unpkg": "dist/togeojson.umd.js",
-  "types": "dist/togeojson.d.ts",
+  "types": "dist/index.d.ts",
   "browser": "dist/togeojson.umd.js",
   "jsdelivr": "dist/togeojson.umd.js",
   "module": "dist/togeojson.es.js",
