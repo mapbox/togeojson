@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.0.0-3](https://github.com/placemarkio/togeojson/compare/v5.0.0-2...v5.0.0-3) (2022-03-15)
+
+
+### Bug Fixes
+
+* Export Folder and Root types ([b9fa7f0](https://github.com/placemarkio/togeojson/commit/b9fa7f0827d8417addbaca76dc9f440495cc5336))
+
 ## [5.0.0-2](https://github.com/placemarkio/togeojson/compare/v5.0.0-1...v5.0.0-2) (2022-03-14)
 
 ## [5.0.0-1](https://github.com/placemarkio/togeojson/compare/v5.0.0-0...v5.0.0-1) (2022-03-14)
