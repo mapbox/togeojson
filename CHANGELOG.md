@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.0.0-4](https://github.com/placemarkio/togeojson/compare/v5.0.0-3...v5.0.0-4) (2022-03-15)
+
+
+### Bug Fixes
+
+* Allow meta object to contain new values ([6dd282e](https://github.com/placemarkio/togeojson/commit/6dd282e33755699dbc95b4455fe06fdfbe8692cb))
+
 ## [5.0.0-3](https://github.com/placemarkio/togeojson/compare/v5.0.0-2...v5.0.0-3) (2022-03-15)
 
 
