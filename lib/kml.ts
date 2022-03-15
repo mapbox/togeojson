@@ -19,7 +19,20 @@ import {
  */
 export interface Folder {
   type: "folder";
-  meta: Partial<Record<typeof FOLDER_PROPS[number], string>>;
+  /**
+   * Standard values:
+   *
+   * * "name",
+   * * "visibility",
+   * * "open",
+   * * "address",
+   * * "description",
+   * * "phoneNumber",
+   * * "visibility",
+   */
+  meta: {
+    [key: string]: unknown;
+  };
   children: Array<Folder | F>;
 }
 
