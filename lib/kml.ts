@@ -12,13 +12,14 @@ import {
   normalizeId,
 } from "./shared";
 
-interface Folder {
+/**
+ * A folder including metadata. Folders
+ * may contain other folders or features,
+ * or nothing at all.
+ */
+export interface Folder {
   type: "folder";
-  meta: {
-    name?: string;
-    visibility?: string;
-    description?: string;
-  };
+  meta: Partial<Record<typeof FOLDER_PROPS[number], string>>;
   children: Array<Folder | F>;
 }
 
@@ -63,20 +64,21 @@ function buildStyleMap(node: Document): StyleMap {
   return styleMap;
 }
 
+const FOLDER_PROPS = [
+  "name",
+  "visibility",
+  "open",
+  "address",
+  "description",
+  "phoneNumber",
+  "visibility",
+] as const;
+
 function getFolder(node: Element): Folder {
-  const props = [
-    "name",
-    "visibility",
-    "open",
-    "address",
-    "description",
-    "phoneNumber",
-    "visibility",
-  ];
   const meta: P = {};
 
   for (const child of Array.from(node.childNodes)) {
-    if (isElement(child) && props.includes(child.tagName)) {
+    if (isElement(child) && FOLDER_PROPS.includes(child.tagName as any)) {
       meta[child.tagName] = nodeVal(child);
     }
   }
