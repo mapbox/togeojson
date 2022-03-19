@@ -13296,63 +13296,64 @@ exports[`toGeoJSON gxtrack.kml 2`] = `
 Object {
   "children": Array [
     Object {
-      "geometry": Object {
-        "coordinates": Array [
-          Array [
-            -122.207881,
-            37.371915,
-            156,
-          ],
-          Array [
-            -122.205712,
-            37.373288,
-            152,
-          ],
-          Array [
-            -122.204678,
-            37.373939,
-            147,
-          ],
-          Array [
-            -122.203572,
-            37.37463,
-            142.199997,
-          ],
-          Array [
-            -122.203451,
-            37.374706,
-            141.800003,
-          ],
-          Array [
-            -122.203329,
-            37.37478,
-            141.199997,
-          ],
-          Array [
-            -122.203207,
-            37.374857,
-            140.199997,
-          ],
-        ],
-        "type": "LineString",
-      },
-      "properties": Object {
-        "coordinateProperties": Object {
-          "times": Array [
-            "2010-05-28T02:02:09Z",
-            "2010-05-28T02:02:35Z",
-            "2010-05-28T02:02:44Z",
-            "2010-05-28T02:02:53Z",
-            "2010-05-28T02:02:54Z",
-            "2010-05-28T02:02:55Z",
-            "2010-05-28T02:02:56Z",
-          ],
+      "children": Array [
+        Object {
+          "geometry": Object {
+            "coordinates": Array [
+              Array [
+                -122.207881,
+                37.371915,
+                156,
+              ],
+              Array [
+                -122.205712,
+                37.373288,
+                152,
+              ],
+              Array [
+                -122.204678,
+                37.373939,
+                147,
+              ],
+              Array [
+                -122.203572,
+                37.37463,
+                142.199997,
+              ],
+              Array [
+                -122.203451,
+                37.374706,
+                141.800003,
+              ],
+              Array [
+                -122.203329,
+                37.37478,
+                141.199997,
+              ],
+              Array [
+                -122.203207,
+                37.374857,
+                140.199997,
+              ],
+            ],
+            "type": "LineString",
+          },
+          "properties": Object {
+            "coordinateProperties": Object {
+              "times": Array [
+                "2010-05-28T02:02:09Z",
+                "2010-05-28T02:02:35Z",
+                "2010-05-28T02:02:44Z",
+                "2010-05-28T02:02:53Z",
+                "2010-05-28T02:02:54Z",
+                "2010-05-28T02:02:55Z",
+                "2010-05-28T02:02:56Z",
+              ],
+            },
+          },
+          "type": "Feature",
         },
-      },
-      "type": "Feature",
-    },
-    Object {
-      "children": Array [],
+      ],
       "meta": Object {},
       "type": "folder",
     },
@@ -13529,6 +13530,178 @@ exports[`toGeoJSON inline_style.kml 2`] = `
 Object {
   "children": Array [
     Object {
+      "children": Array [
+        Object {
+          "geometry": Object {
+            "coordinates": Array [
+              Array [
+                2.3101624,
+                48.7301875,
+              ],
+              Array [
+                2.3098714,
+                48.7300247,
+              ],
+              Array [
+                2.3098051,
+                48.7299542,
+              ],
+              Array [
+                2.3098493,
+                48.7298813,
+              ],
+              Array [
+                2.309934,
+                48.7298108,
+              ],
+              Array [
+                2.3100372,
+                48.729806,
+              ],
+              Array [
+                2.3101293,
+                48.7298424,
+              ],
+              Array [
+                2.3101772,
+                48.7298862,
+              ],
+              Array [
+                2.3101661,
+                48.7299542,
+              ],
+              Array [
+                2.3101587,
+                48.7300538,
+              ],
+              Array [
+                2.3101624,
+                48.7301875,
+              ],
+            ],
+            "type": "LineString",
+          },
+          "properties": Object {
+            "fill": "#ff1100",
+            "fill-opacity": 1,
+            "name": "With all inline styles",
+            "stroke": "#ff0000",
+            "stroke-opacity": 1,
+            "stroke-width": 3,
+          },
+          "type": "Feature",
+        },
+        Object {
+          "geometry": Object {
+            "coordinates": Array [
+              Array [
+                2.3101624,
+                48.7301875,
+              ],
+              Array [
+                2.3098714,
+                48.7300247,
+              ],
+              Array [
+                2.3098051,
+                48.7299542,
+              ],
+              Array [
+                2.3098493,
+                48.7298813,
+              ],
+              Array [
+                2.309934,
+                48.7298108,
+              ],
+              Array [
+                2.3100372,
+                48.729806,
+              ],
+              Array [
+                2.3101293,
+                48.7298424,
+              ],
+              Array [
+                2.3101772,
+                48.7298862,
+              ],
+              Array [
+                2.3101661,
+                48.7299542,
+              ],
+              Array [
+                2.3101587,
+                48.7300538,
+              ],
+              Array [
+                2.3101624,
+                48.7301875,
+              ],
+            ],
+            "type": "LineString",
+          },
+          "properties": Object {
+            "name": "With some inline styles",
+            "stroke": "#ff0000",
+            "stroke-opacity": 1,
+          },
+          "type": "Feature",
+        },
+        Object {
+          "geometry": Object {
+            "coordinates": Array [
+              Array [
+                2.3131898,
+                48.7315075,
+              ],
+              Array [
+                2.3123173,
+                48.7309455,
+              ],
+              Array [
+                2.312019,
+                48.7308143,
+              ],
+              Array [
+                2.3114185,
+                48.730671,
+              ],
+              Array [
+                2.310796,
+                48.7305252,
+              ],
+              Array [
+                2.3104424,
+                48.7303916,
+              ],
+              Array [
+                2.3101624,
+                48.7301875,
+              ],
+            ],
+            "type": "LineString",
+          },
+          "properties": Object {
+            "name": "Without inline style",
+          },
+          "type": "Feature",
+        },
+      ],
+      "meta": Object {
+        "name": "Inline style test",
+      },
+      "type": "folder",
+    },
+  ],
+  "type": "root",
+}
+`;
+
+exports[`toGeoJSON inline_style_mini.kml 1`] = `
+Object {
+  "features": Array [
+    Object {
       "geometry": Object {
         "coordinates": Array [
           Array [
@@ -13543,44 +13716,10 @@ Object {
             2.3098051,
             48.7299542,
           ],
-          Array [
-            2.3098493,
-            48.7298813,
-          ],
-          Array [
-            2.309934,
-            48.7298108,
-          ],
-          Array [
-            2.3100372,
-            48.729806,
-          ],
-          Array [
-            2.3101293,
-            48.7298424,
-          ],
-          Array [
-            2.3101772,
-            48.7298862,
-          ],
-          Array [
-            2.3101661,
-            48.7299542,
-          ],
-          Array [
-            2.3101587,
-            48.7300538,
-          ],
-          Array [
-            2.3101624,
-            48.7301875,
-          ],
         ],
         "type": "LineString",
       },
       "properties": Object {
-        "fill": "#ff1100",
-        "fill-opacity": 1,
         "name": "With all inline styles",
         "stroke": "#ff0000",
         "stroke-opacity": 1,
@@ -13588,104 +13727,43 @@ Object {
       },
       "type": "Feature",
     },
+  ],
+  "type": "FeatureCollection",
+}
+`;
+
+exports[`toGeoJSON inline_style_mini.kml 2`] = `
+Object {
+  "children": Array [
     Object {
-      "geometry": Object {
-        "coordinates": Array [
-          Array [
-            2.3101624,
-            48.7301875,
-          ],
-          Array [
-            2.3098714,
-            48.7300247,
-          ],
-          Array [
-            2.3098051,
-            48.7299542,
-          ],
-          Array [
-            2.3098493,
-            48.7298813,
-          ],
-          Array [
-            2.309934,
-            48.7298108,
-          ],
-          Array [
-            2.3100372,
-            48.729806,
-          ],
-          Array [
-            2.3101293,
-            48.7298424,
-          ],
-          Array [
-            2.3101772,
-            48.7298862,
-          ],
-          Array [
-            2.3101661,
-            48.7299542,
-          ],
-          Array [
-            2.3101587,
-            48.7300538,
-          ],
-          Array [
-            2.3101624,
-            48.7301875,
-          ],
-        ],
-        "type": "LineString",
-      },
-      "properties": Object {
-        "name": "With some inline styles",
-        "stroke": "#ff0000",
-        "stroke-opacity": 1,
-      },
-      "type": "Feature",
-    },
-    Object {
-      "geometry": Object {
-        "coordinates": Array [
-          Array [
-            2.3131898,
-            48.7315075,
-          ],
-          Array [
-            2.3123173,
-            48.7309455,
-          ],
-          Array [
-            2.312019,
-            48.7308143,
-          ],
-          Array [
-            2.3114185,
-            48.730671,
-          ],
-          Array [
-            2.310796,
-            48.7305252,
-          ],
-          Array [
-            2.3104424,
-            48.7303916,
-          ],
-          Array [
-            2.3101624,
-            48.7301875,
-          ],
-        ],
-        "type": "LineString",
-      },
-      "properties": Object {
-        "name": "Without inline style",
-      },
-      "type": "Feature",
-    },
-    Object {
-      "children": Array [],
+      "children": Array [
+        Object {
+          "geometry": Object {
+            "coordinates": Array [
+              Array [
+                2.3101624,
+                48.7301875,
+              ],
+              Array [
+                2.3098714,
+                48.7300247,
+              ],
+              Array [
+                2.3098051,
+                48.7299542,
+              ],
+            ],
+            "type": "LineString",
+          },
+          "properties": Object {
+            "name": "With all inline styles",
+            "stroke": "#ff0000",
+            "stroke-opacity": 1,
+            "stroke-width": 3,
+          },
+          "type": "Feature",
+        },
+      ],
       "meta": Object {
         "name": "Inline style test",
       },
@@ -13867,66 +13945,67 @@ exports[`toGeoJSON literal_color.kml 2`] = `
 Object {
   "children": Array [
     Object {
-      "geometry": Object {
-        "coordinates": Array [
-          Array [
-            2.3101624,
-            48.7301875,
-          ],
-          Array [
-            2.3098714,
-            48.7300247,
-          ],
-          Array [
-            2.3098051,
-            48.7299542,
-          ],
-          Array [
-            2.3098493,
-            48.7298813,
-          ],
-          Array [
-            2.309934,
-            48.7298108,
-          ],
-          Array [
-            2.3100372,
-            48.729806,
-          ],
-          Array [
-            2.3101293,
-            48.7298424,
-          ],
-          Array [
-            2.3101772,
-            48.7298862,
-          ],
-          Array [
-            2.3101661,
-            48.7299542,
-          ],
-          Array [
-            2.3101587,
-            48.7300538,
-          ],
-          Array [
-            2.3101624,
-            48.7301875,
-          ],
-        ],
-        "type": "LineString",
-      },
-      "properties": Object {
-        "fill": "#ff0011",
-        "name": "With all inline styles",
-        "stroke": "#ff0",
-        "stroke-opacity": 0,
-        "stroke-width": 3,
-      },
-      "type": "Feature",
-    },
-    Object {
-      "children": Array [],
+      "children": Array [
+        Object {
+          "geometry": Object {
+            "coordinates": Array [
+              Array [
+                2.3101624,
+                48.7301875,
+              ],
+              Array [
+                2.3098714,
+                48.7300247,
+              ],
+              Array [
+                2.3098051,
+                48.7299542,
+              ],
+              Array [
+                2.3098493,
+                48.7298813,
+              ],
+              Array [
+                2.309934,
+                48.7298108,
+              ],
+              Array [
+                2.3100372,
+                48.729806,
+              ],
+              Array [
+                2.3101293,
+                48.7298424,
+              ],
+              Array [
+                2.3101772,
+                48.7298862,
+              ],
+              Array [
+                2.3101661,
+                48.7299542,
+              ],
+              Array [
+                2.3101587,
+                48.7300538,
+              ],
+              Array [
+                2.3101624,
+                48.7301875,
+              ],
+            ],
+            "type": "LineString",
+          },
+          "properties": Object {
+            "fill": "#ff0011",
+            "name": "With all inline styles",
+            "stroke": "#ff0",
+            "stroke-opacity": 0,
+            "stroke-width": 3,
+          },
+          "type": "Feature",
+        },
+      ],
       "meta": Object {
         "name": "Inline style test",
       },
@@ -15426,18 +15505,19 @@ exports[`toGeoJSON nogeomplacemark.kml 2`] = `
 Object {
   "children": Array [
     Object {
-      "geometry": null,
-      "properties": Object {
-        "fill": "#ff0011",
-        "name": "With all inline styles",
-        "stroke": "#ff0",
-        "stroke-opacity": 0,
-        "stroke-width": 3,
-      },
-      "type": "Feature",
-    },
-    Object {
-      "children": Array [],
+      "children": Array [
+        Object {
+          "geometry": null,
+          "properties": Object {
+            "fill": "#ff0011",
+            "name": "With all inline styles",
+            "stroke": "#ff0",
+            "stroke-opacity": 0,
+            "stroke-width": 3,
+          },
+          "type": "Feature",
+        },
+      ],
       "meta": Object {
         "name": "Inline style test",
       },
@@ -15864,65 +15944,66 @@ exports[`toGeoJSON noname.kml 2`] = `
 Object {
   "children": Array [
     Object {
-      "geometry": Object {
-        "coordinates": Array [
-          Array [
-            2.3101624,
-            48.7301875,
-          ],
-          Array [
-            2.3098714,
-            48.7300247,
-          ],
-          Array [
-            2.3098051,
-            48.7299542,
-          ],
-          Array [
-            2.3098493,
-            48.7298813,
-          ],
-          Array [
-            2.309934,
-            48.7298108,
-          ],
-          Array [
-            2.3100372,
-            48.729806,
-          ],
-          Array [
-            2.3101293,
-            48.7298424,
-          ],
-          Array [
-            2.3101772,
-            48.7298862,
-          ],
-          Array [
-            2.3101661,
-            48.7299542,
-          ],
-          Array [
-            2.3101587,
-            48.7300538,
-          ],
-          Array [
-            2.3101624,
-            48.7301875,
-          ],
-        ],
-        "type": "LineString",
-      },
-      "properties": Object {
-        "fill": "#ff0011",
-        "stroke": "#ff0",
-        "stroke-opacity": 0,
-        "stroke-width": 3,
-      },
-      "type": "Feature",
-    },
-    Object {
-      "children": Array [],
+      "children": Array [
+        Object {
+          "geometry": Object {
+            "coordinates": Array [
+              Array [
+                2.3101624,
+                48.7301875,
+              ],
+              Array [
+                2.3098714,
+                48.7300247,
+              ],
+              Array [
+                2.3098051,
+                48.7299542,
+              ],
+              Array [
+                2.3098493,
+                48.7298813,
+              ],
+              Array [
+                2.309934,
+                48.7298108,
+              ],
+              Array [
+                2.3100372,
+                48.729806,
+              ],
+              Array [
+                2.3101293,
+                48.7298424,
+              ],
+              Array [
+                2.3101772,
+                48.7298862,
+              ],
+              Array [
+                2.3101661,
+                48.7299542,
+              ],
+              Array [
+                2.3101587,
+                48.7300538,
+              ],
+              Array [
+                2.3101624,
+                48.7301875,
+              ],
+            ],
+            "type": "LineString",
+          },
+          "properties": Object {
+            "fill": "#ff0011",
+            "stroke": "#ff0",
+            "stroke-opacity": 0,
+            "stroke-width": 3,
+          },
+          "type": "Feature",
+        },
+      ],
       "meta": Object {
         "name": "Inline style test",
       },
@@ -16251,29 +16332,30 @@ exports[`toGeoJSON opacity_override.kml 2`] = `
 Object {
   "children": Array [
     Object {
-      "geometry": Object {
-        "coordinates": Array [
-          Array [
-            2.3101624,
-            48.7301875,
-          ],
-          Array [
-            2.3098714,
-            48.7300247,
-          ],
-        ],
-        "type": "LineString",
-      },
-      "properties": Object {
-        "fill": "#1100ff",
-        "fill-opacity": 0.8,
-        "stroke-opacity": 0,
-        "stroke-width": 3,
-      },
-      "type": "Feature",
-    },
-    Object {
-      "children": Array [],
+      "children": Array [
+        Object {
+          "geometry": Object {
+            "coordinates": Array [
+              Array [
+                2.3101624,
+                48.7301875,
+              ],
+              Array [
+                2.3098714,
+                48.7300247,
+              ],
+            ],
+            "type": "LineString",
+          },
+          "properties": Object {
+            "fill": "#1100ff",
+            "fill-opacity": 0.8,
+            "stroke-opacity": 0,
+            "stroke-width": 3,
+          },
+          "type": "Feature",
+        },
+      ],
       "meta": Object {
         "name": "Inline style test",
       },
@@ -23256,45 +23338,46 @@ exports[`toGeoJSON timespan.kml 2`] = `
 Object {
   "children": Array [
     Object {
-      "geometry": Object {
-        "coordinates": Array [
-          Array [
-            Array [
-              115.87726,
-              24.93583,
-              0,
+      "children": Array [
+        Object {
+          "geometry": Object {
+            "coordinates": Array [
+              Array [
+                Array [
+                  115.87726,
+                  24.93583,
+                  0,
+                ],
+                Array [
+                  115.87075,
+                  24.93053,
+                  0,
+                ],
+                Array [
+                  115.87439,
+                  24.90768,
+                  0,
+                ],
+                Array [
+                  115.87726,
+                  24.93583,
+                  0,
+                ],
+              ],
             ],
-            Array [
-              115.87075,
-              24.93053,
-              0,
-            ],
-            Array [
-              115.87439,
-              24.90768,
-              0,
-            ],
-            Array [
-              115.87726,
-              24.93583,
-              0,
-            ],
-          ],
-        ],
-        "type": "Polygon",
-      },
-      "properties": Object {
-        "name": "1",
-        "styleUrl": "#FEATURES",
-        "timespan": Object {
-          "begin": "0725",
-          "end": "0733",
+            "type": "Polygon",
+          },
+          "properties": Object {
+            "name": "1",
+            "styleUrl": "#FEATURES",
+            "timespan": Object {
+              "begin": "0725",
+              "end": "0733",
+            },
+          },
+          "type": "Feature",
         },
-      },
-      "type": "Feature",
-    },
-    Object {
-      "children": Array [],
+      ],
       "meta": Object {
         "name": "Features",
         "open": "0",

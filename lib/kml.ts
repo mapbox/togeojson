@@ -139,28 +139,28 @@ export function kmlWithFolders(node: Document): Root {
     node: Document | ChildNode | Element,
     pointer: TreeContainer
   ) {
-    if (node.childNodes) {
-      for (let i = 0; i < node.childNodes.length; i++) {
-        traverse(node.childNodes[i], pointer);
+    if (isElement(node)) {
+      switch (node.tagName) {
+        case "Placemark": {
+          placemarks.push(node);
+          const placemark = getPlacemark(node, styleMap);
+          if (placemark) {
+            pointer.children.push(placemark);
+          }
+          break;
+        }
+        case "Folder": {
+          const folder = getFolder(node);
+          pointer.children.push(folder);
+          pointer = folder;
+          break;
+        }
       }
     }
 
-    if (!isElement(node)) return;
-
-    switch (node.tagName) {
-      case "Placemark": {
-        placemarks.push(node);
-        const placemark = getPlacemark(node, styleMap);
-        if (placemark) {
-          pointer.children.push(placemark);
-        }
-        break;
-      }
-      case "Folder": {
-        const folder = getFolder(node);
-        pointer.children.push(folder);
-        pointer = folder;
-        break;
+    if (node.childNodes) {
+      for (let i = 0; i < node.childNodes.length; i++) {
+        traverse(node.childNodes[i], pointer);
       }
     }
   }

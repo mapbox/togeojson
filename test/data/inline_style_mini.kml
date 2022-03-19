@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <Folder>
+      <name>Inline style test</name>
+      <Placemark>
+        <name>With all inline styles</name>
+        <Style>
+          <LineStyle>
+            <color>#ff0000ff</color>
+            <width>3</width>
+          </LineStyle>
+        </Style>
+        <LineString>
+          <coordinates>2.3101624,48.7301875 2.3098714,48.7300247 2.3098051,48.7299542</coordinates>
+        </LineString>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>
