@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.0.0-5](https://github.com/placemarkio/togeojson/compare/v5.0.0-4...v5.0.0-5) (2022-03-19)
+
+
+### Bug Fixes
+
+* Folder structure fixes ([#72](https://github.com/placemarkio/togeojson/issues/72)) ([ef0e3fe](https://github.com/placemarkio/togeojson/commit/ef0e3fe4109e4d2b08ea9517f5866a760d806613))
+
 ## [5.0.0-4](https://github.com/placemarkio/togeojson/compare/v5.0.0-3...v5.0.0-4) (2022-03-15)
 
 
