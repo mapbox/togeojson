@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.0.0](https://github.com/placemarkio/togeojson/compare/v5.0.0-5...v5.0.0) (2022-04-22)
+
+
+### Bug Fixes
+
+* Fix color extraction ([#77](https://github.com/placemarkio/togeojson/issues/77)) ([5712bc3](https://github.com/placemarkio/togeojson/commit/5712bc3f40a49e31a279643c102f832d4216797a))
+
 ## [5.0.0-5](https://github.com/placemarkio/togeojson/compare/v5.0.0-4...v5.0.0-5) (2022-03-19)
 
 
