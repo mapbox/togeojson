@@ -16,7 +16,7 @@ function getColor(node: Element, output: string): P {
 export function extractIcon(node: Element) {
   return get(node, "IconStyle", (iconStyle) => {
     return Object.assign(
-      getColor(node, "icon"),
+      getColor(iconStyle, "icon"),
       numericProperty(iconStyle, "scale", "icon-scale"),
       numericProperty(iconStyle, "heading", "icon-heading"),
       get(iconStyle, "hotSpot", (hotspot) => {
@@ -38,7 +38,7 @@ export function extractIcon(node: Element) {
 export function extractLabel(node: Element) {
   return get(node, "LabelStyle", (labelStyle) => {
     return Object.assign(
-      getColor(node, "label"),
+      getColor(labelStyle, "label"),
       numericProperty(labelStyle, "scale", "label-scale")
     );
   });
@@ -47,7 +47,7 @@ export function extractLabel(node: Element) {
 export function extractLine(node: Element) {
   return get(node, "LineStyle", (lineStyle) => {
     return Object.assign(
-      getColor(node, "stroke"),
+      getColor(lineStyle, "stroke"),
       numericProperty(lineStyle, "width", "stroke-width")
     );
   });
