@@ -39,6 +39,10 @@ describe("extractStyle", () => {
           64,
           128,
         ],
+        "icon-offset-units": Array [
+          "pixels",
+          "insetPixels",
+        ],
         "stroke": "#303f9f",
         "stroke-opacity": 1,
         "stroke-width": 2.13333,
@@ -72,6 +76,10 @@ describe("extractStyle", () => {
         "icon-offset": Array [
           32,
           64,
+        ],
+        "icon-offset-units": Array [
+          "pixels",
+          "insetPixels",
         ],
         "icon-opacity": 1,
         "icon-scale": 1,
