@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.1.0](https://github.com/placemarkio/togeojson/compare/v5.0.0...v5.1.0) (2022-04-23)
+
+
+### Features
+
+* Translate hotspot units ([#79](https://github.com/placemarkio/togeojson/issues/79)) ([114dcea](https://github.com/placemarkio/togeojson/commit/114dceac3844e430d6d38ad24e77d85b0ecfc99b))
+
 ## [5.0.0](https://github.com/placemarkio/togeojson/compare/v5.0.0-5...v5.0.0) (2022-04-22)
 
 
