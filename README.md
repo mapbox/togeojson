@@ -26,7 +26,7 @@ also encodes parts of KML, GPX, and TCX files that otherwise would be lost.
 
 - Style properties: `fill-color`, `fill-opacity`, `stroke`, `stroke-opacity`,
   `icon-color`, `icon-opacity`, `label-color`, `label-opacity`, `icon-scale`,
-  `icon-heading`, `icon-offset`
+  `icon-heading`, `icon-offset`, `icon-offset-units`
 
 **GPX**
 

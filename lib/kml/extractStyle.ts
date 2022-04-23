@@ -22,7 +22,13 @@ export function extractIcon(node: Element) {
       get(iconStyle, "hotSpot", (hotspot) => {
         const left = parseFloat(hotspot.getAttribute("x") || "");
         const top = parseFloat(hotspot.getAttribute("y") || "");
-        if (!isNaN(left) && !isNaN(top)) return { "icon-offset": [left, top] };
+        const xunits = hotspot.getAttribute("xunits") || "";
+        const yunits = hotspot.getAttribute("yunits") || "";
+        if (!isNaN(left) && !isNaN(top))
+          return {
+            "icon-offset": [left, top],
+            "icon-offset-units": [xunits, yunits],
+          };
         return {};
       }),
       get(iconStyle, "Icon", (icon, properties) => {
