@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.1.1](https://github.com/placemarkio/togeojson/compare/v5.1.0...v5.1.1) (2022-04-24)
+
+
+### Bug Fixes
+
+* Add fixtures, block invalid GPX inputs ([#80](https://github.com/placemarkio/togeojson/issues/80)) ([d57cd80](https://github.com/placemarkio/togeojson/commit/d57cd80757deb34e5442973f4ab44acb1d4660c8))
+
 ## [5.1.0](https://github.com/placemarkio/togeojson/compare/v5.0.0...v5.1.0) (2022-04-23)
 
 
