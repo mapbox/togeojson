@@ -11,7 +11,7 @@ function parse(file: string) {
 }
 
 describe("toGeoJSON", () => {
-  // Loop through all files except hidden ones
+  // Loop through all files except hidden ones
   for (const file of fs
     .readdirSync(d)
     .filter((item) => !item.startsWith("."))) {

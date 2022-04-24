@@ -1011,6 +1011,107 @@ Object {
 }
 `;
 
+exports[`toGeoJSON bad.gpx 1`] = `
+Object {
+  "features": Array [],
+  "type": "FeatureCollection",
+}
+`;
+
+exports[`toGeoJSON bad.kml 1`] = `
+Object {
+  "features": Array [
+    Object {
+      "geometry": null,
+      "properties": Object {},
+      "type": "Feature",
+    },
+    Object {
+      "geometry": null,
+      "properties": Object {
+        "name": "unextruded",
+      },
+      "type": "Feature",
+    },
+    Object {
+      "geometry": null,
+      "properties": Object {
+        "name": "hollow box",
+      },
+      "type": "Feature",
+    },
+  ],
+  "type": "FeatureCollection",
+}
+`;
+
+exports[`toGeoJSON bad.kml 2`] = `
+Object {
+  "children": Array [
+    Object {
+      "geometry": null,
+      "properties": Object {},
+      "type": "Feature",
+    },
+    Object {
+      "geometry": null,
+      "properties": Object {
+        "name": "unextruded",
+      },
+      "type": "Feature",
+    },
+    Object {
+      "geometry": null,
+      "properties": Object {
+        "name": "hollow box",
+      },
+      "type": "Feature",
+    },
+  ],
+  "type": "root",
+}
+`;
+
+exports[`toGeoJSON bad.tcx 1`] = `
+Object {
+  "features": Array [
+    Object {
+      "geometry": Object {
+        "coordinates": Array [
+          Array [
+            0,
+            0,
+            483,
+          ],
+          Array [
+            10,
+            0,
+            483,
+          ],
+        ],
+        "type": "LineString",
+      },
+      "properties": Object {
+        "coordinateProperties": Object {
+          "heart": Array [
+            121,
+            122,
+          ],
+          "times": Array [
+            "2020-12-27T15:59:36.000+01:00",
+            "2020-12-27T15:59:37.000+01:00",
+          ],
+        },
+        "distanceMeters": 6839.970000000001,
+        "totalTimeSeconds": 2283,
+      },
+      "type": "Feature",
+    },
+  ],
+  "type": "FeatureCollection",
+}
+`;
+
 exports[`toGeoJSON blue_hills.gpx 1`] = `
 Object {
   "features": Array [

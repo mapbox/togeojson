@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TrainingCenterDatabase xmlns="http://www.garmin.com/xmlschemas/TrainingCenterDatabase/v2">
+    <Activities>
+        <Activity Sport="Biking">
+            <Id>2020-12-27T15:43:49.000+01:00</Id>
+            <Lap StartTime="2020-12-27T15:43:49.000+01:00">
+                <TotalTimeSeconds>2283.0</TotalTimeSeconds>
+                <DistanceMeters>6839.970000000001</DistanceMeters>
+                <Calories>221</Calories>
+                <Intensity>Active</Intensity>
+                <TriggerMethod>Manual</TriggerMethod>
+                <Track>
+                    <Trackpoint>
+                        <Time>2020-12-27T15:59:36.000+01:00</Time>
+                        <Position>
+                            <LatitudeDegrees>0</LatitudeDegrees>
+                            <LongitudeDegrees>0</LongitudeDegrees>
+                        </Position>
+                        <AltitudeMeters>483.0</AltitudeMeters>
+                        <DistanceMeters>2604.4500000000003</DistanceMeters>
+                        <HeartRateBpm>
+                            <Value>121</Value>
+                        </HeartRateBpm>
+                    </Trackpoint>
+                    <Trackpoint>
+                        <Time>2020-12-27T15:59:37.000+01:00</Time>
+                        <Position>
+                            <LatitudeDegrees>0</LatitudeDegrees>
+                            <LongitudeDegrees>10</LongitudeDegrees>
+                        </Position>
+                        <AltitudeMeters>483.0</AltitudeMeters>
+                        <DistanceMeters>2607.12</DistanceMeters>
+                        <HeartRateBpm>
+                            <Value>122</Value>
+                        </HeartRateBpm>
+                    </Trackpoint>
+                </Track>
+            </Lap>
+
+            <Lap StartTime="2020-12-27T15:43:49.000+01:00">
+                <TotalTimeSeconds>2283.0</TotalTimeSeconds>
+                <DistanceMeters>6839.970000000001</DistanceMeters>
+                <Calories>221</Calories>
+                <Intensity>Active</Intensity>
+                <TriggerMethod>Manual</TriggerMethod>
+                <Track>
+                    <Trackpoint>
+                        <Time>2020-12-27T15:59:36.000+01:00</Time>
+                        <Position>
+                            <LatitudeDegrees>no</LatitudeDegrees>
+                            <LongitudeDegrees>undefined</LongitudeDegrees>
+                        </Position>
+                        <AltitudeMeters>483.0</AltitudeMeters>
+                        <DistanceMeters>2604.4500000000003</DistanceMeters>
+                        <HeartRateBpm>
+                            <Value>121</Value>
+                        </HeartRateBpm>
+                    </Trackpoint>
+                    <Trackpoint>
+                        <Time>2020-12-27T15:59:37.000+01:00</Time>
+                        <Position>
+                            <LatitudeDegrees>undefined</LatitudeDegrees>
+                            <LongitudeDegrees>10</LongitudeDegrees>
+                        </Position>
+                        <AltitudeMeters>483.0</AltitudeMeters>
+                        <DistanceMeters>2607.12</DistanceMeters>
+                        <HeartRateBpm>
+                            <Value>122</Value>
+                        </HeartRateBpm>
+                    </Trackpoint>
+                </Track>
+            </Lap>
+            <Creator xsi:type="Device_t" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <Name>Fitbit Versa</Name>
+                <UnitId>0</UnitId>
+                <ProductID>0</ProductID>
+            </Creator>
+        </Activity>
+    </Activities>
+</TrainingCenterDatabase>

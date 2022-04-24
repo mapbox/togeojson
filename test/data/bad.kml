@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Placemark>
+    <Point>
+      <coordinates>no,no</coordinates>
+    </Point>
+  </Placemark>
+
+  <Placemark>
+    <name>unextruded</name>
+    <LineString>
+      <extrude>1</extrude>
+      <tessellate>1</tessellate>
+      <coordinates>
+        no,no,0 -122.364152,no,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+
+  <Placemark>
+    <name>hollow box</name>
+    <Polygon>
+      <extrude>1</extrude>
+      <altitudeMode>relativeToGround</altitudeMode>
+      <outerBoundaryIs>
+        <LinearRing>
+          <coordinates>
+            no,30
+            no,30
+            no,30
+            no,30
+            no,30
+          </coordinates>
+        </LinearRing>
+      </outerBoundaryIs>
+      <innerBoundaryIs>
+        <LinearRing>
+          <coordinates>
+            yes,30
+            yes,30
+            yes,30
+            yes,30
+            yes,30
+          </coordinates>
+        </LinearRing>
+      </innerBoundaryIs>
+    </Polygon>
+  </Placemark>
+</kml>

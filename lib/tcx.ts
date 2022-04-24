@@ -94,6 +94,7 @@ function getPoints(node: Element) {
       extendedProperties[alias][i] = value;
     }
   }
+  if (line.length < 2) return null;
   return Object.assign(result, {
     line: line,
     times: times,

@@ -8,11 +8,15 @@ interface CoordPair {
   extendedValues: ExtendedValues;
 }
 
-export function coordPair(node: Element): CoordPair {
+export function coordPair(node: Element): CoordPair | null {
   const ll = [
     parseFloat(node.getAttribute("lon") || ""),
     parseFloat(node.getAttribute("lat") || ""),
   ];
+
+  if (isNaN(ll[0]) || isNaN(ll[1])) {
+    return null;
+  }
 
   num1(node, "ele", (val) => {
     ll.push(val);

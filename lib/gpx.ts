@@ -11,15 +11,20 @@ import { coordPair } from "./gpx/coord_pair";
 import { extractProperties } from "./gpx/properties";
 import { P, $, get1, getMulti } from "./shared";
 
+/**
+ * Extract points from a trkseg or rte element.
+ */
 function getPoints(node: Element, pointname: "trkpt" | "rtept") {
   const pts = $(node, pointname);
-  if (pts.length < 2) return; // Invalid line in GeoJSON
-
   const line: Position[] = [];
   const times = [];
   const extendedValues: P = {};
+
   for (let i = 0; i < pts.length; i++) {
     const c = coordPair(pts[i]);
+    if (!c) {
+      continue;
+    }
     line.push(c.coordinates);
     if (c.time) times.push(c.time);
     for (const [name, val] of c.extendedValues) {
@@ -32,6 +37,8 @@ function getPoints(node: Element, pointname: "trkpt" | "rtept") {
     }
   }
 
+  if (line.length < 2) return; // Invalid line in GeoJSON
+
   return {
     line: line,
     times: times,
@@ -39,6 +46,10 @@ function getPoints(node: Element, pointname: "trkpt" | "rtept") {
   };
 }
 
+/**
+ * Extract a LineString geometry from a rte
+ * element.
+ */
 function getRoute(node: Element): Feature<LineString> | undefined {
   const line = getPoints(node, "rtept");
   if (!line) return;
@@ -124,17 +135,23 @@ function getTrack(node: Element): Feature<LineString | MultiLineString> | null {
   };
 }
 
-function getPoint(node: Element): Feature<Point> {
+/**
+ * Extract a point, if possible, from a given node,
+ * which is usually a wpt or trkpt
+ */
+function getPoint(node: Element): Feature<Point> | null {
   const properties: Feature["properties"] = Object.assign(
     extractProperties(node),
     getMulti(node, ["sym"])
   );
+  const pair = coordPair(node);
+  if (!pair) return null;
   return {
     type: "Feature",
     properties,
     geometry: {
       type: "Point",
-      coordinates: coordPair(node).coordinates,
+      coordinates: pair.coordinates,
     },
   };
 }
@@ -156,7 +173,8 @@ export function* gpxGen(node: Document): Generator<Feature> {
   }
 
   for (const waypoint of $(node, "wpt")) {
-    yield getPoint(waypoint);
+    const point = getPoint(waypoint);
+    if (point) yield point;
   }
 }
 
