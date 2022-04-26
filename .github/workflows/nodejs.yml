@@ -9,7 +9,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [18.x]
 
     steps:
     - uses: actions/checkout@v1
@@ -20,6 +20,6 @@ jobs:
     - name: yarn install, build, and test
       run: |
         yarn install
-        yarn test
+        yarn test --reporters=github-actions
       env:
         CI: true
