@@ -5,11 +5,7 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [
-                    -122.0822035425683,
-                    37.42228990140251,
-                    0
-                ]
+                "coordinates": [-122.0822035425683, 37.42228990140251, 0]
             },
             "properties": {
                 "name": "Simple placemark",
@@ -20,11 +16,7 @@
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [
-                    -120.0822035425683,
-                    37.42228990140251,
-                    0
-                ]
+                "coordinates": [-120.0822035425683, 37.42228990140251, 0]
             },
             "properties": {
                 "name": "Simple placemark two",

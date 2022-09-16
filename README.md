@@ -1,5 +1,5 @@
-[![Build status](https://img.shields.io/travis/mapbox/togeojson.svg "Build status")](http://travis-ci.org/mapbox/togeojson)
-[![Coverage status](https://img.shields.io/coveralls/mapbox/togeojson.svg "Coverage status")](https://coveralls.io/r/mapbox/togeojson)
+[![Build status](https://img.shields.io/travis/mapbox/togeojson.svg 'Build status')](http://travis-ci.org/mapbox/togeojson)
+[![Coverage status](https://img.shields.io/coveralls/mapbox/togeojson.svg 'Coverage status')](https://coveralls.io/r/mapbox/togeojson)
 [![stable](http://badges.github.io/stability-badges/dist/stable.svg)](http://github.com/badges/stability-badges)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fmapbox%2Ftogeojson.svg?type=shield)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fmapbox%2Ftogeojson?ref=badge_shield)
 
@@ -8,10 +8,10 @@
 This converts [KML](https://developers.google.com/kml/documentation/) & [GPX](http://www.topografix.com/gpx.asp)
 to [GeoJSON](http://www.geojson.org/), in a browser or with [Node.js](http://nodejs.org/).
 
-* [x] Dependency-free
-* [x] Tiny
-* [x] Tested
-* [x] Node.js + Browsers
+-   [x] Dependency-free
+-   [x] Tiny
+-   [x] Tested
+-   [x] Node.js + Browsers
 
 Want to use this with [Leaflet](http://leafletjs.com/)? Try [leaflet-omnivore](https://github.com/mapbox/leaflet-omnivore)!
 
@@ -71,12 +71,12 @@ Download it into your project like
     wget https://raw.githubusercontent.com/mapbox/togeojson/master/togeojson.js
 
 ```html
-<script src='jquery.js'></script>
-<script src='togeojson.js'></script>
+<script src="jquery.js"></script>
+<script src="togeojson.js"></script>
 <script>
-$.ajax('test/data/linestring.kml').done(function(xml) {
-    console.log(toGeoJSON.kml(xml));
-});
+    $.ajax('test/data/linestring.kml').done(function (xml) {
+        console.log(toGeoJSON.kml(xml));
+    });
 </script>
 ```
 
@@ -85,27 +85,27 @@ just AJAX.
 
 ### KML Feature Support
 
-* [x] Point
-* [x] Polygon
-* [x] LineString
-* [x] name & description
-* [x] ExtendedData
-* [x] SimpleData
-* [x] MultiGeometry -> GeometryCollection
-* [x] Styles with hashing
-* [x] Tracks & MultiTracks with `gx:coords`, including altitude
-* [x] [TimeSpan](https://developers.google.com/kml/documentation/kmlreference#timespan)
-* [x] [TimeStamp](https://developers.google.com/kml/documentation/kmlreference#timestamp)
-* [ ] NetworkLinks
-* [ ] GroundOverlays
+-   [x] Point
+-   [x] Polygon
+-   [x] LineString
+-   [x] name & description
+-   [x] ExtendedData
+-   [x] SimpleData
+-   [x] MultiGeometry -> GeometryCollection
+-   [x] Styles with hashing
+-   [x] Tracks & MultiTracks with `gx:coords`, including altitude
+-   [x] [TimeSpan](https://developers.google.com/kml/documentation/kmlreference#timespan)
+-   [x] [TimeStamp](https://developers.google.com/kml/documentation/kmlreference#timestamp)
+-   [ ] NetworkLinks
+-   [ ] GroundOverlays
 
 ### GPX Feature Support
 
-* [x] Line Paths
-* [x] Line styles
-* [ ] Properties
-  * [x] 'name', 'cmt', 'desc', 'link', 'time', 'keywords', 'sym', 'type' tags
-  * [ ] 'author', 'copyright' tags
+-   [x] Line Paths
+-   [x] Line styles
+-   [ ] Properties
+    -   [x] 'name', 'cmt', 'desc', 'link', 'time', 'keywords', 'sym', 'type' tags
+    -   [ ] 'author', 'copyright' tags
 
 ## FAQ
 
@@ -155,8 +155,9 @@ support for them is out of scope for toGeoJSON.
 Have a string of XML and need an XML DOM?
 
 ```js
-var dom = (new DOMParser()).parseFromString(xmlStr, 'text/xml');
+var dom = new DOMParser().parseFromString(xmlStr, 'text/xml');
 ```
 
 ## License
+
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fmapbox%2Ftogeojson.svg?type=large)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fmapbox%2Ftogeojson?ref=badge_large)

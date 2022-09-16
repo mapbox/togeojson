@@ -8,9 +8,7 @@
                 "geometries": [
                     {
                         "type": "Point",
-                        "coordinates": [
-                            null
-                        ]
+                        "coordinates": [null]
                     },
                     {
                         "type": "LineString",
@@ -36,23 +34,13 @@
                 "geometries": [
                     {
                         "type": "Point",
-                        "coordinates": [
-                            null
-                        ]
+                        "coordinates": [null]
                     },
                     {
                         "type": "LineString",
                         "coordinates": [
-                            [
-                                100.5513698,
-                                13.7987389,
-                                0
-                            ],
-                            [
-                                100.5515619,
-                                13.7992727,
-                                0
-                            ]
+                            [100.5513698, 13.7987389, 0],
+                            [100.5515619, 13.7992727, 0]
                         ]
                     }
                 ]
@@ -75,9 +63,7 @@
                 "geometries": [
                     {
                         "type": "Point",
-                        "coordinates": [
-                            null
-                        ]
+                        "coordinates": [null]
                     },
                     {
                         "type": "LineString",
@@ -103,19 +89,11 @@
                 "geometries": [
                     {
                         "type": "Point",
-                        "coordinates": [
-                            null
-                        ]
+                        "coordinates": [null]
                     },
                     {
                         "type": "LineString",
-                        "coordinates": [
-                            [
-                                100.5343967,
-                                13.745564,
-                                0
-                            ]
-                        ]
+                        "coordinates": [[100.5343967, 13.745564, 0]]
                     }
                 ]
             },
@@ -137,19 +115,11 @@
                 "geometries": [
                     {
                         "type": "Point",
-                        "coordinates": [
-                            null
-                        ]
+                        "coordinates": [null]
                     },
                     {
                         "type": "LineString",
-                        "coordinates": [
-                            [
-                                100.52868400000001,
-                                13.746737,
-                                0
-                            ]
-                        ]
+                        "coordinates": [[100.52868400000001, 13.746737, 0]]
                     }
                 ]
             },
@@ -172,19 +142,11 @@
                 "geometries": [
                     {
                         "type": "Point",
-                        "coordinates": [
-                            null
-                        ]
+                        "coordinates": [null]
                     },
                     {
                         "type": "LineString",
-                        "coordinates": [
-                            [
-                                100.52868400000001,
-                                13.746737,
-                                0
-                            ]
-                        ]
+                        "coordinates": [[100.52868400000001, 13.746737, 0]]
                     }
                 ]
             },
@@ -206,19 +168,11 @@
                 "geometries": [
                     {
                         "type": "Point",
-                        "coordinates": [
-                            null
-                        ]
+                        "coordinates": [null]
                     },
                     {
                         "type": "LineString",
-                        "coordinates": [
-                            [
-                                100.59150720000001,
-                                13.749175999999999,
-                                0
-                            ]
-                        ]
+                        "coordinates": [[100.59150720000001, 13.749175999999999, 0]]
                     }
                 ]
             },
@@ -241,19 +195,11 @@
                 "geometries": [
                     {
                         "type": "Point",
-                        "coordinates": [
-                            null
-                        ]
+                        "coordinates": [null]
                     },
                     {
                         "type": "LineString",
-                        "coordinates": [
-                            [
-                                100.57488623703713,
-                                13.752278881572217,
-                                0
-                            ]
-                        ]
+                        "coordinates": [[100.57488623703713, 13.752278881572217, 0]]
                     }
                 ]
             },
@@ -275,9 +221,7 @@
                 "geometries": [
                     {
                         "type": "Point",
-                        "coordinates": [
-                            null
-                        ]
+                        "coordinates": [null]
                     },
                     {
                         "type": "LineString",
@@ -303,9 +247,7 @@
                 "geometries": [
                     {
                         "type": "Point",
-                        "coordinates": [
-                            null
-                        ]
+                        "coordinates": [null]
                     },
                     {
                         "type": "LineString",
@@ -331,9 +273,7 @@
                 "geometries": [
                     {
                         "type": "Point",
-                        "coordinates": [
-                            null
-                        ]
+                        "coordinates": [null]
                     },
                     {
                         "type": "LineString",
@@ -359,9 +299,7 @@
                 "geometries": [
                     {
                         "type": "Point",
-                        "coordinates": [
-                            null
-                        ]
+                        "coordinates": [null]
                     },
                     {
                         "type": "LineString",
@@ -387,9 +325,7 @@
                 "geometries": [
                     {
                         "type": "Point",
-                        "coordinates": [
-                            null
-                        ]
+                        "coordinates": [null]
                     },
                     {
                         "type": "LineString",
@@ -415,23 +351,13 @@
                 "geometries": [
                     {
                         "type": "Point",
-                        "coordinates": [
-                            null
-                        ]
+                        "coordinates": [null]
                     },
                     {
                         "type": "LineString",
                         "coordinates": [
-                            [
-                                100.5481932,
-                                13.7562302,
-                                0
-                            ],
-                            [
-                                100.5403726,
-                                13.7563681,
-                                0
-                            ]
+                            [100.5481932, 13.7562302, 0],
+                            [100.5403726, 13.7563681, 0]
                         ]
                     }
                 ]
@@ -454,9 +380,7 @@
                 "geometries": [
                     {
                         "type": "Point",
-                        "coordinates": [
-                            null
-                        ]
+                        "coordinates": [null]
                     },
                     {
                         "type": "LineString",

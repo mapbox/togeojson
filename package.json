@@ -1,60 +1,61 @@
 {
-  "name": "@mapbox/togeojson",
-  "version": "0.16.0",
-  "description": "convert KML and GPX to GeoJSON",
-  "main": "togeojson.js",
-  "directories": {
-    "test": "test"
-  },
-  "scripts": {
-    "test": "eslint togeojson.js && tape test/*.js",
-    "cov": "istanbul cover test/index.js && coveralls < ./coverage/lcov.info",
-    "browser": "browserify -t brfs test/index.js > test/bundle.js"
-  },
-  "devDependencies": {
-    "brfs": "~1.4.3",
-    "coveralls": "~2.11.12",
-    "cz-conventional-changelog": "^1.2.0",
-    "eslint": "^3.3.0",
-    "glob": "^7.0.5",
-    "istanbul": "~0.4.4",
-    "tape": "~4.6.0"
-  },
-  "bin": {
-    "togeojson": "togeojson"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/mapbox/togeojson.git"
-  },
-  "browser": {
-    "xmldom": false
-  },
-  "browserify": {
-    "transform": [
-      "brfs"
-    ]
-  },
-  "license": "BSD-2-Clause",
-  "dependencies": {
-    "xmldom": "~0.1.19",
-    "concat-stream": "~1.5.1",
-    "minimist": "1.2.0"
-  },
-  "keywords": [
-    "kml",
-    "geojson",
-    "gpx",
-    "geo",
-    "parser",
-    "formatter",
-    "input",
-    "leaflet",
-    "maps"
-  ],
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+    "name": "@mapbox/togeojson",
+    "version": "0.16.0",
+    "description": "convert KML and GPX to GeoJSON",
+    "main": "togeojson.js",
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "test": "eslint togeojson.js && tape test/*.js",
+        "cov": "istanbul cover test/index.js && coveralls < ./coverage/lcov.info",
+        "browser": "browserify -t brfs test/index.js > test/bundle.js"
+    },
+    "devDependencies": {
+        "brfs": "~1.4.3",
+        "coveralls": "~2.11.12",
+        "cz-conventional-changelog": "^1.2.0",
+        "eslint": "^3.3.0",
+        "glob": "^7.0.5",
+        "istanbul": "~0.4.4",
+        "prettier": "2.7.1",
+        "tape": "~4.6.0"
+    },
+    "bin": {
+        "togeojson": "togeojson"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/mapbox/togeojson.git"
+    },
+    "browser": {
+        "xmldom": false
+    },
+    "browserify": {
+        "transform": [
+            "brfs"
+        ]
+    },
+    "license": "BSD-2-Clause",
+    "dependencies": {
+        "concat-stream": "~1.5.1",
+        "minimist": "1.2.0",
+        "xmldom": "~0.1.19"
+    },
+    "keywords": [
+        "kml",
+        "geojson",
+        "gpx",
+        "geo",
+        "parser",
+        "formatter",
+        "input",
+        "leaflet",
+        "maps"
+    ],
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
     }
-  }
 }
