@@ -451,6 +451,293 @@ var toGeoJSON = (function() {
                 return prop;
             }
             return gj;
+        },
+        fit: function(arrayBuffer) {
+            var dataView = new DataView(arrayBuffer); // eslint-disable-line no-undef
+            var args = {data: dataView, offset: 0};
+            var definitions = {};
+            var gj = fc(); // a feature collection
+            var fileHeader = getFileHeader(args);
+            var coordinates = [];
+
+            if (!fileHeader)
+                return gj;
+
+            while (args.offset < fileHeader.dataSize + fileHeader.headerSize) {
+                var record = getRecord(args);
+                if (definitions[record.header.localType].messageName == 'Record') {
+                    var latPos = -1;
+                    var lngPos = -1;
+                    var fields = definitions[record.header.localType].fields;
+                    for (var i in fields) {
+                        if (fields[i].fieldName == 'PositionLat')
+                            latPos = i;
+                        else if (fields[i].fieldName == 'PositionLong')
+                            lngPos = i;
+                    }
+                    if (latPos >= 0 && lngPos >= 0 && record.content[lngPos] && record.content[latPos]) {
+                        coordinates.push([semicirclesToDegree(record.content[lngPos]), semicirclesToDegree(record.content[latPos])]);
+                    }
+                }
+            }
+
+            if (coordinates.length) {
+                var feature = {
+                    type: 'Feature',
+                    geometry: {
+                        type: 'LineString',
+                        coordinates: coordinates
+                    },
+                    properties: {}
+                };
+                gj.features.push(feature);
+            }
+
+            function semicirclesToDegree(semicircles) {
+                return semicircles * 180 / Math.pow(2, 31);
+            }
+            function getStringFromArray(data, offset, length) {
+                var result = '';
+                for (var i = 0; i < length; i++)
+                    result += String.fromCharCode(data.getUint8(offset + i));
+                return result;
+            }
+            function getFileHeader(args) {
+                var data = args.data;
+                var offset = args.offset;
+                var result = {
+                    headerSize: data.getUint8(offset),
+                    protocolVersion: data.getUint8(offset + 1),
+                    profileVersion: data.getUint16(offset + 2, true),
+                    dataSize: data.getUint32(offset + 4, true),
+                    magicString: getStringFromArray(data, offset + 8, 4),
+                    crc: data.getUint16(offset + 12, true)
+                };
+                if (result.magicString !== '.FIT')
+                    return null; // Cannot find magic string in the file header
+                args.offset += 14;
+                return result;
+            }
+            function getRecordHeader(args){
+                var data = args.data;
+                var val = data.getUint8(args.offset);
+                args.offset += 1;
+                var headerType = (val & (1<<7)) ? 'timestamp' : 'normal';
+                if (headerType == 'normal') {
+                    return {
+                        headerType: headerType,
+                        messageType: (val & (1<<6)) ? 'definition' : 'data',
+                        localType: (val & 0x0f),
+                        developerFields: (val & (1<<5)) ? 1 : 0
+                    };
+                } else {
+                    return {
+                        headerType: headerType,
+                        localType: (val & 0x3f),
+                        timeOffset: (val & 0x0f),
+                        developerFields: (val & (1<<5)) ? 1 : 0
+                    };
+                }
+            }
+            function getMessageName(data) {
+                switch(data) {
+                case 0:
+                    return 'FileId';
+                case 20:
+                    return 'Record';
+                }
+                return '' + data;
+            }
+            function getFieldName(fieldDefinitionNumber) {
+                switch(fieldDefinitionNumber) {
+                case 253:
+                    return 'Timestamp';
+                case 0:
+                    return 'PositionLat';
+                case 1:
+                    return 'PositionLong';
+                case 5:
+                    return 'Distance';
+                }
+
+                return '' + fieldDefinitionNumber;
+            }
+            function getFieldTypeName(data) {
+                switch(data) {
+                case 0:
+                    return 'enum';
+                case 1:
+                    return 'sint8';
+                case 2:
+                    return 'uint8';
+                case 3:
+                    return 'sint16';
+                case 4:
+                    return 'uint16';
+                case 5:
+                    return 'sint32';
+                case 6:
+                    return 'uint32';
+                case 7:
+                    return 'string';
+                case 8:
+                    return 'float32';
+                case 9:
+                    return 'float64';
+                case 10:
+                    return 'uint8z';
+                case 11:
+                    return 'uint16z';
+                case 12:
+                    return 'uint32z';
+                case 13:
+                    return 'byte';
+                case 14:
+                    return 'sint64';
+                case 15:
+                    return 'uint64';
+                case 16:
+                    return 'uint64z';
+                }
+                return 'unknown';
+            }
+            function getFieldType(data) {
+                return {
+                    endian: (data & (1<<7)) ? 1 : 0,
+                    reserved: (data & (1<<6 | 1<<5)) >> 5,
+                    type: getFieldTypeName(data & 0x1f),
+                };
+            }
+            function getFieldDefinition(args) {
+                var data = args.data;
+                var offset = args.offset;
+                var fieldDefinitionNumber = data.getUint8(offset);
+                var field = {
+                    fieldName: getFieldName(fieldDefinitionNumber),
+                    size: data.getUint8(offset + 1),
+                    fieldType: getFieldType(data.getUint8(offset + 2))
+                };
+                args.offset += 3;
+                return field;
+            }
+            function getField(args, fieldDefinition, architecture) {
+                var result = undefined;
+                var littleEndian = architecture == 0;
+                var data = args.data;
+                var offset = args.offset;
+                switch(fieldDefinition.fieldType.type) {
+                case 'enum':
+                    result = data.getUint8(offset);
+                    break;
+                case 'sint8':
+                    result = data.getInt8(offset);
+                    break;
+                case 'sint16':
+                    result = data.getInt16(offset, littleEndian);
+                    break;
+                case 'sint32':
+                    result = data.getInt32(offset, littleEndian);
+                    break;
+                case 'sint64':
+                    result = data.getBigInt64(offset, littleEndian);
+                    break;
+                case 'uint8':
+                    result = data.getUint8(offset);
+                    break;
+                case 'uint16':
+                    result = data.getUint16(offset, littleEndian);
+                    break;
+                case 'uint32':
+                    result = data.getUint32(offset, littleEndian);
+                    break;
+                case 'uint64':
+                    result = data.getBigUint64(offset, littleEndian);
+                    break;
+                case 'uint8z':
+                    result = data.getUint8(offset);
+                    break;
+                case 'uint16z':
+                    result = data.getUint16(offset, littleEndian);
+                    break;
+                case 'uint32z':
+                    result = data.getUint32(offset, littleEndian);
+                    break;
+                case 'uint64z':
+                    result = data.getBigUint64(offset, littleEndian);
+                    break;
+                case 'float32':
+                    result = data.getFloat32(offset, littleEndian);
+                    break;
+                case 'float64':
+                    result = data.getFloat64(offset, littleEndian);
+                    break;
+                case 'string':
+                    result = '';
+                    for (var i = 0; i < fieldDefinition.size; i++)
+                        result += String.fromCharCode(data.getUint8(offset + i));
+                    break;
+                case 'byte':
+                    result = data.getUint8(offset);
+                    break;
+                default:
+                    result = null; // unsupported field type
+                    break;
+                }
+                args.offset += fieldDefinition.size;
+                return result;
+            }
+            function getDefinitionContent(args, developerFields) {
+                var data = args.data;
+                var offset = args.offset;
+                var architecture = data.getUint8(offset + 1);
+                var littleEndian = architecture == 0;
+                var messageNumber = data.getUint16(offset + 2, littleEndian);
+                var result = {
+                    reserved: data.getUint8(offset),
+                    architecture: architecture,
+                    messageNumber: messageNumber,
+                    messageName: getMessageName(messageNumber),
+                    fieldsCount: data.getUint8(offset + 4),
+                    devFieldsCount: 0,
+                    fields: []
+                };
+                args.offset += 5;
+                for (var i = 0; i < result.fieldsCount; i++)
+                    result.fields.push(getFieldDefinition(args));
+                if (developerFields) {
+                    var devFieldsCount = data.getUint8(offset);
+                    result.devFieldsCount = devFieldsCount;
+                    args.offset += 1;
+                    for (i = 0; i < devFieldsCount; i++)
+                        result.fields.push(getFieldDefinition(args));
+                }
+                return result;
+            }
+            function getRecordContent(args, localType) {
+                var result = [];
+                var definition = definitions[localType];
+                if (definition) {
+                    for (var i = 0; i < definition.fieldsCount; i++)
+                        result.push(getField(args, definition.fields[i], i === 0, definition.architecture));
+                }
+                return result;
+            }
+            function getRecord(args) {
+                var header = getRecordHeader(args);
+                var content = undefined;
+                if (header.headerType == 'normal' && header.messageType == 'definition') {
+                    content = getDefinitionContent(args, header.developerFields);
+                    definitions[header.localType] = content;
+                } else {
+                    content = getRecordContent(args, header.localType);
+                }
+                var result = {
+                    header: header,
+                    content: content
+                };
+                return result;
+            }
+            return gj;
         }
     };
     return t;
