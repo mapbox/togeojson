@@ -31,6 +31,18 @@ function gpxFixtureEqual(t, file) {
         file);
 }
 
+function fitFixtureEqual(t, file) {
+    if (process.env.UPDATE) {
+        var output = tj.fit(fs.readFileSync(file).buffer);
+        fs.writeFileSync(file + '.geojson', JSON.stringify(output, null, 4));
+    }
+
+    t.deepEqual(
+        tj.fit(fs.readFileSync(file).buffer),
+        JSON.parse(fs.readFileSync(file + '.geojson', 'utf8')),
+        file);
+}
+
 test('KML', function(t) {
     glob.sync('test/data/*.kml').forEach(function(file) {
         kmlFixtureEqual(t, file);
@@ -41,6 +53,13 @@ test('KML', function(t) {
 test('GPX', function(t) {
     glob.sync('test/data/*.gpx').forEach(function(file) {
         gpxFixtureEqual(t, file);
+    });
+    t.end();
+});
+
+test('FIT', function(t) {
+    glob.sync('test/data/*.fit').forEach(function(file) {
+        fitFixtureEqual(t, file);
     });
     t.end();
 });
