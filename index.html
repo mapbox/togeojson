@@ -17,6 +17,7 @@
                 <div class='col6'>
                     <select id='format'>
                         <option value='kml'>KML</option>
+                        <option value='fit'>FIT</option>
                         <option value='gpx'>GPX</option>
                     </select>
                     <textarea id='in'>
@@ -32,6 +33,7 @@
   &lt;/Placemark&gt;
 &lt;/kml&gt;
                 </textarea>
+                <input id="file" type="file" style="display: none" accept=".fit" />
                 </div>
                 <div class='col6'>
                     <strong class='h30'>GeoJSON</strong>
@@ -79,10 +81,27 @@
         <script src='togeojson.js'></script>
         <script>
 var input = document.getElementById('in');
+var inputFile = document.getElementById('file');
 var out = document.getElementById('output');
 var format = document.getElementById('format');
 input.onchange = input.onkeyup = format.onchange = update = function() {
-    out.value = JSON.stringify(toGeoJSON[format.value]((new DOMParser()).parseFromString(input.value, 'text/xml')), null, 4);
+    if (format.value == 'fit') {
+        input.style.display = 'none';
+        file.style.display = '';
+    } else {
+        input.style.display = '';
+        file.style.display = 'none';
+        out.value = JSON.stringify(toGeoJSON[format.value]((new DOMParser()).parseFromString(input.value, 'text/xml')), null, 4);
+    }
+};
+inputFile.oninput = function() {
+    if (format.value == 'fit') {
+        var fileReader = new FileReader();
+        fileReader.onload = function() {
+            out.value = JSON.stringify(toGeoJSON['fit'](fileReader.result), null, 4);
+        }
+        fileReader.readAsArrayBuffer(this.files[0]);
+    }
 };
 update();
         </script>

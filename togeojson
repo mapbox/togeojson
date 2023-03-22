@@ -11,6 +11,7 @@ var filename = argv._[0] || '',
 
 if (filename.match(/\.kml$/i)) filetype = 'kml';
 if (filename.match(/\.gpx$/i)) filetype = 'gpx';
+if (filename.match(/\.fit$/i)) filetype = 'fit';
 
 if (!tj[filetype] || (process.stdin.isTTY && !argv._[0])) {
     return help();
@@ -19,7 +20,9 @@ if (!tj[filetype] || (process.stdin.isTTY && !argv._[0])) {
 (argv._.length ? fs.createReadStream(argv._[0]) : process.stdin).pipe(concat(convert));
 
 function convert(data) { process.stdout.write(
-    JSON.stringify(tj[filetype](xmldom.parseFromString(data.toString())), null, 4));
+    (filetype === 'fit') ?
+        JSON.stringify(tj[filetype](data.buffer), null, 4)
+        : JSON.stringify(tj[filetype](xmldom.parseFromString(data.toString())), null, 4));
 }
 
 function help() {
