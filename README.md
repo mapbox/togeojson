@@ -8,7 +8,6 @@
 This converts [KML](https://developers.google.com/kml/documentation/) & [GPX](http://www.topografix.com/gpx.asp)
 to [GeoJSON](http://www.geojson.org/), in a browser or with [Node.js](http://nodejs.org/).
 
-* [x] Dependency-free
 * [x] Tiny
 * [x] Tested
 * [x] Node.js + Browsers
