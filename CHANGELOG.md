@@ -1,3 +1,7 @@
+## 0.16.1
+
+* Resolve critical vulnerabilities by upgrading CLI dependencies in package.json.
+
 ## 0.16.0
 
 * Supports the `link` tag in GPX data.

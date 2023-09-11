@@ -1,6 +1,6 @@
 {
   "name": "@mapbox/togeojson",
-  "version": "0.16.0",
+  "version": "0.16.1",
   "description": "convert KML and GPX to GeoJSON",
   "main": "togeojson.js",
   "directories": {
@@ -37,9 +37,9 @@
   },
   "license": "BSD-2-Clause",
   "dependencies": {
-    "xmldom": "~0.1.19",
-    "concat-stream": "~1.5.1",
-    "minimist": "1.2.0"
+    "xmldom": "~0.6.0",
+    "concat-stream": "~2.0.0",
+    "minimist": "1.2.8"
   },
   "keywords": [
     "kml",
