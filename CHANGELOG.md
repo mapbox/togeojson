@@ -1,3 +1,7 @@
+## 0.16.2
+
+* Update `xmldom` to `@xmldom/xmldom`.
+
 ## 0.16.1
 
 * Resolve critical vulnerabilities by upgrading CLI dependencies in package.json.

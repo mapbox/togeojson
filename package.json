@@ -1,6 +1,6 @@
 {
   "name": "@mapbox/togeojson",
-  "version": "0.16.1",
+  "version": "0.16.2",
   "description": "convert KML and GPX to GeoJSON",
   "main": "togeojson.js",
   "directories": {
