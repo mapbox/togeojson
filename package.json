@@ -37,7 +37,7 @@
   },
   "license": "BSD-2-Clause",
   "dependencies": {
-    "xmldom": "~0.6.0",
+    "@xmldom/xmldom": "^0.8.10",
     "concat-stream": "~2.0.0",
     "minimist": "1.2.8"
   },

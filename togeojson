@@ -4,7 +4,7 @@ var tj = require('./'),
     argv = require('minimist')(process.argv.slice(2)),
     concat = require('concat-stream'),
     fs = require('fs'),
-    xmldom = new (require('xmldom').DOMParser)();
+    xmldom = new (require('@xmldom/xmldom').DOMParser)();
 
 var filename = argv._[0] || '',
     filetype = (argv.f || 'kml');

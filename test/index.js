@@ -5,7 +5,7 @@ var test = require('tape').test,
     tj = require('../');
 
 if (!process.browser) {
-    var xmldom = require('xmldom');
+    var xmldom = require('@xmldom/xmldom');
 }
 
 function kmlFixtureEqual(t, file) {
