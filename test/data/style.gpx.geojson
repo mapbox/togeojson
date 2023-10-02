@@ -9,7 +9,8 @@
                 "time": "2008-03-02T03:19:47.984Z",
                 "stroke": "893380",
                 "stroke-opacity": 1,
-                "stroke-width": 2.993385826771654
+                "stroke-width": 2.993385826771654,
+                "origin": "trk"
             },
             "geometry": {
                 "type": "LineString",
@@ -133,7 +134,8 @@
                 "time": "2008-03-02T03:19:41.796Z",
                 "stroke": "32cd32",
                 "stroke-opacity": 1,
-                "stroke-width": 2.362204724409449
+                "stroke-width": 2.362204724409449,
+                "origin": "trk"
             },
             "geometry": {
                 "type": "LineString",
@@ -257,7 +259,8 @@
                 "time": "2008-03-02T03:20:10.718Z",
                 "stroke": "893380",
                 "stroke-opacity": 1,
-                "stroke-width": 2.993385826771654
+                "stroke-width": 2.993385826771654,
+                "origin": "trk"
             },
             "geometry": {
                 "type": "LineString",
@@ -381,7 +384,8 @@
                 "time": "2008-03-02T03:20:20.812Z",
                 "stroke": "cb0017",
                 "stroke-opacity": 1,
-                "stroke-width": 2.362204724409449
+                "stroke-width": 2.362204724409449,
+                "origin": "trk"
             },
             "geometry": {
                 "type": "LineString",
@@ -505,7 +509,8 @@
                 "time": "2008-03-02T03:20:05.125Z",
                 "stroke": "800080",
                 "stroke-opacity": 1,
-                "stroke-width": 2.362204724409449
+                "stroke-width": 2.362204724409449,
+                "origin": "trk"
             },
             "geometry": {
                 "type": "LineString",
@@ -629,7 +634,8 @@
                 "time": "2008-03-02T03:17:27.390Z",
                 "stroke": "cb0017",
                 "stroke-opacity": 1,
-                "stroke-width": 2.993385826771654
+                "stroke-width": 2.993385826771654,
+                "origin": "trk"
             },
             "geometry": {
                 "type": "LineString",
@@ -753,7 +759,8 @@
                 "time": "2008-03-02T03:20:15.937Z",
                 "stroke": "cb0017",
                 "stroke-opacity": 1,
-                "stroke-width": 2.362204724409449
+                "stroke-width": 2.362204724409449,
+                "origin": "trk"
             },
             "geometry": {
                 "type": "LineString",
@@ -877,7 +884,8 @@
                 "time": "2008-03-02T03:19:54.625Z",
                 "stroke": "009300",
                 "stroke-opacity": 1,
-                "stroke-width": 2.993385826771654
+                "stroke-width": 2.993385826771654,
+                "origin": "trk"
             },
             "geometry": {
                 "type": "LineString",
@@ -1001,7 +1009,8 @@
                 "time": "2008-03-02T03:18:03.156Z",
                 "stroke": "000000",
                 "stroke-opacity": 1,
-                "stroke-width": 3.3070866141732287
+                "stroke-width": 3.3070866141732287,
+                "origin": "trk"
             },
             "geometry": {
                 "type": "LineString",
@@ -1049,7 +1058,8 @@
                 "time": "2008-03-02T03:18:40.031Z",
                 "stroke": "000000",
                 "stroke-opacity": 1,
-                "stroke-width": 2.993385826771654
+                "stroke-width": 2.993385826771654,
+                "origin": "trk"
             },
             "geometry": {
                 "type": "LineString",
@@ -1097,7 +1107,8 @@
                 "time": "2008-03-02T03:17:58.015Z",
                 "stroke": "000000",
                 "stroke-opacity": 1,
-                "stroke-width": 2.993385826771654
+                "stroke-width": 2.993385826771654,
+                "origin": "trk"
             },
             "geometry": {
                 "type": "LineString",
@@ -1145,7 +1156,8 @@
                 "time": "2008-03-02T03:19:28.875Z",
                 "stroke": "000000",
                 "stroke-opacity": 1,
-                "stroke-width": 3.3070866141732287
+                "stroke-width": 3.3070866141732287,
+                "origin": "trk"
             },
             "geometry": {
                 "type": "LineString",
@@ -1193,7 +1205,8 @@
                 "time": "2008-03-02T03:17:50.328Z",
                 "stroke": "000000",
                 "stroke-opacity": 1,
-                "stroke-width": 2.6759055118110235
+                "stroke-width": 2.6759055118110235,
+                "origin": "trk"
             },
             "geometry": {
                 "type": "LineString",
@@ -1241,7 +1254,8 @@
                 "time": "2008-03-02T03:17:37.125Z",
                 "stroke": "666666",
                 "stroke-opacity": 1,
-                "stroke-width": 2.6759055118110235
+                "stroke-width": 2.6759055118110235,
+                "origin": "trk"
             },
             "geometry": {
                 "type": "LineString",
@@ -1289,7 +1303,8 @@
                 "time": "2008-03-02T03:17:42.281Z",
                 "stroke": "666666",
                 "stroke-opacity": 1,
-                "stroke-width": 2.6759055118110235
+                "stroke-width": 2.6759055118110235,
+                "origin": "trk"
             },
             "geometry": {
                 "type": "LineString",
@@ -1337,7 +1352,8 @@
                 "time": "2008-03-02T03:19:13.046Z",
                 "stroke": "000000",
                 "stroke-opacity": 1,
-                "stroke-width": 3.465826771653544
+                "stroke-width": 3.465826771653544,
+                "origin": "trk"
             },
             "geometry": {
                 "type": "LineString",
@@ -1385,7 +1401,8 @@
                 "time": "2008-03-02T03:19:34.312Z",
                 "stroke": "7f7f7f",
                 "stroke-opacity": 1,
-                "stroke-width": 2.6759055118110235
+                "stroke-width": 2.6759055118110235,
+                "origin": "trk"
             },
             "geometry": {
                 "type": "LineString",
@@ -1433,7 +1450,8 @@
                 "time": "2008-03-02T03:19:19.125Z",
                 "stroke": "000000",
                 "stroke-opacity": 1,
-                "stroke-width": 4.0932283464566925
+                "stroke-width": 4.0932283464566925,
+                "origin": "trk"
             },
             "geometry": {
                 "type": "LineString",
@@ -1481,7 +1499,8 @@
                 "time": "2008-03-02T03:18:09.312Z",
                 "stroke": "000000",
                 "stroke-opacity": 1,
-                "stroke-width": 3.938267716535434
+                "stroke-width": 3.938267716535434,
+                "origin": "trk"
             },
             "geometry": {
                 "type": "LineString",
@@ -1529,7 +1548,8 @@
                 "time": "2008-03-02T03:20:00.250Z",
                 "stroke": "cb0017",
                 "stroke-opacity": 1,
-                "stroke-width": 2.993385826771654
+                "stroke-width": 2.993385826771654,
+                "origin": "trk"
             },
             "geometry": {
                 "type": "LineString",
@@ -1661,7 +1681,8 @@
                 "time": "2008-03-02T03:20:25.578Z",
                 "stroke": "000000",
                 "stroke-opacity": 1,
-                "stroke-width": 2.993385826771654
+                "stroke-width": 2.993385826771654,
+                "origin": "trk"
             },
             "geometry": {
                 "type": "LineString",
