@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gpx creator="WTracks"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd"
+    xmlns:gpxdata="http://www.cluetrust.com/XML/GPXDATA/1/0"
+    xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1">
+<metadata>
+  <name>GPX extension tests</name>
+  <desc></desc>
+  <author><name>WTracks</name></author>
+  <link href='https://opoto.github.io/wtracks/'>
+    <text>WTracks</text>
+    <type>text/html</type>
+  </link>
+  <time>2019-12-04T23:42:08.027Z</time>
+  <bounds minlat="43.24570289202524" minlon="5.346221923828126" maxlat="43.26670632323062" maxlon="5.406861305236817"/>
+</metadata>
+<wpt lat="43.25667824482849" lon="5.376101510881589"><name>dummy</name><desc>wpt extensions are discarded</desc><ele>-1</ele>
+  <extensions><gpxdata:hr>20</gpxdata:hr></extensions>
+</wpt>
+<trk><name>track 1</name>
+  <trkseg>
+    <trkpt lat="43.256239" lon="5.375854"><ele>52</ele><time>2019-11-16T11:28:40Z</time>
+      <extensions><gpxdata:hr>80</gpxdata:hr><gpxdata:cadence>53</gpxdata:cadence><power>1</power></extensions>
+    </trkpt>
+    <trkpt lat="43.256159" lon="5.375783"><ele>52</ele><time>2019-11-16T11:28:44Z</time>
+      <extensions><gpxdata:hr>81</gpxdata:hr><gpxdata:cadence>91</gpxdata:cadence><power>2</power></extensions>
+    </trkpt>
+    <trkpt lat="43.256078" lon="5.37567"><ele>52</ele><time>2019-11-16T11:28:49Z</time>
+      <extensions><gpxdata:hr>82</gpxdata:hr><gpxdata:cadence>91</gpxdata:cadence></extensions>
+    </trkpt>
+  </trkseg>
+  <trkseg>
+    <trkpt lat="43.256253" lon="5.375862"><ele>0.6</ele><time>2019-11-16T11:28:40Z</time>
+      <extensions><gpxtpx:TrackPointExtension><gpxtpx:cad>53</gpxtpx:cad></gpxtpx:TrackPointExtension><power>4</power></extensions>
+    </trkpt>
+    <trkpt lat="43.256213" lon="5.375858"><ele>0.6</ele><time>2019-11-16T11:28:42Z</time>
+      <extensions><gpxtpx:TrackPointExtension><gpxtpx:cad>61</gpxtpx:cad></gpxtpx:TrackPointExtension><power>5</power></extensions>
+    </trkpt>
+    <trkpt lat="43.256179" lon="5.375822"><ele>0.6</ele><time>2019-11-16T11:28:43Z</time>
+      <extensions><gpxtpx:TrackPointExtension><gpxtpx:cad>89</gpxtpx:cad></gpxtpx:TrackPointExtension></extensions>
+    </trkpt>
+    <trkpt lat="43.256157" lon="5.375797"><ele>0.6</ele><time>2019-11-16T11:28:44Z</time>
+      <extensions><gpxtpx:TrackPointExtension><gpxtpx:cad>91</gpxtpx:cad></gpxtpx:TrackPointExtension></extensions>
+    </trkpt>
+  </trkseg>
+</trk></gpx>
