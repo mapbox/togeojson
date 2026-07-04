@@ -15,6 +15,7 @@
                 "name": "8/8/2013 17:20 (Start)",
                 "styleUrl": "#start",
                 "styleHash": "5a145216",
+                "icon": "http://maps.google.com/mapfiles/kml/paddle/grn-circle.png",
                 "timestamp": "2013-08-08T15:20:40.000Z"
             }
         },
@@ -109,6 +110,7 @@
                 "name": "8/8/2013 17:20",
                 "styleUrl": "#track",
                 "styleHash": "66da7df6",
+                "icon": "http://earth.google.com/images/kml-icons/track-directional/track-0.png",
                 "stroke": "#ff0000",
                 "stroke-opacity": 0.4980392156862745,
                 "stroke-width": 4,
@@ -148,6 +150,7 @@
                 "name": "8/8/2013 17:20 (End)",
                 "styleUrl": "#end",
                 "styleHash": "-77e98803",
+                "icon": "http://maps.google.com/mapfiles/kml/paddle/red-circle.png",
                 "timestamp": "2013-08-08T16:25:57.000Z"
             }
         }

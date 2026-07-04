@@ -15,6 +15,7 @@
                 "name": "Google Earth - New Polygon",
                 "styleUrl": "#a",
                 "styleHash": "-1d694122",
+                "icon": "http://myserver.com/icon.jpg",
                 "description": "Here is some descriptive text"
             }
         },
@@ -31,7 +32,8 @@
             "properties": {
                 "name": "Google Earth - New Path",
                 "styleUrl": "#b",
-                "styleHash": "-5b6ad921"
+                "styleHash": "-5b6ad921",
+                "icon": "http://myserver.com/icon.jpg"
             }
         }
     ]
