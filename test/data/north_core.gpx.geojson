@@ -4,7 +4,8 @@
         {
             "type": "Feature",
             "properties": {
-                "type": "NC"
+                "type": "NC",
+                "origin": "trk"
             },
             "geometry": {
                 "type": "LineString",
@@ -23,7 +24,8 @@
         {
             "type": "Feature",
             "properties": {
-                "type": "NC"
+                "type": "NC",
+                "origin": "trk"
             },
             "geometry": {
                 "type": "LineString",
@@ -42,7 +44,8 @@
         {
             "type": "Feature",
             "properties": {
-                "type": "NC"
+                "type": "NC",
+                "origin": "trk"
             },
             "geometry": {
                 "type": "MultiLineString",
@@ -83,7 +86,8 @@
         {
             "type": "Feature",
             "properties": {
-                "type": "NC"
+                "type": "NC",
+                "origin": "trk"
             },
             "geometry": {
                 "type": "LineString",
@@ -106,7 +110,8 @@
         {
             "type": "Feature",
             "properties": {
-                "type": "NC"
+                "type": "NC",
+                "origin": "trk"
             },
             "geometry": {
                 "type": "LineString",
@@ -125,7 +130,8 @@
         {
             "type": "Feature",
             "properties": {
-                "type": "NC"
+                "type": "NC",
+                "origin": "trk"
             },
             "geometry": {
                 "type": "MultiLineString",
@@ -160,7 +166,8 @@
         {
             "type": "Feature",
             "properties": {
-                "type": "NC"
+                "type": "NC",
+                "origin": "trk"
             },
             "geometry": {
                 "type": "LineString",
@@ -187,7 +194,8 @@
         {
             "type": "Feature",
             "properties": {
-                "type": "NC"
+                "type": "NC",
+                "origin": "trk"
             },
             "geometry": {
                 "type": "MultiLineString",
@@ -218,7 +226,8 @@
         {
             "type": "Feature",
             "properties": {
-                "type": "NC"
+                "type": "NC",
+                "origin": "trk"
             },
             "geometry": {
                 "type": "LineString",
@@ -241,7 +250,8 @@
         {
             "type": "Feature",
             "properties": {
-                "type": "NC"
+                "type": "NC",
+                "origin": "trk"
             },
             "geometry": {
                 "type": "LineString",

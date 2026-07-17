@@ -2288,7 +2288,8 @@
                     "2007-05-11T15:23:01Z",
                     "2007-05-11T15:23:01Z",
                     "2007-05-11T15:23:02Z"
-                ]
+                ],
+                "origin": "trk"
             },
             "geometry": {
                 "type": "LineString",
@@ -11538,7 +11539,8 @@
                     "2009-09-13T09:54:01Z",
                     "2009-09-13T09:54:02Z",
                     "2009-09-13T09:54:03Z"
-                ]
+                ],
+                "origin": "trk"
             },
             "geometry": {
                 "type": "LineString",
@@ -12008,7 +12010,9 @@
         },
         {
             "type": "Feature",
-            "properties": {},
+            "properties": {
+                "origin": "trk"
+            },
             "geometry": {
                 "type": "LineString",
                 "coordinates": [

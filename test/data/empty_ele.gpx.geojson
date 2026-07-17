@@ -8,7 +8,8 @@
                 "coordTimes": [
                     "2007-05-11T15:22:06Z",
                     "2007-05-11T15:22:06Z"
-                ]
+                ],
+                "origin": "trk"
             },
             "geometry": {
                 "type": "LineString",

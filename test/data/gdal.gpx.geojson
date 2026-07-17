@@ -4,7 +4,8 @@
         {
             "type": "Feature",
             "properties": {
-                "name": "track name"
+                "name": "track name",
+                "origin": "trk"
             },
             "geometry": {
                 "type": "MultiLineString",
@@ -40,7 +41,8 @@
             "type": "Feature",
             "properties": {
                 "name": "route name",
-                "time": "2007-11-25T17:58:00Z"
+                "time": "2007-11-25T17:58:00Z",
+                "origin": "rte"
             },
             "geometry": {
                 "type": "LineString",
@@ -87,7 +89,8 @@
                         "type": "type3"
                     }
                 ],
-                "type": "type"
+                "type": "type",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -100,7 +103,9 @@
         },
         {
             "type": "Feature",
-            "properties": {},
+            "properties": {
+                "origin": "wpt"
+            },
             "geometry": {
                 "type": "Point",
                 "coordinates": [

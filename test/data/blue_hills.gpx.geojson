@@ -333,7 +333,8 @@
                         "2001-06-24T17:59:55Z",
                         "2001-06-24T18:04:59Z"
                     ]
-                ]
+                ],
+                "origin": "trk"
             },
             "geometry": {
                 "type": "MultiLineString",
@@ -2407,7 +2408,8 @@
                         "2001-10-13T21:25:25Z",
                         "2001-10-13T21:25:40Z"
                     ]
-                ]
+                ],
+                "origin": "trk"
             },
             "geometry": {
                 "type": "MultiLineString",
@@ -5359,7 +5361,8 @@
                         "2001-05-26T20:44:07Z",
                         "2001-05-26T20:44:11Z"
                     ]
-                ]
+                ],
+                "origin": "trk"
             },
             "geometry": {
                 "type": "MultiLineString",
@@ -7560,7 +7563,8 @@
                 "desc": "Lookout Rock",
                 "type": "rock",
                 "time": "2001-06-24T20:59:47Z",
-                "sym": "Summit"
+                "sym": "Summit",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -7578,7 +7582,8 @@
                 "desc": "1072",
                 "type": "Dot",
                 "time": "2001-10-13T23:50:58Z",
-                "sym": "Dot"
+                "sym": "Dot",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -7596,7 +7601,8 @@
                 "desc": "1081",
                 "type": "Dot",
                 "time": "2001-06-24T20:59:47Z",
-                "sym": "Dot"
+                "sym": "Dot",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -7614,7 +7620,8 @@
                 "desc": "1082",
                 "type": "Dot",
                 "time": "2001-05-26T21:52:38Z",
-                "sym": "Dot"
+                "sym": "Dot",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -7630,7 +7637,8 @@
             "properties": {
                 "name": "1085",
                 "desc": "1085",
-                "sym": "Dot"
+                "sym": "Dot",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -7645,7 +7653,8 @@
             "properties": {
                 "name": "1100",
                 "desc": "1100",
-                "sym": "Dot"
+                "sym": "Dot",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -7662,7 +7671,8 @@
                 "desc": "1103",
                 "type": "Dot",
                 "time": "2001-05-26T21:52:38Z",
-                "sym": "Dot"
+                "sym": "Dot",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -7680,7 +7690,8 @@
                 "desc": "1110",
                 "type": "Dot",
                 "time": "2001-06-24T20:59:48Z",
-                "sym": "Dot"
+                "sym": "Dot",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -7698,7 +7709,8 @@
                 "desc": "1114",
                 "type": "Dot",
                 "time": "2001-05-26T21:52:38Z",
-                "sym": "Dot"
+                "sym": "Dot",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -7716,7 +7728,8 @@
                 "desc": "1135",
                 "type": "Dot",
                 "time": "2001-10-13T23:50:58Z",
-                "sym": "Dot"
+                "sym": "Dot",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -7734,7 +7747,8 @@
                 "desc": "1140 - The log pyramid",
                 "type": "Danger Area",
                 "time": "2001-05-26T21:52:37Z",
-                "sym": "Danger Area"
+                "sym": "Danger Area",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -7752,7 +7766,8 @@
                 "desc": "1141",
                 "type": "Dot",
                 "time": "2001-06-24T20:59:47Z",
-                "sym": "Dot"
+                "sym": "Dot",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -7770,7 +7785,8 @@
                 "desc": "1175",
                 "type": "Dot",
                 "time": "2001-05-26T21:52:38Z",
-                "sym": "Dot"
+                "sym": "Dot",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -7786,7 +7802,8 @@
             "properties": {
                 "name": "1183",
                 "desc": "1183",
-                "sym": "Dot"
+                "sym": "Dot",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -7803,7 +7820,8 @@
                 "desc": "1185",
                 "type": "Dot",
                 "time": "2001-06-24T20:59:47Z",
-                "sym": "Dot"
+                "sym": "Dot",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -7819,7 +7837,8 @@
             "properties": {
                 "name": "1191",
                 "desc": "1191",
-                "sym": "Dot"
+                "sym": "Dot",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -7836,7 +7855,8 @@
                 "desc": "2070",
                 "type": "Dot",
                 "time": "2001-05-26T21:52:36Z",
-                "sym": "Dot"
+                "sym": "Dot",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -7854,7 +7874,8 @@
                 "desc": "2096",
                 "type": "Dot",
                 "time": "2001-06-24T20:59:46Z",
-                "sym": "Dot"
+                "sym": "Dot",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -7872,7 +7893,8 @@
                 "desc": "2112",
                 "type": "Dot",
                 "time": "2001-05-26T21:52:36Z",
-                "sym": "Dot"
+                "sym": "Dot",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -7890,7 +7912,8 @@
                 "desc": "Road",
                 "type": "Truck Stop",
                 "time": "2001-05-26T21:52:36Z",
-                "sym": "Truck Stop"
+                "sym": "Truck Stop",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -7908,7 +7931,8 @@
                 "desc": "Unquity Road",
                 "type": "Truck Stop",
                 "time": "2001-05-26T21:52:36Z",
-                "sym": "Truck Stop"
+                "sym": "Truck Stop",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -7926,7 +7950,8 @@
                 "desc": "Beach",
                 "type": "Dot",
                 "time": "2001-05-26T21:52:37Z",
-                "sym": "Dot"
+                "sym": "Dot",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -7944,7 +7969,8 @@
                 "desc": "BEECH-RUN",
                 "type": "Dot",
                 "time": "2001-05-26T21:52:41Z",
-                "sym": "Dot"
+                "sym": "Dot",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -7961,7 +7987,8 @@
                 "desc": "Boyce Hill",
                 "type": "Summit",
                 "time": "2001-05-26T21:52:44Z",
-                "sym": "Summit"
+                "sym": "Summit",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -7979,7 +8006,8 @@
                 "desc": "Breakneck Ledge",
                 "type": "Dangerous Area",
                 "time": "2001-05-26T21:52:45Z",
-                "sym": "Dangerous Area"
+                "sym": "Dangerous Area",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -7997,7 +8025,8 @@
                 "desc": "BREEZEHILL",
                 "type": "Summit",
                 "time": "2001-05-26T21:52:45Z",
-                "sym": "Summit"
+                "sym": "Summit",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -8015,7 +8044,8 @@
                 "desc": "Buck Hill",
                 "type": "Summit",
                 "time": "2001-05-26T21:52:46Z",
-                "sym": "Summit"
+                "sym": "Summit",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -8033,7 +8063,8 @@
                 "desc": "BURNT-HILL",
                 "type": "Summit",
                 "time": "2001-05-26T21:52:46Z",
-                "sym": "Summit"
+                "sym": "Summit",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -8051,7 +8082,8 @@
                 "desc": "BWZFLATO",
                 "type": "Shipwreck",
                 "time": "2001-10-13T23:50:58Z",
-                "sym": "Shipwreck"
+                "sym": "Shipwreck",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -8069,7 +8101,8 @@
                 "desc": "Dead End",
                 "type": "Zoo",
                 "time": "2001-05-26T21:52:36Z",
-                "sym": "Zoo"
+                "sym": "Zoo",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -8087,7 +8120,8 @@
                 "desc": "DEL-FLAT01",
                 "type": "Shipwreck",
                 "time": "2001-05-26T21:52:52Z",
-                "sym": "Shipwreck"
+                "sym": "Shipwreck",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -8105,7 +8139,8 @@
                 "desc": "DEW-FLAT01",
                 "type": "Shipwreck",
                 "time": "2001-05-26T21:52:53Z",
-                "sym": "Shipwreck"
+                "sym": "Shipwreck",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -8123,7 +8158,8 @@
                 "desc": "Hancock Hill",
                 "type": "Summit",
                 "time": "2001-05-26T21:53:00Z",
-                "sym": "Summit"
+                "sym": "Summit",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -8141,7 +8177,8 @@
                 "desc": "Hemingway Hill",
                 "type": "Summit",
                 "time": "2001-05-26T21:53:01Z",
-                "sym": "Summit"
+                "sym": "Summit",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -8159,7 +8196,8 @@
                 "desc": "Houghton Hill",
                 "type": "Summit",
                 "time": "2001-05-26T21:53:03Z",
-                "sym": "Summit"
+                "sym": "Summit",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -8177,7 +8215,8 @@
                 "desc": "HOUGHTPOND",
                 "type": "Fishing Area",
                 "time": "2001-05-26T21:53:03Z",
-                "sym": "Fishing Area"
+                "sym": "Fishing Area",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -8195,7 +8234,8 @@
                 "desc": "Headquarters",
                 "type": "Building",
                 "time": "2001-05-26T21:52:37Z",
-                "sym": "Building"
+                "sym": "Building",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -8213,7 +8253,8 @@
                 "desc": "LITTLBLUHI",
                 "type": "Summit",
                 "time": "2001-05-26T21:53:08Z",
-                "sym": "Summit"
+                "sym": "Summit",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -8231,7 +8272,8 @@
                 "desc": "Lookout Rock",
                 "type": "Scenic Area",
                 "time": "2001-05-26T21:52:37Z",
-                "sym": "Scenic Area"
+                "sym": "Scenic Area",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -8249,7 +8291,8 @@
                 "desc": "Parking",
                 "type": "Car",
                 "time": "2001-05-26T21:52:36Z",
-                "sym": "Car"
+                "sym": "Car",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -8267,7 +8310,8 @@
                 "desc": "Gravel Pit",
                 "type": "Dot",
                 "time": "2001-10-13T23:50:58Z",
-                "sym": "Dot"
+                "sym": "Dot",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -8285,7 +8329,8 @@
                 "desc": "Pond Singletrack",
                 "type": "Dot",
                 "time": "2001-06-24T20:59:46Z",
-                "sym": "Dot"
+                "sym": "Dot",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -8303,7 +8348,8 @@
                 "desc": "Ski Area",
                 "type": "Dot",
                 "time": "2001-06-24T20:59:46Z",
-                "sym": "Dot"
+                "sym": "Dot",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -8321,7 +8367,8 @@
                 "desc": "Summit",
                 "type": "Dot",
                 "time": "2001-05-26T21:52:37Z",
-                "sym": "Tall Tower"
+                "sym": "Tall Tower",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -8339,7 +8386,8 @@
                 "desc": "Summit Road",
                 "type": "Truck Stop",
                 "time": "2001-05-26T21:52:37Z",
-                "sym": "Truck Stop"
+                "sym": "Truck Stop",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
@@ -8357,7 +8405,8 @@
                 "desc": "Tucker Hill",
                 "type": "Summit",
                 "time": "2001-05-26T21:53:33Z",
-                "sym": "Summit"
+                "sym": "Summit",
+                "origin": "wpt"
             },
             "geometry": {
                 "type": "Point",
